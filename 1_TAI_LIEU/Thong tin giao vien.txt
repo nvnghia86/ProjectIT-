@@ -1,0 +1,16 @@
+Thông tin:
+Name: Bùi Đức Hiếu
+Email: buiduchieuvnu@gmail.com
+Skype: buiduchieuvnu
+Phone: 0944 591 392
+Blog: https://buiduchieuvnu.wordpress.com/
+
+Skill:
+	- PHP, .NET, Java, Javascript(***)
+	- MySQL, MSSQL, Maria DB, Oracle(***)
+	- Windows Server(**), Centos (***), RedHat(*)
+
+
+
+
+	

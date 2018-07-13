@@ -1,0 +1,12 @@
+Công cụ thực hành
+
+- Editor (tùy): Notepad ++
+- Git:
+	+ Git-Console: https://git-scm.com/downloads
+	+ Git-UI: 
+	https://tortoisegit.org/download/
+	
+- Địa chỉ Git của lớp
+https://github.com/
+codedao88/ITP_PHP0718E.git
+
