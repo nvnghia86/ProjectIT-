@@ -1,0 +1,5 @@
+Đây là thư mục chứa các bài lab thực hành của học viên
+
+- Mỗi học viên tạo 1 thư mục theo tên của mình không dấu, viết nối bằng gạch dưới
+VD: BUI_DUC_HIEU
+và các bài lap lưu theo buổi học ở trong thư mục cá nhân
