@@ -65,6 +65,22 @@ body{
 	border-top-left-radius: 50px;
 }
 
+.lop_do{
+	color:red;
+	background-color:yellow;
+	font-weight: bold;
+}
+
+.lop_xanh{
+	color:green;
+	background-color:cyan;
+	font-style:italic;
+}
+
+.lop_do, .lop_xanh{
+	font-size:20px;
+}
+
 
 
 
