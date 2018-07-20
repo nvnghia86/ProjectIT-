@@ -1,0 +1,64 @@
+*{
+	margin: 5;
+	padding: 0;
+	font-family: arial;
+
+}
+#wrapper{
+	width: 100%;
+	margin: 0 auto;
+}
+body{
+	width: 900px;
+	margin: 0 auto;
+}
+.dangnhap1{
+	
+	width: 65%;
+	display: block;
+	height: 350px;
+	
+}
+
+.login button:hover{
+	color: green;
+}
+.button{
+	width: 300px; 
+	height: 40px; 
+	margin-left: 117px;
+	color: white; 
+	background-color:#0099FF; 
+	border-radius: 5px;
+}
+.button:hover{
+	background-color: blue;
+}
+.button:active {
+  background-color: blue;
+  box-shadow: 0 2px #666;
+  transform: translateX(3px);
+}	
+.dangnhap2{
+	
+	width: 35%;
+	height: 350px;
+	
+	float: right;
+	
+}
+.button2{
+	width: 300px; 
+	height: 40px; 
+	margin-left: px;
+	color: white; 
+	background-color:#FF3333; 
+	border-radius: 3px;
+}
+.mxh a:hover{
+	color: red;
+	margin: auto;
+}
+.mxh a{
+	color: gray;
+}
