@@ -21,9 +21,60 @@
 			text-align: right;
 			border-top-left-radius: 175px;
 			border-bottom-right-radius: 175px;
+			
+			background-image: url("http://dulich-hagiang.vn/Data/ResizeImage/~/userfiles/image/kinh-nghiem-du-lich/ruongbacthang__danco_travelx600x0x2.jpg");
+		}
+		#anhnen{
+			border-top-left-radius: 175px;
+			border-bottom-right-radius: 175px;
 			border-bottom-left-radius: 100px;
 			background-image: url("http://dulich-hagiang.vn/Data/ResizeImage/~/userfiles/image/kinh-nghiem-du-lich/ruongbacthang__danco_travelx600x0x2.jpg");
-			background-repeat: repeat-y;/*lặp*/
+			
+		}
+		#anh_nen_lap{
+			width:100%;
+			height:65px;
+			background-image: url('menu_dantri.png');
+			background-repeat:repeat-x;
+		}
+		#vien_net_lien{
+			width: 400px;
+			height: 200px;
+			background-color: orange;
+			border: solid 2px blue;
+		}
+		#vien_net_dut{
+			width: 400px;
+			height: 200px;
+			background-color: yellow;
+			border:dashed 2px red;
+		}
+		#vien_bo_tron{
+			width: 400px;
+			height: 200px;
+			background-color: gray;
+			border: solid 5px green;
+			border-bottom-right-radius: 100px;
+		}
+		body{
+			background-image: url(img_tree.gif);
+			background-attachment: fixed;/*nền cố định*/
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.lop_do{
+			color: red;
+			background-color: orange;
+			font-weight: bold;
+
+		}
+		.lop_xanh{
+			color:blue;
+			background-color: cyan;
+			font-style: italic;
+		}
+		.lop_do,.lop_xanh{
+			font-size: 50px;
 		}
 	</style>
 </head>
@@ -35,9 +86,29 @@
 	<p style="color: orange"> Màu theo tên</p>
 	<p style="color: rgb(105,80,200)">Màu theo hệ RGB</p>
 	<p style="#ffa500">Màu theo hệ HEX</p>
-	<h3>Các loại đổi màu</h3>
-	<p id="mautext">Đổi màu cho text</p>
-	<p id="maunen">Đổi màu nền</p>
-	<p id="mau_duong_vien">Đổi màu đường viền</p>
+
+	<h3>Các loại đổ màu</h3>
+	<p id="mautext">Đổ màu cho text</p>
+	<p id="maunen">Đổ màu nền</p>
+	<p id="mau_duong_vien">Đổ màu đường viền</p>
+	
+	<h2>Nhóm định dạng nền - background</h2>
+	<p id="maunen">Background-color: đổ màu nền</p>
+	<p id="anhnen">Background-image: sử dụng ảnh làm nền</p>
+	<p id="anh_nen_lap">Background-repeat:lặp ảnh nền</p>
+
+	<h2>background-attachment: định vị cho background</h2>
+	<h2>background-position: định vị cho background</h2>
+
+	<h2>định dạng đường viền- border</h2>
+	<h3>Các kiểu đường viền</h3>
+	<p id="vien_net_lien">Đường viền nét liền</p>
+	<p id="vien_net_dut">Đường viền nét đứt</p>
+	<p id="vien_bo_tron">Đường viền bo tròn</p>
+
+	<h3>Selector class</h3>
+	<p class="lop_do">Lớp đỏ</p>
+	<p class="lop_xanh">lớp xanh</p>
+	
 </body>
 </html>
