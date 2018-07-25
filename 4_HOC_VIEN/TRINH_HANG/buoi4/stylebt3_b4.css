@@ -1,0 +1,185 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: aliceblue;
+}
+.wrapper{
+	width: 1000px;
+	margin: 0 auto;
+}
+#header_1{
+	width: 100%;
+	height: 60px;
+	background: darkorange;
+	float: left;
+	background-attachment: fixed;
+}
+#header_1 #pp{
+	width: 200px;
+	height: 50px;
+	background: yellow;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#header_1 #search{
+	width: 280px;
+	height: 50px;
+	background: #00FF7F;
+	float: right;;
+	margin: 2px 2px 2px 2px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-top-left-radius: 25px;
+	text-align: center;
+
+}
+#content{
+	background: #EEE8AA;
+	min-height: 870px;
+	width: 1010px;
+}
+#content #baner_ads{
+	height: 200px;
+	width: 1000px;
+	background: cyan;
+	float: left;
+	margin: 10px 0px;
+	margin: 2px 2px 2px 2px; 
+}
+#content #baner_ads #logo{
+	width: 1000px;
+	height: 55px;
+	background:blue;
+	float: left;
+	margin: 2px 2px 2px 2px; 
+}
+#content #baner_ads #logo #logo1{
+	width: 150px;
+	height: 50px;
+	background: green;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#content #baner_ads #logo #logo2{
+	width: 150px;
+	height: 50px;
+	background: green;
+	float: right;
+	margin: 2px 2px 2px 2px;
+}
+#content #baner_ads #menuc{
+	width: 1000px;
+	height: 115px;
+	background: blue;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#content #baner_ads #menuc .menu{
+	width: 970px;
+	height: 35px;
+	background: gray;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#content #line{
+	width: 1000px;
+	height: 600px;
+	background: cyan;
+	float: left;
+	margin: 10px;
+	margin: 2px 2px 2px 2px; 
+}
+#content #line #slide_show{
+	width: 650px;
+	height: 100px;
+	background: yellow;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#content #line #sl{
+	width: 330px;
+	height: 100px;
+	background: brown;
+	float: right;
+	margin: 2px 2px 2px 2px;
+}
+#content #line #video{
+	width: 990px;
+	height: 120px;
+	background: #40E0D0;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#content #line #tt1{
+	width: 650px;
+	height: 270px;
+	background: yellow;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#content #line #tt2{
+	width: 330px;
+	height: 270px;
+	background: yellow;
+	float: right;
+	margin: 2px 2px 2px 2px;
+}
+#content #line #vd{
+	width: 990px;
+	height: 80px;
+	background: #40E0D0;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#footer{
+	width: 1000px;
+	height: 320px;
+	background: red;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#footer #footer1{
+	width: 980px;
+	height: 100px;
+	background: orange;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#footer #footer1 .col1{
+	width: 240px;
+	height: 95px;
+	background: green;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#footer #footer2{
+	width: 980px;
+	height: 100px;
+	background: blue;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#footer #footer3{
+	width: 980px;
+	height: 100px;
+	background: brown;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#footer #footer3 #col2{
+	width: 300px;
+	height: 95px;
+	background: green;
+	float: left;
+	margin: 2px 2px 2px 2px;
+}
+#footer #footer3 #col3{
+	width: 650px;
+	height: 95px;
+	background: green;
+	float: right;
+	margin: 2px 2px 2px 2px;
+}
