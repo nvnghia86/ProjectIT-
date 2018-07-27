@@ -1,0 +1,273 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: white;
+}
+
+.wrapper{
+	width: 982px;
+	margin: 0 auto;
+}
+
+#header{
+	width: 100%;
+	height: 195px;
+	background: white;
+	float: left;
+}
+
+#header #line-menu{
+	width: 100%;
+	height: 35px;
+	position: sticky;
+	top: 0px;
+	border-bottom: 1px solid gray;
+}
+
+#header #line-menu #menu{
+	width: 620px;
+	height: 32px;
+	background: violet;
+	float: left;
+}
+
+#header #line-menu #search{
+	width: 255px;
+	height: 32px;
+	background: orange;
+	float: left;
+	margin-left: 96px;
+}
+
+#header #line-1{
+	width: 950px;
+	height: 114px;
+	background: red;
+}
+
+#header #logo1{
+	width: 215px;
+	height: 58px;
+	background: gray;
+	float: left;
+	margin-left: 33px;
+}
+
+#header #logo2{
+	width: 77px;
+	height: 73px;
+	background: gray;
+	float: right;
+	margin-right: 15px;
+}
+
+#header #col-1{
+	width: 982px;
+	height: 35px;
+	background: green;
+}
+
+#header #col-2{
+	width: 982px;
+	height: 35px;
+	background: yellow;
+}
+
+#content{
+	min-height: 2600px;
+	width: 982px;
+}
+
+#content #line-2{
+	width: 982px;
+	height: 570px;
+	float: left;
+}
+
+#content #line-2 #tin_tieu_diem{
+	width: 982px;
+	height: 70px;
+	background: #40E0D0;
+	float: left;
+	
+}
+
+#content #line-2 #tin_moi_nhat{
+	width: 672px;
+	height: 520px;
+	background: red;
+	float: left;
+	margin-top: 10px;
+}
+
+#content #line-2 #adv-1{
+	width: 300px;
+	height: 250px;
+	background: blue;
+	float: right;
+	margin-top: 10px;
+}
+
+#content #video{
+	height: 150px;
+	width: 982px;
+	background: violet;
+	float: left;
+	margin-top: 20px;
+}
+
+#content #line-3{
+	width: 982px;
+	height: 570px;
+	float: left;
+}
+
+#content #line-3 #lich_thi_dau{
+	width: 672px;
+	height: 300px;
+	background: yellow;
+	float: left;
+	margin-top: 10px;
+}
+
+#content #line-3 #ket_qua{
+	width: 302px;
+	height: 250px;
+	background: blue;
+	float: right;
+	margin-top: 10px;
+}
+
+#content #line-3 #chuyen_nhuong{
+	width: 672px;
+	height: 300px;
+	background: orange;
+	float: left;
+	margin-top: 10px;
+}
+
+#content #line-3 #ngoi_sao{
+	width: 302px;
+	height: 350px;
+	background: blue;
+	float: right;
+	margin-top: 10px;
+}
+
+#content #line-3 #v_league{
+	width: 672px;
+	height: 300px;
+	background: red;
+	float: left;
+	margin-top: 10px;
+}
+
+#content #line-3 #biem_hoa{
+	width: 302px;
+	height: 300px;
+	background: cyan;
+	float: right;
+	margin-top: 10px;
+}
+
+#content #line-3 #tbn{
+	width: 672px;
+	height: 350px;
+	background: yellow;
+	float: left;
+	margin-top: 10px;
+}
+
+#content #line-3 #doc_nhieu{
+	width: 302px;
+	height: 350px;
+	background: gray;
+	float: right;
+	margin-top: 10px;
+}
+
+#content #line-3 #y{
+	width: 672px;
+	height: 350px;
+	background: cyan;
+	float: left;
+	margin-top: 10px;
+}
+
+#content #line-3 #adv-2{
+	width: 302px;
+	height: 250px;
+	background: blue;
+	float: right;
+	margin-top: 10px;
+}
+
+#footer{
+	width: 100%;
+	height: 500px;
+	background: white;
+	float: left;
+}
+
+#footer #footer_1{
+	width: 982px;
+	height: 255px;
+	background: #A0522D;
+	float: left;
+}
+
+#footer #footer_1 #col{
+	width: 220px;
+	height: 218px;
+	background: #2E8B57;
+	float: left;
+	margin-left: 20px;
+}
+
+#footer #footer_1 #line-4{
+	width: 222px;
+	height: 220px;
+	float: left;
+	margin-left: 20px;
+}
+
+#footer #footer_1 #line-4 #col-1{
+	width: 220px;
+	height: 100px;
+	background: #2E8B57;
+	float: left;
+	margin-top: 10px;
+	background: #2E8B57;
+}
+
+#footer #footer_2{
+	width: 982px ;
+	height: 80px;
+	float: left;
+	margin-top: 20px
+}
+#footer #footer_2 #coll1{
+	width: 982px;
+	height: 71px;
+	background: green;
+	float: left;
+}
+
+#footer #footer_2 #info{
+	width: 258px;
+	height: 122px;
+	background: gray;
+	float: left;
+	margin-left: 13px;
+}
+
+#footer #footer_2 #contact{
+	width: 540px;
+	height: 122px;
+	background: gray;
+	float: left;
+	margin-left: 109px;
+}
