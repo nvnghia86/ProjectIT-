@@ -1,0 +1,39 @@
+#list_1{
+	list-style:none;
+	width: 250px;
+}
+
+#list_1 li{
+	color: #0E4D7D;
+	font-size: 14px;
+	line-height: 1.5;
+	background: url('images/sprite-2.gif');
+	background-repeat:no-repeat;
+	background-position: 0 -287px!important;
+	padding-left:15px;
+}
+
+#list_1 li:hover{
+	cursor:pointer;
+	color:#1883D7;
+	text-decoration:underline;
+}
+#list_2{
+	list-style-type:none;
+}
+#list_2 li{
+	display:inline;
+	width:75px;
+	 line-height:23px;
+	text-transform: uppercase;
+    background-color: #FED700;
+	float:left;
+	height:24px;
+	font-size: 11px;
+	padding: 0px 10px 28px 10px;
+	text-align: center;
+}
+#list_2 li:hover{
+	cursor:pointer;
+	background-color:#F5F5F5;
+}
