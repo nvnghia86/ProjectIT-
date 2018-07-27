@@ -1,0 +1,18 @@
+#list_1{
+	list-style: none;
+	width: 300px;
+}
+#list_1 li{
+	color: #FF7F50;
+	font-size: 16px;
+	line-height: 1.5;
+	background: url('sprite-2.gif');
+	background-repeat: no-repeat;
+	background-position: 0 -290px;important;
+	padding-left: 20px;
+}
+#list_1 li:hover{
+	cursor: pointer;
+	color: #3CB371;
+	text-decoration:underline;
+}
