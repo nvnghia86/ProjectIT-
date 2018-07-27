@@ -1,0 +1,139 @@
+*{margin:0; padding:0}
+#body{ background: white;}
+.wrapper{
+	width: 1000px;
+	margin: 0 auto;
+}
+#header{
+	width: 100%;
+	height: 55px;
+	background: violet;
+	float: left;
+}
+
+#header #logo{
+	width: 100px;
+	height: 50px;
+	background: red;
+	float: left;
+}
+
+#header #search{
+	width: 450px;
+	height: 50px;
+	background: white;
+	float: left;
+}
+
+#header #lua_chon{
+	width: 290px;
+	height: 50px;
+	background: cyan;
+	float: left;
+}
+#header #dang_nhap{
+	width: 160px;
+	height: 50px;
+	background: gray;
+	float: left
+}
+#menu{
+	width: 100%;
+	height: 55px;
+	background: gray;
+	float: left;
+}
+#menu #danh_sach{
+	width: 840px;
+	height: 50px;
+	background: yellow;
+	float: left;
+}
+#menu #tat_quang_cao{
+	width: 160px;
+	height: 50px;
+	background: black;
+	float: left;
+}
+#content{
+    background: green;
+	min-height: 3200px;
+}
+#content #line-1{
+	width:1000px;
+	height:300px;
+	background:violet;
+	float:left;
+}
+#content #line-1 #slider{
+   width:650px;
+   height:300px;
+   background:blue;
+   float:left;
+}
+#content #line-1 #adv-1{
+   width:350px;
+   height:3080px;
+   background:pink;
+   float:left;
+}
+#content #zing_chat{
+	width:650px;
+   height:500px;
+   background:red;
+   float:left;
+}
+
+#content .list{
+	height: 350px;
+	width: 650px;
+	background: blue;
+	float:left;
+	margin: 10px 0px;
+}
+#content #nhac_hot{
+	width:650px;
+	height:500px;
+	background:yellow;
+	float:left;
+}
+#content .hot{
+	width:300px;
+    height:490px;
+    background:cyan;
+	float:left;
+	margin:10px;
+}
+#content #nghe_si_hot{
+	width:650px;
+	height:300px;
+	background:red;
+	float:left;
+}
+#footer{
+	height:150px;
+	width:1000px;
+	background:black;
+}
+#footer .col{
+	height: 110px;
+	width: 310px;
+	background: cyan;
+	float:left;
+	margin: 10px;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
