@@ -16,7 +16,7 @@ body{
 	width: 100%;
 	height: 60px;
 	background: white;
-	float: left;
+	/* float: left; */
 	position: sticky;
 	top: 0px;
 	border-bottom: 1px solid gray;
@@ -61,7 +61,7 @@ body{
 #content{
 	width: 100%;
 	min-height: 2000px;	
-	float: left;
+	/* float: left; */
 }
 
 #content #adv_1{
@@ -178,8 +178,8 @@ body{
 #footer{
 	width: 100%;
 	min-height: 140px;
-	float: left;
-	background:;
+	/* float: left; */
+	/* background:; */
 }
 
 #line-1{
@@ -249,3 +249,5 @@ body{
 	background: cyan;
 	float: right;
 }
+
+.clear{clear:both;}
