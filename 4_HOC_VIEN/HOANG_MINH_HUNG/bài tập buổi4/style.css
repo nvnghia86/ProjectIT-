@@ -1,0 +1,158 @@
+*{margin:0; padding:0}
+#body{ background: white;}
+.wrapper{
+	width: 1000px;
+	margin: 0 auto;
+}
+#header{
+	width:100%;
+	height:55px;
+	background: red;
+	float:left;
+}
+#header #logo{
+	width:50px;
+	height:50px;
+	background:blue;
+	float:left;
+}
+#header #main-menu{
+	width:590px;
+	height:50px;
+	background: gray;
+	float:left;
+}
+#header #search{
+	width:355px;
+	height:50px;
+	background: yellow;
+	float:left;
+}
+#content{
+	background: orange;
+	min-height: 2065px;
+}
+#content #line-1{
+	height: 300px;
+	width: 1000px;
+	background: violet;
+	float:left;
+}
+#content #line-1 #slider{
+	height: 300px;
+	width: 650px;
+	background: green;
+	float:left;
+}
+#content #line-1 #adv-1{
+	height: 300px;
+	width: 350px;
+	background: black;
+	float:left;
+}
+#content #abc{
+	height: 300px;
+	width: 1000px;
+	background: violet;
+	float:left;
+}
+#content #abc #album{
+	height: 300px;
+	width: 650px;
+	background: blue;
+	float:left;
+	margin: 10px 0px;
+}
+#content #abc #list{
+	height: 1700px;
+	width: 350px;
+	background: yellow;
+    float:right;
+	margin: 10px 0px;
+}
+
+#content #nghe_gi{
+	height:150px;
+	width:650px;
+	background:red;
+	float: left;
+}
+#content #mv{
+	height:300px;
+	width:650px;
+	background:violet;
+	float: left;
+}
+#content #tao{
+	height:510px;
+	width:650px;
+	background:green;
+	float: left;
+}
+
+#content .col{
+	width:300px;
+    height:500px;
+    background:cyan;
+	float:left;
+	margin:10px;
+}
+#content #karaoke{
+    height:150px;
+	width:650px;
+	background: pink;
+	float: left;
+}
+#content #phim{
+	height:300px;
+	width:650px;
+	background:violet;
+	float: left;
+}
+#footer{
+	height:180px;
+	width:100%;
+	background:red;
+	float:left;
+}
+#footer .col{
+	height: 160px;
+	width: 180px;
+	background: cyan;
+	float:left;
+	margin: 10px;
+}
+#nct{
+	height:120px;
+	width:100%;
+	background:gray;
+	float:left
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
