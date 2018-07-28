@@ -1,3 +1,9 @@
+h1{
+	color: yellow;
+}
+h2{
+	color: blue;
+}
 #list_1{
 	list-style: none;
 	width: 300px;
@@ -14,5 +20,47 @@
 #list_1 li:hover{
 	cursor: pointer;
 	color: #3CB371;
-	text-decoration:underline;
+	text-decoration: underline;
+}
+#list_2{
+	list-style-type: none;
+}
+#list_2 li{
+	display: inline;
+	width: 90px;
+	line-height: 27px;
+	text-transform: uppercase;
+	background-color: #7FFFD4;
+	float: left;
+	height: 28px;
+	font-size: 13px;
+	padding: 0px 10px 28px 10px;
+	text-align: center;
+}
+#list_2 li: hover{
+	cursor: pointer;
+	background-color: #B9BBC0;
+}
+#list_2 li i{
+	width: 18px;
+	height: 25px;
+	display: block;
+	margin: 2px auto 3px;
+	background-image:url('icondesktop@1x.png');
+	background-repeat: no-repeat;
+}
+#list_2 li i.dt{
+	background-position: -190px 0;
+}
+#list_2 li i.tb{
+	width: 34px;
+	background-position: -209px 0;
+}
+#list_2 li i.lt{
+	width: 40px;
+	background-position: -245px 0;
+}
+#list_2 li i.pk{
+	width: 26px;
+	background-position: -286px 0;
 }
