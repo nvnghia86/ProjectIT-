@@ -1,0 +1,200 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: arial
+}
+
+.wrapper {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#header {
+    width: 100%;
+    height: 55px;
+    background-color: #FED700;
+}
+
+#header #task {
+    width: 1200px;
+    height: 55px;
+}
+
+#header #task #logo {
+    width: 170px;
+    height: 55px;
+    float: left;
+    background-color: black;
+}
+
+#header #task #logo img {
+    width: 170px;
+    height: 55px;
+    display: inline;
+    line-height: 23px;
+    cursor: pointer;
+}
+
+#header #task #search {
+    width: px;
+    height: 55px;
+    background-color: black;
+    float: left;
+}
+
+#header #task #search input[type=text] {
+    padding: 8px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border-radius: 4px;
+}
+
+#header #task #nav {
+    width: 780px;
+    height: 55px;
+    float: left;
+}
+
+#header #task #nav #list li {
+    display: inline;
+    width: 77px;
+    line-height: 23px;
+    text-transform: uppercase;
+    background-color: #FED700;
+    float: left;
+    height: 35px;
+    font-size: 11px;
+    padding: 10px;
+    text-align: center;
+}
+
+#header #task #nav #list li:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+#header #task #nav #list li i {
+    width: 16px;
+    height: 20px;
+    display: block;
+    margin: 2px auto 3px;
+    background-image: url('icon/icondesktop@1x.png');
+    background-repeat: no-repeat;
+}
+
+#header #task #nav #list li i.dt {
+    background-position: -190px 0;
+    width: 30px;
+}
+
+
+
+#content {
+    width: 1200px;
+    height: 360px;
+    margin-top: 10px;
+}
+
+#content #slide {
+    width: 780px;
+    height: 360px;
+    margin-right: 5px;
+    float: left;
+}
+
+#content #slide #slide_1 {
+    width: 780px;
+    height: 300px;
+    float: left;
+}
+#anh {
+    width: 780px;
+    cursor: pointer;
+}
+
+#content #slide #km2 {
+    width: 780px;
+    height: 60px;
+    float: left;
+}
+
+#content #slide #km2 .line{
+	width: 146px;
+	height: 50px;
+	float: left;
+	margin: 5px;
+	text-align: center;
+	line-height: 25px;
+}
+#content #slide #km2 .line a{
+	text-decoration: none;
+	color: black;
+}
+#content #slide #km2 .line a:hover{
+	color: blue;
+}
+#content #khuyenmai {
+    width: 410px;
+    height: 360px;
+    float: left;
+    margin-left: 5px;
+}
+
+#content #khuyenmai #line_1{
+	width: 120px;
+	height: 20px;
+	text-align: left;
+	padding: 10px;
+	line-height: 20px;
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	background-color: #FED700;
+	
+}
+#content #khuyenmai #line_2 #line_2_1{
+	width: 100px;
+	height: 57px;
+	float: left;
+	margin-right: 10px;
+	margin: 5px 0px 5px 0px;
+}
+#content #khuyenmai #line_2 #line_2_1 img{
+	width: 100px;
+	height: 57px;
+}
+#content #khuyenmai #line_2 #line_2_2{
+	width: 300px;
+	height: 57px;
+	float: left;
+	margin: 5px 0px 5px 10px;
+}
+#content #khuyenmai #line_2 #line_2_2 a{
+	color: black;
+	text-decoration: none;
+
+}
+#content #khuyenmai #line_2 #line_2_2 a:hover{
+	color: blue;
+}
+
+#content #khuyenmai #line_3{
+	width: 405px;
+	height: 110px; background-color: #20BCDE;
+	float: left;
+	margin: 10px 0px 10px 0px;
+}
+#content #khuyenmai #line_4{
+	width: 405px;
+	height: 110px;
+	float: left;
+	margin: 0px 0px 10px 0px;
+}
+
+
+
