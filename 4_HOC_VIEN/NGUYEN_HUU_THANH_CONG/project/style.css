@@ -30,7 +30,7 @@ body{
 
 #line-1 li{
 	display: inline;
-    width: 120px;
+    padding: 0 10px;
     line-height: 15px;
     float: right;
     height: 25px;
@@ -39,7 +39,6 @@ body{
     padding: 0px 5px 5px 5px;
     text-align: left;
 	color: #288AD6;
-	background: red;
 }
 
 #line-1 li:hover{
