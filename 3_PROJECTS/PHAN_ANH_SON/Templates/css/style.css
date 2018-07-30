@@ -1,0 +1,113 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #F0F0F0;
+}
+
+.wrapper{
+	margin: 0 auto;
+	width: 1200px;
+}
+
+/*Phần header*/
+#header{
+	width: 100%;
+	height: 55px;
+	background: #FED700;
+}
+
+	#header #logo-search{
+		background: black;
+		float: left;
+
+	}
+
+	#header #logo-search #logo{
+			width: 50px;
+			height: 50px;
+			background: #dcdc;
+			float: left;
+			color: white;
+	}
+
+	#header #logo-search #search{
+			width: 250px;
+			height: 50px;
+			background: #4445;
+			float: left;
+			color: white;
+	}
+
+	#header #main-menu{
+		width: 900px;
+		height: 55px;
+		background: #fff452;
+		float: left;
+	}
+
+/*Phần content*/
+#content{
+	width: 1200px;
+	background: #FFFFFF;
+}
+	#content #line-1{
+		width: 1200px;
+	}
+
+		#content #line-1 #slider{
+			width: 800px;
+			height: 300px;
+			background: orange;
+			float: left;
+
+		}
+
+		#content #line-1 #adv-1{
+			width: 400px;
+			height: 300px;
+			background: gray;
+			float: left;
+		}
+
+	#content #sale{
+		width: 1200px;
+		height: 75px;
+		background: yellow;
+		float: left;
+		margin: 5px 0;
+
+	}
+
+	#content .product-cat{
+		width: 1200px;
+		height: 200px;
+		background: green;
+		float: left;
+		margin: 5px 0;
+	}
+
+	#content #promotion{
+		width: 1200px;
+		height: 200px;
+		background: red;
+		float: left;
+		margin: 5px 0;
+	}
+
+
+/*Phần Footer*/
+#footer{
+	width: 100%;
+	background: #FFFFFF;
+}
+
+	#footer .col{
+		width: 295px;
+		height: 200px;
+		float: left;
+		background: blue;
+		margin-right: 5px; 
+	}

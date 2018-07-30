@@ -1,0 +1,200 @@
+*
+{
+	margin:0;
+	padding:0;
+}
+#header
+{
+	width:100%;
+	height:250px;
+	background:url('hinhanh/header.jpg');
+}
+#navigation
+{
+	width:100%;
+	text-align:center;
+	background-color:#ffcc00;
+    max-width: 1349px;
+    min-width: 1024px;
+    width: 100%;
+    height: 55px;
+    background: #000;
+    margin: auto;
+    position: relative;
+    display: block;
+}
+.a
+{
+	width: 929px;
+    background: #fed700;
+    margin: 0;
+    padding: 0;
+    display: table;
+}
+}
+#navigation ul
+{
+	width:100%;
+}
+#navigation ul li 
+{
+	position:relative;
+	display:inline-block;
+	line-height: 23px;
+	height:24px;
+	padding: 3px 10px 28px 10px;
+	text-align: center;
+}
+#navigation ul li a
+{
+	text-decoration:none;
+	font-size:11px;
+	display:block;
+	height:55px;
+}
+#navigation ul li:hover
+{
+	cursor:pointer;
+	background-color:white;
+	
+}
+#navigation li i 
+{
+	width:16px;
+	height:25px;
+	display:block;
+	margin:2px auto 3px;
+	background:url('hinhanh/icondesktop@1x.png');
+	background-repeat:no-repeat;
+	
+}
+#navigation li i.dt 
+{
+	background-position:-190px 0;
+}
+#navigation li i.tl
+{
+	width: 35px;
+	background-position:-208px 0;
+}
+.logo {
+    float: left;
+    width: 165px;
+    display: block;
+    padding: 14px 0 11px 5px;
+}
+#search-site {
+    float: left;
+    width: 230px;
+    height: 35px;
+    margin: 10px 10px 0 10px;
+    background: #fff;
+    position: relative;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.btntop {
+    float: right;
+    width: 40px;
+    height: 35px;
+    border: 0;
+    background: none;
+}
+#navigation li i.lt
+{
+	width: 40px;
+	background-position:-245px 0;
+}
+#navigation li i.pk
+{
+	width: 30px;
+	background-position:-284px 0;
+}
+#navigation li i.cgr
+{
+	width: 34px;
+	background-position:-315px 0;
+}
+#navigation li i.km
+{
+	width: 29px;
+	background-position:-473px 0;
+}
+#navigation li i.cn
+{
+	width: 34px;
+	background-position:-374px 2;
+}
+#navigation li i.hd
+{
+	width: 34px;
+	background-position:-405px 0;
+}
+span {
+    display: block;
+    position: absolute;
+    top: 8px;
+    width: 23px;
+    margin: auto;
+    left: -200px;
+    right: 0;
+    font-size: 11px;
+}
+.cn
+{
+	top: 6px;
+	left: -4px;	
+}
+#navigation a.sim, 
+{
+    text-transform: none;
+    font-size: 13px;
+    padding: 0;
+    vertical-align: middle;
+    line-height: 19px;
+    border-left: 1px solid rgba(0,0,0,.1);
+    padding-top: 0px;
+}
+.mobile {
+    width: 70px;
+}
+#navigation a.tt 
+{
+	width:133px;
+    text-transform: none;
+    font-size: 13px;
+    padding: 0;
+    vertical-align: middle;
+    line-height: 19px;
+    border-left: 1px solid rgba(0,0,0,.1);
+    padding-top: 6px;
+	top:-5px;
+}
+#content
+{
+	width:100%;
+}
+#content #list_1 
+{
+	list-style:none;
+	width:250px;
+}
+#content #list_1 li 
+{
+	color:#0E4D7D;
+	font-size:14px;
+	line-height:1.5;
+	background:url('hinhanh/sprite-2.gif');
+	background-repeat:no-repeat;
+	background-position:0 -287px!important; 
+	padding-left:15px;
+}
+#content #list_1 li:hover
+{
+	text-decoration:underline;
+	cursor:pointer;
+	color:#1883D7;
+}
+#footer
+{}
