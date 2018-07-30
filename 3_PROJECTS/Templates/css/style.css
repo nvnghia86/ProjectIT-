@@ -7,15 +7,18 @@ body{
 .wrapper{
 	width: 1200px;
 	margin: 0 auto;
-	background:#000;
-	height:55px;
 }
 
 #header{
 	width: 100%;
 	height: 55px;
-	background: yellow;
+	background: #fed700;
 	float: left;
+}
+
+#header .wrapper{
+	background:#000;
+	height:55px;
 }
 
 #header #logo{
@@ -99,23 +102,129 @@ body{
     background-position: -209px 0;
 }
 
+#header ul#main-menu i.lt{
+	width: 42px !important;
+    background-position: -245px 0;
+}
+
+#header ul#main-menu i.pk{
+	width: 26px !important;
+    background-position: -286px 0;
+}
+
+#header ul#main-menu i.cu{
+	background-position: -315px 0;
+    width: 34px !important;
+}
+
+#header ul#main-menu i.km{
+	background-position: -475px 0;
+    width: 22px !important;
+}
+
+#header ul#main-menu i.cn{
+	background-position: -375px 0;
+    width: 29px !important;
+}
+
+#header ul#main-menu i.hd{
+	background-position: -410px 0;
+    width: 25px !important;
+}
+
+#header ul#main-menu li.simso,li.thecao{
+	text-transform: none !important;
+	padding: 5px 5px;
+	font-size:13px !important;
+	height:45px !important;
+}
+
 #content{
-	background: white;
 	min-height: 700px;
 }
 
 #content #line-1{
-	height: 300px;
-	width: 1000px;
-	background: orange;
+	margin-top: 10px;
+	width: 1200px;
 	float:left;
 }
 
 #content #line-1 #slider{
-	height: 300px;
-	width: 650px;
-	background: violet;
+	width: 790px;
 	float:left;
+	position: relative;
+}
+
+#content #line-1 #slider .slider-images{
+	height: 300px;
+	width: 790px;
+}
+
+#content #line-1 #slider:hover .controls{
+	display: block;
+}
+
+#content #line-1 #slider .slider-items{
+	list-style-type:none;
+}
+
+#content #line-1 #slider .slider-items li{
+	display: inline;
+	background: #FFF;
+	width: 147px;
+	height: 55px;
+	float:left;
+	padding: 5px 5px;
+	text-align:center;
+	border-right: solid 1px gray	
+}
+
+#content #line-1 #slider .slider-items li a{
+	line-height: 1.3em;
+	font-size: 12px;
+	text-decoration: none;
+	color: gray;
+	
+}
+
+#content #line-1 #slider .controls{
+	display:none;
+}
+
+#content #line-1 #slider .controls .btn-prev{
+	position: absolute;
+    left: 10px;
+    padding: 10px 13px 20px;
+    margin: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background: rgba(0,0,0,.3);
+    width: 25px;
+    height: 40px;
+    text-align: center;
+    font-size: 46px;
+    color: #fff;
+    font-family: -webkit-body;
+	top: 110px;
+}
+
+#content #line-1 #slider .controls .btn-next{
+	position: absolute;
+    right: 10px;
+    padding: 10px 13px 20px;
+    margin: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background: rgba(0,0,0,.3);
+    width: 25px;
+    height: 40px;
+    text-align: center;
+    font-size: 46px;
+    color: #fff;
+    font-family: -webkit-body;
+	top: 110px;
 }
 
 #content #line-1 #adv-1{
