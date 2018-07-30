@@ -1,0 +1,82 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: white;
+}
+
+#khung{
+	width: 100%;
+	min-height: 100px;
+	margin-top: 20px;
+}
+
+.wrapper{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#line-1{
+	list-style: none;
+	height: 15px;
+	width: 1200px;
+	font-family: arial;
+	margin: 15px 0 0 10px;
+	background: gray;
+	border: blue;
+}
+
+#line-1 li{
+	display: inline;
+    width: 120px;
+    line-height: 15px;
+    float: right;
+    height: 25px;
+    font-size: 14px;
+	font-family: arial;
+    padding: 0px 5px 5px 5px;
+    text-align: left;
+	color: #288AD6;
+	background: red;
+}
+
+#line-1 li:hover{
+	cursor:pointer;
+	color:#288AD6;
+	text-decoration: underline;
+}
+
+#line-1 li i{
+	width: 36px;
+    height: 35px;
+    margin: 12px auto 13px;
+}
+
+#line-1 li i.apple{
+	width: 30px;
+}
+
+#line-1 li i.samsung{
+	width: 30px;
+}
+
+#line-1 li i.gia{
+	width: 30px;
+}
+
+#line-1 li i.tra_gop{
+	width: 30px;
+}
+
+#line-1 li i.xem_tat_ca{
+	width: 50px;
+}
+
+#khung #khung2{
+	width: 1200px;
+	height: 285px;
+	float: left;
+	border: 1px solid gray;
+}
