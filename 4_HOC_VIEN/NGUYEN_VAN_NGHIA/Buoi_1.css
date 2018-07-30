@@ -119,3 +119,12 @@
 	width:100px;
 	background-image:https://i-xem.mkocdn.com/i.xem.sb/data/photo/2018/07/14/012/mang-lag-1531543262-400.jpg;
 }
+#table td
+{
+	padding-left:10px;
+}
+#table tr:hover
+{
+	padding-left:10px;
+	background-color:#fff200;
+}
