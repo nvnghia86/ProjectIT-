@@ -37,3 +37,55 @@
 	cursor:pointer;
 	background-color:#F5F5F5;
 }
+#list_2 li i{
+	width:16px;
+	height:25px;
+	display: block;
+	margin: 2px auto 3px;
+	background-image: url('images/icondesktop@1x.png');
+	background-repeat: no-repeat;
+}
+#list_2 li i.dt{
+	background-position: -190px 0;
+}
+#list_2 li i.tb{
+	background-position: -209px 0;
+	width:34px;
+}
+#list_2 li i.lt{
+	width:40px;
+	background-position: -245px 0;
+}
+#list_2 li i.pk{
+	width: 26px;
+    background-position: -286px 0;
+}
+#list_2 li i.cgr{
+    width:40px;
+	background-position: -310px 0;
+}
+#list_2 li i.km{
+    width:25px;
+	background-position: -350px 0;
+}
+#list_2 li i.cn{
+    width:32px;
+	background-position: -375px 0;
+}
+#list_2 li i.hd{
+    width:29px;
+	background-position: -410px 0;
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
