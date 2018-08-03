@@ -1,7 +1,16 @@
 /* reset css*/
 *{margin: 0; padding:0}
 body{
-	background:gray;
+	background:#F0F0F0;
+	font: 14px/18px Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+    color: #333;
+    outline: none;
+    zoom: 1;
+}
+
+a{
+	text-decoration:none;
+	color: #333;
 }
 
 .wrapper{
@@ -153,11 +162,12 @@ body{
 	width: 790px;
 	float:left;
 	position: relative;
+	overflow:hidden;
 }
 
 #content #line-1 #slider .slider-images{
 	height: 300px;
-	width: 790px;
+	width: 800px;
 }
 
 #content #line-1 #slider:hover .controls{
@@ -230,8 +240,55 @@ body{
 #content #line-1 #adv-1{
 	height: 300px;
 	width: 350px;
-	background: brown;
 	float:left;
+	margin: 10px 0px 10px 10px;
+}
+
+#content #line-1 #adv-1 h3{
+	text-transform:uppercase;
+	width: 350px;
+	float:left;
+	background: #FFF;
+	height: 30px;
+	border-bottom: #F0F0F0 1px solid;
+}
+
+#content #line-1 #adv-1 h3 span{
+	background:#FED700;
+	line-height: 30px;
+	padding: 6px 6px;
+	
+}
+
+#content #line-1 #adv-1 .tin-tieudiem{
+	width: 340px;
+	float:left;
+	background: #FFF;
+	padding: 10px 5px;
+}
+
+#content #line-1 #adv-1 ul.anh-quangcao{
+	list-style-type: none;
+	margin-top: 10px;
+	width: 350px;
+	float:left;
+}
+
+#content #line-1 #adv-1 ul.anh-quangcao li{
+	padding-bottom: 10px;;
+}
+
+#content #line-1 #adv-1 ul.anh-quangcao li img{
+	width: 100%;
+    height: 110px;
+    display: block;
+}
+
+#content #line-1 #adv-1 .tin-tieudiem img{
+	float: left;
+    width: 100px;
+    height: 57px;
+    margin: 0 10px 0 0;
 }
 
 #content .product-cat{
@@ -240,6 +297,92 @@ body{
 	background: blue;
 	float:left;
 	margin: 10px 0px;
+}
+
+#content .giasoc-cuoituan{
+	width: 1200px;
+	float:left;
+	background:  #FFF;
+	margin-top: 30px;
+	border: 1px solid #ff4d00;
+    margin-top: 30px;
+    overflow: visible;
+    padding-top: 20px;
+	position:relative;
+}
+
+#content .giasoc-cuoituan:before{
+	background: url('../images/gsct.png') no-repeat center center;
+    width: 309px;
+    height: 38px;
+    position: absolute;
+    left: 50%;
+    top: -19px;
+    margin-left: -154px;
+    z-index: 9;
+	content: ' ';
+    display: block;
+	background-size: 303px;
+    
+}
+
+#content .giasoc-cuoituan .sanpham{
+	width: 220px;
+	overflow: hidden;
+	float:left;
+	position:relative;
+	padding: 10px;
+}
+
+#content .giasoc-cuoituan .sanpham img{
+	width: 180px;
+	height: 180px;
+	transition: all ease 200ms;
+	margin: 15px auto;
+}
+
+#content .giasoc-cuoituan .sanpham img:hover{
+	margin: 6px auto 24px;
+}
+
+#content .giasoc-cuoituan .sanpham label.giamgia{
+	background-image: linear-gradient(-90deg,#ec1f1f 0%,#ff9c00 100%);
+    border-radius: 10px;
+    padding: 1px 7px;
+    padding-left: 0;
+    padding-right: 10px;
+	position: absolute;
+	top: 158px; 
+	left: 10px;
+	padding: 5px 5px;
+	color: #FFF;
+}
+
+#content .giasoc-cuoituan .sanpham h3{
+	font-size: 18px;
+	width: 240px;
+	margin-top: 18px;
+}
+#content .giasoc-cuoituan .sanpham h3:hover{
+	color: #1883D7;
+}
+
+#content .giasoc-cuoituan .sanpham p.gia{
+	font-size: 18px;
+    width: 240px;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+}
+
+#content .giasoc-cuoituan .sanpham .khuyenmai{
+	width: 240px;
+	margin-top: 10px;
+}
+#content .giasoc-cuoituan .sanpham .khuyenmai img{
+	width: 35px; 
+	height: 35px;
+	float: left;
 }
 
 #content #promotion {
