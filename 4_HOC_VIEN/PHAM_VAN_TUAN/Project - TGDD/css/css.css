@@ -743,3 +743,14 @@ body {
 	text-align: center;
 	color: gray;
 }
+
+#goTop {
+bottom: 40px;
+cursor: pointer;
+display: none;
+height: 44px;
+position: fixed;
+right: 15px;
+width: 44px;
+z-index: 1200;
+}
