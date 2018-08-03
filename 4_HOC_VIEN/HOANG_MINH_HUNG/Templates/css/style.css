@@ -12,53 +12,313 @@ body{
 #header{
 	width:100%;
 	height:55px;
-	background: yellow;
+	background: #fed700;
 	float: left;
 }
+#header .wrapper{
+	background:#000;
+	height:55px;
+}
+
 #header #logo{
-	width:115px;
-	height:50px;
-	background: red;
+	width:155px;
+	height:30px;
+	background: url('../hinh ảnh/icondesktop@1x.png');
 	float: left;
+	margin:10px 10px;
 }
 #header #search{
-	width:316px;
+	width:240px;
 	height:50px;
-	background: white;
 	float: left;
+	position:relative;
 }
-#header #main-menu{
-	width: 769px;
+#header #search #txtSearch{
+	font-size:10px;
+	text-indent:10px;
+    padding: 9px 20px;
+	border-radius: 5px;
+	border: solid 1px gray;
+	margin: 12px 18px;
+
+}
+#header #search .search-icon{
+	width: 30px;
+    height: 20px;
+    background: url('../hinh ảnh/icondesktop@1x.png') no-repeat scroll;
+    background-position: -156px 0px;
+    position: absolute;
+    top: 16px;
+    right: 18px;
+}
+#header ul#main-menu{
+	width: 785px;
 	height: 50px;
-	background: cyan;
+	background: #fed700;
 	float: left;
+	list-style-type: none;
+}
+#header ul#main-menu li{
+	display:inline;
+	width: 78px;
+	height: 55px;
+	float: left;
+	text-transform:uppercase;
+	font-size: 11px;
+	text-align:center;
+}
+#header ul#main-menu li:hover{
+	background: #F0F0F0;
+	cursor:pointer;
+}
+#header ul#main-menu li i{
+	width:16px;
+	height:25px;
+	display: block;
+	margin: 2px auto 3px;
+	background-image: url('../hinh ảnh/icondesktop@1x.png');
+	background-repeat: no-repeat;
+}
+#header ul#main-menu li i.dt{
+	background-position: -190px 0;
+}
+
+#header ul#main-menu li i.tb{
+	width: 34px;
+    background-position: -209px 0;
+}
+
+#header ul#main-menu li i.tb{
+	width: 34px;
+    background-position: -209px 0;
+}
+
+#header ul#main-menu i.lt{
+	width: 42px !important;
+    background-position: -245px 0;
+}
+
+#header ul#main-menu i.pk{
+	width: 26px !important;
+    background-position: -286px 0;
+}
+
+#header ul#main-menu i.cu{
+	background-position: -315px 0;
+    width: 34px !important;
+}
+
+#header ul#main-menu i.km{
+	background-position: -475px 0;
+    width: 22px !important;
+}
+
+#header ul#main-menu i.cn{
+	background-position: -375px 0;
+    width: 29px !important;
+}
+
+#header ul#main-menu i.hd{
+	background-position: -410px 0;
+    width: 25px !important;
+}
+#header ul#main-menu li.simso,li.thecao{
+    text-transform: none !important;
+    padding: 11px 1px;
+    font-size: 12px !important;
+    height: 45px !important;
+	
 }
 #content{
-	background: white;
+
 	min-height:700px;
 }
+
 #content #line-1{
 	width:1200px;
-	height:300px;
-	background:orange;
 	float: left;
+	margin-top: 10px;
 }
 #content #line-1 #slider{
-	width:795px;
-	height:300px;
-	background:violet;
+	width:790px;
 	float: left;
+	position: relative;
+}
+#content #line-1 #slider.slider-ảnh{
+	height: 300px;
+	width: 790px;
+}
+
+#content #line-1 #slider:hover .controls{
+	display: block;
+}
+#content #line-1 #slider .slider-items{
+	list-style-type:none;
+}
+#content #line-1 #slider .slider-items li{
+	display: inline;
+	background: #FFF;
+	width: 147px;
+	height: 55px;
+	float:left;
+	padding: 5px 5px;
+	text-align:center;
+	border-right: solid 1px gray
+}
+#content #line-1 #slider .slider-items li a{
+	font-size:12px;
+	line-height: 1.3em;
+	color:gray;
+	text-decoration: none;
+}
+#content #line-1 #slider .controls{
+	display:none;
+}
+#content #line-1 #slider .controls .btn-prev{
+	position: absolute;
+	left: 10px;
+	padding: 10px 13px 20px;
+	margin: 0;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background: rgba(0,0,0,.3);
+	width: 25px;
+    height: 40px;
+    text-align: center;
+	 font-size: 46px;
+    color: #fff;
+	 font-family: -webkit-body;
+	 top:110px;
+}
+#content #line-1 #slider .controls .btn-next{
+	position: absolute;
+    right: 10px;
+    padding: 10px 13px 20px;
+    margin: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background: rgba(0,0,0,.3);
+    width: 25px;
+    height: 40px;
+    text-align: center;
+    font-size: 46px;
+    color: #fff;
+    font-family: -webkit-body;
+	top: 110px;
 }
 #content #line-1 #adv-1{
 	width:405px;
 	height:300px;
-	background:black;
+	
 	float: left;
+    background:white;
+}
+#content #line-1 #adv-1 #header-adv{
+	width:405px;
+	height:40px;
+	float:left;
+	background:white;
+}
+#content #line-1 #adv-1 #header-adv #tin{
+	text-transform:uppercase;
+	text-align:center;
+	background:#fed700;
+	width:133px;
+	height:40px;
+	float:left;
+	display:block;
+	
+	
+}
+
+#content #line-1 #adv-1 #header-adv #mobi{
+	width:270px;
+	height:40px;
+	background:white;
+	float:left;
+	text-align:center;
+	font-size:13px;
+}
+#content #line-1 #adv-1 #dong2{
+	width:405px;
+	height:115px;
+	background:white;
+}
+#content #line-1 #adv-1 #dong2 .ảnh{
+    float: left;
+    width: 105px;
+    height: 57px;
+    margin: 0 10px 0 0;
+}
+#content #line-1 #adv-1 #dong2 #chữ-dong2{
+	width:290px;
+	
+	background: white;
+	text-align:center;
+	float:left;
+	display:block;
+}
+#content #line-1 #adv-1 #dong2 #chữ-dong2 a:hover{
+	cursor:pointer;
+	color:#A0CBED;
+}
+#content #line-1 #adv-1 #dong3{
+	width:405px;
+	margin-top: 12px;
+	margin-left:7px;
+}
+#content #line-1 #adv-1 #dong4{
+	width:405px;
+	margin-top: 12px;
+	margin-left:7px;
+}
+#content #content-2{
+	width:1200px;
+	height:400px;
+	background:white;
+	float:left;
+	margin: 10px 0px
+}
+#content #content-2 #c18{
+	width:1200px;
+	height:30px;
+	background:white;
+	float: left;
+    padding-top:20px;
+	 
+}
+#content #content-2 #list-dt{
+	list-style-type: none;
+}
+#content #content-2 #list-dt li{
+    display:inline;
+	width:217px;
+	 line-height:25px;
+	float:left;
+	height:24px;
+	font-size: 16px;
+    padding-top: 20px;
+	text-align: center;
+	color: #5F5F5F;
+	padding-left:20px;
+}
+#content #content-2 #list-dt li:hover{
+	cursor:pointer;
+	color:#A0CBED;
+}
+#content #content-2 #list-dt li a{
+    width: 300px;
+    height: 200px;
+    display: block;
+    margin: 175px auto 3px;
+
 }
 #content .product-cat{
 	width:1200px;
 	height:350px;
-	background:green;
+	background:white;
 	float:left;
 	margin: 10px 0px;
 }
@@ -94,19 +354,21 @@ body{
 }
 #content #thu #dau #menu #list_1 li{
 	display:inline;
-	width: 125px;
+	
 	line-height:30px;
 	float:left;
 	height:30px;
 	font-size:16px;
-	padding: 0px auto 0px 10px;
+
 	text-align: center;
 	color:#1883D7;
+	padding: 0 15px;
 }
 #content #thu #dau #menu #list_1 li:hover{
 	cursor:pointer;
 	text-decoration:underline;
 }
+
 #content #thu #ô{
 	width:1200px;
 	height:300px;
