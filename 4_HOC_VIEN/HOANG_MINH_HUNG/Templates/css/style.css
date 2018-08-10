@@ -1,7 +1,7 @@
 /* reset css*/
-*{margin: 0; padding:0 ; position: relative}
+*{margin: 0; padding:0 ; }
 body{
-	background: gray;
+	background:#F0F0F0;
 }
 
 .wrapper{
@@ -130,7 +130,7 @@ body{
 	
 }
 #content{
-
+    
 	min-height:700px;
 }
 
@@ -283,21 +283,74 @@ body{
 }
 #content #content-2{
 	width:1200px;
-	height:400px;
+	height:384px;
 	background:white;
 	float:left;
-	margin: 10px 0px
-	
+	 margin-top: 30px;
+    overflow: visible;
+	position:relative;
+	border: 1px solid #ff4d00;
+	padding-top: 20px;
+
 }
-#content #content-2 #c18{
-	width:1200px;
-	height:30px;
-	background:white;
-	float: left;
-    padding-top:20px;
-	border-bottom: solid 1px gray;
-	 
+
+#content #content-2:before{
+	background: url('../hinh ảnh/gsct.png') no-repeat center center;
+    width: 309px;
+    height: 38px;
+    position: absolute;
+    left: 50%;
+    top: -19px;
+    margin-left: -154px;
+    z-index: 9;
+	content: ' ';
+    display: block;
+	background-size: 303px;
 }
+#content #content-2:hover .controls{
+	display: block;
+	cursor:pointer;
+}
+
+#center #content-2.controls{
+	display:none;
+}
+#content #content-2 .controls .btn-prev{
+	position: absolute;
+	left: 10px;
+	padding: 10px 13px 20px;
+	margin: 0;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background: #fff;
+	width: 25px;
+    height: 40px;
+    text-align: center;
+	 font-size: 46px;
+    color: gray;
+	 font-family: -webkit-body;
+	 top:110px;
+}
+#content #content-2 .controls .btn-next{
+	position: absolute;
+    right: 10px;
+    padding: 10px 13px 20px;
+    margin: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background: #fff;
+    width: 25px;
+    height: 40px;
+    text-align: center;
+    font-size: 46px;
+    color: gray;
+    font-family: -webkit-body;
+	top: 110px;
+}
+
+
 #content #content-2 #list-dt{
 	list-style-type: none;
 }
@@ -312,6 +365,10 @@ body{
 	text-align: center;
 	color: #5F5F5F;
 	padding-left:20px;
+	margin: 15px auto;
+}
+#content #content-2 #list-dt li #h4{
+   float: left;
 }
 #content #content-2 #list-dt .preorder{
 	  display: inline-block;
@@ -319,19 +376,21 @@ body{
     top: 202px;
     left: 10px;
     font-size: 11px;
-    color: #fff;
+    background-image: linear-gradient(-90deg,#ec1f1f 0%,#ff9c00 100%);
+    border-radius: 10px;
     font-weight: 600;
     background: #3fb846;
     border-radius: 2px;
     padding: 0 5px;
     height: 18px;
 	
+	
 }
 #content #content-2 #list-dt li:hover{
 	cursor:pointer;
 	color:#A0CBED;
 	transition: all ease 300ms;
-	margin: 15px auto;
+	margin: 5px auto;
 }
 #content #content-2 #list-dt li a{
     width: 300px;
@@ -340,18 +399,800 @@ body{
     margin: 175px auto 3px;
 
 }
-#content .product-cat{
+#content #content-3{
 	width:1200px;
-	height:350px;
+	height:680px;
+	background:yellow;
+	float:left;
+	margin: 10px 0px;
+	margin-bottom:60px;
+}
+#content #content-3 #content-32{
+	width:1200px;
+    height:390px;
+    background: red;
+	float:left;
+}
+#content #content-3 #content-32 #header-3{
+	width:1200px;
+	height:50px;
+	background:white;
+	float:left;
+	border-bottom: solid 1px gray;
+}
+#content #content-3 #content-32 #header-3 #dtnbn{
+	width:300px;
+	height:30px;
+	background: white;
+	float: left;
+	text-align: center;
+	margin:20px 0;
+	
+}
+#content #content-3 #content-32 #header-3 #menu-3{
+	width:850px;
+	height:48px;
+	background: white;
+	float: right;
+}
+#content #content-3 #content-32 #header-3 #menu-3 #list_3{
+	list-style-type:none;
+}
+#content #content-3 #content-32 #header-3 #menu-3 #list_3 li{
+	display:inline;
+	float:left;
+	line-height:30px;
+	padding: 0 20px;
+	text-align:center;
+	color:#1883D7;
+	padding-top:10px;
+}
+#content #content-3 #content-32 #header-3 #menu-3 #list_3 li:hover{
+	cursor:pointer;
+	text-decoration:underline;
+}
+#content #content-3 #content-32 #sanpham{
+	width:1200px;
+	height:340px;
+	background: white;
+	float:left;
+}
+#content #content-3 #content-32 #sanpham #sanpham1{
+	height:315px;
+	width:480px;
+	overflow: hidden;
+	float:left;
+	position:relative;
+	border-right:solid 1px gray;
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham1 img{
+    width: 480px;
+    height: 222px;
+    margin: 0 0 14px;
+}
+#content #content-3 #content-32 #sanpham #sanpham1 label.dattruoc{
+    padding-left: 0px;
+    padding-right: 10px;
+    position: absolute;
+    top: 230px;
+    left: 345px;
+    padding: 5px 5px;
+    color: #FFF;
+    background: pink;
+}
+#content #content-3 #content-32 #sanpham #sanpham1 h5{
+	font-size: 17px;
+	width: 240px;
+	margin-top: 18px;
+	color:gray;
+	text-decoration:none;
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham1 h5:hover{
+		color: #1883D7;
+		
+}
+#content #content-3 #content-32 #sanpham #sanpham1 p.gia{
+	font-size: 18px;
+    width: 240px;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham2{
+    height: 323px;
+    width: 239px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 17px;
+	border-right:solid 1px gray;
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham2 img{
+    width: 180px;
+    height: 180px;
+    margin: 19px 32px -5px;
+	
+	
+}
+
+#content #content-3 #content-32 #sanpham #sanpham2 img:hover{
+	cursor:pointer;
+	transition: all ease 200ms;
+	margin: 5px 0;
+}
+
+
+
+#content #content-3 #content-32 #sanpham #sanpham2 label.tragop{
+    padding-left: 0px;
+    padding-right: 10px;
+    position: absolute;
+    top: 171px;
+    left: 14px;
+    padding: 5px 5px;
+    color: #FFF;
+    background: orange;
+}
+#content #content-3 #content-32 #sanpham #sanpham2 h6{
+	font-size: 14px;
+	width: 240px;
+	margin-top: 18px;
+	color:gray;
+	
+	text-transform:none;
+	margin-left:4px;
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham2 h6:hover{
+		color: #1883D7;
+		cursor:pointer;
+		
+}
+#content #content-3 #content-32 #sanpham #sanpham2 p.gia{
+	font-size: 18px;
+    width: 240px;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+	margin-left:15px;
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham3{
+    height: 323px;
+    width: 239px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 17px;
+	border-right:solid 1px gray;
+	
+
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham3 img{
+    width: 180px;
+    height: 180px;
+    margin: 10px auto;
+   margin-left:20px;
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham3 img:hover{
+	cursor:pointer;
+	transition: all ease 200ms;
+	margin: 5px auto;
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham3 label.dattruoc2{
+    padding-left: 0px;
+    padding-right: 10px;
+    position: absolute;
+    top: 171px;
+    left: 14px;
+    padding: 5px 5px;
+    color: #FFF;
+    background: pink;
+}
+#content #content-3 #content-32 #sanpham #sanpham3 h6{
+	font-size: 14px;
+	width: 240px;
+	margin-top: 18px;
+	color:gray;
+	
+	text-transform:none;
+	margin-left:4px;
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham3 h6:hover{
+		color: #1883D7;
+		cursor:pointer;
+}
+#content #content-3 #content-32 #sanpham #sanpham3 p.gia{
+	font-size: 18px;
+    width: 240px;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+	margin-left:15px;
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham4{
+    height: 323px;
+    width: 239px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 17px;
+	
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham4 img{
+    width: 180px;
+    height: 180px;
+    margin: 19px 32px -5px;
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham4 img:hover{
+	cursor:pointer;
+	transition: all ease 100ms;
+	margin: 5px 0;
+}
+#content #content-3 #content-32 #sanpham #sanpham4 label.tragop2{
+    padding-left: 0px;
+    padding-right: 10px;
+    position: absolute;
+    top: 171px;
+    left: 14px;
+    padding: 5px 5px;
+    color: #FFF;
+    background: pink;
+}
+#content #content-3 #content-32 #sanpham #sanpham4 h6{
+	font-size: 14px;
+	width: 240px;
+	margin-top: 18px;
+	color:gray;
+	
+	text-transform:none;
+	margin-left:15px;
+	
+}
+#content #content-3 #content-32 #sanpham #sanpham4 h6:hover{
+		color: #1883D7;
+		cursor:pointer;
+}
+#content #content-3 #content-32 #sanpham #sanpham4 p.gia{
+	font-size: 18px;
+    width: 240px;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+	margin-left:15px;
+	
+}
+#content #content-3 #content-33{
+	width:1200px;
+    height:340px;
+    background: red;
+	float:left;
+	border-top: solid 1px gray;
+}
+#content #content-3 #content-33 #sanphamhang2{
+	width:1200px;
+	height:340px;
+	background: white;
+	float:left;
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham5{
+	height:315px;
+	width:480px;
+	overflow: hidden;
+	float:left;
+	position:relative;
+	border-right:solid 1px gray;
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham5 img{
+    width: 480px;
+    height: 222px;
+    margin: 0 0 14px;
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham5 label.tragop3{
+    padding-left: 0px;
+    padding-right: 10px;
+    position: absolute;
+    top: 230px;
+    left: 345px;
+    padding: 5px 5px;
+    color: #FFF;
+    background: pink;
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham5 h5{
+	font-size: 17px;
+	width: 240px;
+	margin-top: 18px;
+	color:gray;
+	text-decoration:none;
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham5 h5:hover{
+		color: #1883D7;
+		
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham5 p.gia{
+	font-size: 18px;
+    width: 240px;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham6{
+    height: 323px;
+    width: 239px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 17px;
+	border-right:solid 1px gray;
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham6 img{
+    width: 180px;
+    height: 180px;
+    margin: 19px 32px -5px;
+	
+	
+}
+
+#content #content-3 #content-33 #sanphamhang2 #sanpham6 img:hover{
+	cursor:pointer;
+	transition: all ease 200ms;
+	margin: 5px 0;
+}
+
+
+
+#content #content-3 #content-33 #sanphamhang2 #sanpham6 label.tragop4{
+    padding-left: 0px;
+    padding-right: 10px;
+    position: absolute;
+    top: 171px;
+    left: 14px;
+    padding: 5px 5px;
+    color: #FFF;
+    background: orange;
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham6 h6{
+	font-size: 14px;
+	width: 240px;
+	margin-top: 18px;
+	color:gray;
+	
+	text-transform:none;
+	margin-left:4px;
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham6 h6:hover{
+		color: #1883D7;
+		cursor:pointer;
+		
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham6 p.gia{
+	font-size: 18px;
+    width: 240px;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+	margin-left:15px;
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham7{
+    height: 323px;
+    width: 239px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 17px;
+	border-right:solid 1px gray;
+	
+
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham7 img{
+    width: 180px;
+    height: 180px;
+    margin: 10px auto;
+   margin-left:20px;
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham7 img:hover{
+	cursor:pointer;
+	transition: all ease 200ms;
+	margin: 5px auto;
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham7 label.tragop5{
+    padding-left: 0px;
+    padding-right: 10px;
+    position: absolute;
+    top: 171px;
+    left: 14px;
+    padding: 5px 5px;
+    color: #FFF;
+    background: pink;
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham7 h6{
+	font-size: 14px;
+	width: 240px;
+	margin-top: 18px;
+	color:gray;
+	
+	text-transform:none;
+	margin-left:4px;
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham7 h6:hover{
+		color: #1883D7;
+		cursor:pointer;
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham7 p.gia{
+	font-size: 18px;
+    width: 240px;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+	margin-left:15px;
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham8{
+    height: 323px;
+    width: 239px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 17px;
+	
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham8 img{
+    width: 180px;
+    height: 180px;
+    margin: 19px 32px -5px;
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham8 img:hover{
+	cursor:pointer;
+	transition: all ease 100ms;
+	margin: 5px 0;
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham8 label.giam{
+    padding-left: 0px;
+    padding-right: 10px;
+    position: absolute;
+    top: 171px;
+    left: 14px;
+    padding: 5px 5px;
+    color: #FFF;
+    background: pink;
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham8 h6{
+	font-size: 14px;
+	width: 240px;
+	margin-top: 18px;
+	color:gray;
+	
+	text-transform:none;
+	margin-left:15px;
+	
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham8 h6:hover{
+		color: #1883D7;
+		cursor:pointer;
+}
+#content #content-3 #content-33 #sanphamhang2 #sanpham8 p.gia{
+	font-size: 18px;
+    width: 240px;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+	margin-left:15px;
+	
+}
+
+#content #content-4{
+	width:1200px;
+	height:390px;
 	background:white;
 	float:left;
 	margin: 10px 0px;
+	margin-bottom:20px;
 }
+#content #content-4 #content-34{
+	width:1200px;
+    height:390px;
+    background: white;
+	float:left;
+}
+#content #content-4 #content-34 #header-4{
+	width:1200px;
+	height:50px;
+	background:white;
+	float:left;
+	border-bottom: solid 1px gray;
+}
+#content #content-4 #content-34 #header-4 #table{
+	width:360px;
+	height:30px;
+	background: white;
+	float: left;
+	text-align: center;
+	margin:20px 0;
+	
+}
+#content #content-4 #content-34 #header-4 #menu-4{
+	width:830px;
+	height:48px;
+	background: white;
+	float: right;
+}
+#content #content-4 #content-34 #header-4 #menu-4 #list_4{
+	list-style-type:none;
+}
+#content #content-4 #content-34 #header-4 #menu-4 #list_4 li{
+	display:inline;
+	float:left;
+	line-height:30px;
+	padding: 0 20px;
+	text-align:center;
+	color:#1883D7;
+	padding-top:10px;
+}
+#content #content-4 #content-34 #header-4 #menu-4 #list_4 li:hover{
+	cursor:pointer;
+	text-decoration:underline;
+}
+#content #content-4 #content-34 #sanphamhang3{
+	width:1200px;
+	height:340px;
+	background: white;
+	float:left;
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham9{
+	height:340px;
+	width:480px;
+	overflow: hidden;
+	float:left;
+	position:relative;
+	border-right:solid 1px gray;
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham9 img{
+    width: 480px;
+    height: 222px;
+    margin: 0 0 14px;
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham9 label.tragop6{
+    padding-left: 0px;
+    padding-right: 10px;
+    position: absolute;
+    top: 230px;
+    left: 345px;
+    padding: 5px 5px;
+    color: #FFF;
+    background: pink;
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham9 h5{
+	font-size: 17px;
+	width: 240px;
+	margin-top: 18px;
+	color:gray;
+	text-decoration:none;
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham9 h5:hover{
+		color: #1883D7;
+		
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham9 p.gia{
+	font-size: 18px;
+    width: 240px;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham10{
+    height: 323px;
+    width: 239px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 17px;
+	border-right:solid 1px gray;
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham10 img{
+    width: 180px;
+    height: 180px;
+    margin: 19px 32px -5px;
+	
+	
+}
+
+#content #content-4 #content-34 #sanphamhang3 #sanpham10 img:hover{
+	cursor:pointer;
+	transition: all ease 200ms;
+	margin: 5px 0;
+}
+
+
+
+#content #content-4 #content-34 #sanphamhang3 #sanpham10 label.tragop7{
+    padding-left: 0px;
+    padding-right: 10px;
+    position: absolute;
+    top: 171px;
+    left: 14px;
+    padding: 5px 5px;
+    color: #FFF;
+    background: orange;
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham10 h6{
+	font-size: 14px;
+	width: 240px;
+	margin-top: 18px;
+	color:gray;
+	
+	text-transform:none;
+	margin-left:4px;
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham10 h6:hover{
+		color: #1883D7;
+		cursor:pointer;
+		
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham10 p.gia{
+	font-size: 18px;
+    width: 240px;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+	margin-left:15px;
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham11{
+    height: 323px;
+    width: 239px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 17px;
+	border-right:solid 1px gray;
+	
+
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham11 img{
+    width: 180px;
+    height: 180px;
+    margin: 10px auto;
+   margin-left:20px;
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham11 img:hover{
+	cursor:pointer;
+	transition: all ease 200ms;
+	margin: 5px auto;
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham11 label.giam2{
+    padding-left: 0px;
+    padding-right: 10px;
+    position: absolute;
+    top: 171px;
+    left: 14px;
+    padding: 5px 5px;
+    color: #FFF;
+    background: pink;
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham11 h6{
+	font-size: 14px;
+	width: 240px;
+	margin-top: 18px;
+	color:gray;
+	
+	text-transform:none;
+	margin-left:4px;
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham11 h6:hover{
+		color: #1883D7;
+		cursor:pointer;
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham11 p.gia{
+	font-size: 18px;
+    width: 240px;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+	margin-left:15px;
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham12{
+    height: 323px;
+    width: 239px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 17px;
+	
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham12 img{
+    width: 180px;
+    height: 180px;
+    margin: 19px 32px -5px;
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham12 img:hover{
+	cursor:pointer;
+	transition: all ease 100ms;
+	margin: 5px 0;
+}
+
+#content #content-4 #content-34 #sanphamhang3 #sanpham12 h6{
+	font-size: 14px;
+	width: 240px;
+	margin-top: 18px;
+	color:gray;
+	
+	text-transform:none;
+	margin-left:15px;
+	
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham12 h6:hover{
+		color: #1883D7;
+		cursor:pointer;
+}
+#content #content-4 #content-34 #sanphamhang3 #sanpham12 p.gia{
+	font-size: 18px;
+    width: 240px;
+    margin-top: 8px;
+    color: red;
+    font-weight: bold;
+	margin-left:15px;
+	
+}
+
+
+
+
+
+
+
+
+
 #content #thu{
 	width:1200px;
 	height:350px;
 	background:cyan;
 	float:left;
+	margin-bottom:10px;
+
 }
 #content #thu #dau{
 	width:1200px;
@@ -396,6 +1237,7 @@ body{
 #content #thu #dau #menu #list_1 li:hover{
 	cursor:pointer;
 	text-decoration:underline;
+
 }
 
 #content #thu #ô{
@@ -418,10 +1260,13 @@ body{
 	text-align: center;
 	color: #0E4D7D;
 	padding-left:20px;
+	margin: 15px auto;
 }
 #content #ô #list_2 li:hover{
 	cursor:pointer;
 	color:#1883D7;
+	transition: all ease 300ms;
+	margin: 5px auto;
 }
 #content #ô #list_2 li i{
 	width:300px;
@@ -464,22 +1309,161 @@ body{
 
 
 
-#content #promotion{
+#content #km{
 	width:1200px;
-	height:150px;
-	background: blue;
+	height:200px;
+	background: white;
 	float: left;
 	margin: 10px 0px;
+	margin-bottom: 20px;
 }
-#footer{ width:100%; height: 150px; background:white; float:left;}
-#footer .col{
+#content #km #thu2{
+	width:1200px;
+	height:50px;
+	background:white;
+	float:left;
+	
+}
+#content #km #ccc{
+	width:350px;
+    height:50px;
+	background: white;
+	float: left;
+	text-align:center;
+	font-size:16px;
+	text-transform:uppercase;
+	line-height: 60px;
+	
+	
+}
+#content #km #content-4{
+	width:1200px;
+	height:150px;
+	background: white;
+	float: left;
+	
+}	
+	
+ #content #km #content-4 img{
+    width: 380px;
+    height: 145px;
+    padding: 0px 10px;
+    float: left;
+	
+ }	 
+ #content #km #content-4 img:hover{
+ cursor:pointer;
+ }
+  
+#footer{
+	width:100%; height: 250px; background:white; float:left;
+	}
+
+#footer #content-5{
+	width:1200px;
+	height:200px;
+	background:white;
+	float:left
+	
+}	
+#footer #content-5 #list_5{
 	width:280px;
-	height: 110px;
-	background: pink;
+	height: 170px;
+	background: white;
 	float: left;
 	margin:10px;
-}
+}	
+#footer #content-5 #list_5 #danhsach2{
+	list-style: none;
 
+}
+#footer #content-5 #list_5 #danhsach2 li{
+	color:#1883D7;
+	line-height:25px;
+	padding-top:8px;
+
+}
+#footer #content-5 #list_5 #danhsach2 li:hover{
+	cursor:pointer;
+	color:gray;
+}
+#footer #content-5 #list_6{
+	width:280px;
+	height: 170px;
+	background: white;
+	float: left;
+	margin:10px;
+}	
+#footer #content-5 #list_6 #danhsach3{
+	list-style: none;
+
+}
+#footer #content-5 #list_6 #danhsach3 li{
+	color:#1883D7;
+	line-height:25px;
+	padding-top:8px;
+
+}
+#footer #content-5 #list_6 #danhsach3 li:hover{
+	cursor:pointer;
+	color:gray;
+}	
+	
+#footer #content-5 #list_7{
+	width:280px;
+	height: 170px;
+	background: white;
+	float: left;
+	margin:10px;
+}	
+#footer #content-5 #list_7 #danhsach4{
+	list-style: none;
+
+}
+#footer #content-5 #list_7 #danhsach4 li{
+	color:black;
+	line-height:25px;
+	padding-top:8px;
+
+}
+#footer #content-5 #list_7 #danhsach4 li:hover{
+	cursor:pointer;
+	color:gray;
+}	
+#footer #content-5 #list_7 #danhsach4 img{
+    width:123px;
+    height:43px;
+} 	
+	#footer #content-5 #list_7 #danhsach4 img:hover{
+	  cursor:pointer;
+	}
+#footer #content-5 #list_8{
+	width:280px;
+	height: 170px;
+	background: white;
+	float: left;
+	margin:10px;	
+}
+#footer #content-5 #list_8 img{
+     width: 166px;
+    height: 87px;
+} 		
+	#footer #content-5 #list_8 img:hover{
+		cursor:pointer;
+	}
+	
+#footer #cuoi{
+	width:100%;
+	height: 50px;
+	background: #F8F8F8;
+	float: left;
+
+}
+#footer #cuoi h6{
+	text-align:center;
+	font-size:11px;
+	color:gray;
+}
 
 
 
