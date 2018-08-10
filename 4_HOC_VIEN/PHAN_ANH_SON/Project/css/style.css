@@ -275,6 +275,32 @@ a{
 	position: relative;
 }
 
+	
+	#content #hang{
+		width: 1200px;
+height: 80px;
+margin: 10px 0 10px 0;
+	}
+
+	#content #hang table{
+		width: 1200px;
+height: auto;
+margin: 0 auto;
+padding: 0;
+	}
+
+	#content #hang table td{
+		border: 1px solid #D6D6D6;
+width: 149px;
+height: 40px;
+	}
+
+	 #content #hang table td img{
+	max-height: 25px;
+
+	}
+
+
 	#content #line-1{
 		width: 1200px;
 		float: left;
@@ -536,7 +562,7 @@ a{
 			font-size: 14px;
 			color: #333;
 			font-weight: 600px;
-			padding: 10px 0 10px 10px;
+			padding: 15px 0 10px 10px;
 			text-transform: uppercase;
 			line-height: 18px;
 		}
