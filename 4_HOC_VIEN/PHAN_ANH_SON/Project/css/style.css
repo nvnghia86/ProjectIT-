@@ -275,6 +275,32 @@ a{
 	position: relative;
 }
 
+	
+	#content #hang{
+		width: 1200px;
+height: 80px;
+margin: 10px 0 10px 0;
+	}
+
+	#content #hang table{
+		width: 1200px;
+height: auto;
+margin: 0 auto;
+padding: 0;
+	}
+
+	#content #hang table td{
+		border: 1px solid #D6D6D6;
+width: 149px;
+height: 40px;
+	}
+
+	 #content #hang table td img{
+	max-height: 25px;
+
+	}
+
+
 	#content #line-1{
 		width: 1200px;
 		float: left;
@@ -536,7 +562,7 @@ a{
 			font-size: 14px;
 			color: #333;
 			font-weight: 600px;
-			padding: 10px 0 10px 10px;
+			padding: 15px 0 10px 10px;
 			text-transform: uppercase;
 			line-height: 18px;
 		}
@@ -929,61 +955,66 @@ a{
 			width: 14px;
 			height: 19px;
 			background: url(../images/icondesktop@1x.png) no-repeat;
-			background-position-x: 0%;
+			background-position-x: 4%;
 			background-position-y: 35%;
 			position: absolute;
 			top: 11px;
-			right: 271px;
+			right: 198px;
 			float: left;
 		}
 
 		#footer .col #dmx{
-			width: 222px;
-			height: 39px;
+			width: 101px;
+			height: 42px;
 			background: url(../images/logosite2018@2x.png) no-repeat;
 			background-position-x: 26%;
 			background-position-y: 43%;
 			position: absolute;
-			top: 58px;
-			right: 75px;
+			top: 52px;
+			right: 189px;
 			float: left;
+			background-size: 463px;
 		}
 
 		#footer .col #bhx{
-			width: 222px;
-			height: 39px;
+			width: 98px;
+			height: 42px;
 			background: url(../images/logosite2018@2x.png) no-repeat;
 			background-position-x: 53%;
 			background-position-y: 43%;
 			position: absolute;
-			top: 96px;
-			right: 75px;
+			top: 76px;
+			right: 189px;
 			float: left;
+			background-size: 463px;
 		}
 
 		#footer .col #vv{
-			width: 150px;
-			height: 39px;
+			width: 71px;
+			height: 42px;
 			background: url(../images/logosite2018@2x.png) no-repeat;
-			background-position-x: 74%;
+			background-position-x: 75%;
 			background-position-y: 43%;
 			position: absolute;
-			top: 137px;
-			right: 142px;
+			top: 102px;
+			right: 214px;
 			float: left;
+			background-size: 463px;
 		}
 
 		#footer .col #ta{
-			width: 208px;
-			height: 39px;
+			width: 100px;
+			height: 42px;
 			background: url(../images/logosite2018@2x.png) no-repeat;
 			background-position-x: 99%;
-			background-position-y: 43%;
+			background-position-y: 109%;
 			position: absolute;
-			top: 176px;
-			right: 80px;
+			top: 111px;
+			right: 189px;
 			float: left;
+			background-size: 463px;
 		}
+
 
 
 
