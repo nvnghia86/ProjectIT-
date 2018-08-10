@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tablet TGDD</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/tablet.css">
+</head>
+
+<body>
+    <div id="header">
+        <div id="task" class="wrapper">
+            <div id="logo"><a href="index.html"><img src="icon/logo.png"></a></div>
+            <div id="search">
+                <input type="text" placeholder="Bạn tìm gì ...">
+            </div>
+            <div id="nav">
+                <ul id="list">
+                    <li><a href="dienthoai.html">
+                        <i class="dt"></i> <a href="dienthoai.html">điện thoại</a></a>
+                    </li>
+                    <li style="background-color: white;>
+                        <a href="tablet.html"><i class="tb"></i><a href="tablet.html">tablet</a></a>
+                    </li>
+                    <li>
+                        <a href="laptop.html"><i class="lt"></i><a href="laptop.html">laptop</a></a>
+                    </li>
+                    <li>
+                        <a href="phukien.html"><i class="pk"></i><a href="phukien.html">phụ kiện</a></a>
+                    </li>
+                    <li>
+                        <a href="cugiare.html"><i class="cu"></i><a href="cugiare.html">cũ giá rẻ</a></a>
+                    </li>
+                    <li>
+                        <a href="khuyenmai.html"><i class="km"></i><a href="kuyenmai.html">khuyến mãi</a></a>
+                    </li>
+                    <li>
+                        <a href="congnghe.html"><i class="cn"></i><a href="congnghe.html">công nghệ</a></a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="hoidap.html"><i class="hd"></i><a href="hoidap.html">hỏi đáp</a></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div id="banner" class="wrapper">
+        <div id="slide">
+            <script type="text/javascript">
+            var manganh = [];
+            manganh[0] = "images/tablet/slide/1.png";
+            manganh[1] = "images/tablet/slide/2.png";
+            manganh[2] = "images/tablet/slide/3.png";
+            manganh[3] = "images/tablet/slide/4.png";
+            manganh[4] = "images/tablet/slide/5.png";
+            manganh[5] = "images/tablet/slide/6.png";
+            var dem = 0;
+            var delay;
+
+            function Frist() {
+                if (dem <= manganh.length)(dem = 0)
+                document.images["anh"].src = manganh[dem];
+
+            }
+
+            function next() {
+                dem++;
+                document.images["anh"].src = manganh[dem];
+                if (dem == manganh.length - 1)
+                    dem = -1
+            }
+
+            function pre() {
+                dem--;
+                document.images["anh"].src = manganh[dem];
+                if (dem == 0)
+                    dem = 4
+            }
+
+            function auto() {
+                dem++;
+                document.images["anh"].src = manganh[dem];
+                if (dem == manganh.length - 1)
+                    dem = -1
+                delay = setTimeout("auto()", 3000)
+            }
+
+            function dung() {
+                clearTimeout(delay);
+            }
+
+
+            window.onload = function() {
+                delay = setTimeout("auto()", 3000)
+            }
+            </script>
+            <img src="images/tablet/slide/1.png" id="anh" />
+        </div>
+        <div id="km">
+            <a href="#"><img src="images/dienthoai/ads.png"></a>
+        </div>
+        <div id="km_2">
+            <a href="#"><img src="images/dienthoai/ads_2.png"></a>
+        </div>
+    </div>
+    <div id="content" class="wrapper_2">
+        <div id="logo">
+            <table class="wrapper_2">
+                <tr>
+              
+                        <td><a href="#"><img src="images/dienthoai/logo/1.jpg"></a></td>
+                        <td><a href="#"><img src="images/dienthoai/logo/2.jpg"></a></td>
+                        <td><a href="#"><img src="images/dienthoai/logo/3.jpg"></a></td>
+                        <td><a href="#"><img src="images/dienthoai/logo/4.jpg"></a></td>
+                        <td><a href="#"><img src="images/dienthoai/logo/5.jpg"></a></td>
+                        <td><a href="#"><img src="images/dienthoai/logo/6.jpg"></a></td>
+                        
+                    </th>
+                </tr>
+            </table>
+
+    </div>
+    </div>
+        <div id="filter" class="wrapper_2">
+            <div id="text">Chọn mức giá:
+            </div>
+            <div id="nav">
+                <ul>
+                    <li><a href="#">Dưới 3 triệu</a></li>
+                    <li><a href="#">Từ 3 - 10 triệu</a></li>
+                    <li><a href="#">Trên 10 triệu</a></li>
+                    
+                    
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" name="moi">Mới</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <input type="checkbox" name="tragop">Trả Góp 0%</a>
+                    </li>
+                    <li><a href="#">Tính năng</a></li>
+                    <li><a href="#" style="margin-left: 375px;">Sắp xếp </a></li>
+                </ul>
+            </div> <br>
+            <h3 style="text-transform: uppercase; font-size: 16px; margin: 0px 0px 10px 0px;">Điện thoại nổi bật nhất</h3>
+        </div>
+        <div id="product" class="wrapper_2">
+            <div id="pro_1">
+                 <div id="pro_1_1">
+                    <div class="khuyenmai">GIẢM 1.000.000đ</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/1.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Wifi Cellular 128GB (2018)</a></div>
+                    <div class="price">14.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 2 k.mãi khác</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp %</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/2.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Mini 4 Wifi 128GB</a></div>
+                    <div class="price">9.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Cơ hội trúng 38 xe Wave Alpha khi trả góp Home Credit</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class=""></div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/3.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Wifi 32GB (2017)</a></div>
+                    <div class="price">7.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Cơ hội trúng 38 xe Wave Alpha khi trả góp Home Credit</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp 0%</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/4.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Pro 10.5 inch 64GB (2017)</a></div>
+                    <div class="price">19.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 1 k.mãi khác</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp 0%</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/5.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Pro 10.5 inch 64GB (2017)</a></div>
+                    <div class="price">16.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 1 k,mãi khác</div>
+                </div>
+
+        </div>
+        
+         <div id="pro_1">
+                 <div id="pro_1_1">
+                    <div class="khuyenmai">GIẢM 1.000.000đ</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/6.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Wifi Cellular 128GB (2018)</a></div>
+                    <div class="price">14.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 2 k.mãi khác</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp %</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/7.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Mini 4 Wifi 128GB</a></div>
+                    <div class="price">9.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Cơ hội trúng 38 xe Wave Alpha khi trả góp Home Credit</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class=""></div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/8.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Wifi 32GB (2017)</a></div>
+                    <div class="price">7.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Cơ hội trúng 38 xe Wave Alpha khi trả góp Home Credit</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp 0%</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/9.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Pro 10.5 inch 64GB (2017)</a></div>
+                    <div class="price">19.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 1 k.mãi khác</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp 0%</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/10.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Pro 10.5 inch 64GB (2017)</a></div>
+                    <div class="price">16.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 1 k,mãi khác</div>
+                </div>
+
+        </div>
+         <div id="pro_1">
+                 <div id="pro_1_1">
+                    <div class="khuyenmai">GIẢM 1.000.000đ</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/11.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Wifi Cellular 128GB (2018)</a></div>
+                    <div class="price">14.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 2 k.mãi khác</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp %</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/12.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Mini 4 Wifi 128GB</a></div>
+                    <div class="price">9.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Cơ hội trúng 38 xe Wave Alpha khi trả góp Home Credit</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class=""></div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/13.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Wifi 32GB (2017)</a></div>
+                    <div class="price">7.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Cơ hội trúng 38 xe Wave Alpha khi trả góp Home Credit</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp 0%</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/14.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Pro 10.5 inch 64GB (2017)</a></div>
+                    <div class="price">19.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 1 k.mãi khác</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp 0%</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/15.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Pro 10.5 inch 64GB (2017)</a></div>
+                    <div class="price">16.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 1 k,mãi khác</div>
+                </div>
+
+        </div>
+         <div id="pro_1">
+                 <div id="pro_1_1">
+                    <div class="khuyenmai">GIẢM 1.000.000đ</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/16.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Wifi Cellular 128GB (2018)</a></div>
+                    <div class="price">14.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 2 k.mãi khác</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp %</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/17.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Mini 4 Wifi 128GB</a></div>
+                    <div class="price">9.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Cơ hội trúng 38 xe Wave Alpha khi trả góp Home Credit</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class=""></div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/18.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Wifi 32GB (2017)</a></div>
+                    <div class="price">7.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Cơ hội trúng 38 xe Wave Alpha khi trả góp Home Credit</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp 0%</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/19.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Pro 10.5 inch 64GB (2017)</a></div>
+                    <div class="price">19.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 1 k.mãi khác</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp 0%</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/20.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Pro 10.5 inch 64GB (2017)</a></div>
+                    <div class="price">16.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 1 k,mãi khác</div>
+                </div>
+
+        </div>
+         <div id="pro_1">
+                 <div id="pro_1_1">
+                    <div class="khuyenmai">GIẢM 1.000.000đ</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/21.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Wifi Cellular 128GB (2018)</a></div>
+                    <div class="price">14.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 2 k.mãi khác</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp %</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/22.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Mini 4 Wifi 128GB</a></div>
+                    <div class="price">9.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Cơ hội trúng 38 xe Wave Alpha khi trả góp Home Credit</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class=""></div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/23.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Wifi 32GB (2017)</a></div>
+                    <div class="price">7.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Cơ hội trúng 38 xe Wave Alpha khi trả góp Home Credit</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp 0%</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/24.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Pro 10.5 inch 64GB (2017)</a></div>
+                    <div class="price">19.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 1 k.mãi khác</div>
+                </div>
+                <div id="pro_1_1">
+                    <div class="tragop">Trả góp 0%</div>
+                    <div class="img"><a href="#"><img src="images/tablet/product/25.jpg"></a></div>
+                    <div class="name"> <a href="#">iPad Pro 10.5 inch 64GB (2017)</a></div>
+                    <div class="price">16.990.000₫</div>
+                    <div class="vote">
+                        <div class="vote-star"><img src="icon/5sao.png"></div>
+                        <div class="voted">21 Đánh giá</div>
+                    </div>
+                    <div class="km"> Giảm 500.000đ khi thanh toán online bằng thẻ Mastercard và 1 k,mãi khác</div>
+                </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+                <div id="nav_bot">
+                    <ul>
+                        <li><a href="#">Dưới 2 triệu</a></li>
+                        <li><a href="#">Từ 2 - 4 triệu</a></li>
+                        <li><a href="#">Từ 4 - 7 triệu</a></li>
+                        <li><a href="#">iPad</a></li>
+                        <li><a href="#">Samsung</a></li>
+                        <li><a href="#">OPPO</a></li>
+                        <li><a href="#">Nokia</a></li>
+                        <li><a href="#">Bảo mật vân tay</a></li>
+                        <li><a href="#">Màn hình tràn viền</a></li>
+                        <li><a href="#">Sạc pin cho thiết bị khác</a></li>
+                        <li><a href="#">Hỗ trợ OTG</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div id="nav_bot_2">
+                    <div class="line_1">
+                        <div class="img"><img src="icon/navbot1.png"></div>
+                        <div class="text">Giao hàng hoả tốc trong 1 giờ</div>
+                    </div>
+                    <div class="line_1">
+                        <div class="img"><img src="icon/navbot2.png"></div>
+                        <div class="text">Thanh toán linh hoạt: tiền mặt, visa, trả góp</div>
+                    </div>
+                    <div class="line_1">
+                        <div class="img"><img src="icon/navbot3.png"></div>
+                        <div class="text">Trải nghiệm sản phẩm tại nhà</div>
+                    </div>
+                    <div class="line_1">
+                        <div class="img"><img src="icon/navbot4.png"></div>
+                        <div class="text">Lỗi đổi tại nhà trong 1 ngày</div>
+                    </div>
+
+                    <div class="line_1">
+                        <div class="img"><img src="icon/navbot5.png"></div>
+                        <div class="text">Hỗ trợ suốt thời gian sử dụng. Hotline:<a href="tel:18001763" style="text-decoration: none; color: #0DB6F1;">18001763</a></div>
+                    </div>
+                </div>
+
+
+                    <div id="footer" class="wrapper">
+                    <div id="bgfooter">
+                        <div class="list_footer">
+                            <ul>
+                                <li><a href="" title="Hướng dẫn mua trả góp">Tìm hiểu về mua trả góp</a></li>
+                                <li><a href="" title="Tìm trung tâm bảo hành">Chính sách bảo hành</a></li>
+                                <li><a href="" title="Chính sách đổi trả">Chính sách đổi trả</a></li>
+                                <li><a href="" title="Giao hàng & Thanh toán">Giao hàng & Thanh toán</a></li>
+                                <li>
+                                    <a href="" title="Xem thêm">
+                                        <font style="font-weight: bold;">Xem thêm</font>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list_footer">
+                            <ul>
+                                <li><a href="">Giới thiệu công ty (mwg.vn)</a></li>
+                                <li><a href="">Tuyển dụng</a></li>
+                                <li><a href="">Gửi góp ý, khiếu nại</a></li>
+                                <li><a href="">Tìm siêu thị (1741  shop)</a></li>
+                                <li><a href="">Xem bản mobile</a></li>
+                            </ul>
+                        </div>
+                        <div class="list_footer">
+                            <ul>
+                                <li>Gọi mua hàng
+                                    <font style="font-weight: bold;">1800.1060</font> (7:30 - 22:00)</li>
+                                <li>Gọi khiếu nại
+                                    <font style="font-weight: bold;">1800.1062</font> (8:00 - 21:30)</li>
+                                <li>Gọi bảo hành
+                                    <font style="font-weight: bold;">1800.1064</font> (8:00 - 21:00)</li>
+                                <li>Hỗ trợ kỹ thuật
+                                    <font style="font-weight: bold;">1800.1763</font> (7:30 - 22:00)</li>
+                                <li><a href="#"><img src="icon/bct.png"></a></li>
+                            </ul>
+                        </div>
+                        <div class="list_footer_2">
+                            <ul>
+                                <li><a href="#"><img src="icon/fb-icon.png" width="15px">3,3tr</a>
+                                    <a href="#"><img src="icon/yt-ico.png" width="15px;">505.4k</a></li>
+                                <li style="color: #9E9E9E">Website cùng tập đoàn:</li>
+                                <br>
+                                <li>
+                                    <img src="icon/dmx-ico.png">
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="footer_bold">
+                            © 2017. Công ty cổ phần Thế Giới Di Động. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM cấp ngày 02/01/2007. GP số 22/GP-ICP-STTTT do Sở TTTT TP HCM cấp ngày 20/03/2012. Địa chỉ: 128 Trần Quang Khải, P. Tân Định, Q.1, TP.Hồ Chí Minh. Điện thoại: 18001060. Email: cskh@thegioididong.com. Chịu trách nhiệm nội dung: Huỳnh Văn Tốt. Xem chính sách sử dụng web
+                        </div>
+                    </div>
+                </div>
+                <div id="goTop">
+                    <img src="icon/gotop.png" alt="Up page">
+                    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                    $(function() {
+                        $(window).scroll(function() {
+                            if ($(this).scrollTop() > 100) $('#goTop').fadeIn();
+                            else $('#goTop').fadeOut();
+                        });
+                        $('#goTop').click(function() {
+                            $('body,html').animate({ scrollTop: 0 }, 'slow');
+                        });
+                    });
+                    </script>
+                </div>
+</body>
+</html>

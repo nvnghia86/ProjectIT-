@@ -302,21 +302,7 @@ a{
     overflow: visible;
     padding-top: 20px;
 	position:relative;
-}
 
-#content .giasoc-cuoituan:before{
-	background: url('../images/gsct.png') no-repeat center center;
-    width: 309px;
-    height: 38px;
-    position: absolute;
-    left: 50%;
-    top: -19px;
-    margin-left: -154px;
-    z-index: 9;
-	content: ' ';
-    display: block;
-	background-size: 303px;
-    
 }
 
 #content .giasoc-cuoituan .sanpham{
