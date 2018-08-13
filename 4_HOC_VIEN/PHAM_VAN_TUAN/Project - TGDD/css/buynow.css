@@ -1,0 +1,389 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: arial;
+}
+
+body {
+    background-color: #eee;
+}
+
+.wrapper {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+.wrapper-2{
+    width: 600px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#header {
+    width: 100%;
+    height: 55px;
+    background-color: #FED700;
+}
+
+#header #task {
+    width: 1200px;
+    height: 55px;
+}
+
+#header #task #logo {
+    width: 170px;
+    height: 55px;
+    float: left;
+    background-color: black;
+}
+
+#header #task #logo img {
+    width: 170px;
+    height: 55px;
+    display: inline;
+    line-height: 23px;
+    cursor: pointer;
+}
+
+#header #task #search {
+    width: px;
+    height: 55px;
+    background-color: black;
+    float: left;
+}
+
+#header #task #search input[type=text] {
+    padding: 8px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+#header #task #nav {
+    width: 780px;
+    height: 55px;
+    float: left;
+}
+
+#header #task #nav #list li {
+    display: inline;
+    width: 77px;
+    line-height: 10px;
+    text-transform: uppercase;
+    background-color: #FED700;
+    float: left;
+    height: 35px;
+    font-size: 11px;
+    padding: 10px;
+    text-align: center;
+}
+
+#header #task #nav #list li a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#header #task #nav #list li:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+#header #task #nav #list li i {
+    width: 16px;
+    height: 20px;
+    display: block;
+    margin: 2px auto 3px;
+    background-image: url('../icon/icondesktop@1x.png');
+    background-repeat: no-repeat;
+}
+
+#header #task #nav #list li i.dt {
+    background-position: -180px 0;
+    width: 28px;
+    height: 28px;
+}
+
+#header #task #nav #list li i.tb {
+    background-position: -209px 0;
+    width: 34px;
+    height: 28px;
+}
+
+#header #task #nav #list li i.lt {
+    background-position: -244px 0;
+    width: 41px;
+    height: 28px;
+}
+
+#header #task #nav #list li i.pk {
+    background-position: -285px 0;
+    width: 28px;
+    height: 28px;
+}
+
+#header #task #nav #list li i.cu {
+    background-position: -314px 0;
+    width: 35px;
+    height: 28px;
+}
+
+#header #task #nav #list li i.km {
+    background-position: -471px 0;
+    width: 28px;
+    height: 28px;
+}
+
+#header #task #nav #list li i.cn {
+    background-position: -437px 0;
+    width: 35px;
+    height: 28px;
+}
+
+#header #task #nav #list li i.hd {
+    background-position: -406px 0;
+    width: 30px;
+    height: 28px;
+}
+
+
+#content{
+    width: 600px;
+    min-height: 600px;
+    box-shadow:0px -26px 16px -1px;
+    background-color: white;
+}
+
+#back{
+    width: 600px;
+    height: 20px;
+    float: left;
+    margin:15px 0 10px 0;
+}
+#content #back a{
+    text-decoration:none;
+    color: #0284E9;
+}
+
+#content #name{
+    width: 600px;
+    height: 120px;
+    float: left;
+    background-image: url(../images/dienthoai/product/dienthoai001/bg/bg.png);
+}
+
+#content #name #phone{
+    width: 65px;
+    height: 78px;
+    position: absolute;
+    margin:20px 10px 10px 25px;
+}
+#content #name #phone img{
+    width: 65px;
+    height: 78px;
+    position: absolute;
+    cursor: pointer;
+}
+#content #name #price{
+    width: 460px;
+    height: 20px;
+    position: absolute;
+    margin:20px 10px 10px 103px;
+    cursor: pointer;
+}
+
+#content #name #color{
+    width: 165px;
+    height: 40px;
+    position: absolute;
+    margin:55px 10px 10px 103px;
+}
+
+#content #name #color select{
+    width: 165px;
+    height: 35px;
+    color: #396EF4;
+    border: none;
+    border-radius: 5px;
+}
+
+#content #info{
+    width: 600px;
+    height: 145px;
+    float: left;
+    background-color: white;
+}
+
+#content #info #gioitinh{
+    width: 500px;
+    height: 20px;
+    position: absolute;
+    margin:20px 10px 10px 30px;
+}
+#content #info #gioitinh .gioitinh-2{
+    margin-left: 20px
+}
+
+#content #hoten{
+    width: 600px;
+    height: 120px;
+    float: left;
+    margin-top: 45px;
+}
+#content #hoten #hoten-1{
+    width: 600px;
+    height: 40px;
+    float: left;
+    margin-left: 30px;
+}
+#content #hoten #hoten-1 .ten{
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+    border:1px solid #eee;
+    padding: 10px;
+}
+#content #hoten #hoten-1 .them{
+    width: 526px;
+    height: 20px;
+    border-radius: 5px;
+    border:1px solid #eee;
+    padding: 10px;
+    margin-top: 10px;
+
+}
+
+#content #thanhtoan{
+    width: 600px;
+    min-height: 100px;
+    background-color: white;
+    float: left;
+}
+
+#content #thanhtoan #line-1{
+    width: 570px;
+    height: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+#content #thanhtoan #line-2{
+    width: 570px;
+    height: 20px;
+    margin-top: 10px;
+}
+#content #thanhtoan #line-2 a{
+    text-decoration: none;
+    color: #088CE9;
+    margin-right: 25px;
+}
+#content #thanhtoan #line-2 #div1{
+    margin-top: 55px;
+    margin-left: 25px;
+}
+#content #thanhtoan #line-2 #div1 #thanhpho .thanhpho{
+    width:  225px;
+    height: 38px;
+    border-radius: 5px;
+    color: #1EA4F9;
+    margin-right: 15px;
+}
+
+#content #thanhtoan #line-2 #div1 #thanhpho .sonha{
+    width: 448px;
+    height: 20px;
+    border-radius: 5px;
+    border:1px solid #CECECE;
+    padding: 10px;
+    margin-top: 10px;
+}
+#content #thanhtoan #line-2 #div1 #check-1{
+    width: 490px;
+    height: 90px;
+    float: left;
+    margin-top: 15px;
+}
+#content #thanhtoan #line-2 #div1 #check-1 input{
+    margin-top: 10px;
+}
+
+#content #thanhtoan #line-2 #div2{
+    margin-top: 55px;
+}
+
+#content #thanhtoan #line-2 #div2{
+    margin-top: 55px;
+    margin-left: 25px;
+}
+#content #thanhtoan #line-2 #div2 #thanhpho .thanhpho{
+    width:  225px;
+    height: 38px;
+    border-radius: 5px;
+    color: #1EA4F9;
+    margin-right: 15px;
+}
+
+#content #thanhtoan #line-2 #div2 #thanhpho .sonha{
+    width: 448px;
+    height: 20px;
+    border-radius: 5px;
+    border:1px solid #CECECE;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#content #thanhtoan #line-2 #div2 #check-1{
+    width: 490px;
+    height: 90px;
+    float: left;
+    margin-top: 15px;
+}
+#content #thanhtoan #line-2 #div2 #check-1 input{
+    margin-top: 10px;
+}
+
+#content #tratien{
+    width: 600px;
+    height: 50px;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+#content #tratien #btn-thanhtoan{
+    width: 600px;
+    height: 55px;
+    float: left;
+}
+
+#content #tratien #btn-thanhtoan #btn-tt{
+    width: 255px;
+    height: 45px;
+    background-image: linear-gradient(-180deg, #f59000 2%, #fd6e1d 96%);
+    border: none;
+    border-radius: 5px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+#content #tratien #btn-thanhtoan #btn-tt2{
+    width: 255px;
+    height: 45px;
+    background-image: linear-gradient(-180deg, #288ad6 2%, #0e74c2 96%);
+    border: none;
+    border-radius: 5px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+#footer{
+    clear: both;
+    color: gray;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
