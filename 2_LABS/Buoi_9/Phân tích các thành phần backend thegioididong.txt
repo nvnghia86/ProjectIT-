@@ -1,0 +1,24 @@
+Các thành phần backend- thegioididong.com
+
+- Trang login
+- Quản trị danh mục sản phẩm
+	+ Danh sách danh mục sản phẩm: 
+			STT, Mã, Tên danh mục, Mô tả, Trạng thái
+	+ Form thêm, sửa sản phẩm:
+		> Mã: text
+		> Tên danh mục: text
+		> Mô tả: textarea
+		> Trạng thái: select
+	+ Các nút action: Thêm mới, Lưu, Xóa
+- Quản trị sản phẩm
+- Quản trị nhà cung cấp
+	+ Danh sách danh mục sản phẩm: 
+			STT,Logo, Mã NCC, Tên NCC, Trạng thái
+	+ Form thêm, sửa sản phẩm:
+		> Mã NCC: text
+		> Tên nhà cung cấp: text
+		> Điện thoại: text
+		> Logo: file
+		> Trạng thái: select
+	+ Các nút action: Thêm mới, Lưu, Xóa
+
