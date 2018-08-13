@@ -1,0 +1,61 @@
+#list_1{
+	list-style:none;
+	width:250px;
+	}
+	
+#list_1 li{
+	color:blue;
+	font-size: 14px;
+	line-height:1.5;
+	background: url('images/sprite-2.gif');
+	background-repeat:no-repeat;
+	background-position: 0 -287px!important;
+	padding-left:15px;
+}
+
+#list_1 li:hover{
+	cursor:pointer;
+	color:#1883D7;
+	text-decoration:underline;
+}
+
+#list_2{
+	line-style:none;
+	width:1200px;
+	line-height:55px;
+	}
+	
+#list_2 li{
+	width:75px;
+	display:inline;
+	text-transform:uppercase;
+	float:left;
+	font-family:tahoma;
+	font-size:11px;
+	text-align:center;
+	line-height:3;
+	background:yellow;
+	padding-top:13px;
+}
+
+#list_2 li:hover{
+	cursor:pointer;
+	background:white;
+}
+#list_2 li i{
+	width: 16px;
+    height: 25px;
+    display: block;
+    margin: 2px auto 3px;
+	background-image: url('images/icondesktop@1x.png');
+	background-repeat:no-repeat;
+}
+
+#list_2 li i.dt{
+	background-position: -189px 0;
+}
+
+#list_2 li i.tb{
+	background-position: -206px 0;
+	width:37px;
+}
