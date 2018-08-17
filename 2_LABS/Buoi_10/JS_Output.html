@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Javascript | JS Output</title>
+		<meta target="utf-8" />
+		<script>
+			function canhbao(){
+				alert('Đây là hộp thoại cảnh báo');
+			}
+			
+			function xacnhan(){
+				var ketqua = confirm('Lựa chọn của bạn là gì? (Có hoặc không)');
+				alert('Kết quả: ' + ketqua);
+			}
+			
+			function nhaplieu(){
+				var ketqua = prompt('Tên bạn là gì nhỉ?');
+				alert('Rất vui khi được làm quen với ' + ketqua);
+			}
+			
+		</script>
+		<script src="HelloJavaScript.js"></script>
+	</head>
+	<body>
+		<h1>Javascript | JS Output</h1>
+		<h2>Cửa sổ dialog</h2>
+		<button type="button" onclick="canhbao()">Hộp thoại cảnh báo - Alert</button> 
+		<button type="button" onclick="xacnhan()">Hộp thoại xác nhận - Confirm</button> 
+		<button type="button" onclick="nhaplieu()">Hộp thoại nhập - Prompt</button> 
+	</body>
+</html>
