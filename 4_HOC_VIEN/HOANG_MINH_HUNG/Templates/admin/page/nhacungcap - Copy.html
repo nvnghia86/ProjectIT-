@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>thegioididong.com | Quản trị danh mục sản phẩm</title>
+    <title>thegioididong.com | Quản trị nhà cung cấp </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -60,7 +60,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>Bùi Đức Hiếu</strong>
+                                    <strong>Hoàng Minh Hưng</strong>
                                     <span class="pull-right text-muted">
                                         <em>Yesterday</em>
                                     </span>
@@ -279,16 +279,11 @@
                             <a href="#"><i class="fa fa-dashboard fa-fw"></i> Bảng điều khiển</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị sản phẩm<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhmuc_sanpham.html">Danh mục sản phẩm</a>
-                                </li>
-								<li>
-                                    <a href="nhacungcap.html">Danh sách nhà cung cấp</a>
-                                </li>
-								<li>
-                                    <a href="quanlysanpham.html">Danh sách sản phẩm</a>
+                                    <a href="#">Quản trị danh mục sản phẩm</a>
+									<a href="#">Quản trị nhà cung cấp</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -303,7 +298,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Quản trị danh mục sản phẩm</h1>
+                    <h1 class="page-header">Quản trị nhà cung cấp</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -314,16 +309,20 @@
 						<div class="panel-heading">Chi tiết danh mục</div>
 						<div class="panel-body">
 							<div class="form-group">
-								<label>Mã:</label>
+								<label>Mã NCC:</label>
 								<input type="text" class="form-control" placeholder="Mã danh mục..."/>
 							</div>
 							<div class="form-group">
-								<label>Tên danh mục:</label>
+								<label>Tên nhà cung cấp:</label>
 								<input type="text" class="form-control" placeholder="tên danh mục..."/>
 							</div>
 							<div class="form-group">
-								<label>Mô tả:</label>
-								<textarea rows="3" class="form-control" >Mô tả...</textarea>
+								<label>Điên thoại:</label>
+								<input type="text" class="form-control" placeholder="tên danh mục..."/>
+							</div>
+							<div class="form-group">
+								<label>Logo:</label>
+								<input type="file">
 							</div>
 							<div class="form-group">
 								<label>Trạng thái:</label>
@@ -349,27 +348,64 @@
 								<thead>
 									<tr>
 										<th>STT</th>
-										<th>Mã</th>
-										<th>Tên</th>
-										<th>Mô tả</th>
+										<th> Logo</th>
+										<th>Mã NCC</th>
+										<th>Tên NCC</th>
 										<th>Trạng thái</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>1</td>
-										<td>DIENTHOAI</td>
-										<td>Điện thoại di động</td>
-										<td>Danh mục sản phẩm điện thoại động</td>
+										<td>
+										  <img src="../images/iPhone-(Apple)42-b_16.jpg" height=25px; />
+										</td>
+										<td>234</td>
+										<td>Apple</td>
+										<td>
+											<span class="label label-danger">Khóa</span>
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>
+										  <img src="../images/Samsung42-b_25.jpg" height=25px; />
+										</td>
+										<td>118</td>
+										<td>Samsung</td>
 										<td>
 											<span class="label label-success">Kích hoạt</span>
 										</td>
 									</tr>
 									<tr>
-										<td>2</td>
-										<td>LAPTOP</td>
-										<td>Latop</td>
-										<td>Danh mục sản phẩm máy tính xách tay - laptop</td>
+										<td>3</td>
+										<td>
+										  <img src="../images/OPPO42-b_23.jpg" height=25px; />
+										</td>
+										<td>543</td>
+										<td>OPPO</td>
+										<td>
+											<span class="label label-danger">Khóa</span>
+										</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>
+										  <img src="../images/Nokia42-b_21.jpg" height=25px; />
+										</td>
+										<td>213</td>
+										<td>Nokia</td>
+										<td>
+											<span class="label label-success">Kích hoạt</span>
+										</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>
+										  <img src="../images/Huawei42-b_16.jpg" height=25px; />
+										</td>
+										<td>116</td>
+										<td>Huawei</td>
 										<td>
 											<span class="label label-danger">Khóa</span>
 										</td>

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>thegioididong.com | Quản trị danh mục sản phẩm</title>
+    <title>thegioididong.com | Quản trị nhà cung cấp </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -60,7 +60,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>Bùi Đức Hiếu</strong>
+                                    <strong>Hoàng Minh Hưng</strong>
                                     <span class="pull-right text-muted">
                                         <em>Yesterday</em>
                                     </span>
@@ -279,16 +279,12 @@
                             <a href="#"><i class="fa fa-dashboard fa-fw"></i> Bảng điều khiển</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị sản phẩm<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhmuc_sanpham.html">Danh mục sản phẩm</a>
-                                </li>
-								<li>
-                                    <a href="nhacungcap.html">Danh sách nhà cung cấp</a>
-                                </li>
-								<li>
-                                    <a href="quanlysanpham.html">Danh sách sản phẩm</a>
+                                    <a href="#">Quản trị danh mục sản phẩm</a>
+									<a href="#">Quản trị nhà cung cấp</a>
+									<a href="#">Quản trị sản phẩm </a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -303,28 +299,62 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Quản trị danh mục sản phẩm</h1>
+                    <h1 class="page-header">Quản trị sản phẩm</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
-				<div class="col-lg-4 col-sm-12">
+
+				
+				<div class="col-lg-12 col-sm-12">
+					<div class="panel panel-primary  ">
+						<div class="panel-heading">Danh sách danh mục</div>
+					
+						<div class="panel-body">
+						
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                                Thêm mới
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h4 class="modal-title" id="myModalLabel">Thêm mới sản phẩm</h4>
+                                        </div>
+                                        <div class="modal-body">
+                   <div class="col-lg-12 col-sm-12">
 					<div class="panel panel-info">
-						<div class="panel-heading">Chi tiết danh mục</div>
+						
 						<div class="panel-body">
 							<div class="form-group">
 								<label>Mã:</label>
 								<input type="text" class="form-control" placeholder="Mã danh mục..."/>
 							</div>
 							<div class="form-group">
-								<label>Tên danh mục:</label>
+								<label>Tên :</label>
 								<input type="text" class="form-control" placeholder="tên danh mục..."/>
 							</div>
 							<div class="form-group">
-								<label>Mô tả:</label>
-								<textarea rows="3" class="form-control" >Mô tả...</textarea>
+                                            <label>Ảnh</label>
+                                            <input type="file">
+                                        </div>
+							<div class="form-group">
+								<label>Gía nhập :</label>
+								<input type="text" class="form-control" placeholder="Giá nhập vào..."/>
 							</div>
+							<div class="form-group">
+								<label>Gía bán :</label>
+								<input type="text" class="form-control" placeholder="Gía bán ra..."/>
+							</div>
+							<div class="form-group">
+								<label>Khuyến mãi :</label>
+								<input type="text" class="form-control" placeholder="tên danh mục..."/>
+							</div>
+							
 							<div class="form-group">
 								<label>Trạng thái:</label>
 								<select class="form-control">
@@ -332,51 +362,185 @@
 									<option>Khóa</option>
 								</select>
 							</div>
+							<div class="form-group">
+								<label>Mô tả ngắn:</label>
+								<textarea rows="3" class="form-control" >Mô tả...</textarea>
+							</div>
+							<div class="form-group">
+								<label>Mô tả dài:</label>
+								<textarea rows="3" class="form-control" >Mô tả...</textarea>
+							</div>
 						</div>
-						<div class="panel-footer">
-							<button type="button" class="btn btn-success"> Thêm mới</button>
-							<button type="button" class="btn btn-warning"> Lưu</button>
-							<button type="button" class="btn btn-danger"> Xóa</button>
-						</div>
+						
 					</div>
 				</div>
-				
-				<div class="col-lg-8 col-sm-12">
-					<div class="panel panel-primary">
-						<div class="panel-heading">Danh sách danh mục</div>
-						<div class="panel-body">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng </button>
+                                            <button type="button" class="btn btn-primary">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->
+                        
+							
+							<button type="button" class="btn btn-warning"> Lưu</button>
+							<button type="button" class="btn btn-danger"> Xóa</button>
+						
+						
 							<table class="table table-bordered table-striped">
 								<thead>
 									<tr>
 										<th>STT</th>
-										<th>Mã</th>
+										<th>Hình ảnh</th>
+										<th>Mã </th>
 										<th>Tên</th>
-										<th>Mô tả</th>
+										<th>Nha CCC</th>
+										<th>Tồn kho</th>
+										<th>Gía nhập</th>
+										<th>Gía bán</th>
+										<th>Khuyến mại</th>
 										<th>Trạng thái</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>1</td>
-										<td>DIENTHOAI</td>
-										<td>Điện thoại di động</td>
-										<td>Danh mục sản phẩm điện thoại động</td>
+										<td>
+										  <img src="../images/hu.jpg" height=50px; />
+										</td>
+										<td>234</td>
+										<td>Huawei Nova 3i</td>
+										<td>Apple</td>
+										<td>100 chiếc</td>
+										<td>5.500.000đ</td>
+										<td>6.990.000đ</td>
+										<td>giảm 500.000đ</td>
 										<td>
 											<span class="label label-success">Kích hoạt</span>
 										</td>
 									</tr>
 									<tr>
 										<td>2</td>
-										<td>LAPTOP</td>
-										<td>Latop</td>
-										<td>Danh mục sản phẩm máy tính xách tay - laptop</td>
+										<td>
+										  <img src="../images/iphone.jpg" height=50px; />
+										</td>
+										<td>254</td>
+										<td>iPhone 6s</td>
+										<td>Apple</td>
+										<td>50 chiếc</td>
+										<td>4.500.000đ</td>
+										<td>5.290.000đ</td>
+										<td>giảm 500.000đ</td>
+										<td>
+											<span class="label label-success">Kích hoạt</span>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>
+										  <img src="../images/j6.jpg" height=50px; />
+										</td>
+										<td>231</td>
+										<td>Samsung Galaxy J6</td>
+										<td>Samsung</td>
+										<td>hết hàng </td>
+										<td>4.500.000đ</td>
+										<td>5.290.000đ</td>
+										<td>trả góp 0%</td>
 										<td>
 											<span class="label label-danger">Khóa</span>
 										</td>
 									</tr>
+									<tr>
+										<td>3</td>
+										<td>
+										  <img src="../images/j8-600x600.jpg" height=50px; />
+										</td>
+										<td>234</td>
+										<td>Samsung Galaxy J8</td>
+										<td>Samsung</td>
+										<td>5 chiếc</td>
+										<td>5.500.000đ</td>
+										<td>7.990.000đ</td>
+										<td>giảm 500.000đ</td>
+										<td>
+											<span class="label label-success">Kích hoạt</span>
+										</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>
+										  <img src="../images/nokia-31-docquyen-600x600.jpg" height=50px; />
+										</td>
+										<td>645</td>
+										<td>Nokia 3.1 32GB</td>
+										<td>Nokia</td>
+										<td> hết hàng</td>
+										<td>6.500.000đ</td>
+										<td>7.290.000đ</td>
+										<td>Trả góp 0%</td>
+										<td>
+											<span class="label label-danger">Khóa</span>
+										</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>
+										  <img src="../images/oppo.jpg" height=50px; />
+										</td>
+										<td>234</td>
+										<td>OPPO F7</td>
+										<td>OPPO</td>
+										<td>100 chiếc</td>
+										<td>6.300.000đ</td>
+										<td>7.990.000đ</td>
+										<td>giảm 500.000đ</td>
+										<td>
+											<span class="label label-success">Kích hoạt</span>
+										</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>
+										  <img src="../images/x-1-600x600.jpg" height=50px; />
+										</td>
+										<td>23</td>
+										<td>OPPO Find X</td>
+										<td>OPPO</td>
+										<td>hết hàng</td>
+										<td>19.500.000đ</td>
+										<td>20.990.000đ</td>
+										<td>giảm 500.000đ</td>
+										<td>
+											<span class="label label-danger">Khóa</span>
+										</td>
+									</tr>
+									
+									<tr>
+										<td>7</td>
+										<td>
+										  <img src="../images/xi.jpg" height=50px; />
+										</td>
+										<td>238</td>
+										<td>Xiaomi Mi 8</td>
+										<td>Xiaomi</td>
+										<td>hết hàng</td>
+										<td>11.900.000đ</td>
+										<td>12.990.000đ</td>
+										<td>giảm 500.000đ</td>
+										<td>
+											<span class="label label-success">Kích hoạt</span>
+										</td>
+									</tr>
+									
 								</tbody>
 							</table>
 						</div>	
+						
 					</div>
 				</div>
 				

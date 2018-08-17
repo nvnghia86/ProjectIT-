@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>thegioididong.com | Quản trị danh mục sản phẩm</title>
+    <title>thegioididong.com | Quản trị sản phẩm</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Thegioididong.com | Quản trị hệ thống</a>
+                <a class="navbar-brand" href="index.html">Thegioididong.com | Quản trị sản phẩm</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -279,16 +279,11 @@
                             <a href="#"><i class="fa fa-dashboard fa-fw"></i> Bảng điều khiển</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị sản phẩm<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhmuc_sanpham.html">Danh mục sản phẩm</a>
-                                </li>
-								<li>
-                                    <a href="nhacungcap.html">Danh sách nhà cung cấp</a>
-                                </li>
-								<li>
-                                    <a href="quanlysanpham.html">Danh sách sản phẩm</a>
+                                    <a href="danhmuc_sanpham.html">Quản trị danh mục sản phẩm</a>
+									<a href="quantrisp.html">Quản trị sản phẩm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -303,13 +298,13 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Quản trị danh mục sản phẩm</h1>
+                    <h1 class="page-header">Quản trị sản phẩm</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
-				<div class="col-lg-4 col-sm-12">
+				<div class="col-lg-3 col-sm-12">
 					<div class="panel panel-info">
 						<div class="panel-heading">Chi tiết danh mục</div>
 						<div class="panel-body">
@@ -318,12 +313,42 @@
 								<input type="text" class="form-control" placeholder="Mã danh mục..."/>
 							</div>
 							<div class="form-group">
-								<label>Tên danh mục:</label>
-								<input type="text" class="form-control" placeholder="tên danh mục..."/>
+								<label>Tên:</label>
+								<input type="text" class="form-control" placeholder="Tên danh mục..."/>
 							</div>
 							<div class="form-group">
-								<label>Mô tả:</label>
-								<textarea rows="3" class="form-control" >Mô tả...</textarea>
+                                <label>Ảnh</label>
+                                <input type="file">
+                            </div>
+							<div class="form-group">
+                                            <label>Nhà cung cấp</label>
+                                            <select class="form-control">
+                                                <option>Apple</option>
+                                                <option>Samsung</option>
+                                                <option>OPPO</option>
+                                                <option>Nokia</option>
+                                                <option>Huawei</option>
+                                                <option>Vivo</option>
+                                                <option>Xiaomi</option>
+                                                <option>Sony</option>
+                                                <option>HTC</option>
+                                                <option>Asus</option>
+                                                <option>Mobiistar</option>
+                                                <option>BKAV</option>
+                                                <option>Motorola</option>
+                                            </select>
+                                        </div>
+							<div class="form-group">
+								<label>Giá nhập:</label>
+								<input type="text" class="form-control" placeholder="Giá nhập vào..."/>
+							</div>
+							<div class="form-group">
+								<label>Giá bán:</label>
+								<input type="text" class="form-control" placeholder="Giá bán ra..."/>
+							</div>
+							<div class="form-group">
+								<label>Khuyến mãi:</label>
+								<input type="text" class="form-control" placeholder="Nội dung khuyến mãi..."/>
 							</div>
 							<div class="form-group">
 								<label>Trạng thái:</label>
@@ -332,46 +357,167 @@
 									<option>Khóa</option>
 								</select>
 							</div>
+							<div class="form-group">
+                                            <label>Mô tả ngắn:</label>
+                                            <textarea class="form-control" rows="2"></textarea>
+                                        </div>
+							<div class="form-group">
+                                            <label>Mô tả dài:</label>
+                                            <textarea class="form-control" rows="2"></textarea>
+                                        </div>
 						</div>
-						<div class="panel-footer">
-							<button type="button" class="btn btn-success"> Thêm mới</button>
+						<div class="panel-footer">						
+							<button type="button" class="btn btn-primary"> Thêm mới</button>
 							<button type="button" class="btn btn-warning"> Lưu</button>
 							<button type="button" class="btn btn-danger"> Xóa</button>
 						</div>
 					</div>
 				</div>
 				
-				<div class="col-lg-8 col-sm-12">
+				<div class="col-lg-9 col-sm-12">
 					<div class="panel panel-primary">
-						<div class="panel-heading">Danh sách danh mục</div>
+						<div class="panel-heading">Danh sách sản phẩm</div>
 						<div class="panel-body">
 							<table class="table table-bordered table-striped">
 								<thead>
 									<tr>
 										<th>STT</th>
+										<th>Hình ảnh</th>
 										<th>Mã</th>
-										<th>Tên</th>
-										<th>Mô tả</th>
+										<th>Tên</th>										
+										<th>Nhà CC</th>
+										<th>Tồn kho</th>										
+										<th>Giá nhập</th>
+										<th>Giá bán</th>
+										<th>Khuyến mãi</th>
 										<th>Trạng thái</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>1</td>
-										<td>DIENTHOAI</td>
-										<td>Điện thoại di động</td>
-										<td>Danh mục sản phẩm điện thoại động</td>
+										<td><img src="../images/a6.jpg" height="60px"></img></td>
+										<td>A6</td>
+										<td>Samsung Galaxy A6</td>
+										<td>Samsung</td>
+										<td>10</td>
+										<td>3.000.000đ</td>
+										<td>6.990.000đ</td>
+										<td>Phiếu giảm giá</td>
 										<td>
 											<span class="label label-success">Kích hoạt</span>
 										</td>
 									</tr>
 									<tr>
 										<td>2</td>
-										<td>LAPTOP</td>
-										<td>Latop</td>
-										<td>Danh mục sản phẩm máy tính xách tay - laptop</td>
+										<td><img src="../images/nova3i.jpg" height="60px"></img></td>
+										<td>3i</td>
+										<td>Nova 3i</td>
+										<td>Huawei</td>
+										<td>9</td>
+										<td>3.000.000đ</td>
+										<td>6.990.000đ</td>
+										<td>Bình giữ nhiệt</td>
 										<td>
-											<span class="label label-danger">Khóa</span>
+											<span class="label label-success">Kích hoạt</span>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td><img src="../images/iphonex.jpg" height="60px"></img></td>
+										<td>X</td>
+										<td>iPhone X 64gb</td>
+										<td>Apple</td>
+										<td>12</td>
+										<td>20.000.000đ</td>
+										<td>29.990.000đ</td>
+										<td>Giảm 3000.000đ</td>
+										<td>
+											<span class="label label-success">Kích hoạt</span>
+										</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td><img src="../images/nokia.jpg" height="60px"></img></td>
+										<td>3.1</td>
+										<td>Nokia 3.1</td>
+										<td>Nokia</td>
+										<td>14</td>
+										<td>1.000.000đ</td>
+										<td>3.990.000đ</td>
+										<td>Trả góp 0%</td>
+										<td>
+											<span class="label label-success">Kích hoạt</span>
+										</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td><img src="../images/oppof7.jpg" height="60px"></img></td>
+										<td>F7</td>
+										<td>OPPO F7</td>
+										<td>OPPO</td>
+										<td>6</td>
+										<td>4.000.000đ</td>
+										<td>7.990.000đ</td>
+										<td>Giảm 50%</td>
+										<td>
+											<span class="label label-success">Kích hoạt</span>
+										</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td><img src="../images/vivov9.jpg" height="60px"></img></td>
+										<td>V9</td>
+										<td>Vivo V9</td>
+										<td>Vivo</td>
+										<td>7</td>
+										<td>4.000.000đ</td>
+										<td>7.990.000đ</td>
+										<td>Phiếu giảm giá</td>
+										<td>
+											<span class="label label-success">Kích hoạt</span>
+										</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td><img src="../images/xiaomi.jpg" height="60px"></img></td>
+										<td>A2</td>
+										<td>Xiaomi A2</td>
+										<td>Xiaomi</td>
+										<td>12</td>
+										<td>3.000.000đ</td>
+										<td>6.990.000đ</td>
+										<td>Phiếu giảm giá</td>
+										<td>
+											<span class="label label-success">Kích hoạt</span>
+										</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td><img src="../images/asus.jpg" height="60px"></img></td>
+										<td>Max Plus M1</td>
+										<td>ASUS Zenfone Max Plus M1 - ZB570TL</td>
+										<td>ASUS</td>
+										<td>4</td>
+										<td>2.000.000đ</td>
+										<td>3.990.000đ</td>
+										<td>Không</td>
+										<td>
+											<span class="label label-success">Kích hoạt</span>
+										</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td><img src="../images/bkav.jpg" height="60px"></img></td>
+										<td>Bphone 2017</td>
+										<td>BKAV Bphone 2017</td>
+										<td>BKAV</td>
+										<td>8</td>
+										<td>5.000.000đ</td>
+										<td>9.790.000đ</td>
+										<td>Không</td>
+										<td>
+											<span class="label label-success">Kích hoạt</span>
 										</td>
 									</tr>
 								</tbody>

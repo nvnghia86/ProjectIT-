@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,8 +23,8 @@
 
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	
-	<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    
+    <link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,7 +46,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="<i></i>con-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">Thegioididong.com | Quản trị hệ thống</a>
             </div>
@@ -268,10 +269,10 @@
                             <div class="input-group custom-search-form">
                                 <input type="text" class="form-control" placeholder="Search...">
                                 <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
                             </div>
                             <!-- /input-group -->
                         </li>
@@ -279,21 +280,21 @@
                             <a href="#"><i class="fa fa-dashboard fa-fw"></i> Bảng điều khiển</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị sản phẩm<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhmuc_sanpham.html">Danh mục sản phẩm</a>
+                                    <a href="quantri_dssp.html">Quản trị danh mục sản phẩm</a>
                                 </li>
-								<li>
-                                    <a href="nhacungcap.html">Danh sách nhà cung cấp</a>
+                                <li>
+                                    <a href="quantri_ncc.html">Quản trị nhà cung cấp</a>
                                 </li>
-								<li>
-                                    <a href="quanlysanpham.html">Danh sách sản phẩm</a>
+                                <li>
+                                    <a href="quantri_sp.html">Quản trị sản phẩm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-					</ul>
+                    </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
@@ -303,102 +304,196 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Quản trị danh mục sản phẩm</h1>
+                    <h1 class="page-header">Quản trị nhà cung cấp</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
-				<div class="col-lg-4 col-sm-12">
-					<div class="panel panel-info">
-						<div class="panel-heading">Chi tiết danh mục</div>
-						<div class="panel-body">
-							<div class="form-group">
-								<label>Mã:</label>
-								<input type="text" class="form-control" placeholder="Mã danh mục..."/>
-							</div>
-							<div class="form-group">
-								<label>Tên danh mục:</label>
-								<input type="text" class="form-control" placeholder="tên danh mục..."/>
-							</div>
-							<div class="form-group">
-								<label>Mô tả:</label>
-								<textarea rows="3" class="form-control" >Mô tả...</textarea>
-							</div>
-							<div class="form-group">
-								<label>Trạng thái:</label>
-								<select class="form-control">
-									<option>Kích hoạt</option>
-									<option>Khóa</option>
-								</select>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button type="button" class="btn btn-success"> Thêm mới</button>
-							<button type="button" class="btn btn-warning"> Lưu</button>
-							<button type="button" class="btn btn-danger"> Xóa</button>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-8 col-sm-12">
-					<div class="panel panel-primary">
-						<div class="panel-heading">Danh sách danh mục</div>
-						<div class="panel-body">
-							<table class="table table-bordered table-striped">
-								<thead>
-									<tr>
-										<th>STT</th>
-										<th>Mã</th>
-										<th>Tên</th>
-										<th>Mô tả</th>
-										<th>Trạng thái</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>DIENTHOAI</td>
-										<td>Điện thoại di động</td>
-										<td>Danh mục sản phẩm điện thoại động</td>
-										<td>
-											<span class="label label-success">Kích hoạt</span>
-										</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>LAPTOP</td>
-										<td>Latop</td>
-										<td>Danh mục sản phẩm máy tính xách tay - laptop</td>
-										<td>
-											<span class="label label-danger">Khóa</span>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>	
-					</div>
-				</div>
-				
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /#page-wrapper -->
+                <div class="col-lg-12 col-sm-12">
+                    <!-- /.panel-heading -->
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                        Nhập thông tin sản phẩm
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content " >
+                                <table class="table table-bordered table-striped"> 
+                                    <tr>
+                                        
+                                    </tr>
+                                </table>
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title" id="myModalLabel">Nhập thông tin sản phẩm</h4>
+                                </div>
+                                <div class="modal-body">
+                                 <div class="form-group">
+                                    <label>Mã:</label>
+                                    <input type="text" class="form-control" placeholder="Mã sản phẩm..."/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tên sản phẩm:</label>
+                                    <input type="text" class="form-control" placeholder="Tên sản phẩm..."/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Hình ảnh:</label>
+                                    <input type="file" name="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Nhà cung cấp:</label>
+                                    <select class="form-control">
+                                        <option>Sony</option>
+                                        <option>Apple</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Giá nhập:</label>
+                                    <input type="text" class="form-control" placeholder="Giá nhập ..."/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Giá bán:</label>
+                                    <input type="text" class="form-control" placeholder="Giá bán..."/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Khuến mại:</label>
+                                    <select class="form-control">
+                                        <option>Có</option>
+                                        <option>Không</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Trạng thái:</label>
+                                    <select class="form-control">
+                                        <option>Kích hoạt</option>
+                                        <option>Khóa</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Mô tả ngắn:</label>
+                                    <textarea name=""></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Mô tả dài:</label>
+                                    <textarea name=""></textarea>
+                                </div>
 
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+                
+                <!-- .panel-body -->
+                
+                
+                        <!--
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-success"> Thêm mới</button>
+                            <button type="button" class="btn btn-warning"> Lưu</button>
+                            <button type="button" class="btn btn-danger"> Xóa</button>
+                        </div>
+                    -->
+                    
+                </div>
+                
+                <div class="col-lg-12 col-sm-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Danh sách danh mục</div>
+                        <div class="panel-body">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Trạng thái</th>
+                                        <th>Mã</th>
+                                        <th>Tên</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Nhà cung cấp</th>
+                                        <th>Giá nhập</th>
+                                        <th>Giá bán</th>
+                                        <th>Khuyến mại</th>
+                                        <th>Trạng thái</th>
+                                        <th>Mô tả ngắn</th>
+                                        <th>Mô tả dài</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+                                          <div class="btn-group" role="group">
+                                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Thêm
+                                          </button>
+                                          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                              <a class="dropdown-item" href="#">Sửa</a><br/>
+                                              <a class="dropdown-item" href="#">Xóa</a>
+                                          </div>
+                                      </div>
+                                  </div></td>
+                                  <td>DIENTHOAI</td>
+                                  <td>Điện thoại di động</td>
+                                  <td>Danh mục sản phẩm điện thoại động</td>
+                                  <td>
+                                    <span class="label label-success">Kích hoạt</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+                                  <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Thêm
+                                  </button>
+                                  <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                      <a class="dropdown-item" href="#">Sửa</a><br/>
+                                      <a class="dropdown-item" href="#">Xóa</a>
+                                  </div>
+                              </div>
+                          </div></td>
+                          <td>LAPTOP</td>
+                          <td>Latop</td>
+                          <td>Danh mục sản phẩm máy tính xách tay - laptop</td>
+                          <td>
+                            <span class="label label-danger">Khóa</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>  
     </div>
-    <!-- /#wrapper -->
+</div>
 
-    <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
+</div>
+<!-- /.row -->
+</div>
+<!-- /#page-wrapper -->
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+</div>
+<!-- /#wrapper -->
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+<!-- jQuery -->
+<script src="../vendor/jquery/jquery.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="../js/sb-admin-2.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../js/sb-admin-2.js"></script>
 
 </body>
 

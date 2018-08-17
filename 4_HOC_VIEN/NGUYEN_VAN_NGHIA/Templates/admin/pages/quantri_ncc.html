@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +20,7 @@
 
     <!-- Custom CSS -->
     <link href="../css/sb-admin-2.css" rel="stylesheet">
-
+    <link href="../css/logo.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	
@@ -31,7 +32,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
@@ -45,7 +45,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="<i></i>con-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">Thegioididong.com | Quản trị hệ thống</a>
             </div>
@@ -279,16 +279,16 @@
                             <a href="#"><i class="fa fa-dashboard fa-fw"></i> Bảng điều khiển</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị sản phẩm<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhmuc_sanpham.html">Danh mục sản phẩm</a>
+                                    <a href="quantri_dssp.html">Quản trị danh mục sản phẩm</a>
                                 </li>
-								<li>
-                                    <a href="nhacungcap.html">Danh sách nhà cung cấp</a>
+                                <li>
+                                    <a href="quantri_ncc.html">Quản trị nhà cung cấp</a>
                                 </li>
-								<li>
-                                    <a href="quanlysanpham.html">Danh sách sản phẩm</a>
+                                <li>
+                                    <a href="quantri_sp.html">Quản trị sản phẩm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -314,24 +314,39 @@
 						<div class="panel-heading">Chi tiết danh mục</div>
 						<div class="panel-body">
 							<div class="form-group">
-								<label>Mã:</label>
-								<input type="text" class="form-control" placeholder="Mã danh mục..."/>
+								<div class="form-group">
+                                <label>Mã NCC:</label>
+                                <input type="text" class="form-control" placeholder="Mã nhà cung cấp..."/>
+                                </div>
 							</div>
-							<div class="form-group">
-								<label>Tên danh mục:</label>
-								<input type="text" class="form-control" placeholder="tên danh mục..."/>
-							</div>
-							<div class="form-group">
-								<label>Mô tả:</label>
-								<textarea rows="3" class="form-control" >Mô tả...</textarea>
-							</div>
-							<div class="form-group">
-								<label>Trạng thái:</label>
-								<select class="form-control">
-									<option>Kích hoạt</option>
-									<option>Khóa</option>
-								</select>
-							</div>
+                            <div class="form-group">
+                                <div class="form-group">
+                                <label>Tên nhà cung cấp:</label>
+                                <input type="text" class="form-control" placeholder="Tên nhà cung cấp..."/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group">
+                                <label>Điện thoại:</label>
+                                <input type="text" class="form-control" placeholder="Điện thoại..."/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group">
+                                <label>Logo:</label>
+                                <input type="file" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group">
+                                <label>Trạng thái:</label>
+                                <select class="form-control">
+                                    <option>Kích hoạt</option>
+                                    <option>Khóa</option>
+
+                                </select>
+                                </div>
+                            </div>
 						</div>
 						<div class="panel-footer">
 							<button type="button" class="btn btn-success"> Thêm mới</button>
@@ -349,31 +364,50 @@
 								<thead>
 									<tr>
 										<th>STT</th>
-										<th>Mã</th>
-										<th>Tên</th>
-										<th>Mô tả</th>
+										<th>Logo</th>
+										<th>Mã NCC</th>
+										<th>Tên NCC</th>
 										<th>Trạng thái</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>1</td>
-										<td>DIENTHOAI</td>
-										<td>Điện thoại di động</td>
-										<td>Danh mục sản phẩm điện thoại động</td>
 										<td>
-											<span class="label label-success">Kích hoạt</span>
-										</td>
+                                            <img src="../images/samsung.jpg" alt="" width="70px">      
+                                        </td>
+										<td>NC01</td>
+										<td>Samsung</td>
+										<td><span class="label label-danger">Khóa</span></td>
 									</tr>
-									<tr>
-										<td>2</td>
-										<td>LAPTOP</td>
-										<td>Latop</td>
-										<td>Danh mục sản phẩm máy tính xách tay - laptop</td>
-										<td>
-											<span class="label label-danger">Khóa</span>
-										</td>
-									</tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <img src="../images/apple.jpg" alt="" width="50px">      
+                                        </td>
+                                        <td>NC01</td>
+                                        <td>Samsung</td>
+                                        <td><span class="label label-danger">Khóa</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <img src="../images/sony.png" alt="" width="70px">      
+                                        </td>
+                                        <td>NC01</td>
+                                        <td>Samsung</td>
+                                        <td><span class="label label-danger">Khóa</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <img src="../images/nokia.jpg" alt="" width="70px">      
+                                        </td>
+                                        <td>NC01</td>
+                                        <td>Samsung</td>
+                                        <td><span class="label label-danger">Khóa</span></td>
+                                    </tr>
+									
 								</tbody>
 							</table>
 						</div>	
