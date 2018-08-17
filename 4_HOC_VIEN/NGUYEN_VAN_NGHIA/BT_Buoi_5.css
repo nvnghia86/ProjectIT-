@@ -2,7 +2,14 @@
 {
 	margin:0; padding:0;
 }
-header
+body, input, button, option, textarea, label, legend, h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font: 13px/18px Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+    color: #333;
+    outline: none;
+
+
+}
+#header
 {
 	position: absolute;
     top: 0;
@@ -12,10 +19,17 @@ header
     height: 55px;
 	text-align:center;
 }
-
+#list_2
+{
+	width: 799px;
+    height: 55px;
+    background: #fed700;
+    float: left;
+    list-style-type: none;
+}
 .menu 
 {
-	max-width: 1208px;
+	max-width: 1219px;
     min-width: 1024px;
     width: 100%;
     height: 55px;
@@ -111,7 +125,7 @@ header
     top: 10px;
     width: 23px;
     margin: auto;
-    left: 117px;
+    left: 256px;
     right: 0;
     font-size: 11px;
 }
@@ -122,7 +136,7 @@ header
     top: 6px;
     width: 23px;
     margin: auto;
-    left: 455px;
+    left: 598px;
     right: 0;
     font-size: 11px;
 }
@@ -178,7 +192,30 @@ header
     margin: 1px auto 0;
 	background-image: url('hinhanh/icondesktop@1x.png');	
 }
-
+#body
+{
+	width:1349px;
+	height:2778px;
+	background:#f0f0f0;
+	padding-top:65px;
+	margin-left:65px;
+}
+#body #slider-img
+{
+	width:800px;
+	height:300px;
+	float:left;
+}
+#body #slider-item
+{
+	width:800px;
+	height:55px;
+	float:left;
+}
+#body #slider-item li 
+{
+	
+}
 
 
 
