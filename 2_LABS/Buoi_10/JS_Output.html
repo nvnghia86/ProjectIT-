@@ -17,6 +17,16 @@
 				alert('Rất vui khi được làm quen với ' + ketqua);
 			}
 			
+			function tinhtong(){
+				var so1 = prompt('Nhập số thứ nhất');
+				var so2 = prompt('Nhập số thứ hai');
+				var ketqua = parseInt(so1) + parseInt(so2);
+				document.getElementById('ketqua').innerHTML = 'Tổng: ' + ketqua;
+				document.getElementsByName('ketqua1').value = 'Tổng: ' + ketqua;
+				console.log('Kết quả của phép cộng: ' + ketqua);
+				
+			}
+			
 		</script>
 		<script src="HelloJavaScript.js"></script>
 	</head>
@@ -26,5 +36,21 @@
 		<button type="button" onclick="canhbao()">Hộp thoại cảnh báo - Alert</button> 
 		<button type="button" onclick="xacnhan()">Hộp thoại xác nhận - Confirm</button> 
 		<button type="button" onclick="nhaplieu()">Hộp thoại nhập - Prompt</button> 
+		
+		<h2>Truy cập vào phần tử HTML</h2>
+		<button type="button" onclick="tinhtong()">Tính tổng 2 số</button> 
+		<p id="ketqua">Kết quả</p>
+		<input type="text" name="ketqua1" value="" />
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
