@@ -1,0 +1,186 @@
+/* reset css*/
+*{margin: 0; padding:0}
+body{
+	background:gray;
+	font: 14px/18px Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+    color: #333;
+    outline: none;
+    zoom: 1;
+}
+
+a {
+	text-decoration:none;
+	color:#333;
+	
+}
+
+.wrapper{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/*-------------------------HEADER------------------------------------------------------------------*/
+
+#header{
+	width: 100%;
+	height: 55px;
+	background: #fed700;
+	float: left;
+}
+
+#header .wrapper{
+	background:#000;
+	height:55px;
+}
+
+#header #logo{
+	width: 30px;
+	height: 30px;
+	background:url('../buoi_5/hinhanh/icondesktop@1x.png') no-repeat scroll ;
+	float: left;
+	margin:10px 5px;
+}
+
+#header #search{
+	width: 250px;
+	height: 50px;
+	float: left;
+	position:relative;
+}
+
+#header #search #txtsearch {
+	font-size:10px;
+	text-indent:10px;
+	padding:9px 20px;
+	border-radius: 5px;
+	border:solid 1px gray;
+	margin:12px 18px; /* điều chỉnh khoảng cách*/
+	
+}
+
+#header #search .search-icon {
+	width:30px;
+    height:30px;
+	background:url('../buoi_5/hinhanh/icondesktop@1x.png')no-repeat scroll;
+	background-position:-156px 0px;
+	position:asolude;
+	/*ta định vị icon này, cố định search làm trục r mới dùng position, top,..*/
+	top:16px;
+	right:25px;	
+}
+
+#header ul#main-menu{
+	width: 910px;
+	height: 55px;
+	background: #fed700;
+	float: left;
+	list-style-type:none;
+}
+
+#header ul#main-menu li{
+	display:inline;
+	width:85px;
+	height:55px;
+	float:left;
+	text-transform:uppercase;
+	font-size:12px;
+	text-align:center;
+}
+
+#header ul#main-menu li:hover{
+	background: #F0F0F0;
+	cursor:pointer;
+}
+
+#header ul#main-menu li i.icon{
+	width: 16px;
+    height: 25px;
+    display: block;
+    margin: 2px auto 11px;
+	background-image: url('../buoi_5/hinhanh/icondesktop@1x.png');
+	background-repeat:no-repeat;
+}
+
+#header ul#main-menu li i.dt{
+	background-position: -190px 0;
+}
+
+#header ul#main-menu li i.tb{
+	background-position: -207px 0;
+	width: 34px;
+}
+
+#header ul#main-menu li i.lt{
+	background-position: -241px 0px;
+	width: 43px !important;
+}
+
+#header ul#main-menu li i.pk{
+	background-position: -284px 0px;
+	width: 29px !important;
+}
+
+#header ul#main-menu li i.gr{
+	background-position: -314px 0px;
+	width: 35px !important;
+}
+
+#header ul#main-menu li i.km{
+	background-position: -350px 0px;
+	width: 25px !important;
+}
+
+#header ul#main-menu li i.cn{
+	background-position: -377px 0px;
+	 width: 29px !important;
+}
+
+#header ul#main-menu li i.hd{
+	background-position: -405px 0px;
+	 width: 29px !important;
+}
+
+#header ul#main-menu li.simso,li.thecao{
+	text-transform: none !important;
+	padding: 5px 5px;
+	font-size:13px !important;
+	height:45px !important;
+}
+
+/*-------------------------------NỘI DUNG---------------------------------------------------*/
+#content {
+	min-height:500px;
+}
+
+/*
+#content #duong-dan {
+	width:1200px;
+	height:40px;
+	background:white;
+	float:left;
+	margin-top:10px;
+}
+
+#content #duong-dan ul{
+	width:1200px;
+	height:40px;
+	list-style-type:none;
+	float:left;
+	margin:10px;
+}
+
+#content #duong-dan ul li{
+	color:#288ad6;
+
+}
+*/
+
+#content .ten {
+	line-height:50px;
+	background:white;
+}
+
+
+
+
+  
