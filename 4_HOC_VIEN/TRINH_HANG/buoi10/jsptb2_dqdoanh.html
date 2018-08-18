@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>giải phương trình bậc 2</title>
+	<meta charset="utf-8">
+	<script>
+		function nhapvaocacso() {
+          var a = prompt('nhập số a');
+           var b = prompt('nhập số b');
+            var c = prompt('nhập số c');
+            var denta = parseInt(b*b) - parseInt(4*a*c);
+            var d =  parseInt(-b) /  parseInt(2*a);
+            var e = parseInt(denta) -  parseInt(b) / parseInt(2*a);
+             var f = parseInt(denta) +  parseInt(b) / parseInt(2*a);
+            if (denta < 0) {
+            	alert('phương trình vô nghiệm');
+
+            }else if (denta == 0) {
+            	alert('phương trình có nghiệm duy nhất là :' + d )
+            } else{
+					alert('phương trình có hai nghiệm phân biệt là:'+ e + 'và'+ f )
+				}
+
+
+			                               // nhập vào các số a ,b,c
+		}
+	</script>
+</head>
+<body>
+   <h1>KẾT QUẢ CỦA HỆ PHƯƠNG TRÌNH AX<SUP>2</SUP>+BX+C</SUP></h1>
+   <button type="button" onclick="nhapvaocacso()">Kết Quả</button>
+</body>
+</html>
