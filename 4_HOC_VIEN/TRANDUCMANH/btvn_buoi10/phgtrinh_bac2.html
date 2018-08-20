@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giải Phương Trình Bậc 2</title>
+	<script type="text/javascript">
+		function bac2()
+		{
+			var a= prompt('Nhập số A', 'mời nhập');
+			var b= prompt('Nhập số B', 'mời nhập');
+			var c= prompt('Nhập số C', 'mời nhập');
+			var x;
+			if(a==0)
+			{
+				if(b==0)
+				{
+					if(c==0)
+						
+						alert('Phương Trình vô số nghiệm');
+						
+					else
+						alert('Phương Trình vô nghiệm');
+				}
+				else {
+					var x = -parseInt(b)/parseInt(c);
+					alert('Phương trình có 1 nghiệm duy nhất là:'+x);
+					}
+			}
+			else
+			{
+				var delta= parseInt(b)*parseInt(b)-4*parseInt(a)*parseInt(c);
+				if(delta <0)
+					alert('Phương trình vô nghiệm');
+				else if(delta==0)
+					{	
+						var X = -parseInt(b) /(2*parseInt(a));
+					alert('Phương trình có  nghiệm kép  là: '+X);
+				}
+				else
+				{
+					var Y=Math.sqrt(parseInt(delta));
+					var X1=(-parseInt(b) +parseInt(Y))/(2*parseInt(a));
+				var X2=(-parseInt(b) -parseInt(Y))/(2*parseInt(a));
+				alert('Phương trình có  2 nghiệm phân biệt');
+				alert('X1='+X1);
+					alert('X2='+X2);
+				}
+
+
+
+
+
+			}
+
+		}
+	</script>
+</head>
+<body>
+<h2>Hello Phương trình bậc 2</h2>
+<button type="button" onclick="bac2()">Giải phương trình bậc 2</button>
+
+<p></p>
+
+</body>
+</html>
