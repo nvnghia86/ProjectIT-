@@ -5,6 +5,11 @@
 		<script>
 			function kiemtra_chanle(){
 				var so = prompt('Mời bạn nhập vào 1 số bất kỳ:');
+				if(isNaN(so)){
+					alert('Số vừa nhập không hợp lệ');
+					return;
+				}
+				
 				if(so%2==0){
 					alert('Số ' + so + ' là số chẵn.');
 				}else{
