@@ -1,0 +1,907 @@
+*{margin: 0; padding: 0; font-family: Arial}
+
+body{background: #F0F0F0;}
+
+.wrapper{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+a{text-decoration: none;}
+
+ul{list-style-type: none;}
+
+/*---------------------Header------------*/
+#header{
+	width: 100%;
+	height: 55px;
+	background: #FED700;
+}
+
+#header .wrapper{
+	background: #000000;
+	width: 1200px;
+	height: 55px;
+}
+		
+		/*-----Logo-------*/
+		#header #logo{
+			width: 165px;
+			height: 30px;
+			float: left;
+			position: relative;
+		}
+
+				#header #logo #icon-logo{
+					width: 156px;
+					height: 30px;
+					background: url("../images/icondesktop@1x.png") no-repeat;
+					position: absolute; 
+					top: 10px;
+					right: 5px;
+				}
+
+
+		/*-----Search-------*/
+		#header #search{
+			width: 230px;
+			height: 35px;
+			float: left;
+			position: relative;
+		}
+
+		#header #search input{
+			width: 215px;
+			height: 35px;
+			border-radius: 5px;
+			margin: 7px 0  0 5px; 
+			padding-left: 15px;
+		}
+
+		#header #search #icon-search{
+			background: url("../images/icondesktop@1x.png") no-repeat;
+		    width: 29px;
+		    height: 30px;
+		    position: absolute;
+		    top: 18px;
+		    right: 1px;
+		    background-position-x: 33%;
+		}
+
+
+		/*-----Nav-------*/
+		#header #nav{
+			width: 780px;
+			height: 55px;
+			background: #FED700;
+			float: right;
+		}
+
+
+
+		#header #nav .icon{
+			display: inline;
+			float: left;
+			width: 10%;
+			height: 20px;
+			font-size: 11px;
+			text-transform: uppercase;
+			position: relative;
+			padding-top: 35px; 
+			color: #333;
+			text-align: center;
+		}
+
+		#header #nav .icon:hover{
+			background: #F5F5F5;
+		}
+
+
+						#header #nav .icon #icon-mobile{
+							    background: url(../images/icondesktop@1x.png) no-repeat;
+							    width: 28%;
+							    height: 30px;
+							    background-position-x: 39%;
+							    background-position-y: 0%;
+							    position: absolute;
+							    top: 5px;
+							    right: 28px;
+						}
+
+						#header #nav .icon #icon-tablet{
+							background: url(../images/icondesktop@1x.png) no-repeat;
+						    width: 47%;
+						    height: 30px;
+						    background-position-x: 45%;
+						    background-position-y: 0%;
+						    position: absolute;
+						    top: 5px;
+							right: 18px;
+						}
+
+						#header #nav .icon #icon-laptop{
+							    background: url(../images/icondesktop@1x.png) no-repeat;
+							    width: 54%;
+							    height: 30px;
+							    background-position-x: 53%;
+							    background-position-y: 0%;
+							    position: absolute;
+							    top: 5px;
+							    right: 18px;
+						}
+
+						#header #nav .icon #icon-phukien{
+							    background: url(../images/icondesktop@1x.png) no-repeat;
+							    width: 33%;
+							    height: 30px;
+							    background-position-x: 60%;
+							    background-position-y: 0%;
+							    position: absolute;
+							    top: 5px;
+							    right: 30px;
+						}
+
+						#header #nav .icon #icon-maydoitra{
+							    background: url(../images/icondesktop@1x.png) no-repeat;
+							    width: 52%;
+							    height: 30px;
+							    background-position-x: 68%;
+							    background-position-y: 0%;
+							    position: absolute;
+							    top: 5px;
+							    right: 20px;
+						}
+
+							#header #nav .icon  #icon-may{
+								position: absolute;
+							    top: 12px;
+							    right: 28px;
+							}
+
+						#header #nav .icon #icon-promo{
+							background: url(../images/icondesktop@1x.png) no-repeat;
+						    width: 36%;
+						    height: 30px;
+						    background-position-x: 100%;
+						    background-position-y: 0%;
+						    position: absolute;
+						    top: 5px;
+						    right: 25px;
+						}
+
+						#header #nav .icon #icon-news{
+							    background: url(../images/icondesktop@1x.png) no-repeat;
+							    width: 42%;
+							    height: 30px;
+							    background-position-x: 80%;
+							    background-position-y: 0%;
+							    position: absolute;
+							    top: 5px;
+							    right: 23px;
+
+						}
+
+							#header #nav .icon  #icon-tin{
+								position: absolute;
+							    top: 9px;
+							    right: 32px;
+							}
+
+
+						#header #nav .icon #icon-ask{
+							    background: url(../images/icondesktop@1x.png) no-repeat;
+							    width: 42%;
+							    height: 30px;
+							    background-position-x: 87%;
+							    background-position-y: 0%;
+							    position: absolute;
+							    top: 5px;
+							    right: 22px;
+
+						}
+
+
+						#header #nav .icon-1{
+							width: 46px;
+							height: 36px;
+							text-transform: none;
+							text-align: center;
+							padding: 19px 4px 0 4px;
+						}
+
+						#header #nav .duongke{
+							border-left: 1px solid #eee;
+							height: 55px;
+							width: 0;
+							float: left;
+						}
+
+						
+						#header #nav .icon-2{
+							width: 85px;
+							height: 36px;
+							padding-top: 19px; 
+							text-transform: none;
+							text-align: center;
+							margin: 0 0 0 5px;
+						}
+
+						
+
+
+/*---------------------Content------------*/
+#content{
+}
+
+		#content #line-1{
+			width: 1200px;
+			height: 354px;
+			margin-top: 10px; 
+		}
+
+						#content #line-1 #slider{
+							width: 790px;
+							height: 354px;
+							background: #FFF;
+							float: left;
+							position: relative;
+							cursor: pointer;
+						}
+
+
+
+						#content #line-1 #slider #btn{
+							position: absolute;
+							top: 30%;
+							display: none;
+						}
+
+						#content #line-1 #slider:hover #btn{
+							display:block;
+
+						}
+
+
+						#content #line-1 #slider #btn .prev{
+							position: absolute;
+							right: -48px;
+							width: 30px;
+							height: 30px;
+				
+						    margin: 0;
+						    border-radius: 5px;
+						    -webkit-border-radius: 5px;
+						    -moz-border-radius: 5px;
+						    background: rgba(0,0,0,.3);
+						    width: 48px;
+						    height: 40px;
+						    text-align: center;
+						    font-size: 46px;
+						    color: #fff;
+						    font-family: -webkit-body;
+
+						}
+
+
+						#content #line-1 #slider  #btn .next{
+							position: absolute;
+							left: 743px;
+							width: 30px;
+							height: 30px;
+						
+						    margin: 0;
+						    border-radius: 5px;
+						    -webkit-border-radius: 5px;
+						    -moz-border-radius: 5px;
+						    background: rgba(0,0,0,.3);
+						    width: 48px;
+						    height: 40px;
+						    text-align: center;
+						    font-size: 46px;
+						    color: #fff;
+						    font-family: -webkit-body;
+
+
+						}
+
+
+							#content #line-1 #slider #slider-img img{
+								width: 790px;
+								height: 300px;
+							}
+
+							#content #line-1 #slider #slider-list{
+								height: 54px;
+								width: 790px;
+							}
+
+							#content #line-1 #slider #slider-list ul li{
+								display: inline;
+								width: 158px;
+								height: 54px;
+								float: left;
+								font-size: 12px;
+								text-align: center;
+								margin-top: 10px;
+								color: #333;
+							}
+
+							#content #line-1 #slider #slider-list ul li .item-border{
+								width: 0;
+								height: 30px;
+								border-right: 1px solid #eee; 
+								float: left;
+							}
+
+							#content #line-1 #slider #slider-list ul li a{
+								color: #333;
+							}
+
+						#content #line-1 #homenew{
+							width: 400px;
+							height: 354px;
+							float: right;
+							position: relative;
+						}
+
+
+							#content #line-1 #homenew #homenew-1{
+								width: 400px;
+								height: 38px;
+								background: #fff;
+								
+							}
+
+							#content #line-1 #homenew #homenew-1 a{
+								width: 125px;
+								height: 38px;
+								background: #fff;
+								
+							}
+
+							#content #line-1 #homenew #homenew-1 h3{
+								width: 125px;
+								height: 38px;
+								font-size: 14px;
+								background:  #FDD504;
+								line-height: 38px;
+								padding-left: 5px;
+								float: left;
+							}
+
+							#content #line-1 #homenew #homenew-1 h3::after{
+								    content: '';
+								    width: 0;
+								    height: 0;
+								    border-right: 12px solid #fff;
+								    border-top: 20px solid transparent;
+								    border-bottom: 18px solid transparent;
+								    position: absolute;
+								    top: 0px;
+								    bottom: 0;
+								    right: 264px;
+								    background: #FDD504;
+								    float: left;
+
+								}
+
+							#content #line-1 #homenew #homenew-2{
+								width: 400px;
+								height: 75px;
+								background: #fff;
+							}
+
+							#content #line-1 #homenew #homenew-2 #homenew-quangcao{
+								width: 400px;
+								height: 75px;
+								background: #fff;
+								float: left;
+								border-top: 1px solid gray;
+							}
+
+
+									#content #line-1 #homenew #homenew-2 #homenew-quangcao img{
+										width: 100px;
+										height: 57px;
+										float: left;
+										margin: 10px;
+									}
+
+									#content #line-1 #homenew #homenew-2 #homenew-quangcao h3{
+										width: 250px;
+										float: left;
+										height: 36px;
+										line-height: 1.3em;
+    									font-size: 14px;
+    									font-weight: normal;
+    									color: #333;
+    									margin-top: 10px;
+									}
+
+									#content #line-1 #homenew #homenew-2 #homenew-quangcao span{
+										float: left;
+										font-size: 12px;
+										color: #999;
+										margin-top: 5px;
+									}
+
+							#content #line-1 #homenew #homenew-3 img{
+								margin-top: 7px;
+							}
+
+/*--------------------------------------*/
+		#content #banner-sale{
+			margin-top: 10px;
+			width: 1200px;
+			height: 80px;
+		}
+
+			#content #banner-sale img{
+				width: 1200px;
+				height: 80px;
+			}
+
+/*--------------------------------------*/
+		#content #slider-product{
+			width: 1200px;
+			height: 390px;
+			background: #FFF;
+			margin-top: 30px; 
+			position: relative;
+		}
+		
+		#content #slider-product .navigat{
+			display: block;
+			border-bottom: 1px solid #eee;
+		}
+		
+		#content #slider-product::before{
+			content: ' ';
+			background: url("../images/gsct.png") no-repeat center center;
+			position: absolute;
+			top: -19px;
+			left: 442px;
+			display: none;
+			background-size: 309px 38px;
+			width: 309px;
+			height: 38px;
+		}
+
+					
+					#content #slider-product ul{						
+						height: 309px;
+						margin: 0 auto;
+						
+
+					}
+
+					#content #slider-product .item-product{
+						display: inline;
+						width: 223px;
+						height: 293px;
+						float: left;
+						margin: 10px 6px 0 7px;
+						 
+					}
+
+					#content #slider-product .item-product a{
+						display: block;
+					    overflow: hidden;
+					    background: #fff;
+					    padding: 10px 0;	
+					    float: left;
+						position: relative;
+					}
+
+					#content #slider-product .item-product img{
+						width: 160px;
+   			 			height: 160px;
+   			 			float: left;
+   			 			margin: 15px 35px 15px 35px;
+					}
+					
+					#content #slider-product .item-product h3{
+						font-size: 14px;
+						color: #333;
+						width: 220px;
+						height: 18px;
+						float: left;
+						margin: 0 10px;
+					}
+					
+					#content #slider-product .item-product h3:hover{
+						color: #3993D9;
+					}
+					
+					#content  .price{
+						font-size: 14px;
+						color: #E10C00;
+						width: 220px;
+						height: 18px;
+						float: left;
+						margin: 10px 10px;
+						
+					}
+					
+					#content  .content-product{
+						font-size: 12px;
+						color: #333;
+						width: 210px;
+						height: 32px;
+						float: left;
+						margin: 0 10px;
+						
+					}
+					/*Khu vực khuyến mại giá*/
+					 .preorder{
+						color: #fff;
+						background: #e91e63;
+						font-size: 11px;
+						border-radius: 2px;
+						padding: 3px 15px 3px 15px;
+					}
+					
+					.installment{
+						color: #fff;
+						background: #f28902;
+						font-size: 11px;
+						padding: 3px 15px 3px 15px;
+						border-radius: 2px;
+						
+					}
+					
+					.discount{
+						color: #fff;
+						background-image: linear-gradient(-90deg,#ec1f1f 0%,#ff9c00 100%);
+						font-size: 11px;
+						padding: 3px 15px 3px 15px;
+						border-radius: 10px;
+						
+					}
+					
+					.shockprice{
+						color: #fff;
+						background: #3fb846;
+						font-size: 11px;
+						padding: 3px 15px 3px 15px;
+						border-radius: 2px;
+						
+					}
+					
+					.new{
+						color: #fff;
+						background: #1191f8;
+						font-size: 11px;
+						padding: 3px 15px 3px 15px;
+						border-radius: 2px;
+					}
+					/*--Khu vực khuyến mại giá*/
+					
+					#content #slider-product .item-product  .km{
+						position: absolute;
+						top: 166px;
+						left: 0px;
+						margin: 0 10px;
+					}
+					
+					
+/*--------------------------------------*/
+
+		#content .navigat{
+			width: 1200px;
+			height: 46px;
+			background: #FFF;
+			margin-top: 10px; 
+			float: left;
+		}
+		
+							#content  .navigat .navigat-1{
+								display: block;
+								font-size: 16px;
+								font-weight: 600;
+								height: 46px;
+								line-height: 46px;
+								margin: 0 10px;
+								float: left;
+							}
+							
+							#content  .navigat .navigat-2{
+								float: right;
+							}
+							
+							#content  .navigat .navigat-list li{
+								float: left;
+								display: inline;
+								height: 46px;
+								line-height: 46px;
+								margin: 0px 10px 0px 10px;
+							}
+							
+							#content  .navigat .navigat-list li a{
+								color: #288AD6;
+								font-size: 14px;
+							}
+							
+							#content  .navigat .navigat-list li a:hover{
+								text-decoration: underline;
+							}
+/*--------------------------------------*/
+
+		#content .product{
+			width: 1200px;
+			background: #FFF;
+		}
+		
+				#content .product .homeproduct{
+					width: 1200px;
+					float: left;
+					background: #fff;
+				}
+				
+				#content .product .homeproduct .feature{
+					float: left;
+					width: 480px;
+					height: 333px;
+					border-top: 1px solid #eee;
+					border-right: 1px solid #eee;
+					position: relative;
+				}
+				
+				#content .product .homeproduct .feature img{
+					float: left;
+					width: 480px;
+					height: 222px;
+				}
+				
+				#content .product .homeproduct .feature h3{
+					float: left;
+					width: 480px;
+					font-size: 14px;
+					color: #333;
+					height: 18px;
+					float: left;
+					margin: 15px 10px 0 10px;
+				}
+				
+				#content .product .homeproduct .feature h3:hover{
+					color: #3993D9;
+				}
+				
+				#content .product .homeproduct .sp{
+					float: left;
+					width: 238px;
+					display: inline;
+					height: 333px;
+					border-top: 1px solid #eee;
+					border-right: 1px solid #eee;
+					position: relative;
+					
+				}
+				
+				
+				#content .product .homeproduct .sp img{
+					width: 180px;
+					height: 180px;
+					float: left;
+					margin: 20px 0 0 30px;
+				}
+				
+				#content .product .homeproduct .sp h3{
+					float: left;
+					width: 180px;
+					font-size: 14px;
+					color: #333;
+					height: 18px;
+					float: left;
+					margin: 15px 10px 0 10px;
+				}
+				
+				#content .product .homeproduct .sp h3:hover{
+					color: #3993D9;
+				}
+				
+				#content .product .homeproduct .feature .km-feature{
+					    position: absolute;
+						top: 260px;
+						right: 16px;
+				}
+				
+				#content .product .homeproduct .sp .km1{
+					    display: inline-block;
+						position: absolute;
+						top: 180px;
+						left: 10px;
+				}
+				
+
+		#content #banner-product{
+			width: 1200px;
+			height: 159px;
+			background: #FFF;
+			float: left;
+		}
+		
+		#content #banner-product ul li{
+			display: inline;
+			float: left;
+			margin: 0 10px 10px 10px;
+		}
+		
+		#content #banner-product ul li img{
+			width: 380px;
+			height: 145px;
+		}
+
+
+/*---------------------Footer------------*/
+#footer{
+	width: 100%;
+	background: #fff;
+	margin-top: 10px;
+	float: left;
+}
+
+#footer .wrapper{
+	width: 1200px;
+	height: 180px;
+	
+}
+
+		#footer .col{
+			width: 300px;
+			background: #FFF;
+			float: left;
+			margin-top: 10px;
+			position: relative;
+		}
+		
+		#footer .col-4{
+			width: 200px;
+			background: #FFF;
+			float: left;
+			margin-left: 100px;
+			margin-top: 10px;
+			position: relative;
+		}
+		
+		#footer ul li{
+			margin-top: 10px; 
+			
+		}
+		
+		#footer p{
+			margin-top: 10px; 
+			font-size: 14px;
+			color: #333;
+			
+		}
+		
+		#footer p a{
+			font-weight: bold;
+			color: #333;
+			
+		}
+		
+		#footer  ul li a{
+			color: #0082CE;
+			font-size: 14px;
+		}
+		
+		#footer  ul .showmore{
+			
+		}
+		
+		#footer  ul .showmore a::after{
+			    content: '';
+				display: inline-block;
+				width: 0;
+				height: 0;
+				border-top: 5px solid #288ad6;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				margin: 0 0 0 5px;
+				position: relative;
+				top: -2px;
+				
+		}
+		
+		#footer  ul .hidden{
+			
+		}
+		
+		#footer .col .icontgdd-bct{
+			    width: 110px;
+				height: 29px;
+				background: url("../images/icondesktop@1x.png") no-repeat;
+				position: absolute;
+				top: 120px;
+				left: 1px;
+				background-position-x: 1px;
+				background-position-y: -55px;
+		}
+		
+		#footer .col-4 .icon-col{
+			margin: 0 20px 0 20px;
+		}
+		
+		#footer .col-4 .fb{
+			    width: 17px;
+				height: 15px;
+				background: url("../images/icondesktop@1x.png") no-repeat;
+				position: absolute;
+				top: 13px;
+				left: -2px;
+				background-position-x: 1px;
+				background-position-y: -29px;
+		}
+		
+		#footer .col-4 .youtube{
+				width: 17px;
+				height: 15px;
+				background: url("../images/icondesktop@1x.png") no-repeat;
+				position: absolute;
+				top: 13px;
+				left: 70px;
+				background-position-x: -15px;
+				background-position-y: -29px;
+		}
+		
+		#footer .col-4 .dmx{
+			width: 110px;
+			height: 29px;
+			background: url(../images/logosite2018.png) no-repeat;
+			position: absolute;
+			top: 62px;
+			left: 0px;
+			background-position-x: -110px;
+			background-position-y: 0;
+		}
+		
+		#footer .col-4 .bhx{
+			width: 110px;
+			height: 29px;
+			background: url(../images/logosite2018.png) no-repeat;
+			position: absolute;
+			top: 85px;
+			left: 0px;
+			background-position-x: -219px;
+			background-position-y: 0;
+		}
+		
+		#footer .col-4 .vv{
+			width: 81px;
+			height: 29px;
+			background: url(../images/logosite2018.png) no-repeat;
+			position: absolute;
+			top: 107px;
+			left: 0px;
+			background-position-x: -329px;
+			background-position-y: 0;
+		}
+		
+		#footer .col-4 .ta{
+			width: 145px;
+			height: 29px;
+			background: url(../images/logosite2018.png) no-repeat;
+			position: absolute;
+			top: 130px;
+			left: 0px;
+			background-position-x: -409px;
+			background-position-y: 0;
+		}
+		
+		
+
+		#footer #address{
+			float: left;
+			width: 100%;
+			background: #F8F8F8;
+			min-width: 980px;
+			padding: 10px 0;
+		}
+			
+			#footer #address p{
+				    font-size: 10px;
+					color: #999;
+					text-align: center;
+			}
