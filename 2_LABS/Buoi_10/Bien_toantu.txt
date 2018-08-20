@@ -1,8 +1,0 @@
-JS Variables
-	+ Không phải khai báo kiểu dữ liệu mà chỉ cần dùng từ khóa var hoặc let(ES5)
-	
-JS Operators
-	+, -, *, /, %, Math.sqrt, vv..
-	
- 5 == '5' => true
- 5 === '5' => false

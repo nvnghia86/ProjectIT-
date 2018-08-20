@@ -1,9 +1,0 @@
-Các điều khiển
-	- Điều khiển rẽ nhánh: 
-		if..else
-		if..else if..else
-		switch..case..default
-	- Điều khiển lặp:
-		+ for :biết trước số lần lặp
-		+ do: làm xong mới kiểm tra
-		+ while: kiểm tra trước mới làm
