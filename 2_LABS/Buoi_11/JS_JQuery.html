@@ -8,54 +8,29 @@
 		<h1>JS | Jquery</h1>
 		<h2>Truy cập vào phần tử</h2>
 		<button type="button" id="btn_doimau">Đổi màu phần tử</button>
-		<button type="button" id="btn_an">Ẩn phần tử</button>
-		<button type="button" id="btn_hien">Hiện phần tử</button>
-		<button type="button" id="btn_fadein">Hiện phần tử (hiệu ứng)</button>
-		<button type="button" id="btn_fadeout">Ẩn phần tử (hiệu ứng)</button>
-		<button type="button" id="btn_trai">Dịch chuyển sang trái</button>
-		<button type="button" id="btn_phai">Dịch chuyển sang phải</button>
-
-		<hr/>
 		<div id="phantu_1" style="width:100px;height:100px;background:yellow">Phần tử 1</div>
 	</body>
 	<script>
 		function doimau(){
 			var ngaunhien = Math.floor(Math.random() * 10);
-			var mau= 'red';
-			if (ngaunhien%2==0){
-				mau = 'blue';
-			} else if (ngaunhien%3==0){
-				mau = 'orange';
-			} else {
-				mau = 'red';
+			var mau='red';
+			if(ngaunhien%2==0){
+				mau='blue';
+			}else if(ngaunhien%3==0){
+				mau='orange';
+			}else{	
+				mau='red';
 			}
-			$('#phantu_1').attr('style','background' + mau)
+			$('#phantu_1').attr('style','width:100px;height:100px;background:' +mau)
 		}
-		
-		$(function){
-			//viết mã Jquery ở đây
-			$('#btn_doimau').on('click', function(){
+	
+		$(function(){
+			// viết mã Jquery ở đây
+			$('#btn_doimau').on('click',function(){
 				doimau();
-			}
-			$('#btn_an').on('click', function(){
-				doimau();
-			}
-			$('#btn_hien').on('click', function(){
-				doimau();
-			}
-			$('#btn_fadein').on('click', function(){
-				doimau();
-			}
-			$('#btn_fadeout').on('click', function(){
-				doimau();
-			}
-			$('#btn_trai').on('click', function(){
-				doimau();
-			}
-			$('#btn_phai').on('click', function(){
-				doimau();
-			}
+			});
 			
-		}
+			
+		})
 	</script>
 </html>
