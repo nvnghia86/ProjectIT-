@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Giải phương trình bậc 2</title>
+</head>
+<script>
+	function nhapso(){
+		var a = parseFloat(prompt('Nhập a'));
+		var b = parseFloat(prompt('Nhập b'));
+		var c = parseFloat(prompt('Nhập c'));
+		var delta = b*b - 4*a*c;
+		x1 = -b/c;
+		x2 = -b/2*a;
+		x3 = (-b - Math.sqrt(delta))/(2*a);
+		x4 = (-b + Math.sqrt(delta))/(2*a);
+		if(a == 0){
+			if(b == 0){
+				if(c == 0){
+					alert('Phương trình có vô số nghiệm');
+				}else{
+					alert('Phương trình vô nghiệm');
+				}
+			}else{
+				document.getElementById('kq').innerHTML = 'Phương trình có nghiệm duy nhất X = ' + x1; 
+			}
+		}else if(delta < 0){
+			alert('Phương trình vô nghiệm');
+		}else if(delta == 0 ){
+			document.getElementById('kq').innerHTML = 'Phương trình có 2 nghiệm kép X1 = X2 = ' + x2;
+		}else{
+			document.getElementById('kq').innerHTML = 'Phương trình có 2 nghiệm phân biệt: <br />' + 'X1 = ' + x3 + '<br /> X2 = ' + x4;
+		}
+	}
+</script>
+	
+ <body>
+	<button type="button" onclick="nhapso()">Nhập số</button>
+	<br />Kết quả: <br />
+	<p id="kq">	</p>
+ </body>
+ </html>

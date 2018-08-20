@@ -5,11 +5,6 @@
 		<script>
 			function kiemtra_chanle(){
 				var so = prompt('Mời bạn nhập vào 1 số bất kỳ:');
-				if(isNaN(so)){
-					alert('Số vừa nhập không hợp lệ');
-					return;
-				}
-				
 				if(so%2==0){
 					alert('Số ' + so + ' là số chẵn.');
 				}else{
@@ -21,10 +16,10 @@
 				var thang = prompt('Mời bạn nhập vào 1 tháng bất kỳ:');
 				if(thang == 4 || thang == 6 || thang == 9 || thang == 11){
 					alert('Tháng ' + thang + ' có 30 ngày.');
-				}else if(thang == 1 || thang == 3 || thang == 5 || thang == 7 || thang == 8|| thang == 10 || thang == 12){
-					alert('Tháng ' + thang + ' có 31 ngày.');
+				}else if(thang == 2 ){
+					alert('Tháng ' + thang + ' có 28 ngày.');
 				} else{
-					alert('Tháng ' + thang + ' chắc là có 28 ngày.');
+					alert('Tháng ' + thang + ' chắc là có 31 ngày.');
 				}
 			}
 			
@@ -55,12 +50,3 @@
 		<button type="button" onclick="kiemtra_ngaytuan()">Ngày của tuần</button>
 	</body>
 </html>
-
-
-
-
-
-
-
-
-

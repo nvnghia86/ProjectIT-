@@ -1,9 +1,0 @@
-﻿/* bo góc border*/
-	border-radius;
-	
-/* chèn image có 2 loại:
-	background image và image
-	background: url(link) no-repeat;
-	background-position: x y;
-khi padding thì phải trừ bớt đi
-	

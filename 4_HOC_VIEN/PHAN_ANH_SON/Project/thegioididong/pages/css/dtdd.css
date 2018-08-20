@@ -1,0 +1,749 @@
+*{margin: 0; padding: 0; font-family: Arial}
+
+body{background: #FFF;}
+
+.wrapper{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+a{text-decoration: none;}
+
+ul{list-style-type: none;}
+
+/*---------------------Header------------*/
+#header{
+	width: 100%;
+	height: 55px;
+	background: #FED700;
+}
+
+#header .wrapper{
+	background: #000000;
+	width: 1200px;
+	height: 55px;
+}
+		
+		/*-----Logo-------*/
+		#header #logo{
+			width: 165px;
+			height: 30px;
+			float: left;
+			position: relative;
+		}
+
+				#header #logo #icon-logo{
+					width: 156px;
+					height: 30px;
+					background: url("../../images/icondesktop@1x.png") no-repeat;
+					position: absolute; 
+					top: 10px;
+					right: 5px;
+				}
+
+
+		/*-----Search-------*/
+		#header #search{
+			width: 230px;
+			height: 35px;
+			float: left;
+			position: relative;
+		}
+
+		#header #search input{
+			width: 215px;
+			height: 35px;
+			border-radius: 5px;
+			margin: 7px 0  0 5px; 
+			padding-left: 15px;
+		}
+
+		#header #search #icon-search{
+			background: url("../../images/icondesktop@1x.png") no-repeat;
+		    width: 29px;
+		    height: 30px;
+		    position: absolute;
+		    top: 18px;
+		    right: 1px;
+		    background-position-x: 33%;
+		}
+
+
+		/*-----Nav-------*/
+		#header #nav{
+			width: 780px;
+			height: 55px;
+			background: #FED700;
+			float: right;
+		}
+
+
+
+		#header #nav .icon{
+			display: inline;
+			float: left;
+			width: 10%;
+			height: 20px;
+			font-size: 11px;
+			text-transform: uppercase;
+			position: relative;
+			padding-top: 35px; 
+			color: #333;
+			text-align: center;
+		}
+
+		#header #nav .icon:hover{
+			background: #F5F5F5;
+		}
+
+
+						#header #nav .icon #icon-mobile{
+							    background: url(../../images/icondesktop@1x.png) no-repeat;
+							    width: 28%;
+							    height: 30px;
+							    background-position-x: 39%;
+							    background-position-y: 0%;
+							    position: absolute;
+							    top: 5px;
+							    right: 28px;
+						}
+
+						#header #nav .icon #icon-tablet{
+							background: url(../../images/icondesktop@1x.png) no-repeat;
+						    width: 47%;
+						    height: 30px;
+						    background-position-x: 45%;
+						    background-position-y: 0%;
+						    position: absolute;
+						    top: 5px;
+							right: 18px;
+						}
+
+						#header #nav .icon #icon-laptop{
+							    background: url(../../images/icondesktop@1x.png) no-repeat;
+							    width: 54%;
+							    height: 30px;
+							    background-position-x: 53%;
+							    background-position-y: 0%;
+							    position: absolute;
+							    top: 5px;
+							    right: 18px;
+						}
+
+						#header #nav .icon #icon-phukien{
+							    background: url(../../images/icondesktop@1x.png) no-repeat;
+							    width: 33%;
+							    height: 30px;
+							    background-position-x: 60%;
+							    background-position-y: 0%;
+							    position: absolute;
+							    top: 5px;
+							    right: 30px;
+						}
+
+						#header #nav .icon #icon-maydoitra{
+							    background: url(../../images/icondesktop@1x.png) no-repeat;
+							    width: 52%;
+							    height: 30px;
+							    background-position-x: 68%;
+							    background-position-y: 0%;
+							    position: absolute;
+							    top: 5px;
+							    right: 20px;
+						}
+
+							#header #nav .icon  #icon-may{
+								position: absolute;
+							    top: 12px;
+							    right: 28px;
+							}
+
+						#header #nav .icon #icon-promo{
+							background: url(../../images/icondesktop@1x.png) no-repeat;
+						    width: 36%;
+						    height: 30px;
+						    background-position-x: 100%;
+						    background-position-y: 0%;
+						    position: absolute;
+						    top: 5px;
+						    right: 25px;
+						}
+
+						#header #nav .icon #icon-news{
+							    background: url(../../images/icondesktop@1x.png) no-repeat;
+							    width: 42%;
+							    height: 30px;
+							    background-position-x: 80%;
+							    background-position-y: 0%;
+							    position: absolute;
+							    top: 5px;
+							    right: 23px;
+
+						}
+
+							#header #nav .icon  #icon-tin{
+								position: absolute;
+							    top: 9px;
+							    right: 32px;
+							}
+
+
+						#header #nav .icon #icon-ask{
+							    background: url(../../images/icondesktop@1x.png) no-repeat;
+							    width: 42%;
+							    height: 30px;
+							    background-position-x: 87%;
+							    background-position-y: 0%;
+							    position: absolute;
+							    top: 5px;
+							    right: 22px;
+
+						}
+
+
+						#header #nav .icon-1{
+							width: 46px;
+							height: 36px;
+							text-transform: none;
+							text-align: center;
+							padding: 19px 4px 0 4px;
+						}
+
+						#header #nav .duongke{
+							border-left: 1px solid #eee;
+							height: 55px;
+							width: 0;
+							float: left;
+						}
+
+						
+						#header #nav .icon-2{
+							width: 85px;
+							height: 36px;
+							padding-top: 19px; 
+							text-transform: none;
+							text-align: center;
+							margin: 0 0 0 5px;
+						}
+/*----------------/End Header-------------*/
+
+/*----------------Content----------------*/
+#content{}
+
+	#content #line-1{
+		width: 1200px;
+		background: #fff;
+		margin-top: 10px; 
+	}
+	
+		#content #line-1 #slider{ 
+			width: 800px;
+			float: left;
+			background: #fff;
+		}
+		
+			#content #line-1 #slider a{
+				margin-top: 0px;
+			}
+		
+				#content #line-1 #slider a img{
+					
+				}
+		
+		#content #line-1 #adv-1{ 
+			width: 400px;
+			float: right;
+			background: #fff;
+		}
+		
+			#content #line-1 #adv-1 a{
+				float: right;
+				margin-bottom: 5px;
+			}
+			
+				#content #line-1 #adv-1 a img{}
+		
+	#content #img-ncc{
+		width: 1200px;
+		margin-top: 5px;
+		float: left;
+	}
+	
+		#content #img-ncc a{
+			width: 148px;
+			height: 40px;
+			border: 1px solid #eee;
+			float: left;
+			text-align: center;
+			line-height: 40px;
+		}
+		
+		#content #img-ncc a img{
+			width: 114px;
+			margin-top: 10px;
+		}
+	
+	#content .filter{
+		width: 1200px;
+		float: left;
+		margin-top: 10px;
+		border-bottom: 1px solid #eee;
+		padding-bottom: 10px;
+	}
+	
+		#content .filter li{
+			display: inline;
+			float: left;
+		}
+		
+		#content .filter .chon a{
+			color: #333;
+		}
+		
+		#content .filter .list-filter{
+			margin-left: 20px;
+		}
+		
+		#content .filter .list-filter a{
+			color: #0080FF;
+		}
+		
+		#content .filter .list-filter a:hover{
+			color: #333;
+		}
+		
+		#content .filter .sapxep{
+			display: inline;
+			float: right;
+		}
+		
+		#content .filter .sapxep a{
+			color: #0080FF;
+		}
+		
+		#content .filter .sapxep a:hover{
+			color: #333;
+		}
+	
+		#content .navigat{
+			width: 1200px;
+			height: 46px;
+			background: #FFF;
+			margin-top: 10px; 
+			float: left;
+		}
+		
+							#content  .navigat .navigat-1{
+								display: block;
+								font-size: 16px;
+								font-weight: 600;
+								height: 46px;
+								line-height: 46px;
+								margin: 0 10px;
+								float: left;
+							}
+	
+	#content .product{
+			width: 1200px;
+			background: #FFF;
+		}
+		
+			/*Khu vực khuyến mại giá*/
+					 .preorder{
+						color: #fff;
+						background: #e91e63;
+						font-size: 11px;
+						border-radius: 2px;
+						padding: 3px 15px 3px 15px;
+					}
+					
+					.installment{
+						color: #fff;
+						background: #f28902;
+						font-size: 11px;
+						padding: 3px 15px 3px 15px;
+						border-radius: 2px;
+						
+					}
+					
+					.discount{
+						color: #fff;
+						background-image: linear-gradient(-90deg,#ec1f1f 0%,#ff9c00 100%);
+						font-size: 11px;
+						padding: 3px 15px 3px 15px;
+						border-radius: 10px;
+						
+					}
+					
+					.shockprice{
+						color: #fff;
+						background: #3fb846;
+						font-size: 11px;
+						padding: 3px 15px 3px 15px;
+						border-radius: 2px;
+						
+					}
+					
+					.new{
+						color: #fff;
+						background: #1191f8;
+						font-size: 11px;
+						padding: 3px 15px 3px 15px;
+						border-radius: 2px;
+					}
+					/*--Khu vực khuyến mại giá*/
+					
+				#content  .price{
+						font-size: 14px;
+						color: #E10C00;
+						width: 220px;
+						height: 18px;
+						float: left;
+						margin: 10px 10px;
+						
+					}
+					
+					#content  .content-product{
+						font-size: 12px;
+						color: #333;
+						width: 210px;
+						height: 32px;
+						float: left;
+						margin: 0 10px;
+					}
+		
+				#content .product .homeproduct{
+					width: 1200px;
+					float: left;
+					background: #fff;
+				}
+				
+				#content .product .homeproduct .feature{
+					float: left;
+					width: 480px;
+					height: 333px;
+					border-top: 1px solid #eee;
+					border-right: 1px solid #eee;
+					position: relative;
+				}
+				
+				#content .product .homeproduct .feature .left{
+					width: 200px;
+					float: left;
+				}
+				
+				#content .product .homeproduct .feature .left img{
+					width: 200px;
+				}
+				
+				#content .product .homeproduct .feature .right{
+					width: 55%;
+					float: right;
+				}
+				
+				#content .product .homeproduct .feature .right h3{
+					float: left;
+					font-size: 16px;
+					color: #333;
+					height: 18px;
+					float: left;
+					margin: 15px 10px 0 10px;
+				}
+				
+				#content .product .homeproduct .feature .right .price{
+						font-size: 16px;
+						color: #E10C00;
+						width: 220px;
+						height: 18px;
+						float: left;
+						margin: 10px 10px;
+				}
+				
+				#content .product .homeproduct .feature .right .promotion{
+					float: left;
+					border: 1px solid #eee;
+					border-radius: 3px;
+					padding: 5px;
+					position: relative;
+					padding: 20px 10px 10px 10px;
+					margin-top: 15px;
+					margin-right: 10px;
+				}
+				
+				#content .product .homeproduct .feature .right .promotion .plabel{
+					float: left;
+					position: absolute;
+					left: 5px;
+					top: -10px;
+					padding: 0 10px;
+					border-radius: 10px;
+					background: #ed142f;
+					color: #fff;
+					height: 24px;
+					line-height: 24px;
+				}
+				
+				#content .product .homeproduct .feature .right .promotion .plabel i{
+					float: left;
+					background: url(../images/dtdd/icon.png) no-repeat;
+					background-size: 16px 15px;
+					width: 16px;
+					height: 15px;
+					display: inline-block;
+					position: relative;
+					top: 2px;
+					margin-right: 3px;
+				}
+				
+				#content .product .homeproduct .feature .right .promotion span{
+					float: left;
+					display: inline-block;
+					font-size: 12px;
+					margin-left: 5px;
+					color: #222;
+				}
+				
+				#content .product .homeproduct .feature .right .button button{
+					padding: 5px 0;
+					width: 110px;
+					margin: 0 5px;
+					margin-left: 0;
+					cursor: pointer;
+					font-size: 12px;
+					color: #f76b1c;
+					text-transform: uppercase;
+					border: 1px solid #f76b1c;
+					border-radius: 3px;
+					background: #fff;
+					transition: all .3s ease;
+					margin-top: 10px;
+				}
+				
+				
+				
+				#content .product .homeproduct .sp{
+					float: left;
+					width: 238px;
+					display: inline;
+					height: 333px;
+					border-top: 1px solid #eee;
+					border-right: 1px solid #eee;
+					position: relative;
+					
+				}
+				
+				
+				#content .product .homeproduct .sp img{
+					width: 180px;
+					height: 180px;
+					float: left;
+					margin: 20px 0 0 30px;
+				}
+				
+				#content .product .homeproduct .sp h3{
+					float: left;
+					width: 180px;
+					font-size: 14px;
+					color: #333;
+					height: 18px;
+					float: left;
+					margin: 15px 10px 0 10px;
+				}
+				
+				#content .product .homeproduct .sp h3:hover{
+					color: #3993D9;
+				}
+				
+				
+				#content .product .homeproduct .feature .km-feature{
+					    position: absolute;
+						top: 260px;
+						right: 16px;
+				}
+				
+				#content .product .homeproduct .sp .km1{
+					    display: inline-block;
+						position: absolute;
+						top: 180px;
+						left: 10px;
+				}
+	
+	#content #xemthem{}
+	
+	#content .catetag{}
+	
+	#content .class{}
+/*---------------/End Content----------------*/
+
+/*---------------------Footer------------*/
+#footer{
+	width: 100%;
+	background: #fff;
+	margin-top: 10px;
+	float: left;
+}
+
+#footer .wrapper{
+	width: 1200px;
+	height: 180px;
+	
+}
+
+		#footer .col{
+			width: 300px;
+			background: #FFF;
+			float: left;
+			margin-top: 10px;
+			position: relative;
+		}
+		
+		#footer .col-4{
+			width: 200px;
+			background: #FFF;
+			float: left;
+			margin-left: 100px;
+			margin-top: 10px;
+			position: relative;
+		}
+		
+		#footer ul li{
+			margin-top: 10px; 
+			
+		}
+		
+		#footer p{
+			margin-top: 10px; 
+			font-size: 14px;
+			color: #333;
+			
+		}
+		
+		#footer p a{
+			font-weight: bold;
+			color: #333;
+			
+		}
+		
+		#footer  ul li a{
+			color: #0082CE;
+			font-size: 14px;
+		}
+		
+		#footer  ul .showmore{
+			
+		}
+		
+		#footer  ul .showmore a::after{
+			    content: '';
+				display: inline-block;
+				width: 0;
+				height: 0;
+				border-top: 5px solid #288ad6;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				margin: 0 0 0 5px;
+				position: relative;
+				top: -2px;
+				
+		}
+		
+		#footer  ul .hidden{
+			
+		}
+		
+		#footer .col .icontgdd-bct{
+			    width: 110px;
+				height: 29px;
+				background: url("../images/icondesktop@1x.png") no-repeat;
+				position: absolute;
+				top: 120px;
+				left: 1px;
+				background-position-x: 1px;
+				background-position-y: -55px;
+		}
+		
+		#footer .col-4 .icon-col{
+			margin: 0 20px 0 20px;
+		}
+		
+		#footer .col-4 .fb{
+			    width: 17px;
+				height: 15px;
+				background: url("../images/icondesktop@1x.png") no-repeat;
+				position: absolute;
+				top: 13px;
+				left: -2px;
+				background-position-x: 1px;
+				background-position-y: -29px;
+		}
+		
+		#footer .col-4 .youtube{
+				width: 17px;
+				height: 15px;
+				background: url("../images/icondesktop@1x.png") no-repeat;
+				position: absolute;
+				top: 13px;
+				left: 70px;
+				background-position-x: -15px;
+				background-position-y: -29px;
+		}
+		
+		#footer .col-4 .dmx{
+			width: 110px;
+			height: 29px;
+			background: url(../images/logosite2018.png) no-repeat;
+			position: absolute;
+			top: 62px;
+			left: 0px;
+			background-position-x: -110px;
+			background-position-y: 0;
+		}
+		
+		#footer .col-4 .bhx{
+			width: 110px;
+			height: 29px;
+			background: url(../images/logosite2018.png) no-repeat;
+			position: absolute;
+			top: 85px;
+			left: 0px;
+			background-position-x: -219px;
+			background-position-y: 0;
+		}
+		
+		#footer .col-4 .vv{
+			width: 81px;
+			height: 29px;
+			background: url(../images/logosite2018.png) no-repeat;
+			position: absolute;
+			top: 107px;
+			left: 0px;
+			background-position-x: -329px;
+			background-position-y: 0;
+		}
+		
+		#footer .col-4 .ta{
+			width: 145px;
+			height: 29px;
+			background: url(../images/logosite2018.png) no-repeat;
+			position: absolute;
+			top: 130px;
+			left: 0px;
+			background-position-x: -409px;
+			background-position-y: 0;
+		}
+		
+		
+
+		#footer #address{
+			float: left;
+			width: 100%;
+			background: #F8F8F8;
+			min-width: 980px;
+			padding: 10px 0;
+		}
+			
+			#footer #address p{
+				    font-size: 10px;
+					color: #999;
+					text-align: center;
+			}

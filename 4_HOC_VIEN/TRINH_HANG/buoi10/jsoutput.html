@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript | output javascript</title>
+	<meta charset="utf-8"/>
+	<script>
+		function canhbao(){
+			alert('Đây là hộp thoại cảnh báo');
+		}
+		function xacnhan(){
+			var ketqua = confirm('Lựa chọn của bạn là gì? (có hoặc không)');
+			alert('kết quả:'+ketqua);
+		}
+		function nhaplieu(){
+			var ketqua = prompt('Tên bạn là gì ?');
+			alert('Rất vui khi được làm quen với '+ketqua);
+		}
+		function tinhtong(){
+			var so1 = prompt('Nhập số thứ nhất');
+			var so2 = prompt('Nhập số thứ hai');
+			var ketqua = parseInt(so1) + parseInt(so2);
+			document.getElementById('ketqua').innerHTML = 'Tổng: ' + ketqua;
+			document.getElementsByName('ketqua1').value = 'Tổng: ' + ketqua;
+			console.log('Kết quả của phép cộng: ' + ketqua);
+				
+		}
+	</script>
+</head>
+<body>
+	<h1>Javascript | outtput javascript</h1>
+	<h2>Cửa sổ dialog</h2>
+	<button type="button" onclick="canhbao()"> Hộp thoại cảnh báo - alert</button>
+	<button type="button" onclick="xacnhan()">Hộp thoại xác nhận - confirm</button>
+	<button type="button" onclick="nhaplieu()"> Hộp thoại nhập liệu - Prompt</button>
+	<h2>Truy cập vào phần tử HTML</h2>
+	<button type="button" onclick="tinhtong()">Tính tổng 2 số</button> 
+	<p id="ketqua">Kết quả</p>
+	<!-- <input type="text" name="ketqua1" value="" /> -->
+</body>
+</html>
