@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>JS | Điều khiển lặp</title>
+	<script type="text/javascript">
+		function lap_for(){
+			var dayso='';
+			for(var i=1;i<=100;i++){
+				dayso= i%2==0?dayso+=i+';':dayso+='';
+			}
+			document.getElementById('ketqua').innerHTML = dayso;
+			alert('Xử lý xong');
+		}
+		function lap_do(){
+			var dayso='';
+			var dem =0;
+			var i=0;
+			do{
+				if(i%2==0){
+					dayso =dayso + i + '; ';
+					dem++;
+				}
+				i++;
+			}while(dem<=100)
+			document.getElementsById('ketqua').innerHTML=dayso;
+			alert('xử lý xong');
+
+		}
+		function lap_while(){
+			var dayso='';
+			var dem=-'';
+			var i=0;
+			while(dem<=100){
+				if(i%2==0){
+					dayso =dayso + i + '; ';
+					dem++;
+				}
+				i++;
+			}
+			document.getElementsById('ketqua').innerHTML=dayso;
+			alert('xử lý xong');
+		}
+	</script>
+</head>
+<body>
+	<h1>JS | Điều khiển lặp</h1>
+	<h2>1. Điều khiển lặp for</h2>
+	<button type="button" onclick="lap_for()">Tìm số chẵn từ 1 ->100(for)</button>
+	<h2>2. Điều khiển lặp do</h2>
+	<button type="button" onclick="lap_do()">Tìm 100 số chẵn(do)</button>
+	<h2>3. Điều khiển lặp while</h2>
+	<button type="button" onclick="lap_while()">Tìm số chẵn từ 1 ->100(while)</button>
+	<h2>Kết quả:</h2>
+	<p id='ketqua'></p>
+</body>
+</html>

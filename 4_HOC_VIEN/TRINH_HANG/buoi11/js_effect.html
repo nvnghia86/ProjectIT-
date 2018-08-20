@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>JS | Effect</title>
+	<script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<h1>JS | jquery</h1>
+	<h2>Truy cập vào phần tử</h2>
+	<button type="button" id="btn_an">Ẩn phần tử</button>
+	<button type="button" id="btn_hien">Hiện phần tử</button>
+	<button type="button" id="btn_fadein">Hiện phần tử(hiệu ứng)</button>
+	<button type="button" id="btn_fadeout">Ẩn phần tử(Hiệu ứng)</button>
+	<button type="button" id="btn_trai">Dịch chuyển sang trai</button>
+	<button type="button" id="btn_phai">Dịch chuyển sang phai</button>
+	<hr/>
+	<div id="phantu" style="width: 100px;height:100px;background: yellow;position: absolute;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiA9TaQAfIlZeEajvgQ3AcZa-T0lPCdSPUgjkvHKQoFtz2VjR5"></div>
+</body>
+<script>
+	$(function(){
+		// viết mã jquery ở đây
+		$('#btn_an').on('click',function(){
+			$('#phantu').hide();
+		});
+		$('#btn_hien').on('click',function(){
+			$('#phantu').show();
+		});
+		$('#btn_fadein').on('click',function(){
+			$('#phantu').fadeIn(2000);
+		});
+		$('#btn_fadeout').on('click',function(){
+			$('#phantu').fadeOut(2000);
+		});
+		$('#btn_trai').on('click',function(){
+			$('#phantu').animate({left:'100px'});
+		});
+		$('#btn_phai').on('click',function(){
+			$('#phantu').animate({left:'-100px'})
+			// $('#phantu').animate({right:'300px'});
+		});
+	})
+</script>
+</html>
