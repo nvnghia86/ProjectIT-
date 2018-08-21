@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>JS | Phương trình bậc 2</title>
+	</head>
+	<script type="text/javascript">
+		function giaiphuongtrinhbac2(){
+			var a = prompt('Nhập a');
+			var b = prompt('Nhập b');
+			var c = prompt('Nhập c');
+			if (parseFloat(a)==0) {
+					var x=-parseFloat(c)/parseFloat(b);
+					alert('Phương trình có nghiệm là '+x);
+				}
+			if (parseFloat(a)!=0){
+				var delta = Math.pow(parseFloat(b),2) - 4*parseFloat(a)*parseFloat(c);
+				if(parseFloat(delta)>0){
+						var x1=(-parseFloat(b)+Math.sqrt(parseFloat(delta)))/(2*parseFloat(a));
+						var x2=(-parseFloat(b)+Math.sqrt(parseFloat(delta)))/(2*parseFloat(a));
+						alert('Phuong trình có hai nghiệm phân biệt: x1= '+x1+' và x2= '+x2);
+				}
+				else if(parseFloat(delta)==0){
+						var x=(-parseFloat(b))/(2*parseFloat(a));
+						alert('Phuong trình có nghiệm kép: x= '+x);
+				}
+				else{
+						alert('Phương trình vô nghiệm');
+				}
+			}
+		}
+	</script>
+	<body>
+		<h1>JS | Các điều khiển trong html</h1>
+		<h2>1. Điều khiển rẽ nhánh</h2>
+		<button type="button" onclick="giaiphuongtrinhbac2()">Giải phương trình bậc 2</button>
+	</body>
+</html>
