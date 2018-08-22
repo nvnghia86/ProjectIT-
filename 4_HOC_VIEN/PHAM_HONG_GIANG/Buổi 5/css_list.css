@@ -1,0 +1,29 @@
+#list_1{
+	list-style: none;
+	width: 250px;
+}
+
+#list_1 li{
+	color: #0E4D7D;
+	font-size: 14px;
+	line-height: 1.5;
+	background: url('images/sprite-2.gif');
+	background-repeat: no-repeat;
+	background-position: 0 -287px!important;
+	padding-left: 15px;
+}
+
+#list_1 li:hover{
+	cursor: pointer;
+	color: #1883D7;
+	text-decoration: underline;
+}
+
+#list_2{
+	line-style-type: none;
+}
+
+#list_2 li{
+	display: inline;
+	
+}

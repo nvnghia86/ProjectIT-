@@ -1,0 +1,82 @@
+#css_float{
+	
+	background: #E4E4E4;
+}
+
+#duong_bao{
+	width: 700px;
+	min-height:400px;
+	background: white;
+	margin: 0 auto; /*Căn giữa đối tượng*/
+}
+
+#css_float #duong_bao #hop_1{
+	width: 300px; height: 100px; background: yellow;
+	float:right;
+}
+
+#css_float #duong_bao #hop_2{
+	width: 200px; height: 120px; background: orange;
+	float:right;
+}
+
+#css_float #duong_bao #hop_3{
+	width: 250px; height: 80px; background: violet;
+	float:left;
+}
+
+#css_float #duong_bao #hop_4{
+	width: 320px; height: 100px; background: green;
+	float:right;
+}
+
+#css_float #duong_bao #hop_5{
+	width: 120px; height: 50px; background: red;
+	float:inherit;
+}
+
+#css_margin_padding {
+	background: #c3c3c3
+}
+
+#css_margin_padding #duong_bao #hop_1{
+	width: 300px; height: 100px; background: yellow;
+	margin: 35px 25px 15px 10px;
+	float:left;
+}
+
+#css_margin_padding #duong_bao #hop_2{
+	width: 350px; height: 220px; background: orange;
+	float:left;
+	padding: 50px 30px 30px 20px;
+}
+
+#css_margin_padding #duong_bao #hop_3{
+	width: 120px; height: 120px; background: green;
+	float:left;
+	margin-left: 20px;
+}
+
+/* Lab CSS Position */
+#css_position{background:#333}
+
+#css_position #duong_bao{
+	background: white;
+	width: 70%;
+	margin: 0 auto;
+	position:relative;
+}
+
+#css_position #duong_bao #hop_1{
+	width:150px; height:150; background:red;
+	position:fixed;
+	top:250px;
+	right: 0px;
+}
+
+#css_position #duong_bao #hop_2{
+	width:150px; height:150; background:blue;
+	position:absolute;
+	top:100px;
+	right:50px;
+}
