@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Điều khiển | Lặp</title>
+		<meta charset="utf-8" />
+		<script>
+			function lap_for(){
+				var dayso='';
+				for(var i=1; i<=100;i++){
+					dayso=i%2==0?dayso+=i + ';':dayso+='';
+					
+				}
+				document.getElementById('ketqua').innerHTML=dayso;
+				alert('Xử lý xong!');
+			}
+			
+			
+			function lap_do(){
+				var dayso = '';
+				var dem = 0;
+				var i = 0;
+				do {
+					if(i%2==0){
+						dayso +=i + ';';
+						dem++;
+					}
+					i++;
+				}while
+				document.getElementById('ketqua').innerHTML=dayso;
+				alert('Xử lý xong!');
+			}
+			
+			function lap_while(){}
+		</script>
+	</head>
+	<body>
+		<h1>JS Điều khiển lặp</h1>
+		<h2>1.Điều khiển lặp - For</h2>
+			<button type="button" onclick="lap_for()">Tìm 100 số chẵn (for)</button>
+		<h2>2.Điều khiển lặp - Do</h2>
+		<button type="button" onclick="lap_do()">Tìm 100 số chẵn (do)</button>
+		<h2>3.Điều khiển lặp - While</h2>
+		<button type="button" onclick="lap_while()">Tìm 100 số chẵn (while)</button>
+		<p id="ketqua"></p>
+	</body>
+</html>

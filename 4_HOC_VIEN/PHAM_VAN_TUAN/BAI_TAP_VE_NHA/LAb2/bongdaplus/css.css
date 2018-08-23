@@ -1,0 +1,38 @@
+*{margin:0; padding:0;}
+.wrapper{width: 1000px; height: auto; margin: 0 auto; padding: 0;}
+#header{width: 1000px; height: 300px; background-color: #8A5CA2;}
+#header #nav{width: 700px; height: 50px; background-color: #5F9F9D; float: left;}
+#header #search{width: 300px; height: 50px; background-color: #4DDF1F; float: left;}
+#header #banner{width: 1000px; height: 150px; background-color: #AE3CC2; float: left;}
+#header #nav_2{width: 1000px; height: 50px; background-color:#2FCFC6; float: left;}
+#header #nav_3{width: 1000px; height: 50px; background-color:#CDCF2F; float: left;}
+
+
+/* css header*/
+
+#content{width: 1000px; height: auto;}
+#content #article{width: 640px; height: auto; float: left; margin: 5px; background-color: #4283BC;}
+#content #article #col_1{width: 630px; height: 360px; float: left;margin: 5px; background-color: #93FF00;}
+#content #article #col_2{width: 630px; height: 150px; float: left;margin: 5px; background-color: #93FF00;}
+#content #article #col_3{width: 990px; height: 150px; float: left; margin: 5px; background-color: #5BB24C;}
+#content #article #col_4{width: 630px; height: 360px; float: left;margin: 5px; background-color: #93FF00;}
+#content #article #col_5{width: 630px; height: 800px;float: left;margin: 5px; background-color: #93FF00;}
+#content #article #col_6{width: 630px; height: 360px; float: left;margin: 5px; background-color: #93FF00;}
+#content #article #col_7{width: 630px; height: 360px; float: left;margin: 5px; background-color: #93FF00;}
+#content #article #col_8{width: 630px; height: 360px; float: left;margin: 5px; background-color: #93FF00;}
+
+
+#content #aside{width: 340px; height: auto; float: left; margin: 5px; background-color: ;}
+#content #aside #col_1{width: 330px; height: 250px; float: left;margin: 5px; background-color: #93FF00;}
+#content #aside #col_2{width: 330px; height: 250px; float: left;margin: 5px; background-color: #93FF00; margin-top: 435px;}
+#content #aside #col_3{width: 330px; height: 200px; float: left;margin: 5px; background-color: #93FF00;}
+#content #aside #col_4{width: 330px; height: 150px; float: left;margin: 5px; background-color: #93FF00;}
+#content #aside #col_5{width: 330px; height: 100px; float: left;margin: 5px; background-color: #93FF00;}
+#content #aside #col_6{width: 330px; height: 120px; float: left;margin: 5px; background-color: #93FF00;}
+#content #aside #col_7{width: 330px; height: 250px; float: left;margin: 5px; background-color: #93FF00;}
+#content #aside #col_8{width: 330px; height: 100px; float: left;margin: 5px; background-color: #93FF00;}
+
+
+#footer{width: 1000px; height: 350px; background-color: black; clear: both;}
+#footer #footer_1{width: 100%; height: 170px; background-color: #BEB940; margin: 5px 0px 5px 0px;}
+#footer #footer_2{width: 100%; height: 170px; background-color: #50AE64; }

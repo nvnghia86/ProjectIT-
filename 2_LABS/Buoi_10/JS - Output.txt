@@ -1,0 +1,11 @@
+JS Output
+	- Cửa sổ (dialog):
+		+ Cảnh báo alert()
+		+ Xác nhận: confirm()
+		+ Nhập liệu: prompt()
+	- Chèn nội dung vào HTML có sẵn (write content):
+		+ getElementById
+		+ getElementByName
+	- Xuất ra log: dành cho lập trình viên gỡ lỗi - debug
+
+		

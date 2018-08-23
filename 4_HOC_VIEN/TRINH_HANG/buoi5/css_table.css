@@ -1,0 +1,22 @@
+h1{
+	color: #00FF00;
+}
+h2{
+	color: #DAA520;
+}
+table#table_1{
+	border-collapse:collapse;
+	border: solid 2px  #FF0000;
+}
+table#table_1 thead{
+	background: #1883D7;
+	color:#7FFF00;
+}
+table#table_1 td{
+	padding: 5px;
+}
+table#table_1 tr:hover{
+	cursor:pointer;
+	background: #0000FF;
+	color: #E9967A;
+}
