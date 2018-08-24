@@ -1,0 +1,215 @@
+/* reset css*/
+*{margin: 0; padding:0}
+body{
+	background: white;
+}
+
+.wrapper{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#header{
+	width: 100%;
+	height: 55px;
+	background: black;
+	float: left;
+}
+
+#header #logo{
+	width: 100px;
+	height: 55px;
+	background: red;
+	float: left;
+}
+
+#header #search{
+	width: 600px;
+	height: 55px;
+	background: white;
+	float: left;
+}
+
+#header #link-list{
+	width: 300px;
+	height: 55px;
+	background: cyan;
+	float: left;
+}
+
+#content{
+	background: white;
+	min-height: 1000px;
+}
+
+#content #line-1 #main-menu{
+	width: 100%;
+	height: 60px;
+	background: gray;
+	float: left;
+	margin: 10px 10px;
+}	
+
+#content #line-2 #adv-1{
+	width: 1000px;
+	height: 200px;
+	background: violet;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+#content #line-3{
+	width: 1000px;
+	height: 300px;
+	background: pink;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+#content #line-3 #slider{
+	width: 650px;
+	height: 300px;
+	background: DarkOrchid;
+	float: left;
+}
+
+#content #line-3 #playlist{
+	width: 350px;
+	height: 300px;
+	background: DarkSeaGreen;
+	float: left;
+}
+
+#content #line-4{
+	width: 1000px;
+	height: 300px;
+	background: Gainsboro;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+#content #line-4 #zingchart{
+	width: 650px;
+	height: 300px;
+	background: GreenYellow;
+	float: left;
+}
+
+#content #line-4 #chu-de-hot{
+	width: 350px;
+	height: 300px;
+	background: Khaki;
+	float: left;
+}
+
+#content #line-5{
+	width: 1000px;
+	height: 300px;
+	background: LawnGreen;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+#content #line-5 #ky-uc{
+	width: 650px;
+	height: 300px;
+	background: LightGreen;
+	float: left;
+}
+
+#content #line-5 #zingchart-tuan-bai-hat{
+	width: 350px;
+	height: 300px;
+	background: LightGrey;
+	float: left;
+}
+
+#content #line-6{
+	width: 1000px;
+	height: 300px;
+	background: LightSeaGreen;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+#content #line-6 #video-hot{
+	width: 650px;
+	height: 300px;
+	background: Maroon;
+	float: left;
+}
+
+#content #line-6 #zingchart-tuan-MV{
+	width: 350px;
+	height: 300px;
+	background: Navy;
+	float: left;
+}
+
+#content #line-7{
+	width: 1000px;
+	height: 300px;
+	background: OldLace;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+#content #line-7 #album-hot{
+	width: 650px;
+	height: 300px;
+	background: PaleGreen;
+	float: left;
+}
+
+#content #line-7 #zingchart-tuan-album{
+	width: 350px;
+	height: 300px;
+	background: PaleTurquoise;
+	float: left;
+}
+
+#content #line-8{
+	width: 650px;
+	height: 250px;
+	background: PeachPuff;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+#content #line-8 #nhac-viet-hot{
+	width: 325px;
+	height: 250px;
+	background: RoyalBlue;
+	float: left;
+}
+
+#content #line-8 #nhac-viet-moi{
+	width: 325px;
+	height: 250px;
+	background: SeaGreen;
+	float: left;
+}
+
+#content #line-9 #nghe-si-hot{
+	width: 650px;
+	height: 200px;
+	background: Teal;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+#content #line-10 #doi-tac{
+	width: 1000px;
+	height: 100px;
+	background: Wheat;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+#footer .col{
+	height: 110px;
+	width: 140px;
+	background: Thistle;
+	float:left;
+	margin: 10px;
+}
