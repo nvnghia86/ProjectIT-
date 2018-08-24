@@ -1,0 +1,123 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Thẻ định dạng bảng biểu - table</title>
+	</head>
+	<body>
+		<h1>Thẻ định dạng bảng biểu - table</h1>
+		<h2>Bảng tiêu chuẩn</h2>
+		<h3>Danh sách đội bóng vào bán kết</h3>
+		<table width="500" border="1">
+		<caption>Đội khủng</caption>
+			<thead>
+				<tr>
+					<th>STT</th>
+					<th>Tên đội</th>
+					<th>Cờ</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Pháp</td>
+					<td align="center">
+						<img src="hinhanh/flag/fra.png" width="60" />
+					</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Anh</td>
+					<td align="center">
+						<img src="hinhanh/flag/eng.png" width="60" />
+					</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Croatia</td>
+					<td align="center">
+						<img src="hinhanh/flag/cro.png" width="60" />
+					</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Bỉ</td>
+					<td align="center">
+						<img src="hinhanh/flag/bel.png" width="60" />
+					</td>
+					
+				</tr>
+			</tbody>
+		</table>
+		
+		<table width= "600" border="1">
+		<tr>
+			<td bgcolor = "green" colspan="5" align = "center" >Danh sách đội thi đấu</td>
+		</tr>
+		<tr>
+			<td rowspan= "2" align = "center">  Cặp đấu</td>
+			<td rowspan= "2" align = "center">  Đội tuyển</td>
+			<td rowspan= "2" align = "center">  Thi đấu</td>
+			<td colspan= "2" align = "center">  Hiệu số</td>
+		</tr>
+		<tr>
+			<td align = "center">bàn thắng</td>
+			<td align = "center">bàn thua</td> 
+		
+		</tr>
+		<tr>
+			<td rowspan = "2" align = "center">Cặp1</td>
+			<td align = "center">Anh</td>
+			<td align = "center"><img src="hinhanh/flag/eng.png" width="60" /> </td>
+			<td align = "center">9</td>
+			<td align = "center">2</td>
+		</tr>
+			<td align = "center">Bỉ</td>
+			<td align = "center"><img src="hinhanh/flag/bel.png" width="60" /> </td>
+			<td align = "center">9</td>
+			<td align = "center">2</td>
+		</tr>	
+				<tr>
+			<td rowspan = "2" align = "center">Cặp2</td>
+			<td align = "center">Pháp</td>
+			<td align = "center"><img src="hinhanh/flag/fra.png" width="60" /> </td>
+			<td align = "center">9</td>
+			<td align = "center">2</td>
+		</tr>
+			<td align = "center">Croatia</td>
+			<td align = "center"><img src="hinhanh/flag/cro.png" width="60" /> </td>
+			<td align = "center">9</td>
+			<td align = "center">2</td>
+		</tr>	
+		</table>
+		<form>
+		<h1>các thành phần của form</h1>
+		<h2>nhóm thẻ input<h2>
+		<h3>thẻ nhập văn bản</h3>
+		<input type = "text" size = "60" maxlength = "20" /> 
+		<h3> thẻ password</h3>
+		<input type = "password" size = "60" maxlength = "20" /> 	
+		<h3> thẻ check chọn</h3>
+		<input type = "checkbox" value = "dulich" />Du lịch 	
+		<input type = "checkbox" value = "dulich" />xem phim
+		<input type = "checkbox" value = "dulich" />nghe nhạc
+		<input type = "checkbox" value = "dulich" checked />đập đá
+		<h3> thẻ lựa chọn 1 giá trị</h3>
+		<input type = "radio" value = "nam" name="giới tính" />Nam
+		<input type = "radio" value = "nữ" name="giới tính" checked />Nữ
+		<h3> thẻ danh sách lựa chọn</h3>
+		<select>
+			<option>Hà Nội1</option>
+			<option>Hà Nội2</option>
+			<option>Hà Nội3</option>
+		</select>
+		<h3> thẻ nhập vùng văn bản</h3>
+		<textarea  cols="50" rows ="3"> 
+		Nhập văn bản vào đây
+		</textarea>
+		<h3> Nút ấn</h3>
+		<input type = "submit" value = "gửi dữ liệu lên" />		
+		<input type = "reset" value = "thiết lập lại" />
+		<input type = "button" value = "nút ấn bình thường" />
+		</form>
+	</body>
+</html>

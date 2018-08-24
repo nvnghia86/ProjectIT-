@@ -1,0 +1,75 @@
+#list_1 {
+    width: 250px;
+    list-style: none;
+}
+
+#list_1 li {
+    color: #0E4D7D;
+    line-height: 1.5;
+    background-image: url(images/sprite-2.gif);
+    background-repeat: no-repeat;
+    background-position: 0 -287px!important;
+    padding-left: 10px;
+}
+
+#list_1 li:hover {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#list_2 {
+    list-style-type: none;
+    width: 700px;
+}
+
+#list_2 li {
+    display: inline;
+    width: 75px;
+    line-height: 23px;
+    text-transform: uppercase;
+    background-color: #FED700;
+    float: left;
+    height: 50px;
+    font-size: 11px;
+    padding: 10px;
+    text-align: center;
+}
+#list_2 li:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+#list_2 li i{
+    width: 16px;
+    height: 25px;
+    display: block;
+    margin: 2px auto 3px;
+    background-image: url('images/icon.png');
+    background-repeat:no-repeat;
+    }
+#list_2 li i.dt{
+    background-position: -190px 0;
+}
+
+#list_2 li i.tb{
+    width: 34px;
+    background-position: -209px 0;
+}
+
+#list_2 li i.lt{
+    width: 40px;
+    background-position: -245px 0;
+}
+
+#list_2 li i.pk{
+    width: 28px;
+    background-position: -284px 0;
+}
+#list_2 li i.cu{
+    width: 40px;
+    background-position: -311px 0;
+}
+#list_2 li i.km{
+        width: 23px;
+    background-position: -475px 0;
+}

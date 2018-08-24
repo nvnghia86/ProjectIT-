@@ -1,0 +1,109 @@
+ #color_text{
+	 color:red;
+ }
+ #color_background{
+	 background-color: yellow;
+	 width: 300px;
+	 height: 100px;
+ }
+ #color_border{
+	 border: 2px solid blue;
+	  width: 300px;
+	 height: 100px;
+ }
+ 
+ #anh_nen{
+	   width: 300px;
+	 height: 100px;
+	 background: url("./images/quangcao.png");
+ }
+ 
+ #anh_nen_lap{
+	   width: 800px;
+	 height: 300px;
+	 background: url("./images/smile-icon.png");
+ }
+  #anh_nen_lap_ngang{
+	   width: 800px;
+	 height: 300px;
+	 background: url("./images/smile-icon.png");
+	 background-repeat: repeat-x;
+ }
+   #anh_nen_lap_doc{
+	   width: 800px;
+	 height: 300px;
+	 background: url("./images/smile-icon.png");
+	 background-repeat: repeat-y;
+ }
+   #anh_nen_lap_k_lap{
+	   width: 800px;
+	 height: 300px;
+	 background: url("./images/smile-icon.png");
+	 background-repeat: no-repeat;
+ }
+ 
+ 
+ #menu_dantri{
+	 background: url("./images/menu_dantri.png");
+	 height: 56px;
+	 background-repeat: repeat-x;
+	 
+	 
+ }
+ 
+ #vien_net_lien{
+	  width: 300px;
+	 height: 100px;
+	 border: 1px solid;
+	 border-color: red;
+	 background-color: yellow;
+ }
+ 
+ #vien_net_dut{
+	  width: 300px;
+	 height: 100px;
+	 border: 2px dashed;
+	 border-color: blue;
+	 background-color: green;
+	 
+ }
+ 
+ #vien_bo_tron{
+	 border-radius: 20px;
+	  width: 300px;
+	 height: 100px;
+	 background-color: green;
+	 
+ }
+  #vien_bo_tron_1goc{
+	 border-top-left-radius: 50px;
+	  width: 300px;
+	 height: 100px;
+	 background-color: green;
+	 
+ }
+ 
+ #vien_day{
+	 
+ }
+ body{
+	 background: url("./images/img_tree.gif");
+	 background-attachment: fixed;
+	 background-repeat: no-repeat;
+	 background-position: center;
+ }
+ 
+ #do{
+	 color: red;
+	 width: 400px;
+	 height: 100px;
+	 background-color: gray;
+	 
+ }
+  #xanh{
+	 color: blue;
+	 width: 400px;
+	 height: 100px;
+	 background-color: yellow;
+	 
+ }
