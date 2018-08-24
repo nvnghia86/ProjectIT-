@@ -1,4 +1,7 @@
 var ACCOUNT = function(){
+	
+	this.DS_TAIKHOAN = [];
+	
     this.TAI_KHOAN = '';
     this.MAT_KHAU = '';
     this.VAI_TRO  = '';
@@ -7,11 +10,23 @@ var ACCOUNT = function(){
 	
 	this.dangnhap = function(){
 		
-		if(this.TAI_KHOAN=='admin' && this.MAT_KHAU=='123'){
-			alert('Đăng nhập thành công!');
-			window.location.href = 'danhmuc_sanpham.html';
+		var hople=false;
+		
+		for(var i = 0; i< this.DS_TAIKHOAN.length;i++){
+			var tk = this.DS_TAIKHOAN[i];
+			if(this.TAI_KHOAN==tk.TAI_KHOAN && this.MAT_KHAU==tk.MAT_KHAU){
+				hople = true;
+				this.VAI_TRO = tk.VAI_TRO;
+			}
+		}
+		
+		if(hople){
+			alert("Bạn đã đăng nhập thành công! Xin chào: " + this.VAI_TRO);
+			document.location.href='danhmuc_sanpham.html';
 		}else{
 			alert('Tài khoản hoặc mật khẩu không hợp lệ!');
 		}
+
 	}
+	
 };

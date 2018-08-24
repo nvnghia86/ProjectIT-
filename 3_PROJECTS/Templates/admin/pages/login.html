@@ -19,6 +19,7 @@
     <script src="../vendor/metisMenu/metisMenu.min.js"></script>
     <script src="../js/sb-admin-2.js"></script>
     <script src="../js/ACCOUNT.js"></script>
+	<script src="../data/DULIEU_MAU.js"></script>
 	<style>
 		.login-panel {
 			margin-top: 0% !important;
@@ -26,9 +27,12 @@
 	</style>
 	<script>
 		var Acc = new ACCOUNT();
+		var DuLieu = new DULIEU_MAU();
 		
 		$(function(){
-		
+			
+			Acc.DS_TAIKHOAN = DuLieu.DS_TAIKHOAN;
+			
 			$('#btnLogin').on('click',function(){
 				Acc.TAI_KHOAN = $('#email').val();
 				Acc.MAT_KHAU = $('#password').val();
