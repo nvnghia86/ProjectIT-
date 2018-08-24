@@ -1,0 +1,20 @@
+[
+	{
+		"MA":"DIENTHOAI",
+		"TEN":"Điện thoại",
+		"MO_TA":"Danh mục điện thoại di động",
+		"TRANG_THAI":"Sử dụng"
+	},
+	{
+		"MA":"LAPTOP",
+		"TEN":"Laptop",
+		"MO_TA":"Danh mục máy tính xách tay",
+		"TRANG_THAI":"Khóa"
+	},
+	{
+		"MA":"TABLET",
+		"TEN":"Tablet",
+		"MO_TA":"Danh mục máy tính bảng",
+		"TRANG_THAI":"Sử dụng"
+	}
+]
