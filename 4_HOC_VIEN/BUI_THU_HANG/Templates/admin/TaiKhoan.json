@@ -1,0 +1,16 @@
+[
+	{
+		"TAI_KHOAN":"Admin",
+		"MAT_KHAU":"123",
+		"HO_TEN":"Nguyễn Văn A",
+		"VAI_TRO":"Quản trị hệ thống",
+		"EMAIL":"admin@gmail.com",
+	},
+	{
+		"TAI_KHOAN":"Nhân viên",
+		"MAT_KHAU":"123",
+		"HO_TEN":"Nguyễn Văn B",
+		"VAI_TRO":"Người dùng",
+		"EMAIL":"nhanhvien@gmail.com",
+	},
+]
