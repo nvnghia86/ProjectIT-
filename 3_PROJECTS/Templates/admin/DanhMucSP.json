@@ -1,0 +1,32 @@
+[
+	{
+		"MA":"DIENTHOAI",
+		"TEN":"Điện thoại",
+		"MO_TA":"Điện thoại di động",
+		"TRANG_THAI":"Đang bán"
+	},
+	{
+		"MA":"LAPTOP",
+		"TEN":"Máy tính xách tay",
+		"MO_TA":"Laptop chuyên dụng",
+		"TRANG_THAI":"Đang bán"
+	},
+	{
+		"MA":"THIETBI",
+		"TEN":"Thiết bị mạng",
+		"MO_TA":"Bộ phát sóng wifi",
+		"TRANG_THAI":"Ngừng bán"
+	},
+	{
+		"MA":"DIEN_TU",
+		"TEN":"Ti vi",
+		"MO_TA":"Ti vi 4K",
+		"TRANG_THAI":"Đang bán"
+	},
+	{
+		"MA":"GIA_DUNG",
+		"TEN":"Đồ gia dụng gia đình",
+		"MO_TA":"Đồ nấu nướng",
+		"TRANG_THAI":"Hết hàng"
+	},
+]
