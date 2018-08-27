@@ -10,37 +10,51 @@
     <meta name="author" content="">
 
     <title>thegioididong.com | Quản trị danh mục sản phẩm</title>
-
-    <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
     <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="../css/sb-admin-2.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	
 	<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <script src="../vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
     <script src="../vendor/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
     <script src="../js/sb-admin-2.js"></script>
+    <script src="../data/DULIEU_MAU.js"></script>
+    <script src="../js/DM_SANPHAM.js"></script>
+	
 	
 	<script>
-		$(function(){
-			
-			var Acc = JSON.parse(localStorage.getItem('Acc'));
+		var Data = new DULIEU_MAU();
+		var DM = new DM_SANPHAM();
+		DM.load_DuLieu(Data.DM_SANPHAM);
 		
+		function show_DanhSach(){
+			$('#DanhSach tbody').html('');
+			var html='';
+			for(var i=0; i< DM.DANH_SACH.length; i++){
+				var trangthai = '';
+				if(DM.DANH_SACH[i].TRANG_THAI=='Kích hoạt'){
+					trangthai = '<label class="label label-success">Kích hoạt</label>';
+				}else{
+					trangthai = '<label class="label label-danger">Khóa</label>';
+				}
+			
+				html +='<tr>';
+				html +='<td>'+ (i+1) +'</td>';
+				html +='<td>'+ DM.DANH_SACH[i].MA +'</td>';
+				html +='<td>'+ DM.DANH_SACH[i].TEN +'</td>';
+				html +='<td>'+ DM.DANH_SACH[i].MO_TA +'</td>';
+				html +='<td>'+ trangthai +'</td>';
+				html +='</tr>';
+			}
+			$('#DanhSach tbody').html(html);
+		}
+	
+		$(function(){
+			var Acc = JSON.parse(localStorage.getItem('Acc'));
 			$('#spVaiTro').html(Acc.VAI_TRO);
+			
+			show_DanhSach();
 		
 		});
 		
@@ -353,7 +367,7 @@
 					<div class="panel panel-primary">
 						<div class="panel-heading">Danh sách danh mục</div>
 						<div class="panel-body">
-							<table class="table table-bordered table-striped">
+							<table class="table table-bordered table-striped" id="DanhSach">
 								<thead>
 									<tr>
 										<th>STT</th>
@@ -363,26 +377,7 @@
 										<th>Trạng thái</th>
 									</tr>
 								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>DIENTHOAI</td>
-										<td>Điện thoại di động</td>
-										<td>Danh mục sản phẩm điện thoại động</td>
-										<td>
-											<span class="label label-success">Kích hoạt</span>
-										</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>LAPTOP</td>
-										<td>Latop</td>
-										<td>Danh mục sản phẩm máy tính xách tay - laptop</td>
-										<td>
-											<span class="label label-danger">Khóa</span>
-										</td>
-									</tr>
-								</tbody>
+								<tbody></tbody>
 							</table>
 						</div>	
 					</div>
@@ -395,9 +390,6 @@
 
     </div>
     <!-- /#wrapper -->
-
-    
-
 </body>
 
 </html>
