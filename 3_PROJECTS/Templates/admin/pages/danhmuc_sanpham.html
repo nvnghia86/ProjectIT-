@@ -55,6 +55,25 @@
 			$('#spVaiTro').html(Acc.VAI_TRO);
 			
 			show_DanhSach();
+			
+			$('#btnThem').on('click',function(){
+				
+				DM.MA = $('#MA').val();
+				DM.TEN = $('#TEN').val();
+				DM.MO_TA = $('#MO_TA').val();
+				DM.TRANG_THAI = $('#TRANG_THAI').val();
+				
+				if(DM.them()==true){
+					$('#MA').val('');
+					$('#TEN').val('');
+					$('#MO_TA').html('');
+					$('#TRANG_THAI').val('Kích hoạt');
+					show_DanhSach();
+				}else{
+					$('#MA').focus();
+				}
+			
+			});
 		
 		});
 		
@@ -337,26 +356,26 @@
 						<div class="panel-body">
 							<div class="form-group">
 								<label>Mã:</label>
-								<input type="text" class="form-control" placeholder="Mã danh mục..."/>
+								<input type="text" id="MA" class="form-control" placeholder="Mã danh mục..."/>
 							</div>
 							<div class="form-group">
 								<label>Tên danh mục:</label>
-								<input type="text" class="form-control" placeholder="tên danh mục..."/>
+								<input type="text" id="TEN" class="form-control" placeholder="tên danh mục..."/>
 							</div>
 							<div class="form-group">
 								<label>Mô tả:</label>
-								<textarea rows="3" class="form-control" >Mô tả...</textarea>
+								<textarea rows="3" id="MO_TA" class="form-control" ></textarea>
 							</div>
 							<div class="form-group">
 								<label>Trạng thái:</label>
-								<select class="form-control">
-									<option>Kích hoạt</option>
-									<option>Khóa</option>
+								<select id="TRANG_THAI" class="form-control">
+									<option value="Kích hoạt">Kích hoạt</option>
+									<option value="Khóa">Khóa</option>
 								</select>
 							</div>
 						</div>
 						<div class="panel-footer">
-							<button type="button" class="btn btn-success"> Thêm mới</button>
+							<button type="button" id="btnThem" class="btn btn-success"> Thêm mới</button>
 							<button type="button" class="btn btn-warning"> Lưu</button>
 							<button type="button" class="btn btn-danger"> Xóa</button>
 						</div>
