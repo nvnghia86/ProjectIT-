@@ -41,30 +41,31 @@ function lap_for()
 }
 //dayso = i%2==0 ? dayso + = i + ';':'';
 //		i++; -->
-function lap_do()
-{
-	var dayso ='';
-	var dem = 0;
-	var i = 0;
-	do
-	{
-		if(i%2==0)
-		{
-			dayso =dayso + i +';' ;
-		}
-		i++;
-	}
-	while(dem<=100);
-	document.getElementById('ketqua1').innerHTML = dayso;
-	alert('Sử lý song');
-}
-function lap_while()
-{
-	var dayso ='';
-	var dem = 0;
-	var i = 0;
-	while(dem<=100)
-	{
-
-	}
-}
+function lap_do(){
+				var dayso='';
+				var dem = 0;
+				var i=0;
+				do{
+					if(i%2==0){
+						dayso = dayso + i + '; ';
+						dem++;
+					}
+					i++;
+				}while(dem<=100);
+				document.getElementById('ketqua1').innerHTML=dayso;
+				alert('Xử lý xong!');
+			}
+function lap_while(){
+				var dayso='';
+				var dem = 0;
+				var i=0;
+				while(dem<=100){
+					if(i%2==0){
+						dayso = dayso + i + '; ';
+						dem++;
+					}
+					i++;
+				}
+				document.getElementById('ketqua2').innerHTML=dayso;
+				alert('Xử lý xong!');
+			}
