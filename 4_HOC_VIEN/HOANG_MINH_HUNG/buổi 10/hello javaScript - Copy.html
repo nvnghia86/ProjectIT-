@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Giai phuong trinh bac 2</title>
+<script language="JavaScript">
+function giai(form){
+var x1,x2;
+var a,b,c,delta;
+a= parseFloat(form.a.value);
+b= parseFloat(form.b.value);
+c= parseFloat(form.c.value);
+delta=(b*b-4*a*c)
+if(delta ==0){
+ alert("phuong trinh co nghiem kep");
+ x1=-b/(2*a) ;
+ x2=-b/(2*a);
+ form.x.value=eval(x1);
+ form.y.value=eval(x2);
+}
+else if(delta<0){
+ alert("phuong trinh vo nghiem");
+} 
+else{
+ alert("phuong trinh co hai nghiem");
+ x1=(-b-Math.sqrt(delta))/(2*a);
+ x2=(-b+Math.sqrt(delta))/(2*a);
+ form.x.value=eval(x1);
+ form.y.value=eval(x2);
+}
+}
+</script>
+</head>
+<body>
+<form method="post">
+<center>
+<br>Nhap gia tri a:
+<input type="text" name="a" value="">
+<br> Nhap gia tri b:
+<input type="text" name="b" value="">
+<br>Nhap gia tri c:
+<input type="text" name="c" value="">
+<br>Đáp số:
+<input type="text" name="x" value="">
+<input type="text" name="y" value="">
+<input type="button" value="giai" onClick="giai(this.form)">
+</center>
+</form>
+</body>
+</html>

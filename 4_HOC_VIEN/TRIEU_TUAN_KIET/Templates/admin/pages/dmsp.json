@@ -1,0 +1,32 @@
+[
+	{
+		"MA" : "DIENTHOAI",
+		"TEN" : "Điện thoại",
+		"MO_TA" : "Danh mục điện thoại di động",
+		"TRANG_THAI" : "Sự dụng"
+	},
+	{
+		"MA" : "LAPTOP",
+		"TEN" : "Laptop",
+		"MO_TA" : "Danh mục máy tính xách tay",
+		"TRANG_THAI" : "Sự dụng"
+	},
+	{
+		"MA" : "DODIEN",
+		"TEN" : "Đồ điện",
+		"MO_TA" : "Danh mục đồ điện",
+		"TRANG_THAI" : "Sự dụng"
+	},
+	{
+		"MA" : "PHUKIEN",
+		"TEN" : "Phụ kiện",
+		"MO_TA" : "Danh mục phụ kiện",
+		"TRANG_THAI" : "Sự dụng"
+	},
+	{
+		"MA" : "MAYTINH",
+		"TEN" : "Máy tính",
+		"MO_TA" : "Danh mục máy tính",
+		"TRANG_THAI" : "Sự dụng"
+	}
+]

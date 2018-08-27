@@ -1,0 +1,51 @@
+<html>
+    <head>
+	     <title> JS | Các điều khiển trong html</title>
+		 <meta target="utf-8" />
+		 <script> 
+		      function kiemtra_chanle(){
+			         var so = prompt ('mời bạn nhập vào một số bất kỳ:');
+					 if(so%2==0){
+					     alert('số' + so + 'là số chẵn.');
+					 }else{
+						 alert('số' + so + 'là số lẻ.');
+					 }
+			  }
+			  function kiemtra_ngaythang(){
+			        var thang =prompt ('mời bạn nhập vào một tháng bất kỳ:');
+					if(thang == 4 || thang ==6 || thang == 9 || thang ==11  ){
+					     alert (' tháng ' + thang +' là tháng có 30 ngày');
+					}else if(thang == 1 || thang == 3 || thang == 5 || thang == 7 || thang == 8 || thang ==10 || thang == 12 ){
+					     alert('tháng ' + thang + ' là tháng có 31 ngày');
+					}else{
+					     alert (' tháng ' + thang +' chắc  là tháng có 28 ngày');
+						 }
+			  }
+			  function kiemtra_ngaycuatuan(){
+			            var homnay = new Date();
+						var ngay = homnay.getDay();
+						ngay++;
+						var thu= '';
+						switch (ngay){
+						     case 2: thu='thứ hai' ; break;
+							 case 3: thu='thứ ba' ; break;
+							 case 4: thu='thứ tư' ; break;
+							 case 5: thu='thứ năm' ; break;
+							 case 6: thu='thứ sáu' ; break;
+							 case 7: thu='thứ bảy' ; break;
+							 case 1: thu='chủ nhật' ; break;
+							 default: thu='Không xác định';
+						}
+						alert('hôm nay là thứ ' +thu)
+			  }
+		 </script>
+		 
+	</head>
+    <body>
+	     <h1> JS | Các điều khiển trong html</h1>
+		 <h2>1. Điều khiển rẽ nhánh</h2>
+		 <button type="button" onclick="kiemtra_chanle()"> kiểm tra chẵn lẻ</button>
+		 <button type="button"  onclick="kiemtra_ngaythang()"> Ngày của tháng </button>
+		 <button type="button" onclick="kiemtra_ngaycuatuan()"> ngày của tuần </button>
+	</body>
+</html>
