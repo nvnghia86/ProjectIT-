@@ -1,0 +1,18 @@
+[
+	{
+		"TAI_KHOAN":"admin",
+		"MAT_KHAU":"123",
+		"HO_TEN":"Quản trị hệ thống",
+		"EMAIL":"admin@gmail.com",
+		"AVATAR":"admin.png"
+
+	},
+	{
+		"TAI_KHOAN":"nhanvien",
+		"MAT_KHAU":"123",
+		"HO_TEN":"Nhân viên bán hàng",
+		"EMAIL":"nhanvien@gmail.com",
+		"AVATAR":"nhanvien.png"
+
+	},
+]

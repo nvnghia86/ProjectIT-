@@ -1,0 +1,50 @@
+[
+	{
+		"Ma":"DIENTHOAI",
+		"TEN":"Điện thoại",
+		"MO_TA":"Danh mục điện thoại di động",
+		"TRANG_THAI":"Sử dụng" 
+
+
+	},
+	{
+		"Ma":"LAPTOP",
+		"TEN":"Laptop",
+		"MO_TA":"Danh mục máy tính sách tay",
+		"TRANG_THAI":"Sử dụng" 
+
+
+	},
+	{
+		"Ma":"PC",
+		"TEN":"Máy tính",
+		"MO_TA":"Danh mục máy tính để bàn",
+		"TRANG_THAI":"Không" 
+
+
+	},
+	{
+		"Ma":"TAINGHE",
+		"TEN":"Tai nghe",
+		"MO_TA":"Danh mục tai nghe",
+		"TRANG_THAI":"Sử dụng" 
+
+
+	},
+	{
+		"Ma":"BANPHIM",
+		"TEN":"Bàn phím",
+		"MO_TA":"Danh mục bán phím",
+		"TRANG_THAI":"Sử dụng" 
+
+
+	},
+	{
+		"Ma":"CHUOT",
+		"TEN":"Chuột",
+		"MO_TA":"Danh mục chuột",
+		"TRANG_THAI":"Sử dụng" 
+
+
+	}
+]
