@@ -9,7 +9,7 @@ var ACCOUNT = function(){
 	this.AVATAR ='';
 	
 	this.dangnhap = function(){
-		
+		localStorage.setItem('Acc',null);
 		var hople=false;
 		
 		for(var i = 0; i< this.DS_TAIKHOAN.length;i++){
@@ -17,6 +17,7 @@ var ACCOUNT = function(){
 			if(this.TAI_KHOAN==tk.TAI_KHOAN && this.MAT_KHAU==tk.MAT_KHAU){
 				hople = true;
 				this.VAI_TRO = tk.VAI_TRO;
+				localStorage.setItem('Acc',JSON.stringify(tk));
 			}
 		}
 		
