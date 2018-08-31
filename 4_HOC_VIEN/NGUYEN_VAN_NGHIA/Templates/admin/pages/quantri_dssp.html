@@ -1,11 +1,9 @@
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -20,10 +18,10 @@
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="../vendor/metisMenu/metisMenu.min.js"></script>
     <script src="../js/sb-admin-2.js"></script>
-    <script href="../data/DULIEU_MAU.js"></script>
+    <script href="../Data/DULIEU_MAU.js"></script>
     <script href="../js/DM_SANPHAM.js"></script>
-    <script href="../css/login.css"></script>
-        <script>
+    <script>
+	
         var Data = new DULIEU_MAU();
         var DM = new DM_SANPHAM();
         DM.load_DuLieu(Data.DM_SANPHAM);
@@ -48,7 +46,8 @@
                 html +='</tr>';
             }
             $('#DanhSach tbody').html(html);
-        }
+        };
+		
         $(function(){
             var Acc = JSON.parse(localStorage.getItem('Acc'));
             $('#spVaiTro').html(Acc.VAI_TRO);

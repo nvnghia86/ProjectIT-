@@ -35,4 +35,44 @@ var DM_SANPHAM = function(){
 		}
 	}
 	
+	this.lay =function(){
+		for(var i=0; i<this.DANH_SACH.length;i++){
+			var item = this.DANH_SACH[i];
+			if(this.MA == item.MA){
+				this.TEN = item.TEN;
+				this.MO_TA = item.MO_TA;
+				this.TRANG_THAI = item.TRANG_THAI;
+				return;
+			}
+		}
+	}
+	
+	this.sua = function(){
+		if(this.kiemtra_Them()== true){
+			for(var i=0; i<this.DANH_SACH.length;i++){
+				var item = this.DANH_SACH[i];
+				if(this.MA == item.MA){
+					item.TEN = this.TEN;
+					item.MO_TA = this.MO_TA;
+					item.TRANG_THAI = this.TRANG_THAI;
+					this.DANH_SACH[i] = item;
+				}
+			}
+			alert('Sửa thành công!');
+			return true;
+		}else{
+			alert('Sửa thất bại!');
+			return false;
+		}
+	}
+	
+	this.xoa = function(){
+		for(var i=0; i<this.DANH_SACH.length;i++){
+			var item = this.DANH_SACH[i];
+			if(this.MA == item.MA){
+				this.DANH_SACH.splice(i,1);
+				alert('Xóa thành công!');
+			}
+		}
+	}
 }
