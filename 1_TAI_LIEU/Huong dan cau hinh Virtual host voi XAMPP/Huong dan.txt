@@ -1,0 +1,28 @@
+# Hướng dẫn cấu hình Virtual host với XAMPP
+1. Chuẩn bị:
+- XAMPP (Đã có)
+- Trình duyệt bất kỳ (Firefox)
+- Tên miền cần tạo: 
+	+ lab.itp.com: Các bài thực hành
+	+ project.itp.com: Dự án chung của lớp
+2. Bước 1: Map tên miền vào IP local (127.0.0.1)
+- Cấu hình add file host
+- Điền thông tin:
+	127.0.0.1 lab.itp.com
+	127.0.0.1 project.itp.com
+- Kiểm tra thử: 
+	ping lab.itp.com (ok)
+	ping project.itp.com (ok)
+
+3. Bước 2: Cấu hình trong XAMPP
+	- Cấu hình ở file Xampp\apache\conf\extra\httpd-vhosts.conf
+		+ Trỏ thư mục cho tên miền lab.itp.com (D:\ITP_PHP0718E\2_LABS)
+		+ Trỏ thư mục cho tên miền project.itp.com 
+		(D:\ITP_PHP0718E\3_PROJECTS\project.itp.com)
+	- Khởi động lại Apache
+
+4. Bước 4: Kiểm tra kết quả:
+	- Thử truy cập vào lab.itp.com (OK)
+	- Thử truy cập vào project.itp.com (OK)
+
+=> Finish!
