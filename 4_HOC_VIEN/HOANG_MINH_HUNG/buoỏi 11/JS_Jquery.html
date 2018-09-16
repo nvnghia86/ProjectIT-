@@ -1,0 +1,36 @@
+<html>
+    <head>
+	<meta charset="utf-8" />
+	 <title> JS | Jquery</title>
+	 <script src="jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+	    <h1> JS | Jquery</h1>
+		<h2>truy cập vào phần tử</h2>
+		<button type="button" id="btn_doimau"> phần tử 1</button>
+		<div  id="phantu_1" style="height:100px; width:100px;background:yellow;"></div>
+	</body>
+	<script>
+	     function doimau(){
+		      var ngaunhien = Math.floor(Math.random() * 10);
+			  var mau='red';
+			     if( ngaunhien%2==0 ){
+				    mau='blue';
+				}else if( ngaunhien%3==0){
+				    mau='orange';
+				}else{
+				    mau='red';
+				}
+				$('#phantu_1').attr('style','width:100px;height:100px;background:' +mau)
+				}
+				$(function(){
+				     $('#btn_doimau').on('click',function(){
+				          doimau();
+				     });
+					 
+				})
+				
+				
+	</script>
+
+</html>

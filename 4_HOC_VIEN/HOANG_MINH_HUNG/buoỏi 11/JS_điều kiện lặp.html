@@ -1,0 +1,44 @@
+<html>
+     <head>
+	     <meta charset="utf-8" />
+		 <title> JS | Điều khiển lặp</title>
+	 </head>
+	 <script>
+	      function lap_for(){
+		        var dayso='';
+				for(var i = 1; i<=100;i++ ){
+				    dayso=i%2==0?dayso+=i + ';' :dayso+='';
+					}
+				document.getElementById('ketqua').innerHTML=dayso;
+				alert('xử lý xong ');
+		}
+		function lap_while(){
+		     var dayso='';
+			 var i = 0;
+			 var dem = 0;
+			 while (dem < 100){
+			      if (i%2==0){
+				      dayso=dayso + i + ';';
+					  dem++;
+				  }
+				  i++;
+			 }
+			document.getElementById('ketqua').innerHTML=dayso;
+			alert('Xử lý xong!');
+}				
+			 
+		
+		
+	 </script>
+	 
+	 
+	 <body>
+	     <h1> JS | Điều khiển lặp</h1>
+		 <h2> 1.Điều khiển lặp for</h2>
+		 <button style="button" onclick="lap_for()">Tìm số chăn từ 1-100(for) </button>
+		  <h2> 1.Điều khiển lặp while</h2>
+		 <button style="button" onclick="lap_for()">Tìm 100 số chăn(while) </button>
+		 <h2>kết quả:</h2>
+		 <p id="ketqua"></p>
+	 </body>
+</html>

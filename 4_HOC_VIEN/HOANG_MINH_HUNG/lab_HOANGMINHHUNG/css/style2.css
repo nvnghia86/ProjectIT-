@@ -1,0 +1,115 @@
+/* reset css*/
+*{margin: 0; padding:0}
+body{
+	background:gray;
+    
+	
+}
+#bai_1{
+	width: 1000px;
+	height:650px;
+	background:white;
+	
+}
+.wrapper{
+	width: 1000px;
+	margin: 0 auto;
+}
+#bai_1 #header{
+	width:1000px;
+	height:55px;
+	background:white;
+}
+#bai_1 #header #list_2{
+	list-style-type:none;
+    width:1000px;
+	height:55px;
+}
+#bai_1 #header #list_2 li{
+
+	width:180px;
+	 line-height:5px;
+	text-transform: uppercase;
+    background-color: #FED700;
+	float:left;
+	height:24px;
+	font-size: 15px;
+	padding: 0px 10px 28px 10px;
+	text-align: center;
+}
+#bai_1 #header #list_2 li:hover{
+    cursor:pointer;
+	background-color:#F5F5F5;
+}
+#bai_1 #header #list_2 li i{
+ 	width:16px;
+	height:25px;
+	display: block;
+	margin: 2px auto 3px;;
+}
+#content{
+	height:55px;
+	width:1000px;
+	background:white;
+}
+
+#content #line-1{
+	height:55px;
+	width:1000px;
+	background:white;
+}
+#content #line-1 #search{
+	height:55px;
+	width:300px;
+	background:white;
+	float:right;
+}
+#content #line-2{
+	height:400px;
+	width:1000px;
+	background:white;
+}
+#content #line-2 #bang_1 table{
+     background: #A5F8A8;
+    width: 521px;
+    height: 353px;
+    margin-top: -100px;
+    margin-left: 28px;
+}
+#content #line-2 #bang_1 table tr{
+	text-align:center;
+	
+}
+#content #line-2 #line-3{
+	height:400px;
+	width:400px;
+	background:white;
+	float:right;
+}
+#content #line-2 #line-3 #con_1{
+	margin-left: 20px;
+}
+#content #line-2 #line-3 #con_2{
+	margin-left: 20px;
+	margin-top:10px;
+}
+#content #line-2 #line-3 #con_3{
+	margin-left: 20px;
+	margin-top:10px;
+}
+
+#footer #cuoi{
+    height:130px;
+	width:1000px;
+	background:white;
+	text-align:center;
+	
+}
+
+
+
+
+
+
+
+

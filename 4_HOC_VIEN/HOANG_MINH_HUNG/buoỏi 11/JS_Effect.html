@@ -1,0 +1,52 @@
+<html>
+     <head>
+	     <title>JS | Effect</title>
+		 <meta charset="utf-8" />
+		 <script src="jquery-3.3.1.min.js"></script>
+	 </head>
+	 <body>
+	      <h1>JS | Effect</h1>
+		  
+		  <h2> TRuy cập vào phần tử</h2>
+		  <button style="button" id="btn_an" > ẩn phần tử</button>
+		  <button style="button" id="btn_hien" > hiện phần tử</button>
+		  <button style="button" id="btn_fadein" > Hiện phần tử (hiệu ứng)</button>
+		   <button style="button" id="btn_fadeout" > ẩn phần tử (hiệu ứng)</button>
+		   <button type="button" id="btn_trai">Dịch chuyển sang trái</button>
+		   <button type="button" id="btn_phai">Dịch chuyển sang phải</button>
+		  <hr/> 
+		   <div id="phantu" style="width:100px;height:100px;background:yellow;position:absolute;">phần tử</div>
+	 </body>
+	 <script>
+	      $(function(){
+		       $('#btn_an').on('click',function(){
+			       $('#phantu').hide();
+			    });
+		  
+		       $('#btn_hien').on('click',function(){
+			       $('#phantu').show();
+			    });
+				
+			   $('#btn_fadein').on('click',function(){
+			       $('#phantu').fadeIn(3000);
+			    });
+				
+				 $('#btn_fadeout').on('click',function(){
+			       $('#phantu').fadeOut(3000);
+			    });
+				
+				$('#btn_trai').on('click',function(){
+			       $('#phantu').animate({left: '200px'});
+			    });
+				
+				$('#btn_phai').on('click',function(){
+			       $('#phantu').animate({left: '-200px'});
+			    });
+				
+				
+		  })
+		  
+	 
+	 </script>
+ 
+</html>
