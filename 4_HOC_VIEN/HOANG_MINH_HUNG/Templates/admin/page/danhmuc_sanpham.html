@@ -10,27 +10,107 @@
     <meta name="author" content="">
 
     <title>thegioididong.com | Quản trị danh mục sản phẩm</title>
-
-    <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
     <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="../css/sb-admin-2.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	
 	<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<style>
+		#DanhSach tr:hover{
+			pointer:cusor;
+			background: yellow;
+		}
+	</style>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="../js/sb-admin-2.js"></script>
+    <script src="../data/DULIEU_MAU.js"></script>
+    <script src="../js/DM_SANPHAM.js"></script>
+	
+	
+		<script>
+		var Data = new DULIEU_MAU();
+		var DM = new DM_SANPHAM();
+		DM.load_DuLieu(Data.DM_SANPHAM);
+		
+		function show_DanhSach(){
+			$('#DanhSach tbody').html('');
+			var html='';
+			for(var i=0; i< DM.DANH_SACH.length; i++){
+				var trangthai = '';
+				if(DM.DANH_SACH[i].TRANG_THAI=='Kích hoạt'){
+					trangthai = '<label class="label label-success">Kích hoạt</label>';
+				}else{
+					trangthai = '<label class="label label-danger">Khóa</label>';
+				}
+			
+				html +='<tr>';
+				html +='<td>'+ (i+1) +'</td>';
+				html +='<td>'+ DM.DANH_SACH[i].MA +'</td>';
+				html +='<td>'+ DM.DANH_SACH[i].TEN +'</td>';
+				html +='<td>'+ DM.DANH_SACH[i].MO_TA +'</td>';
+				html +='<td>'+ trangthai +'</td>';
+				html +='</tr>';
+			}
+			$('#DanhSach tbody').html(html);
+		}
+	
+		$(function(){
+			var Acc = JSON.parse(localStorage.getItem('Acc'));
+			$('#spVaiTro').html(Acc.VAI_TRO);
+			
+			show_DanhSach();
+			
+			$('#btnThem').on('click',function(){
+				
+				DM.MA = $('#MA').val();
+				DM.TEN = $('#TEN').val();
+				DM.MO_TA = $('#MO_TA').val();
+				DM.TRANG_THAI = $('#TRANG_THAI').val();
+				
+				if(DM.them()==true){
+					$('#MA').val('');
+					$('#TEN').val('');
+					$('#MO_TA').html('');
+					$('#TRANG_THAI').val('Kích hoạt');
+					show_DanhSach();
+				}else{
+					$('#MA').focus();
+				}
+			
+		});
+		
+		$('#DanhSach tr').on('click',function(e){
+		        DM.MA = $(this).data('ma');
+				DM.lay();
+				$('#MA').val(DM.MA);
+				$('#TEN').val(DM.TEN);
+				$('#MO_TA').val(DM.MO_TA);
+				$('#TRANG_THAI').val(DM.TRANG_THAI);
+			});
+		$('#btnLuu').on('click',function(){
+			
+				DM.TEN = $('#TEN').val();
+				DM.MO_TA = $('#MO_TA').val();
+				DM.TRANG_THAI = $('#TRANG_THAI').val();
+				if(DM.sua() == true){
+					show_DanhSach();
+				}else{
+					$('#TEN').focus();
+				}
+			});	
+        $('#btnXoa').on('click',function(){
+				var xacnhan = confirm('Bạn có chắc chắn muốn xóa danh mục ' + DM.TEN + ' không?');
+				if(xacnhan==true){
+					DM.xoa();
+					show_DanhSach();
+				}
+			});
+		
+		});
+		
+	</script>
 
 </head>
 
@@ -244,7 +324,7 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw"></i> <span id="spVaiTro"></span> <i class="fa fa-caret-down"> </i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> Hồ sơ</a>
@@ -309,28 +389,28 @@
 						<div class="panel-body">
 							<div class="form-group">
 								<label>Mã:</label>
-								<input type="text" class="form-control" placeholder="Mã danh mục..."/>
+								<input type="text" id="MA" class="form-control" placeholder="Mã danh mục..."/>
 							</div>
 							<div class="form-group">
 								<label>Tên danh mục:</label>
-								<input type="text" class="form-control" placeholder="tên danh mục..."/>
+								<input type="text" id="TEN" class="form-control" placeholder="tên danh mục..."/>
 							</div>
 							<div class="form-group">
 								<label>Mô tả:</label>
-								<textarea rows="3" class="form-control" >Mô tả...</textarea>
+								<textarea rows="3" id="MO_TA" class="form-control" ></textarea>
 							</div>
 							<div class="form-group">
 								<label>Trạng thái:</label>
-								<select class="form-control">
+								<select id="TRANG_THAI" class="form-control">
 									<option>Kích hoạt</option>
 									<option>Khóa</option>
 								</select>
 							</div>
 						</div>
 						<div class="panel-footer">
-							<button type="button" class="btn btn-success"> Thêm mới</button>
-							<button type="button" class="btn btn-warning"> Lưu</button>
-							<button type="button" class="btn btn-danger"> Xóa</button>
+							<button type="button" id="btnThem" class="btn btn-success"> Thêm mới</button>
+							<button type="button" id="btnLuu" class="btn btn-warning"> Lưu</button>
+							<button type="button" id="btnXoa" class="btn btn-danger"> Xóa</button>
 						</div>
 					</div>
 				</div>
@@ -339,7 +419,7 @@
 					<div class="panel panel-primary">
 						<div class="panel-heading">Danh sách danh mục</div>
 						<div class="panel-body">
-							<table class="table table-bordered table-striped">
+							<table class="table table-bordered table-striped" id="DanhSach">
 								<thead>
 									<tr>
 										<th>STT</th>
@@ -349,31 +429,11 @@
 										<th>Trạng thái</th>
 									</tr>
 								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>DIENTHOAI</td>
-										<td>Điện thoại di động</td>
-										<td>Danh mục sản phẩm điện thoại động</td>
-										<td>
-											<span class="label label-success">Kích hoạt</span>
-										</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>LAPTOP</td>
-										<td>Latop</td>
-										<td>Danh mục sản phẩm máy tính xách tay - laptop</td>
-										<td>
-											<span class="label label-danger">Khóa</span>
-										</td>
-									</tr>
-								</tbody>
+								<tbody></tbody>
 							</table>
 						</div>	
 					</div>
 				</div>
-	
 				
             </div>
             <!-- /.row -->
@@ -382,19 +442,6 @@
 
     </div>
     <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../js/sb-admin-2.js"></script>
-
 </body>
 
 </html>

@@ -1,0 +1,185 @@
+<html>
+    <head>
+	    <meta charset="utf-8">
+		<title> bai kiem tra</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script>
+    function kiemtra()
+    {
+      var hoten=document.getElementById('hoten').value;
+      if(hoten.length<40)
+      {
+        alert('Họ tên không hợp lệ');
+        return false;
+      }
+      var email=document.getElementById('email').value;
+      var filter=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      if(!filter.test(email))
+      {
+        alert('email của bạn không hợp lệ')
+        return false;
+      }
+      var dienthoai=document.getElementById('dienthoai').value;
+      if(isNaN(dienthoai)||dienthoai.length<10)
+      {
+        alert('Điện thoại không hợp lệ');
+        return false;
+      } 
+      var ngay=document.getElementById('ngay').value;
+      if(ngay=="" || ngay>32)
+      {
+        alert("ngày phải nhỏ hơn 32 và không được trống");
+        return false;
+      }
+      var thang=document.getElementById('thang').value;
+      if(thang==""||thang>13)
+      {
+        alert("tháng phải nhỏ hơn 13 và không được trống");
+        return false;
+      }
+      var nam=document.getElementById('nam').value;
+        if(nam==""||nam>2006)
+      {
+        alert("năm phải nhỏ hơn 2006 và không được trống");
+        return false;
+      }
+	alert('đăng nhập thành công');
+    }
+    function xoa()
+    {
+      document.getElementById('hoten').value="";
+      document.getElementById('diachi').value="";
+      document.getElementById('email').value="";
+      document.getElementById('dienthoai').value="";
+      document.getElementById('ngay').value="";
+      document.getElementById('thang').value="";
+      document.getElementById('nam').value="";
+       var radio = document.getElementsByName('radio');
+       for (var i = 0; i < radio.length; i++){
+                    radio[i].checked =false;
+                }
+
+    
+     var checkboxes = document.getElementsByName('checkbox');
+       for (var i = 0; i < checkboxes.length; i++){
+                    checkboxes[i].checked = false;
+                }
+				
+    }
+  </script>
+	</head>
+	<body>
+	    <div id="content" class="wrapper">
+	       <div id="div_1">  
+		        <div id="anh_1"> 
+				    <img src="hinhanh/haiquy.jpg" width=" 300px" height="650px" />
+				</div>
+		   </div>
+		   <div id="div_2">
+		      <div>
+ 			    <h1> THAM GIA CLB</h1>
+				<h5> Qúy độc giả hãy điền đẩy đủ thông tin để tham gia phát triển câu lạc bộ ngày càng mạnh hơn </h5>
+			  </div>
+		      <div id="bang_1">
+			    <table width="500"  border="0" />
+				   <tr height="25px" width="50px" >
+				      <td> Họ và tên:</td>
+					  <td align="left"><input type="text" size="30" id="hoten" maxlength="40"/>*</td>
+				   </tr>
+				   <tr height="25px">
+				      <td >Địa chỉ:</td>
+					  <td align="left" colspan="2"><input type="text" size="50" id="diachi" maxlength="30"></td>
+				   </tr>
+				   <tr height="25px">
+				       <td>Email:</td>
+					  <td align="left" colspan="2"><input type="text" size="30" id="email"  maxlength="40">*</td>
+				   </tr>
+				   <tr height="25px">
+				        <td align="left">Điên_thoại:</td>
+					    <td align="left"><input type="text" size="20" id="dienthoai" maxlength="15">*</td>
+				   </tr>
+				   <tr height="25px">
+				        <td>Ngày sinh: </td>
+						<td align="left" colspan="2"> <input type="text" size="5" id="ngay" maxlength="32" > / <input type="text" size="5" id="thang" maxlength="32" >/ <input type="text" size="8" id="nam" maxlength="10"> *</td>
+				   </tr>
+				   <tr height="25px">
+				        <td> Đề tài:</td>
+						<td align="left" colspan="2">
+						   <select>	
+				               <option>Tìm hiểu Hải quỳ</option>
+                               <option>Tìm hiểu về Mực</option>
+				               <option selected>Tìm hiểu sứa biển</option>
+				               <option>Tìm hiểu rùa biển</option>
+			               </select>
+						</td>
+				   </tr>
+				   <tr height="25px"> 
+				        <td> Nhóm:</td>
+						<td align="left" colspan="2"><input type="radio" value="nghiencuu" name="nhom" /> Nghiên cứu </td></td>
+				   </tr>
+				   <tr height="25px">
+				        <td></td>
+						<td align="left" colspan="2"><input type="radio" value="haingu" name="nhom" /> Hải ngư </td></td>
+				   </tr>
+				   <tr height="25px">
+				        <td></td>
+						<td align="left" colspan="2"><input type="radio" value="haingu" name="nhom" /> Viễn dương </td></td>
+				   </tr>
+				   <tr height="25px">
+				        <td></td>
+						<td align="left" colspan="2"><input type="radio" value="haingu" name="nhom" /> Mỹ thuật </td></td>
+				   </tr>
+				   <tr height="25px">
+				        <td></td>
+						<td align="left" colspan="2"><input type="radio" value="haingu" name="nhom" /> Thực phẩm </td></td>
+				   </tr>
+				   <tr height="25px">
+				        <td></td>
+						<td align="left" colspan="2"><input type="radio" value="haingu" name="nhom" /> Sinh vật</td></td>
+				   </tr>
+				   <tr height="25px">
+				       <td>Gửi hình:</td>
+					  <td align="left" colspan="2"><input type="text" size="30" maxlength="10"><input type="submit" value="Browse..." /></td>
+				   </tr>
+				   <tr height="25px"> 
+				        <td> Tài liệu:</td>
+						<td align="left" colspan="2"><input type="checkbox" value="Sinh vật biển " /> Sinh vật biển </td>
+				   </tr>
+				   <tr height="25px">
+				        <td></td>
+						<td align="left" colspan="2"><input type="checkbox" value="San hô  " /> San hô</td>
+				   </tr>
+				   <tr height="25px">
+				        <td></td>
+						<td align="left" colspan="2"><input type="checkbox" value="Môi trường biển  " /> Môi trường biển</td>
+				   </tr>
+				   <tr height="25px">
+				        <td></td>
+						<td align="left" colspan="2"><input type="checkbox" value=" Khí hậu" /> Khí hậu</td>
+				   </tr>
+				    <tr height="25px">
+						<td></td>
+						<td align="left" colspan="2"><input type="Button" value="Tham gia" onclick="kiemtra();"> &nbsp <input type="Button" value="Xóa thông tin" onclick="xoa();"></td>
+					</tr>
+				   
+				   
+				</table>
+			  </div>
+		   </div>
+		   <div id="div_3">
+		        <div id="con_1">
+		            <img src="hinhanh/s8.jpg" width="170px" />
+			    </div>
+			    <div id="con_2">
+			        <img src="hinhanh/img-511645l.jpg" width="170px" />
+			    </div>
+			    <div id="con_3">
+			       <img src="hinhanh/anh-10_LMAO.jpg" width="170px" />
+				</div>
+				<div id="con_4">
+			       <img src="hinhanh/kham-pha-loai-sinh-vat-bat-tu-tren-the-gioi.jpg" width="170px" />
+				</div>
+		   </div>
+		</div>
+	</body>
+</html>
