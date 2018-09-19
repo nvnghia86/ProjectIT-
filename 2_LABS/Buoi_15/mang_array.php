@@ -41,6 +41,7 @@
 	</thead>
 	<tbody>
 	<?php
+		sort($giohang);
 		$tongtien = 0;
 		for($i=0; $i< count($giohang);$i++){	
 	?>
