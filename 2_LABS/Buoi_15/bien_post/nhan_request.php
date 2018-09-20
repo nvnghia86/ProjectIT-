@@ -3,7 +3,7 @@
 	$tk = $_POST['taikhoan'];
 	$mk = $_POST['matkhau'];
 	
-	if($tk=='admin' && $mk='123'){
+	if($tk=='admin' && $mk=='123'){
 		echo 'Đăng nhập thành công!';
 	}else{
 		echo 'Đăng nhập thất bại!';
