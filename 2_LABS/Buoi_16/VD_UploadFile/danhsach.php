@@ -45,7 +45,7 @@
 				<td><?=basename($file)?></td>
 				<td><a href="<?=UPLOAD_FOLDER.basename($file)?>" target="_blank">Download</a></td>
 				<td>
-					<a href="xoa.php?file=<?=basename($file)?>" class="btn btn-danger btn-xs">Xóa</a>
+					<a href="xoa.php?file=<?=basename($file)?>" class="btn btn-danger btn-sm">Xóa</a>
 				</td>
 			</tr>
 		<?php 
