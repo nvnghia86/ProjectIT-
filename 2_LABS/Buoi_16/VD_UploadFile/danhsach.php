@@ -30,6 +30,7 @@
 				<th>File</th>
 				<th>Tên file</th>
 				<th>Download</th>
+				<th>Xóa</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -43,6 +44,9 @@
 				<td><img width="100" height="60" src="<?=UPLOAD_FOLDER.basename($file)?>" /></td>
 				<td><?=basename($file)?></td>
 				<td><a href="<?=UPLOAD_FOLDER.basename($file)?>" target="_blank">Download</a></td>
+				<td>
+					<a href="xoa.php?file=<?=basename($file)?>" class="btn btn-danger btn-xs">Xóa</a>
+				</td>
 			</tr>
 		<?php 
 			}
