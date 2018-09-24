@@ -17,12 +17,6 @@
     <!-- MetisMenu CSS -->
     <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
-    <!-- DataTables CSS -->
-    <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
-
-    <!-- DataTables Responsive CSS -->
-    <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="../css/sb-admin-2.css" rel="stylesheet">
 
@@ -35,7 +29,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
@@ -51,7 +44,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Thegioididong.com | Quản trị hệ thống</a>
+                <a class="navbar-brand" href="index.php">Thegioididong.com | Quản trị hệ thống</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -76,7 +69,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>Nguyễn Văn B</strong>
+                                    <strong>John Smith</strong>
                                     <span class="pull-right text-muted">
                                         <em>Yesterday</em>
                                     </span>
@@ -88,7 +81,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>Nguyễn Văn C</strong>
+                                    <strong>John Smith</strong>
                                     <span class="pull-right text-muted">
                                         <em>Yesterday</em>
                                     </span>
@@ -256,7 +249,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Cấu hình hệ thống</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Đăng xuất</a>
+                        <li><a href="login.php"><i class="fa fa-sign-out fa-fw"></i> Đăng xuất</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -280,13 +273,13 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Bảng điều khiển</a>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Bảng điều khiển</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị danh mục sản phẩm<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhmuc_sanpham.html">Danh mục sản phẩm</a>
+                                    <a href="danhmuc_sanpham.php">Danh mục sản phẩm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -296,7 +289,7 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị nhà cung cấp<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhmuc_nhacungcap.html">Danh sách nhà cung cấp</a>
+                                    <a href="danhmuc_nhacungcap.php">Danh sách nhà cung cấp</a>
                                 </li>
                                 
                             </ul>
@@ -307,15 +300,13 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Quản trị sản phẩm<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+                                    <a href="danhsachsanpham.php">Danh sách sản phẩm</a>
                                 </li>
                                 
                             </ul>
                             <!-- /.nav-second-level -->
 							
                         </li>
-                        
-                    </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
@@ -325,117 +316,65 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">QUẢN TRỊ SẢN PHẨM</h1>
+                    <h1 class="page-header">Quản trị danh mục nhà cung cấp</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
-            <div class="row">
-				<div class="col-lg-12">
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <!-- Button trigger modal -->
-							<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal"> Thêm mới</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> Sửa</button>
-							<button type="button" class="btn btn-danger" > Xóa</button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title" id="myModalLabel">Thêm mới sản phẩm</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="panel panel-info">
-												<div class="panel-body">
-													<div class="form-group">
-														<label>Mã sản phẩm:</label>
-														<input type="text" class="form-control" placeholder="Mã sản phẩm..."/>
-													</div>
-													<div class="form-group">
-														<label>Tên sản phẩm:</label>
-														<input type="text" class="form-control" placeholder="Tên sản phẩm..."/>
-													</div>
-													<div class="form-group">
-														<label>Hình ảnh</label>
-														<input type="file">
-													</div>
-													 <div class="form-group">
-														<label>Nhà cung cấp</label>
-														<select class="form-control">
-															<option>Iphone</option>
-															<option>Samsung</option>
-															<option>Oppo</option>
-														</select>
-													</div>
-													<div class="form-group">
-														<label>Giá nhập:</label>
-														<input type="text" class="form-control" placeholder="Giá nhập..."/>
-													</div>
-													<div class="form-group">
-														<label>Giá bán:</label>
-														<input type="text" class="form-control" placeholder="Giá bán..."/>
-													</div>
-													<div class="form-group">
-														<label>Khuyến mại:</label>
-														<select class="form-control">
-															<option>10%</option>
-															<option>20%</option>
-															<option>30%</option>
-														</select>
-													</div>
-													 <div class="form-group">
-														<label>Trạng thái</label>
-														<select class="form-control">
-															<option>Kích hoạt</option>
-															<option>Khóa</option>
-														</select>
-													</div>
-													<div class="form-group">
-														<label>Mô tả ngắn:</label>
-														<textarea rows="3" class="form-control" >Mô tả ngắn...</textarea>
-													</div>
-													<div class="form-group">
-														<label>Mô tả dài:</label>
-														<textarea rows="3" class="form-control" >Mô tả dài...</textarea>
-													</div>
-												</div>
-											</div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-                                            <button type="button" class="btn btn-primary">Lưu</button>
-                                        </div>
-                                    </div>
-                                    <!-- /.modal-content -->
-                                </div>
-                                <!-- /.modal-dialog -->
+			
+			<!-- /.row -->
+			<div class="row">
+				<div class="col-lg-4 col-sm-12">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+                            Chi tiết nhà cung cấp
+                        </div>
+						
+						<div class="panel-body">
+							<div class="form-group">
+								<label>Mã nhà cung cấp:</label>
+								<input type="text" class="form-control" placeholder="Mã nhà cung cấp..."/>
+							</div>
+							<div class="form-group">
+								<label>Tên cung cấp:</label>
+								<input type="text" class="form-control" placeholder="Mã nhà cung cấp..."/>
+							</div>
+							<div class="form-group">
+								<label>Điện thoại:</label>
+								<input type="text" class="form-control" placeholder="Điện thoại..."/>
+							</div>
+							<div class="form-group">
+                                <label>Logo</label>
+                                <input type="file">
                             </div>
-                            <!-- /.modal -->
-                        </div>
-                        <!-- .panel-body -->
-                    <!-- /.panel -->
-                </div>
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4>Danh sách sản phẩm</h4>
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+							 <div class="form-group">
+                                <label>Trạng thái</label>
+                                <select class="form-control">
+                                    <option>Kích hoạt</option>
+                                    <option>Khóa</option>
+                                </select>
+                            </div>
+							<div class="panel-footer">
+									<button type="button" class="btn btn-success"> Thêm mới</button>
+									<button type="button" class="btn btn-warning"> Lưu</button>
+									<button type="button" class="btn btn-danger"> Xóa</button>
+							</div>
+							
+						</div>
+						<!-- /panel-body -->
+					</div>
+				</div>
+				
+				<div class="col-lg-8 col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">Danh sách nhà cung cấp</div>
+						<div class="panel-body">
+							<table class="table table-bordered table-striped">
 								<thead>
 									<tr>
 										<th>STT</th>
-										<th>Hình ảnh</th>
-										<th>Mã sản phẩm</th>
-										<th>Tên sản phẩm</th>
-										<th>Nhà cung cấp</th>
-										<th>Tồn kho</th>
-										<th>Giá nhập</th>
-										<th>Giá bán</th>
-										<th>Khuyến mại</th>
+										<th>Logo</th>
+										<th>Mã nhà cung cấp</th>
+										<th>Tên nhà cung cấp</th>
 										<th>Trạng thái</th>
 									</tr>
 								</thead>
@@ -443,15 +382,10 @@
 									<tr>
 										<td>1</td>
 										<td>
-											<img src="../images/dtdd.jpg" height="100px" />
+											<img src="../images/1.jpg" height="25px" />
 										</td>
 										<td>01</td>
 										<td>Iphone</td>
-										<td>Iphone</td>
-										<td>1</td>
-										<td>1200000</td>
-										<td>1500000</td>
-										<td>10%</td>
 										<td>
 											<span class="label label-success">Kích hoạt</span>
 										</td>
@@ -460,67 +394,35 @@
 									<tr>
 										<td>2</td>
 										<td>
-											<img src="../images/dtdd.jpg" height="100px" />
+											<img src="../images/2.jpg" height="25px" />
 										</td>
 										<td>02</td>
 										<td>Samsung</td>
-										<td>Samsung</td>
-										<td>2</td>
-										<td>1200000</td>
-										<td>1500000</td>
-										<td>20%</td>
 										<td>
 											<span class="label label-danger">khóa</span>
 										</td>
 									</tr>
+									
 									<tr>
 										<td>3</td>
 										<td>
-											<img src="../images/dtdd.jpg" height="100px" />
+											<img src="../images/3.jpg" height="25px" />
 										</td>
-										<td>01</td>
-										<td>Iphone</td>
-										<td>Iphone</td>
-										<td>1</td>
-										<td>1200000</td>
-										<td>1500000</td>
-										<td>10%</td>
+										<td>03</td>
+										<td>Oppo</td>
 										<td>
 											<span class="label label-success">Kích hoạt</span>
-										</td>
-									</tr>
-									
-									<tr>
-										<td>4</td>
-										<td>
-											<img src="../images/dtdd.jpg" height="100px" />
-										</td>
-										<td>02</td>
-										<td>Samsung</td>
-										<td>Samsung</td>
-										<td>2</td>
-										<td>1200000</td>
-										<td>1500000</td>
-										<td>20%</td>
-										<td>
-											<span class="label label-danger">khóa</span>
 										</td>
 									</tr>
 									
 								</tbody>
-							</table> 
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-        </div>
-        <!-- /#page-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
+							</table>
+						</div>	
+					</div>
+				</div>
+			</div>
+		<!-- /.row -->	
+           
 
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
@@ -531,23 +433,8 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../vendor/metisMenu/metisMenu.min.js"></script>
 
-    <!-- DataTables JavaScript -->
-    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
-    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
-
     <!-- Custom Theme JavaScript -->
     <script src="../js/sb-admin-2.js"></script>
-
-    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-    <script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-            responsive: true
-        });
-    });
-    </script>
-
 
 </body>
 
