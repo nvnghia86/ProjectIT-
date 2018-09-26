@@ -6,7 +6,6 @@
 	+ tb_lophoc(id_lophoc, ma_lop, ten_lop, ngay_khai_giang)
 	+ tb_hocvien(id_hocvien, ho_ten, dia_chi, id_lophoc)
 	+ tb_diemthi (id_lophoc, id_hocvien, diem)
-	
 - Tạo các quan hệ tương ứng
 - Thực hiện thêm ít nhất mỗi bảng 5 bản ghi
 - Thực hiện các thao tác chọn, thêm, sửa, xóa trên các bảng
