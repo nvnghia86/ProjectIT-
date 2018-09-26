@@ -22,13 +22,31 @@
 
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/sb-admin-2.js"></script>
+	<script src="../data/DULIEUMAU.js"></script>
+    <script src="../js/DM_SANPHAM.js"></script>
+	
+	<script>
+	/* 	$(function(){
+			
+			var Acc = JSON.parse(localStorage.getItem('Acc'));
+		
+			$('#spVaiTro').html(Acc.VAI_TRO);
+		
+		}); 
+		 */
+	</script>
 </head>
 
 <body>
@@ -241,15 +259,15 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw"></i>  <span id="spVaiTro"></span> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> Hồ sơ</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Cấu hình hệ thống</a>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Cấu hình hệ thống</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Đăng xuất</a>
+                        <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i>Đăng xuất</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -272,14 +290,14 @@
                             </div>
                             <!-- /input-group -->
                         </li>
-                        <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Bảng điều khiển</a>
+                        <<li>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Bảng điều khiển</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị danh mục sản phẩm<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhmuc_sanpham.html">Danh mục sản phẩm</a>
+                                    <a href="danhmuc_sanpham.php">Danh mục sản phẩm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -289,7 +307,7 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị nhà cung cấp<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhmuc_nhacungcap.html">Danh sách nhà cung cấp</a>
+                                    <a href="danhmuc_nhacungcap.php">Danh sách nhà cung cấp</a>
                                 </li>
                                 
                             </ul>
@@ -300,141 +318,27 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Quản trị sản phẩm<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+                                    <a href="danhsachsanpham.php">Danh sách sản phẩm</a>
                                 </li>
                                 
                             </ul>
                             <!-- /.nav-second-level -->
 							
                         </li>
+                    </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
+				
             </div>
+			
+
             <!-- /.navbar-static-side -->
         </nav>
 
-        <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Quản trị danh mục nhà cung cấp</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-			
-			<!-- /.row -->
-			<div class="row">
-				<div class="col-lg-4 col-sm-12">
-					<div class="panel panel-info">
-						<div class="panel-heading">
-                            Chi tiết nhà cung cấp
-                        </div>
-						
-						<div class="panel-body">
-							<div class="form-group">
-								<label>Mã nhà cung cấp:</label>
-								<input type="text" class="form-control" placeholder="Mã nhà cung cấp..."/>
-							</div>
-							<div class="form-group">
-								<label>Tên cung cấp:</label>
-								<input type="text" class="form-control" placeholder="Mã nhà cung cấp..."/>
-							</div>
-							<div class="form-group">
-								<label>Điện thoại:</label>
-								<input type="text" class="form-control" placeholder="Điện thoại..."/>
-							</div>
-							<div class="form-group">
-                                <label>Logo</label>
-                                <input type="file">
-                            </div>
-							 <div class="form-group">
-                                <label>Trạng thái</label>
-                                <select class="form-control">
-                                    <option>Kích hoạt</option>
-                                    <option>Khóa</option>
-                                </select>
-                            </div>
-							<div class="panel-footer">
-									<button type="button" class="btn btn-success"> Thêm mới</button>
-									<button type="button" class="btn btn-warning"> Lưu</button>
-									<button type="button" class="btn btn-danger"> Xóa</button>
-							</div>
-							
-						</div>
-						<!-- /panel-body -->
-					</div>
-				</div>
-				
-				<div class="col-lg-8 col-sm-12">
-					<div class="panel panel-primary">
-						<div class="panel-heading">Danh sách nhà cung cấp</div>
-						<div class="panel-body">
-							<table class="table table-bordered table-striped">
-								<thead>
-									<tr>
-										<th>STT</th>
-										<th>Logo</th>
-										<th>Mã nhà cung cấp</th>
-										<th>Tên nhà cung cấp</th>
-										<th>Trạng thái</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>
-											<img src="../images/1.jpg" height="25px" />
-										</td>
-										<td>01</td>
-										<td>Iphone</td>
-										<td>
-											<span class="label label-success">Kích hoạt</span>
-										</td>
-									</tr>
-									
-									<tr>
-										<td>2</td>
-										<td>
-											<img src="../images/2.jpg" height="25px" />
-										</td>
-										<td>02</td>
-										<td>Samsung</td>
-										<td>
-											<span class="label label-danger">khóa</span>
-										</td>
-									</tr>
-									
-									<tr>
-										<td>3</td>
-										<td>
-											<img src="../images/3.jpg" height="25px" />
-										</td>
-										<td>03</td>
-										<td>Oppo</td>
-										<td>
-											<span class="label label-success">Kích hoạt</span>
-										</td>
-									</tr>
-									
-								</tbody>
-							</table>
-						</div>	
-					</div>
-				</div>
-			</div>
-		<!-- /.row -->	
-           
+                    <!-- /.panel -->
+   </div>
+ <!-- /.col-lg-12 -->
 
-    <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../js/sb-admin-2.js"></script>
 
 </body>
 

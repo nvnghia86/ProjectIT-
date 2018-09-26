@@ -1,0 +1,7 @@
+- gi?i thi?u PHP
+- Bi?n 
+- Ki?u Data type
+- String
+- H?ng s? (Define)
+- Toán t? (Operator)
+- If...Elsse

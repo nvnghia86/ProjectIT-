@@ -22,13 +22,76 @@
 
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/sb-admin-2.js"></script>
+	<script src="../data/DULIEUMAU.js"></script>
+    <script src="../js/DM_SANPHAM.js"></script>
+	
+	<script>
+		
+		var Data = new DULIEU_MAU();
+		var DM = new DM_SANPHAM();
+		DM.load_DuLieu(Data.DM_SANPHAM);
+		
+		function show_DanhSach(){
+			$('#DanhSach tbody').html('');
+			var html='';
+			for(var i=0; i< DM.DANH_SACH.length; i++){
+				var trangthai = '';
+				if(DM.DANH_SACH[i].TRANG_THAI=='Kích hoạt'){
+					trangthai = '<label class="label label-success">Kích hoạt</label>';
+				}else{
+					trangthai = '<label class="label label-danger">Khóa</label>';
+				}
+			
+				html +='<tr>';
+				html +='<td>'+ (i+1) +'</td>';
+				html +='<td>'+ DM.DANH_SACH[i].MA +'</td>';
+				html +='<td>'+ DM.DANH_SACH[i].TEN +'</td>';
+				html +='<td>'+ DM.DANH_SACH[i].MO_TA +'</td>';
+				html +='<td>'+ trangthai +'</td>';
+				html +='</tr>';
+			}
+			$('#DanhSach tbody').html(html);
+		}
+	
+		$(function(){
+			var Acc = JSON.parse(localStorage.getItem('Acc'));
+			$('#spVaiTro').html(Acc.VAI_TRO);
+			
+			show_DanhSach();
+			
+			$('#btnThem').on('click',function(){
+				
+				DM.MA = $('#MA').val();
+				DM.TEN = $('#TEN').val();
+				DM.MO_TA = $('#MO_TA').val();
+				DM.TRANG_THAI = $('#TRANG_THAI').val();
+				
+				if(DM.them()==true){
+					$('#MA').val('');
+					$('#TEN').val('');
+					$('#MO_TA').html('');
+					$('#TRANG_THAI').val('Kích hoạt');
+					show_DanhSach();
+				}else{
+					$('#MA').focus();
+				}
+			
+			});
+		
+		});
+		
+	</script>
 
 </head>
 
@@ -45,7 +108,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Thegioididong.com | Quản trị hệ thống</a>
+                <a class="navbar-brand" href="index.php">Thegioididong.com | Quản trị hệ thống</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -242,7 +305,7 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw"></i> <span id="spVaiTro"></span> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> Hồ sơ</a>
@@ -250,7 +313,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i>Cấu hình hệ thống</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Đăng xuất</a>
+                        <li><a href="login.php"><i class="fa fa-sign-out fa-fw"></i>Đăng xuất</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -274,13 +337,13 @@
                             <!-- /input-group -->
                         </li>
                         <<li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Bảng điều khiển</a>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Bảng điều khiển</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị danh mục sản phẩm<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhmuc_sanpham.html">Danh mục sản phẩm</a>
+                                    <a href="danhmuc_sanpham.php">Danh mục sản phẩm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -290,7 +353,7 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản trị nhà cung cấp<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhmuc_nhacungcap.html">Danh sách nhà cung cấp</a>
+                                    <a href="danhmuc_nhacungcap.php">Danh sách nhà cung cấp</a>
                                 </li>
                                 
                             </ul>
@@ -301,7 +364,7 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Quản trị sản phẩm<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+                                    <a href="danhsachsanpham.php">Danh sách sản phẩm</a>
                                 </li>
                                 
                             </ul>
@@ -334,25 +397,25 @@
 						<div class="panel-body">
 							<div class="form-group">
 								<label>Mã:</label>
-								<input type="text" class="form-control" placeholder="Mã danh mục..."/>
+								<input type="text" id="MA" class="form-control" placeholder="Mã danh mục..."/>
 							</div>
 							<div class="form-group">
 								<label>Tên:</label>
-								<input type="text" class="form-control" placeholder="Tên danh mục..."/>
+								<input type="text" id="TEN" class="form-control" placeholder="Tên danh mục..."/>
 							</div>
 							<div class="form-group">
 								<label>Mô tả:</label>
-								<input type="textarea" class="form-control" placeholder="Mô tả..."/>
+								<input type="textarea" id="MO_TA" class="form-control" placeholder="Mô tả..."/>
 							</div>
 							 <div class="form-group">
                                 <label>Trạng thái</label>
-                                <select class="form-control">
-                                    <option>Kích hoạt</option>
-                                    <option>Khóa</option>
+                                <select id="TRANG_THAI" class="form-control">
+                                    <option value="Kích hoạt">Kích hoạt</option>
+                                    <option value="Khóa">Khóa</option>
                                 </select>
                             </div>
 							<div class="panel-footer">
-									<button type="button" class="btn btn-success"> Thêm mới</button>
+									<button type="button" id="btnThem" class="btn btn-success"> Thêm mới</button>
 									<button type="button" class="btn btn-warning"> Lưu</button>
 									<button type="button" class="btn btn-danger"> Xóa</button>
 							</div>
@@ -366,7 +429,7 @@
 					<div class="panel panel-primary">
 						<div class="panel-heading">Danh sách nhà cung cấp</div>
 						<div class="panel-body">
-							<table class="table table-bordered table-striped">
+							<table class="table table-bordered table-striped" id="DanhSach">
 								<thead>
 									<tr>
 										<th>STT</th>
@@ -376,38 +439,7 @@
 										<th>Trạng thái</th>
 									</tr>
 								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>01</td>
-										<td>Iphone</td>
-										<td>Iphone</td>
-										<td>
-											<span class="label label-success">Kích hoạt</span>
-										</td>
-									</tr>
-									
-									<tr>
-										<td>2</td>
-										<td>02</td>
-										<td>Samsung</td>
-										<td>Samsung</td>
-										<td>
-											<span class="label label-danger">khóa</span>
-										</td>
-									</tr>
-									
-									<tr>
-										<td>3</td>
-										<td>03</td>
-										<td>Oppo</td>
-										<td>Oppo</td>
-										<td>
-											<span class="label label-success">Kích hoạt</span>
-										</td>
-									</tr>
-									
-								</tbody>
+								<tbody></tbody>
 							</table>
 						</div>	
 					</div>
@@ -426,17 +458,7 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../js/sb-admin-2.js"></script>
 
 </body>
 

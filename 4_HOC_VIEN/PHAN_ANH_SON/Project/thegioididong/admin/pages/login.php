@@ -1,3 +1,6 @@
+<?php
+	require('../modules/module-login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,18 +27,40 @@
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	
 	<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	 <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/sb-admin-2.js"></script>
+	<script src="../js/ACCOUNT.js"></script>
+	<script src="../data/DULIEUMAU.js"></script>
 	<style>
 		.login-panel {
 			margin-top: 0% !important;
 		}
 	</style>
+	<script>
+	/* 	 var Acc = new ACCOUNT();
+		var DuLieu = new DULIEU_MAU();
+		
+		$(function(){
+			
+			Acc.DS_TAIKHOAN = DuLieu.DS_TAIKHOAN;
+			
+			$('#btnLogin').on('click',function(){
+				Acc.TAI_KHOAN = $('#email').val();
+				Acc.MAT_KHAU = $('#password').val();
+				Acc.dangnhap();
+			});
+		}); */
+	
+	</script> 
 </head>
 
 <body>
@@ -54,21 +79,24 @@
                         <h3 class="panel-title">ĐĂNG NHẬP</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form role="form" method="post" action="login.php">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Tài khoản truy cập" name="email" type="email" autofocus>
+                                    <input class="form-control" placeholder="Tài khoản truy cập" name="taikhoan" id="email" type="text" autofocus>
+									
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Mật khẩu" name="password" type="password" value="">
+                                    <input class="form-control" placeholder="Mật khẩu" name="matkhau" id="password" type="password" value="">
                                 </div>
+                                <p class="label label-danger"><?=$thongbao?></p>
                                 <div class="checkbox">
                                     <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                        <input name="ghinho" type="checkbox" value="Remember Me">Remember Me
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
+								<button type="submit"  id="btnLogin" name="login" class="btn btn-lg btn-success btn-block">Đăng Nhập</button>
+                                
                             </fieldset>
                         </form>
                     </div>
@@ -77,17 +105,7 @@
         </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../js/sb-admin-2.js"></script>
+   
 
 </body>
 
