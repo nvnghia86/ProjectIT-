@@ -1,5 +1,4 @@
-Server: sql12.freemysqlhosting.net
-Name: sql12258870
-Username: sql12258870
-Password: LD5sWjslL9
-Port number: 3306
+Host: p01.vinahost.vn
+DB Name: qxfbgkqd_haf
+Username: qxfbg_haf
+Password: Szcu785^
