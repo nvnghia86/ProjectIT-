@@ -2,3 +2,8 @@ Host: p01.vinahost.vn
 DB Name: qxfbgkqd_haf
 Username: qxfbg_haf
 Password: Szcu785^
+
+*** Lưu ý:
+- Tạo các thủ tục
+- Thêm sửa, xóa dữ liệu trong bảng
+- Tuyệt đối: KHÔNG sửa, xóa bảng
