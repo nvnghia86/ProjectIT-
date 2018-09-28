@@ -1,0 +1,5 @@
+Server: sql12.freemysqlhosting.net
+Name: sql12258870
+Username: sql12258870
+Password: LD5sWjslL9
+Port number: 3306
