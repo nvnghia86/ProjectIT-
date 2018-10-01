@@ -13,6 +13,7 @@ BEGIN
 		ROLLBACK;
 		GET DIAGNOSTICS CONDITION 1
 		p_ma_loi = RETURNED_SQLSTATE, p_thong_bao =  MESSAGE_TEXT;
+		select p_ma_loi MA_LOI, p_thong_bao THONG_BAO, p_ket_qua KET_QUA;
 END;
 
 START TRANSACTION;
