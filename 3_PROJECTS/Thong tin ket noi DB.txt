@@ -1,7 +1,7 @@
 Host: p01.vinahost.vn
 DB Name: qxfbgkqd_haf
-Username: qxfbg_haf
-Password: Szcu785^
+Username: qxfbg_vnh
+Pass: Hdez3!14
 
 *** Lưu ý:
 - Tạo các thủ tục
