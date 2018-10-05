@@ -1,0 +1,11 @@
+1. Lấy ra 4 sản phẩm thuộc danh mục điện thoại có tổng điểm đánh giá nhiều nhất
+- Nội dung lấy: 
+	+ Tên sản phẩm
+	+ Mã sản phẩm
+	+ Hình ảnh
+	+ Giá bán
+	+ Khuyến mại
+	+ Tổng điểm đánh giá
+	
+- Phương pháp: Trả lời các câu hỏi sau:
+	+ Lấy ở đâu?
