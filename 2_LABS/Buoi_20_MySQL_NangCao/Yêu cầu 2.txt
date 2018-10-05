@@ -1,0 +1,16 @@
+Yêu cầu 2:
+Hãy lấy ra thông tin của sản phẩm là "Điện thoại Samsung Galaxy S9+ 64GB"
+
+Nội dung cần lấy:
+	+ id_sanpham
+	+ ma
+	+ ten
+	+ gia_ban
+	+ khuyến mãi
+	+ giao hàng
+	+ hình ảnh
+	+ mô tả
+	+ số lượng đánh giá,
+	+ tổng điểm đánh giá
+	+ bảo hành
+	+ thông số kỹ thuật
