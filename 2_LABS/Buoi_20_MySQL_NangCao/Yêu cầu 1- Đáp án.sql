@@ -15,7 +15,8 @@ from
 	left join ch_sanpham_khuyenmai as spkm on spkm.id_sanpham = sp.id_sanpham
 	left join ch_dm_khuyenmai as km on spkm.id_dm_khuyenmai = km.id_dm_khuyenmai
 	left join ch_danhgia as dg on dg.id_sanpham = sp.id_sanpham
-	
+where
+	id_dm_sanpham=4	
 group by
 	sp.id_sanpham,
 	sp.ma,
