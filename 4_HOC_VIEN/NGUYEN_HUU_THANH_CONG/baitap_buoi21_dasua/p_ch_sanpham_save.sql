@@ -1,12 +1,19 @@
-DROP PROCEDURE IF EXISTS `p_dm_baohanh_save`;
-
-CREATE  PROCEDURE `p_dm_baohanh_save`(
+CREATE PROCEDURE `p_ch_sanpham_save`(
+	p_id_sanpham int,
+	p_ma nvarchar(100)
+	p_ten nvarchar(300)
+	p_gia_nhap float(15,2)
+	p_gia_ban float(15,2)
+	p_gioithieu text
+	p_id_dm_sanpham int,
 	p_id_dm_baohanh int,
-	p_ten varchar(100),
-	p_mota varchar(200),
-	p_trangthai int 
+	p_id_dm_doitra int,
+	p_id_dm_giaohang int,
+	p_id_dm_tragop int,
+	p_id_dm_hang_sanxuat int,
+	p_trangthai int
 )
-BEGIN 
+BEGIN  
 -- Khai báo các biến trả về
 DECLARE p_ma_loi varchar(20) DEFAULT 'ERR';
 DECLARE p_thong_bao varchar(500) DEFAULT '';
@@ -22,23 +29,10 @@ END;
 -- Bắt đầu 1 giao dịch
 START TRANSACTION;
 -- Kiểm tra xem nên tạo mới hay sửa
-IF p_id_dm_baohanh=0 OR p_id_dm_baohanh is null THEN
-	INSERT INTO ch_dm_baohanh(
-		ten,
-		mota,
-		trangthai
-	)VALUES(
-		p_ten,
-		p_mota,
-		p_trangthai
-	);
+IF p_id_sanpham = 0 OR p_id_sanpham is null THEN
+	INSERT INTO ch_sanpham(ma)VALUES(p_ma);
 ELSE
-	UPDATE ch_dm_baohanh SET
-		ten = p_ten,
-		mota = p_mota,
-		trangthai = p_trangthai
-	WHERE
-		id_dm_baohanh = p_id_dm_baohanh;
+	UPDATE ch_sanpham SET ma = p_ma WHERE ma = p_ma;
 END IF;
 
 COMMIT;
