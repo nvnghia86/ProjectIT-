@@ -1,7 +1,7 @@
  <?php
  echo "<h2>Đối tượng khách hàng</h2>";
- require('KHACHHANG.php');
- $KhachHang = new KHACHHANG();
+ require('KHACH_HANG.php');
+ $KhachHang = new KHACH_HANG();
  
  
  echo "<h3>Gọi phương thức FindAll</h3>";
@@ -9,7 +9,7 @@
  print('<pre>');
  print_r($rs);
  
- echo "<h3>Gọi phương thức FindKey</h3>";
+ echo "<h3>Gọi phương thức FindKey('ngoc')</h3>";
  $rs = $KhachHang->FindKey('ngoc');
  print('<pre>');
  print_r($rs);
@@ -27,13 +27,13 @@
  print_r($rs);
  
  
-  echo "<h3>Gọi phương thức Del</h3>";
- $KhachHang->Id_KhachHang = 4;
+  echo "<h3>Gọi phương thức Del(21)</h3>";
+ $KhachHang->Id_KhachHang =21;
  $rs = $KhachHang->Del();
  print('<pre>');
  print_r($rs);
  
-   echo "<h3>Gọi phương thức GetById</h3>";
+   echo "<h3>Gọi phương thức GetById(3)</h3>";
  $KhachHang->Id_KhachHang = 3;
  $rs = $KhachHang->GetById();
  print('<pre>');

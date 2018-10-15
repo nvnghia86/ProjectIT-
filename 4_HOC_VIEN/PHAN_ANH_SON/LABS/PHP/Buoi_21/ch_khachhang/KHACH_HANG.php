@@ -1,7 +1,7 @@
  <?php
  require('MySQLHelper.php');
  
- class KHACHHANG{
+ class KHACH_HANG{
 	/*  Các thuộc tính */
 	public $Id_KhachHang;
 	public $HoTen;
