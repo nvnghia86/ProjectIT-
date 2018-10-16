@@ -1,8 +1,8 @@
 <?php
 require_once('Configs/Config.php');
-require_once('Controllers/HocVienController.php');
+require_once('Cores/RouterHelper.php');
 
-$Controller = new HocVienController();
-$Controller->showDanhSach();
+$Router = new RouterHelper();
+$Router->router();
 
 ?>
