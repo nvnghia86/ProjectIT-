@@ -1,0 +1,16 @@
+HƯỚNG DẪN LẬP TRÌNH PHP MVC
+Với module Quản lý danh mục bảo hành
+
+Các bước:
+- Bước 1: Tạo model
+	+ ChDmBaoHanh.php
+
+- Bước 2: Tạo controller ChDmBaoHanhController.php & Code các hàm View và Action
+	+ Code hàm viewDanhSach()
+	+ Code hàm viewSua()
+	+ actLuu() (Bao gồm thêm mới và sửa)
+	+ actXoa()
+	+ actTim()
+	
+- Bước 1: Thiết kế View
+	+ View sanh sách: BaoHanh_DanhSach.php
