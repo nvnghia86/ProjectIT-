@@ -43,3 +43,27 @@
         </div>
     </div>
 </div>
+<script>
+	// Khai báo đối tượng cửa sổ
+	var EccDialog = new ECC_DIALOG();
+	
+	$(function(){
+		
+		// Bắt sự kiện khi ấn nút thêm mới
+		$('#btnThemMoi').on('click',function(){
+			// Hiển thị cửa sổ popup
+			EccDialog.show(
+				'Tạo mới danh mục bảo hành', 
+				'?app=DmBaoHanh&view=ChiTiet&layout=popup', 
+				'50%', '310');
+		});
+	});
+
+</script>
+
+
+
+
+
+
+
