@@ -13,6 +13,7 @@ define("DB_HOSTNAME","p01.vinahost.vn:3306");
 define("DB_PASSWORD","Hdez3!14");
 define("DB_USERNAME","qxfbg_vnh");
 define("DB_DATABSE","qxfbgkqd_haf");
+define("DB_TABLE_PREFIX","tnus_");
 
 define("HTTP_HOST","");
 define("HTTP_PATH","");
