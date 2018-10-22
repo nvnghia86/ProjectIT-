@@ -28,7 +28,7 @@ class System extends TNUSObject {
         // truy cập vào vùng yêu cầu đăng nhập nhưng User chưa đăng nhập
         if ($is_auth == true && empty($_SESSION["auth"]["ID_TAI_KHOAN"])) {
             // Chuyển tới App đăng nhập
-            $app = "CoreAuthen";
+            $app = "auth";
         } else {
             // Lấy app cần xử lý
             $app = empty($_REQUEST["app"]) ? $default_m : $_REQUEST["app"];
