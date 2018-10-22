@@ -12,84 +12,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 
-                    <i class="icon-mail-read"></i> Công văn <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li>
-                        <a href="?app=congvan">
-                            <i class="glyphicon glyphicon-list-alt"></i>  
-                            Công văn đến</a>
-                    </li>
-                    <li>
-                        <a href="?app=congvandi">
-                            <i class="glyphicon glyphicon-phone"></i>  
-                            Công văn đi</a>
-                    </li>
-                    <li>
-                        <a href="?app=sms_danhba&task=import_danhba">
-                            <i class="glyphicon glyphicon-import"></i>  
-                            Import danh bạ từ file excel</a>
-                    </li>
-
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 
-                    <i class="icon-map4"></i> ĐỊA BÀN <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                     <li><a href="?app=caDmDiaBan">Danh mục địa bàn</a></li> 
-                </ul>
-            </li>
-             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 
-                    <i class="icon-books"></i> CHUYÊN ĐỀ <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                     <li><a href="#">Đầu mục chuyên đề</a></li>
-                    <li><a href="/Views/ChuyenDe">Danh sách chuyên đề</a></li>
-                    
-                </ul>
-            </li>
-            
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 
-                    <i class="icon-books"></i> KẾ HOẠCH NGHIỆP VỤ <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Đầu mục kế hoạch</a></li>
-                    <li><a href="#">Danh sách kế hoạch</a></li>
-                </ul>
-            </li>
-            
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 
-                    <i class="glyphicon glyphicon-cog"></i> Hệ thống <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-user"></i>  
-                            Quản lý tài khoản</a>
-                    </li>
-                    <li>
-                        <a href="?app=filemanager">
-                            <i class="glyphicon glyphicon-tasks"></i>  
-                            Quản lý tài nguyên</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-wrench"></i>  
-                            Cấu hình hệ thống</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-stats"></i>  
-                            Cấu hình dịch vụ</a>
-                    </li>
-
-                </ul>
-            </li>
-
-        </ul>
+        <ul class="nav navbar-nav" id="MainMenu"></ul>
         <?php
         /* load block */
         /* if (!empty($_SESSION["auth"]["id_nsd"])) {
@@ -121,3 +44,50 @@
 </nav>
 <!--Hidden field-->
 <input type="hidden" id="TAIKHOAN" value=" <?=$this->loaduser['username']?>" />
+
+<script src="modules/menu/MenuNgang.js"></script>
+<script>
+
+    var Menu = new MenuNgang();
+    
+    function Menu_bind(){
+        Menu.getTree();
+        //console.log(Menu.TreeData);
+        var _html = '';
+        for (var i = 0; i < Menu.TreeData.length; i++) {
+            var _item = Menu.TreeData[i][1];
+            //console.log(_item);
+            if(_item.children.length > 0){
+                _html +='<li class="dropdown">';
+                        _html +='<a href="'+ _item.url +'" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> ';
+                                _html +='<i class="'+ _item.css_class +'"></i> ' + _item.tieude + ' <span class="caret"></span></a>';
+                        _html +='<ul class="dropdown-menu" role="menu">';
+                        for (var j = 0; j < _item.children.length; j++) {
+                            var _chil = _item.children[j];
+                            _html +='<li>';
+                                _html +='<a href="' + _chil.url + '">';
+                                _html +='<i class="' + _chil.css_class + '"></i>  ';
+                                _html +='' + _chil.tieude + '</a>';
+                            _html +='</li>';
+                        }
+                                
+                        _html +='</ul>';
+                _html +='</li>';
+            }else{
+                _html += '<li>';
+                _html += '<a href="'+ _item.url +'"> <i class="'+ _item.css_class +'"></i> ' + _item.tieude + '</a>';
+                _html += '</li>';
+            }
+        }
+        //console.log(_html);
+        $('#MainMenu').html(_html);
+    }
+    
+    $(function(){
+        Menu_bind();
+    
+    });
+    
+    
+
+</script>
