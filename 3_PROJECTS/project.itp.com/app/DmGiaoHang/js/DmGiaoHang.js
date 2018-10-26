@@ -16,7 +16,7 @@ var DmGiaoHang = function(pAppUrl){
 	// Liệt kê tất cả
 	this.FindAll = function(){
 		var _params = {};
-        var _data = {COMMAND:'p_ch_dm_baohanh_find_all', PARAMS:_params};
+        var _data = {COMMAND:'p_ch_dm_giaohang_find_all', PARAMS:_params};
         var _rs = that.CoreData.callDataGet('AjxCallProcGet', _data);
 		if(_rs.CODE=='SUC'){
 			that.DanhSach = _rs.DATA;
