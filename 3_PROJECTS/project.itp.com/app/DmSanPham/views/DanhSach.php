@@ -48,9 +48,42 @@
 <script>
 	// Khai báo đối tượng cửa sổ
 	var EccDialog = new ECC_DIALOG();
+	var SanPham = new DmSanPham('?app=DmSanPham');
+	
+	function Page_init(){
+		SanPham.FindAll();
+		DanhSach_bind();
+	}
+	
+	function DanhSach_bind(){
+		
+		var _html = '';
+		for(var i=0; i< SanPham.DanhSach.length;i++){
+			var _dong = SanPham.DanhSach[i];
+			
+			var _trangthai ='';
+			if(_dong.trangthai=='1'){
+				_trangthai = '<span class="label label-success">Sử dụng</span>';
+			}else{
+				_trangthai = '<span class="label label-danger">Khóa</span>';
+			}
+			
+			_html +='<tr>';
+			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
+			_html +='	<td>'+ (i+1) +'</td>';
+			_html +='	<td>'+ _dong.ten +'</td>';
+			_html +='	<td>'+ _dong.id_dm_sanpham_cha +'</td>';
+			_html +='	<td>'+ _dong.mota +'</td>';
+			_html +='	<td>';
+			_html += _trangthai;
+			_html +='	</td>';
+			_html +='</tr>';
+		}
+		$('#DanhSach > tbody').html(_html);
+	}
 	
 	$(function(){
-		
+		Page_init();
 		// Bắt sự kiện khi ấn nút thêm mới
 		$('#btnThemMoi').on('click',function(){
 			// Hiển thị cửa sổ popup
