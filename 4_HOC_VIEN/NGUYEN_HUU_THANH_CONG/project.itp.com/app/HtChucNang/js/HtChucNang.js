@@ -1,6 +1,7 @@
 var HtChucNang = function (pUrl) {
     this.id_ht_chucnang = '';
     this.id_ht_chucnang_cha = '';
+    this.ten_chucnang_cha = '';
     this.tieude = '';
     this.ma = '';
     this.url = '';
@@ -8,9 +9,8 @@ var HtChucNang = function (pUrl) {
     this.trangthai = '';
     this.css = '';
     this.css_class = '';
-    this.thutu = '';
+    this.thutu = 0;
 
-    
     this.TreeData = null;
 
     // Others
@@ -43,12 +43,13 @@ var HtChucNang = function (pUrl) {
             css_class: this.css_class,
             thutu: this.thutu
         };
-        var _data = {COMMAND:'p_dm_diaban_save', PARAMS:_params};
+        console.log(_params);
+        var _data = {COMMAND:'p_ht_chucnang_save', PARAMS:_params};
         //var _rs = that.CoreData.callDataGet('CallProcGetTreeData', _params);
         var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
         console.log(_rs);
+        alert(_rs.MESSAGE);
         if(_rs.CODE !='SUC'){
-            alert(_rs.MESSAGE);
             return false;
         }
         return _rs;
@@ -56,12 +57,12 @@ var HtChucNang = function (pUrl) {
     
     this.del = function () {
         var _params = {
-            ID_DM_DIA_BAN: this.ID_DM_DIA_BAN
+            id_ht_chucnang: this.id_ht_chucnang
         };
-        var _data = {COMMAND:'p_dm_diaban_del', PARAMS:_params};
+        var _data = {COMMAND:'p_ht_chucnang_del', PARAMS:_params};
         var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
+        alert(_rs.MESSAGE);
         if(_rs.CODE !='SUC'){
-            alert(_rs.MESSAGE);
             return false;
         }
         return _rs;
@@ -69,16 +70,26 @@ var HtChucNang = function (pUrl) {
     
     this.getById = function () {
         var _params = {
-            ID_DM_DIA_BAN: this.ID_DM_DIA_BAN
+            id_ht_chucnang: this.id_ht_chucnang
         };
-        var _data = {COMMAND:'p_dm_diaban_get_byid', PARAMS:_params};
+        var _data = {COMMAND:'p_ht_chucnang_get_byid', PARAMS:_params};
         var _rs = that.CoreData.callDataGet('AjxCallProcGet', _data);
         console.log(_rs);
         if(_rs.CODE !='SUC'){
             alert(_rs.MESSAGE);
             return false;
         }
-        that.ChiTiet = _rs.DATA[0];
+        that.id_ht_chucnang = _rs.DATA[0]['id_ht_chucnang'];
+        that.id_ht_chucnang_cha = _rs.DATA[0]['id_ht_chucnang_cha'];
+        that.tieude = _rs.DATA[0]['tieude'];
+        that.ma = _rs.DATA[0]['ma'];
+        that.url = _rs.DATA[0]['url'];
+        that.loai = _rs.DATA[0]['loai'];
+        that.trangthai = _rs.DATA[0]['trangthai'];
+        that.css = _rs.DATA[0]['css'];
+        that.css_class = _rs.DATA[0]['css_class'];
+        that.thutu = _rs.DATA[0]['thutu'];
+
     };
 
     this.log = function (pTitle,pMsg) {
