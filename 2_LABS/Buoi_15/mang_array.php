@@ -60,6 +60,6 @@
 			<td><?=$tongtien?> đ</td>
 		</tr>
 	</tbody>
-<table>
+</table>
 
 
