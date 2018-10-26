@@ -48,7 +48,7 @@
 <script src="app/DmBaoHanh/js/DmBaoHanh.js"></script>
 <script>
 	// Khai báo đối tượng cửa sổ
-	var EccDialog = new ECC_DIALOG();
+	var EccDialog = new ECC_DIALOG(Page_init);
 	var BaoHanh = new DmBaoHanh('?app=DmBaoHanh');
 	
 	function Page_init(){
