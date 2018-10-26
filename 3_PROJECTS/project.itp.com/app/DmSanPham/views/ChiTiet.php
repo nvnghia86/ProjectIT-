@@ -4,15 +4,15 @@
 <form class="row" style="margin-bottom:5px" id="FORM">
     <div class="form-group-sm col-sm-6">
        <label>Tên sản phẩm <span class="require">(*)</span></label>
-	   <input type="text" class="form-control" placeholder="Tên sản phẩm"  />
+	   <input type="text" id="ten" class="form-control" placeholder="Tên sản phẩm"  />
     </div>
     <div class="form-group-sm col-sm-6">
        <label>id dm sảm phẩm cha <span class="require">(*)</span></label>
-	   <input type="text" class="form-control" placeholder="id_dm_sanpham_cha"  />
+	   <input type="text" id="id_dm_sanpham_cha" class="form-control" placeholder="id_dm_sanpham_cha"  />
     </div>
 	<div class="form-group-sm col-sm-6">
        <label>Mô tả <span class="require">(*)</span></label>
-	   <textarea class="form-control" rows="3"></textarea>
+	   <textarea id="mota" class="form-control" rows="3"></textarea>
     </div>
     
     <div class="form-group-sm col-sm-4">
