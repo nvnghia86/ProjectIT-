@@ -28,7 +28,25 @@ var DmSanPham = function(pAppUrl){
 	
 	this.GetById = function(){}
 	
-	this.Save = function(){}
+	this.Save = function(){
+		var _params = {
+			id_dm_sanpham: this.id_dm_sanpham,
+			ten: this.ten,
+			id_dm_sanpham_cha: this.id_dm_sanpham_cha,
+			mota: this.mota,
+			trangthai: this.trangthai
+		};
+        var _data = {COMMAND:'p_ch_dm_sanpham_save', PARAMS:_params};
+        var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
+		alert(_rs.MESSAGE);
+	}
 
-	this.Del = function(){}
+	this.Del = function(){
+		var _params = {
+			id_dm_sanpham: this.id_dm_sanpham
+		};
+        var _data = {COMMAND:'p_ch_dm_sanpham_del', PARAMS:_params};
+        var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
+		alert(_rs.MESSAGE);
+	}
 }
