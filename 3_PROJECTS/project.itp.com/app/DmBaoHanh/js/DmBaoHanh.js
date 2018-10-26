@@ -27,7 +27,24 @@ var DmBaoHanh = function(pAppUrl){
 	
 	this.GetById = function(){}
 	
-	this.Save = function(){}
+	this.Save = function(){
+		var _params = {
+			id_dm_baohanh: this.id_dm_baohanh,
+			ten: this.ten,
+			mota: this.mota,
+			trangthai: this.trangthai
+		};
+        var _data = {COMMAND:'p_ch_dm_baohanh_save', PARAMS:_params};
+        var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
+		alert(_rs.MESSAGE);
+	}
 
-	this.Del = function(){}
+	this.Del = function(){
+		var _params = {
+			id_dm_baohanh: this.id_dm_baohanh
+		};
+        var _data = {COMMAND:'p_ch_dm_baohanh_del', PARAMS:_params};
+        var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
+		alert(_rs.MESSAGE);
+	}
 }
