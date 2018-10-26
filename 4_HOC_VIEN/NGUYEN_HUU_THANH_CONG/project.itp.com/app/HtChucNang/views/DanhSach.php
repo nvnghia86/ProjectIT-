@@ -127,34 +127,33 @@
                         CreateNew : {
                           "label" : "Tạo mới",
                           "action" : function(){
-                              var _id = node.original.ID_DM_DIA_BAN;
+                              var _id = node.original.id_ht_chucnang;
                               var _text = node.original.text;
-                              EccDialog.show('Tạo mới chức năng', '?app=HtChucNang&view=PopChiTiet&layout=popup&type=add&id=0&id_cha=' + _id + '&text=' + _text, '50%', '350', 'modModal');
+                              EccDialog.show('Tạo mới chức năng', '?app=HtChucNang&view=PopChiTiet&layout=popup&id=0&id_cha=' + _id + '&ten_chucnang_cha=' + _text, '70%', '350', 'modModal');
                           },
                           "_class" : "class"
                         },
                         Edit : {
                           "label" : "Sửa thông tin",
                           "action" : function(){
-                              var _id = node.original.ID_DM_DIA_BAN;
-                              EccDialog.show('Sửa thông tin', '?app=caDmDiaBan&view=DiaBanChiTiet&layout=popup&type=edit&id=' + _id, '50%', '400', 'modModal');
+                              var _id = node.original.id_ht_chucnang;
+                              EccDialog.show('Sửa chức năng', '?app=HtChucNang&view=PopChiTiet&layout=popup&id=' + _id , '70%', '350', 'modModal');
                           },
                           "_class" : "class"
                         },
                         Delete : {
                           "label" : "Xóa",
                           "action" : function(){
-                              DiaBan.ID_DM_DIA_BAN = node.original.ID_DM_DIA_BAN;
+                              ChucNang.id_ht_chucnang = node.original.id_ht_chucnang;
                               
-                              if(DiaBan.ID_DM_DIA_BAN=='0'){
-                                  alert('Không được xóa địa bàn gốc');
+                              if(ChucNang.id_ht_chucnang=='0'){
+                                  alert('Không được xóa chức năng gốc');
                                   return false;
                               }
                               
-                              if(confirm('Bạn có chắc chắn muốn xóa địa bàn này không?')){
-                                  var _rs = DiaBan.del();
-                                  alert(_rs.MESSAGE);
-                                  DiaBan.getTree();
+                              if(confirm('Bạn có chắc chắn muốn xóa chức năng này không?')){
+                                  var _rs = ChucNang.del();
+                                  ChucNang.getTreeFilterLoai();
                                   $('#treeDanhSach').jstree("refresh");;
                               }
                           },
