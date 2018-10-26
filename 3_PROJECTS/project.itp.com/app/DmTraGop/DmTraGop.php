@@ -1,4 +1,4 @@
-<?php
+﻿<?php 
 /**
  * App quản lý danh mục trả góp
  * Create: 08-10-2017
