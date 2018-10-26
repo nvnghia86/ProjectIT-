@@ -129,7 +129,7 @@
                           "action" : function(){
                               var _id = node.original.id_ht_chucnang;
                               var _text = node.original.text;
-                              EccDialog.show('Tạo mới chức năng', '?app=HtChucNang&view=PopChiTiet&layout=popup&id=0&id_cha=' + _id + '&ten_chucnang_cha=' + _text, '50%', '350', 'modModal');
+                              EccDialog.show('Tạo mới chức năng', '?app=HtChucNang&view=PopChiTiet&layout=popup&id=0&id_cha=' + _id + '&ten_chucnang_cha=' + _text, '70%', '350', 'modModal');
                           },
                           "_class" : "class"
                         },
@@ -137,7 +137,7 @@
                           "label" : "Sửa thông tin",
                           "action" : function(){
                               var _id = node.original.id_ht_chucnang;
-                              EccDialog.show('Sửa chức năng', '?app=HtChucNang&view=PopChiTiet&layout=popup&id=' + _id , '50%', '350', 'modModal');
+                              EccDialog.show('Sửa chức năng', '?app=HtChucNang&view=PopChiTiet&layout=popup&id=' + _id , '70%', '350', 'modModal');
                           },
                           "_class" : "class"
                         },
