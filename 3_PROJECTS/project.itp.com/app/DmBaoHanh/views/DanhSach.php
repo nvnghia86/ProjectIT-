@@ -10,7 +10,7 @@
 		<button type="button" class="btn btn-primary btn-xs" id="btnThemMoi">
 		<i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
 		<button type="button" class="btn btn-danger btn-xs" id="btnXoa">
-			<i class="glyphicon glyphicon-trash"></i> Xóa
+			<i class="glyphicon glyphicon-trash"></i> Xóa 1
 		</button>
     </div>
     <div class="col-sm-12">
@@ -90,7 +90,7 @@
 			EccDialog.show(
 				'Tạo mới danh mục bảo hành', 
 				'?app=DmBaoHanh&view=ChiTiet&layout=popup', 
-				'50%', '310');
+				'90%', '310');
 		});
 	});
 
