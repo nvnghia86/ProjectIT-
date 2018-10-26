@@ -23,11 +23,9 @@ var ACCOUNT = function(){
 		
 		if(hople){
 			alert("Bạn đã đăng nhập thành công! Xin chào: " + this.VAI_TRO);
-			document.location.href='danhmuc_sanpham.html';
+			document.location.href='quantri_dssp.html';
 		}else{
 			alert('Tài khoản hoặc mật khẩu không hợp lệ!');
 		}
-
 	}
-	
 };
