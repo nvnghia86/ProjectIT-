@@ -17,7 +17,7 @@
     
     <div class="form-group-sm col-sm-4">
         <label>Trạng thái </label>
-        <select class="form-control" id="sel_TRANG_THAI" name="trang_thai">
+        <select class="form-control" id="trangthai">
             <option value="1">1</option>
             <option value="0">0</option>
         </select>
@@ -28,3 +28,22 @@
         <button type="button" class="btn btn-warning btn-sm" id="btnSave"><i class="glyphicon glyphicon-save"></i> Lưu</button>
     </div>
 </form>
+<script src="app/DmSanPham/js/DmSanPham.js"></script>
+<script>
+    
+    var SanPham = new DmSanPham('?app=DmSanPham');
+    
+    
+    
+    $(function(){
+        
+        $('#btnSave').on('click',function(){
+            SanPham.ten = $('#ten').val();
+            SanPham.mota = $('#mota').val();
+            SanPham.trangthai = $('#trangthai').val();
+            SanPham.Save();
+        })
+        
+    })
+
+</script>

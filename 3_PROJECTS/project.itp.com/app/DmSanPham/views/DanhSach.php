@@ -9,6 +9,8 @@
 		</button>
 		<button type="button" class="btn btn-primary btn-xs" id="btnThemMoi">
 		<i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
+		<button type="button" class="btn btn-warning btn-xs" id="btnSua">
+		<i class="glyphicon glyphicon-edit"></i> Sửa</button> 
 		<button type="button" class="btn btn-danger btn-xs" id="btnXoa">
 			<i class="glyphicon glyphicon-trash"></i> Xóa
 		</button>
@@ -54,8 +56,17 @@
 	function Page_init(){
 		SanPham.FindAll();
 		DanhSach_bind();
+		Action_filter();
 	}
-	
+	function Action_filter(){
+		if(SanPham.id_dm_sanpham != 0){
+			$('#btnSua').show();
+			$('#btnXoa').show();
+		}else{
+			$('#btnSua').hide();
+			$('#btnXoa').hide();
+		}
+	}
 	function DanhSach_bind(){
 		
 		var _html = '';
@@ -92,6 +103,31 @@
 				'Tạo mới danh mục sản phẩm', 
 				'?app=DmSanPham&view=ChiTiet&layout=popup', 
 				'50%', '360');
+		});
+
+				$('#btnXoa').on('click',function(){
+			var _xacnhan = confirm('Bạn có chắc chắn muốn xóa không?');
+			if(_xacnhan==true){
+				SanPham.Del();
+				Page_init();
+			}
+		});
+		
+		$('#btnTaiLai').on('click',function(){
+			Page_init();
+		});
+		
+		$('#DanhSach').on('click','tr',function(){
+			$('#DanhSach tr').attr('class', '');
+			var _id = $(this).data('id');
+			if(S.id_dm_sanpham == _id){
+				SanPham.id_dm_sanpham = 0;
+			}else{
+				$('#DanhSach tr').attr('class', '');
+				SanPham.id_dm_sanpham = _id;
+				$(this).attr('class', 'row_selected');
+			}
+			Action_filter();
 		});
 	});
 
