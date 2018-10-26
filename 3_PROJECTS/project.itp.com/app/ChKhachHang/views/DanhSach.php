@@ -29,7 +29,6 @@ if (!defined('AREA')) {
                             <th>Tên</th>
                             <th>Email</th>
                             <th>Số điện thoại</th>
-                            <th>Mật khẩu</th>
                             <th>Trạng thái</th>
                         </tr>
                     </thead>
@@ -40,7 +39,6 @@ if (!defined('AREA')) {
                             <td>Phan Anh Sơn</td>
                             <td>phananhson24101995@gmail.com</td>
                             <td>0965 453 286</td>
-                            <td>123</td>
                             <td>
                                 <span class="label label-success">Sử dụng</span>
                             </td>

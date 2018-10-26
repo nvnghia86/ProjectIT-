@@ -95,6 +95,7 @@ class CoreDataApp extends AppObject {
             //print_r($_params);
             $_rs = $DB->callProcedure($_procName, $_params);
             $rsp = new DataResponse($_rs[0]['MA_LOI'], $_rs[0]['THONG_BAO'], $_rs[0]['KET_QUA']);
+            //print_r($_rs);
             return $rsp;
         } catch (Exception $ex) {
             $rsp = new DataResponse("ERR", "Loi: " . $ex->getMessage() . json_encode($_req), NULL);
