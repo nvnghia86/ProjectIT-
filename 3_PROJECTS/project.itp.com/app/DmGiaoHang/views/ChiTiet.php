@@ -2,17 +2,11 @@
 
 <form class="row" style="margin-bottom:5px" id="FORM">
     <div class="form-group-sm col-sm-6">
-       <label>Mã khuyến mại <span class="require">(*)</span></label>
-	   <input type="text" class="form-control" placeholder="Tên khuyến mại"  />
+       <label>Tên giao hàng <span class="require">(*)</span></label>
+	   <input type="text" class="form-control" placeholder="Tên bảo hành"  />
     </div>
-	
 	<div class="form-group-sm col-sm-6">
-       <label>Tên khuyến mại<span class="require">(*)</span></label>
-	   <textarea class="form-control" rows="3"></textarea>
-    </div>
-	
-	<div class="form-group-sm col-sm-6">
-       <label>Nội dung <span class="require">(*)</span></label>
+       <label>Mô tả <span class="require">(*)</span></label>
 	   <textarea class="form-control" rows="3"></textarea>
     </div>
     
