@@ -203,3 +203,11 @@ input[type=date]:focus{
     background-color: #f5e107;
     color:#0000ff;
 }
+
+.table tbody > tr{
+    cursor: pointer;
+}
+
+.table tbody > tr:hover{
+    background: #FFE793;
+}
