@@ -21,9 +21,9 @@
 					<thead>
 						<tr>
 							<th><input type="checkbox" id="chkAll" /></th>
-							<th>STT</th>
+							<th>Mã</th>
 							<th>Tên</th>
-							<th>Mô tả</th>
+							<th>Nội dung</th>
 							<th>Trạng thái</th>
 						</tr>
 					</thead>
@@ -31,8 +31,8 @@
 						<tr>
 							<td><input type="checkbox" id="chk_1" /></td>
 							<td>1</td>
-							<td>khuyến mại 1 tặng 1</td>
-							<td>khuyến mại 1 tặng 1 trong trường hợp lỗi phần cứng</td>
+							<td>Mua 1 tặng 1</td>
+							<td>khuyến mại 1 tặng 1 khi mua điện thoại di dộng bất kì</td>
 							<td>
 								<span class="label label-success">Sử dụng</span>
 							</td>
