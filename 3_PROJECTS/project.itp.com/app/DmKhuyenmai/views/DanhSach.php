@@ -17,7 +17,7 @@
         <div class="row panel panel-primary" id="LIST">
             <div class="panel-heading">Danh sách khuyến mại</div>
             <div class="panel-body">
-                <table class="table table-bordered table-stripped">
+                <table class="table table-bordered table-stripped" id="DanhSach">
 					<thead>
 						<tr>
 							<th><input type="checkbox" id="chkAll" /></th>
@@ -43,19 +43,53 @@
         </div>
     </div>
 </div>
+<script src="app/DmKhuyenmai/js/DmKhuyenmai.js"></script>
 <script>
 	// Khai báo đối tượng cửa sổ
 	var EccDialog = new ECC_DIALOG();
+	var Khuyenmai = new DmKhuyenmai('?app=DmKhuyenmai');
+	
+	function Page_init(){
+		Khuyenmai.FindAll();
+		DanhSach_bind();
+	}
+	
+	function DanhSach_bind(){
+		
+		var _html = '';
+		for(var i=0; i< Khuyenmai.DanhSach.length;i++){
+			var _dong = Khuyenmai.DanhSach[i];
+			
+			var _trangthai ='';
+			if(_dong.trangthai=='1'){
+				_trangthai = '<span class="label label-success">Sử dụng</span>';
+			}else{
+				_trangthai = '<span class="label label-danger">Khóa</span>';
+			}
+			
+			_html +='<tr>';
+			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
+			_html +='	<td>'+ (i+1) +'</td>';
+			_html +='	<td>'+ _dong.ten +'</td>';
+			_html +='	<td>'+ _dong.noidung +'</td>';
+			_html +='	<td>';
+			_html += _trangthai;
+			_html +='	</td>';
+			_html +='</tr>';
+		}
+		$('#DanhSach > tbody').html(_html);
+	}
 	
 	$(function(){
 		
+		Page_init();
 		// Bắt sự kiện khi ấn nút thêm mới
 		$('#btnThemMoi').on('click',function(){
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
 				'Tạo mới danh mục khuyến mại', 
 				'?app=DmKhuyenmai&view=ChiTiet&layout=popup', 
-				'50%', '310');
+				'50%', '450');
 		});
 	});
 
