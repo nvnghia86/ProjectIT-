@@ -1,10 +1,8 @@
-<script src="<?= AppObject::getBaseFile('libs/Cores/CoreUtilities.js') ?>"></script>
-<script src="<?= AppObject::getBaseFile('app/CoreData/js/CoreDataAjax.js') ?>"></script>
-<script src="<?= AppObject::getBaseFile('app/HtChucNang/js/HtChucNang') ?>"></script>
+
+<script src="<?= AppObject::getBaseFile('app/HtChucNang/js/HtChucNang.js') ?>"></script>
 <form class="row" style="margin-bottom:5px" id="FORM">
     <div class="form-group-sm col-sm-6" id="DiaBanCha">
         <label>Menu cha:</label>
-        <input type="hidden" id="FormType" value="add" />
         <input type="hidden" id="id_ht_chucnang" value="0" />
         <input type="hidden" id="id_ht_chucnang_cha" value="0" />
         <input type="text" class="form-control" id="ten_chucnang_cha" readonly="true" value="" />
@@ -34,7 +32,7 @@
 
     <div class="form-group-sm col-sm-4">
         <label>Trạng thái </label>
-        <select class="form-control" id="sel_TRANG_THAI" name="trang_thai">
+        <select class="form-control" id="trangthai" name="trangthai">
             <option value="1">Kích hoạt</option>
             <option value="0">Khóa</option>
         </select>
@@ -47,42 +45,62 @@
     </div>
 </form>
 <script>
-    var DiaBan = new CA_DM_DIA_BAN('?app=caDmDiaBan');
     var Util = new CoreUtilities();
-    
+    var ChucNang = new HtChucNang();
     function Page_init(){
-        DiaBan.ID_DM_DIA_BAN = Util.getParameterByName('id');
-        $('#hdf_ID_DM_DIA_BAN').val(DiaBan.ID_DM_DIA_BAN);
-        var _type = Util.getParameterByName('type');
-        if(_type=='add'){
-            var _idCha = Util.getParameterByName('id_cha');
-            var _text = Util.getParameterByName('text');
-            $('#hdf_ID_DM_DIA_BAN_CHA').val(_idCha);
-            $('#txt_TEN_DM_DIA_BAN_CHA').val(_text);
-        }else if(_type=='edit'){
-            $('#DiaBanCha').hide();
-            DiaBan.getById();
-            $('#hdf_ID_DM_DIA_BAN_CHA').val();
-            $('#txt_MA').val(DiaBan.ChiTiet.MA);
-            $('#txt_TEN').val(DiaBan.ChiTiet.TEN);
-            $('#txt_MO_TA').val(DiaBan.ChiTiet.MO_TA);
-            $('#sel_TRANG_THAI').val(DiaBan.ChiTiet.TRANG_THAI);
+        ChucNang.id_ht_chucnang_cha = Util.getParameterByName('id_cha');
+        ChucNang.id_ht_chucnang = Util.getParameterByName('id');
+        ChucNang.ten_chucnang_cha = Util.getParameterByName('ten_chucnang_cha');
+        if(ChucNang.id_ht_chucnang != '0'){
+            ChucNang.getById();
+            $('#ten_chucnang_cha').hide();
+            Form_binding();
+            
+        }else{
+            Form_reset();
         }
-        
+    }
+    
+    function Form_binding(){
+        $('#id_ht_chucnang').val(ChucNang.id_ht_chucnang);
+        $('#id_ht_chucnang_cha').val(ChucNang.id_ht_chucnang_cha);
+        $('#ten_chucnang_cha').val(ChucNang.ten_chucnang_cha);
+        $('#tieude').val(ChucNang.tieude);
+        $('#ma').val(ChucNang.ma);
+        $('#url').val(ChucNang.url);
+        $('#loai').val(ChucNang.loai);
+        $('#trangthai').val(ChucNang.trangthai);
+        $('#css').val(ChucNang.css);
+        $('#css_class').val(ChucNang.css_class);
+        $('#thutu').val(ChucNang.thutu);
+    }
+    
+    function Form_reset(){
+        $('#id_ht_chucnang').val(ChucNang.id_ht_chucnang);
+        $('#id_ht_chucnang_cha').val(ChucNang.id_ht_chucnang_cha);
+        $('#ten_chucnang_cha').val(ChucNang.ten_chucnang_cha);
+        $('#tieude').val('');
+        $('#ma').val('');
+        $('#url').val('#');
+        $('#loai').val('');
+        $('#trangthai').val('1');
+        $('#css').val('');
+        $('#css_class').val('');
+        $('#thutu').val('');
     }
     
     $(function(){
         Page_init();
         
-        $('.ACTIONS').on('click','#btn_LUU',function(){
-            DiaBan.ID_DM_DIA_BAN = $('#hdf_ID_DM_DIA_BAN').val();
-            DiaBan.ID_DM_DIA_BAN_CHA = $('#hdf_ID_DM_DIA_BAN_CHA').val();
-            DiaBan.MA = $('#txt_MA').val();
-            DiaBan.TEN = $('#txt_TEN').val();
-            DiaBan.MO_TA = $('#txt_MO_TA').val();
-            DiaBan.TRANG_THAI = $('#sel_TRANG_THAI').val();
-            var _rs = DiaBan.save();
-            alert(_rs.MESSAGE);
+        $('#btnSave').on('click',function(){
+            ChucNang.tieude = $('#tieude').val();
+            ChucNang.ma = $('#ma').val();
+            ChucNang.url = $('#url').val();
+            ChucNang.trangthai = $('#trangthai').val();
+            ChucNang.css = $('#css').val();
+            ChucNang.css_class = $('#css_class').val();
+            ChucNang.save();
+            Page_init();
         });
         
         

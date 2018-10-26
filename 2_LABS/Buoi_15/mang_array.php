@@ -49,7 +49,7 @@
 			<td><?=($i+1)?></td>
 			<td><?=$giohang[$i]['TEN']?></td>
 			<td><?=$giohang[$i]['SL']?></td>
-			<td><?=$giohang[$i]['GIA']?> đ</td>
+			<td><?=$giohang[$i]['GIA']?>đ</td>
 			<td><?= $giohang[$i]['GIA'] * $giohang[$i]['SL']?> đ</td>
 		</tr>
 	<?php 
