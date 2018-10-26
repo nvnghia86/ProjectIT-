@@ -27,7 +27,7 @@ if (!defined('AREA')) {
         <script type="text/javascript" src="<?php echo AppObject::getBaseFile('skins/cahd_skin/assets/js/core/libraries/bootstrap.min.js')?>"></script>
         <script type="text/javascript" src="<?php echo AppObject::getBaseFile('skins/cahd_skin/assets/js/plugins/loaders/blockui.min.js')?>"></script>
         <script type="text/javascript" src="<?php echo AppObject::getBaseFile('skins/cahd_skin/assets/js/plugins/forms/styling/uniform.min.js')?>"></script>
-
+        
         <script type="text/javascript" src="<?php echo AppObject::getBaseFile('skins/cahd_skin/assets/js/core/app.js')?>"></script>
         <script type="text/javascript" src="<?php echo AppObject::getBaseFile('skins/cahd_skin/assets/js/pages/login.js')?>"></script>
         <!-- /theme JS files -->
