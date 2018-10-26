@@ -2,7 +2,7 @@
     die('Access denied');
 } ?>
 <div class="row" style="margin-top:10px;">
-    <h3 class="label-default" style="margin: 0px 10px 10px 10px; padding: 2px; color: #FFF; border-left: 5px #CB9420 solid; font-size: 14px">Quản lý danh mục khuyến mại</h3>
+    <h3 class="label-default" style="margin: 0px 10px 10px 10px; padding: 2px; color: #FFF; border-left: 5px #CB9420 solid; font-size: 14px">Quản lý danh mục bảo hành</h3>
 	<div class="well-sm well"  style="margin: 0px 10px 10px 10px;">
 		<button type="button" class="btn btn-success btn-xs" id="btnTaiLai">
 			<i class="glyphicon glyphicon-refresh"></i> Tải lại
@@ -15,15 +15,15 @@
     </div>
     <div class="col-sm-12">
         <div class="row panel panel-primary" id="LIST">
-            <div class="panel-heading">Danh sách khuyến mại</div>
+            <div class="panel-heading">Danh sách bảo hành</div>
             <div class="panel-body">
                 <table class="table table-bordered table-stripped" id="DanhSach">
 					<thead>
 						<tr>
 							<th><input type="checkbox" id="chkAll" /></th>
-							<th>Mã</th>
+							<th>STT</th>
 							<th>Tên</th>
-							<th>Nội dung</th>
+							<th>Mô tả</th>
 							<th>Trạng thái</th>
 						</tr>
 					</thead>
@@ -31,8 +31,8 @@
 						<tr>
 							<td><input type="checkbox" id="chk_1" /></td>
 							<td>1</td>
-							<td>Mua 1 tặng 1</td>
-							<td>khuyến mại 1 tặng 1 khi mua điện thoại di dộng bất kì</td>
+							<td>Nhận hàng tại siêu thị</td>
+							<td>Mua hàng trả tiền tại chỗ</td>
 							<td>
 								<span class="label label-success">Sử dụng</span>
 							</td>
@@ -43,22 +43,22 @@
         </div>
     </div>
 </div>
-<script src="app/DmKhuyenmai/js/DmKhuyenmai.js"></script>
+<script src="app/DmGiaoHang/js/DmGiaoHang.js"></script>
 <script>
 	// Khai báo đối tượng cửa sổ
 	var EccDialog = new ECC_DIALOG();
-	var Khuyenmai = new DmKhuyenmai('?app=DmKhuyenmai');
+	var GiaoHang = new DmGiaoHang('?app=DmGiaoHang');
 	
 	function Page_init(){
-		Khuyenmai.FindAll();
+		GiaoHang.FindAll();
 		DanhSach_bind();
 	}
 	
 	function DanhSach_bind(){
 		
 		var _html = '';
-		for(var i=0; i< Khuyenmai.DanhSach.length;i++){
-			var _dong = Khuyenmai.DanhSach[i];
+		for(var i=0; i< GiaoHang.DanhSach.length;i++){
+			var _dong = GiaoHang.DanhSach[i];
 			
 			var _trangthai ='';
 			if(_dong.trangthai=='1'){
@@ -71,7 +71,7 @@
 			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
 			_html +='	<td>'+ (i+1) +'</td>';
 			_html +='	<td>'+ _dong.ten +'</td>';
-			_html +='	<td>'+ _dong.noidung +'</td>';
+			_html +='	<td>'+ _dong.mota +'</td>';
 			_html +='	<td>';
 			_html += _trangthai;
 			_html +='	</td>';
@@ -83,13 +83,14 @@
 	$(function(){
 		
 		Page_init();
+		
 		// Bắt sự kiện khi ấn nút thêm mới
 		$('#btnThemMoi').on('click',function(){
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
-				'Tạo mới danh mục khuyến mại', 
-				'?app=DmKhuyenmai&view=ChiTiet&layout=popup', 
-				'50%', '450');
+				'Tạo mới danh mục bảo hành', 
+				'?app=DmBaoHanh&view=ChiTiet&layout=popup', 
+				'50%', '310');
 		});
 	});
 

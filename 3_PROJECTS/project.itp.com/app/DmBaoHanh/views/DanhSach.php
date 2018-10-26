@@ -8,7 +8,9 @@
 			<i class="glyphicon glyphicon-refresh"></i> Tải lại
 		</button>
 		<button type="button" class="btn btn-primary btn-xs" id="btnThemMoi">
-		<i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
+		<i class="glyphicon glyphicon-plus"></i> Thêm mới</button> 
+		<button type="button" class="btn btn-warning btn-xs" id="btnSua">
+		<i class="glyphicon glyphicon-edit"></i> Sửa</button> 
 		<button type="button" class="btn btn-danger btn-xs" id="btnXoa">
 			<i class="glyphicon glyphicon-trash"></i> Xóa
 		</button>
@@ -52,6 +54,17 @@
 	function Page_init(){
 		BaoHanh.FindAll();
 		DanhSach_bind();
+		Action_filter();
+	}
+	
+	function Action_filter(){
+		if(BaoHanh.id_dm_baohanh != 0){
+			$('#btnSua').show();
+			$('#btnXoa').show();
+		}else{
+			$('#btnSua').hide();
+			$('#btnXoa').hide();
+		}
 	}
 	
 	function DanhSach_bind(){
@@ -67,7 +80,7 @@
 				_trangthai = '<span class="label label-danger">Khóa</span>';
 			}
 			
-			_html +='<tr>';
+			_html +='<tr data-id="'+ _dong.id_dm_baohanh +'">';
 			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
 			_html +='	<td>'+ (i+1) +'</td>';
 			_html +='	<td>'+ _dong.ten +'</td>';
@@ -89,9 +102,35 @@
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
 				'Tạo mới danh mục bảo hành', 
-				'?app=DmBaoHanh&view=ChiTiet&layout=popup', 
+				'?app=DmBaoHanh&view=ChiTiet&layout=popup&id=' + BaoHanh.id_dm_baohanh, 
 				'50%', '310');
 		});
+		
+		$('#btnXoa').on('click',function(){
+			var _xacnhan = confirm('Bạn có chắc chắn muốn xóa không?');
+			if(_xacnhan==true){
+				BaoHanh.Del();
+				Page_init();
+			}
+		});
+		
+		$('#btnTaiLai').on('click',function(){
+			Page_init();
+		});
+		
+		$('#DanhSach').on('click','tr',function(){
+			$('#DanhSach tr').attr('class', '');
+			var _id = $(this).data('id');
+			if(BaoHanh.id_dm_baohanh == _id){
+				BaoHanh.id_dm_baohanh = 0;
+			}else{
+				$('#DanhSach tr').attr('class', '');
+				BaoHanh.id_dm_baohanh = _id;
+				$(this).attr('class', 'row_selected');
+			}
+			Action_filter();
+		});
+		
 	});
 
 </script>
