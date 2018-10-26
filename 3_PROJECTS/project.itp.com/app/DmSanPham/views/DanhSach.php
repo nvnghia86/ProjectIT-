@@ -17,7 +17,7 @@
         <div class="row panel panel-primary" id="LIST">
             <div class="panel-heading">Danh sách sản phẩm</div>
             <div class="panel-body">
-                <table class="table table-bordered table-stripped">
+                <table class="table table-bordered table-stripped" id="DanhSach">
 					<thead>
 						<tr>
 							<th><input type="checkbox" id="chkAll" /></th>
@@ -45,6 +45,7 @@
         </div>
     </div>
 </div>
+<script src="app/DmSanPham/js/DmSanPham.js"></script>
 <script>
 	// Khai báo đối tượng cửa sổ
 	var EccDialog = new ECC_DIALOG();
