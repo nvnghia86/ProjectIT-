@@ -17,7 +17,7 @@
         <div class="row panel panel-primary" id="LIST">
             <div class="panel-heading">Danh sách sản phẩm</div>
             <div class="panel-body">
-                <table class="table table-bordered table-stripped">
+                <table class="table table-bordered table-stripped" id="DanhSach">
 					<thead>
 						<tr>
 							<th><input type="checkbox" id="chkAll" /></th>
@@ -49,14 +49,58 @@
         </div>
     </div>
 </div>
+<script src="app/ChSanPham/js/ChSanPham.js"></script>
 <script>
+	// Khai báo đối tượng cửa sổ
 	var EccDialog = new ECC_DIALOG();
+	var SanPham = new ChSanPham('?app=ChSanPham');
+	
+	function Page_init(){
+		SanPham.FindAll();
+		DanhSach_bind();
+	}
+	
+	function DanhSach_bind(){
+		
+		var _html = '';
+		for(var i=0; i< SanPham.DanhSach.length;i++){
+			var _dong = SanPham.DanhSach[i];
+			
+			var _trangthai ='';
+			if(_dong.trangthai=='1'){
+				_trangthai = '<span class="label label-success">Sử dụng</span>';
+			}else{
+				_trangthai = '<span class="label label-danger">Khóa</span>';
+			}
+			
+			_html +='<tr>';
+			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
+			_html +='	<td>'+ (i+1) +'</td>';
+			_html +='	<td>'+ _dong.ma +'</td>';
+			_html +='	<td>'+ _dong.ten +'</td>';
+			_html +='	<td>'+ _dong.gia_nhap +'</td>';
+			_html +='	<td>'+ _dong.gia_ban +'</td>';
+			_html +='	<td>'+ _dong.gioithieu +'</td>';
+			_html +='	<td>';
+			_html += _trangthai;
+			_html +='	</td>';
+			_html +='</tr>';
+		}
+		$('#DanhSach > tbody').html(_html);
+	}
+	
 	$(function(){
+		
+		Page_init();
+		
+		// Bắt sự kiện khi ấn nút thêm mới
 		$('#btnThemMoi').on('click',function(){
+			// Hiển thị cửa sổ popup
 			EccDialog.show(
-			'Tạo mới CH Sản Phẩm',
-			'?app=ChSanPham&view=ChiTiet&layout=popup',
-			'90%','500');
-		})
+				'Tạo mới danh mục bảo hành', 
+				'?app=ChSanPham&view=ChiTiet&layout=popup', 
+				'90%', '500');
+		});
 	});
+
 </script>
