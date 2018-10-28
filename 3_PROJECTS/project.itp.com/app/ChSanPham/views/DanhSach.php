@@ -8,11 +8,11 @@
 			<i class="glyphicon glyphicon-refresh"></i> Tải lại
 		</button>
 		<button type="button" class="btn btn-primary btn-xs" id="btnThemMoi">
-		<i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
+		<i class="glyphicon glyphicon-plus"></i> Thêm mới1</button>
 		<button type="button" class="btn btn-warning btn-xs" id="btnSua">
-		<i class="glyphicon glyphicon-edit"></i> Sửa</button>
+		<i class="glyphicon glyphicon-edit"></i> Sửa1</button>
 		<button type="button" class="btn btn-danger btn-xs" id="btnXoa">
-			<i class="glyphicon glyphicon-trash"></i> Xóa
+			<i class="glyphicon glyphicon-trash"></i> Xóa1
 		</button>
     </div>
     <div class="col-sm-12">
@@ -53,7 +53,7 @@
 </div>
 <script src="app/ChSanPham/js/ChSanPham.js"></script>
 <script>
-	var EccDialog = new ECC_DIALOG();
+	var EccDialog = new ECC_DIALOG(Page_init);
 	var SanPham = new ChSanPham('?app=ChSanPham');
 	
 	function Page_init(){
@@ -80,9 +80,9 @@
 			
 			var _trangthai ='';
 			if(_dong.trangthai=='1'){
-				_trangthai = '<span class="label label-success">Sử dụng</span>';
+				_trangthai = '<span class="label label-success">Có hàng</span>';
 			}else{
-				_trangthai = '<span class="label label-danger">Khóa</span>';
+				_trangthai = '<span class="label label-danger">Hết hàng</span>';
 			}
 			
 			_html +='<tr data-id="'+ _dong.id_ch_sanpham +'">';
