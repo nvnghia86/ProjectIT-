@@ -12,7 +12,7 @@
 		<button type="button" class="btn btn-warning btn-xs" id="btnSua">
 		<i class="glyphicon glyphicon-edit"></i> Sửa</button> 
 		<button type="button" class="btn btn-danger btn-xs" id="btnXoa">
-			<i class="glyphicon glyphicon-trash"></i> Xóa
+			<i class="glyphicon glyphicon-trash"></i> Xóa 1
 		</button>
     </div>
     <div class="col-sm-12">
@@ -48,7 +48,7 @@
 <script src="app/DmBaoHanh/js/DmBaoHanh.js"></script>
 <script>
 	// Khai báo đối tượng cửa sổ
-	var EccDialog = new ECC_DIALOG();
+	var EccDialog = new ECC_DIALOG(Page_init);
 	var BaoHanh = new DmBaoHanh('?app=DmBaoHanh');
 	
 	function Page_init(){
@@ -102,8 +102,13 @@
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
 				'Tạo mới danh mục bảo hành', 
+<<<<<<< HEAD
+				'?app=DmBaoHanh&view=ChiTiet&layout=popup', 
+				'90%', '310');
+=======
 				'?app=DmBaoHanh&view=ChiTiet&layout=popup&id=' + BaoHanh.id_dm_baohanh, 
 				'50%', '310');
+>>>>>>> 13846127e4df4995a537d2052b32b4604fb5d88a
 		});
 		
 		$('#btnXoa').on('click',function(){
