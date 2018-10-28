@@ -214,4 +214,5 @@ input[type=date]:focus{
 
 .table tbody > tr.row_selected{
     background: #79BF71;
+	color: #FFF;
 }
