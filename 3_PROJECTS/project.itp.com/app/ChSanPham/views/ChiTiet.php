@@ -69,11 +69,17 @@
 <script src="app/ChSanPham/js/ChSanPham.js"></script>
 <script src="app/DmSanPham/js/DmSanPham.js"></script>
 <script src="app/DmBaoHanh/js/DmBaoHanh.js"></script>
+<script src="app/DmDoiTra/js/DmDoitra.js"></script>
+<script src="app/DmGiaoHang/js/DmGiaoHang.js"></script>
+<script src="app/DmHangSanXuat/js/DmHangSanXuat.js"></script>
 <script>
 	
 	var SanPham = new ChSanPham('?app=ChSanPham');
 	var DMSP = new DmSanPham('?app=DmSanPham');
 	var DMBH = new DmBaoHanh('?app=DmBaoHanh');
+	var DMGH = new DmGiaoHang('?app=DmGiaoHang');
+	var DMTG = new DmTraGop('?app=DmTraGop');
+	var DMHSS = new DmHangSanSuat('?app=DmHangSanSuat');
 	
 	function DmSanPham_bind(){
 		DMSP.FindAll();
@@ -95,6 +101,46 @@
 		$('#id_dm_baohanh').html(_html);
 	}
 	
+	function DmDoiTra_bind(){
+		DMDT.FindAll();
+		var _html='';
+		for(var i=0; i< DMDT.DanhSach.length; i++){
+			var _dong = DMDT.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_doitra +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_doitra').html(_html);
+	}
+	
+	function DmGiaoHang_bind(){
+		DMGH.FindAll();
+		var _html='';
+		for(var i=0; i< DMGH.DanhSach.length; i++){
+			var _dong = DMGH.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_giaohang +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_giaohang').html(_html);
+	}
+	
+	function DmTraGop_bind(){
+		DMTG.FindAll();
+		var _html='';
+		for(var i=0; i< DMTG.DanhSach.length; i++){
+			var _dong = DMTG.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_tragop +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_tragop').html(_html);
+	}
+	
+	function DmHangSanSuat_bind(){
+		DMHSS.FindAll();
+		var _html='';
+		for(var i=0; i< DMHSS.DanhSach.length; i++){
+			var _dong = DMHSS.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_hang_sansuat +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_hang_sansuat').html(_html);
+	}
+	
 	function Page_init(){
 		SanPham.id_sanpham = Util.getParameterByName('id');
 		if(SanPham.id_sanpham==0 || SanPham.id_sanpham==null){
@@ -113,9 +159,14 @@
 			$('#gioithieu').val(SanPham.gioithieu);
 			$('#trangthai').val(SanPham.trangthai);
 		}
-		
+	
+	
 		DmSanPham_bind();
 		DmBaoHanh_bind();
+		DmDoiTra_bind();
+		DmGiaoHang_bind();
+		DmTraGop_bind();
+		DmHangSanSuat_bind();
 	}
 	
 	
