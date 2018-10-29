@@ -5,4 +5,7 @@
 <script type="text/javascript" src="<?php echo AppObject::getBaseFile('skins/cahd_skin/assets/js/core/libraries/bootstrap.min.js') ?>"></script>
 <script src="<?= AppObject::getBaseFile('libs/Cores/CoreUtilities.js') ?>"></script>
 <script src="<?= AppObject::getBaseFile('app/CoreData/js/CoreDataAjax.js') ?>"></script>
+<script>
+	var Util = new CoreUtilities();
+</script>
 <?php echo $content; ?>

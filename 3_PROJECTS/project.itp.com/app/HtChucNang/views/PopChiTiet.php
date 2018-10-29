@@ -45,7 +45,7 @@
     </div>
 </form>
 <script>
-    var Util = new CoreUtilities();
+    
     var ChucNang = new HtChucNang();
     function Page_init(){
         ChucNang.id_ht_chucnang_cha = Util.getParameterByName('id_cha');

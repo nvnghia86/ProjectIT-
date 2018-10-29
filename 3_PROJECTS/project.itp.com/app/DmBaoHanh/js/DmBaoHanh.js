@@ -25,7 +25,21 @@ var DmBaoHanh = function(pAppUrl){
 		}
 	}
 	
-	this.GetById = function(){}
+	this.GetById = function(){
+		var _params = {
+			id_dm_baohanh: that.id_dm_baohanh
+		};
+        var _data = {COMMAND:'p_ch_dm_baohanh_get_byid', PARAMS:_params};
+        var _rs = that.CoreData.callDataGet('AjxCallProcGet', _data);
+		if(_rs.CODE=='SUC'){
+			var _chitiet = _rs.DATA[0];
+			that.ten = _chitiet.ten;
+			that.mota = _chitiet.mota;
+			that.trangthai = _chitiet.trangthai;
+		}else{
+			alert(_rs.MESSAGE);
+		}
+	}
 	
 	this.Save = function(){
 		var _params = {
