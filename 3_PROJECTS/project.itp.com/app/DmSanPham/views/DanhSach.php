@@ -2,7 +2,7 @@
     die('Access denied');
 } ?>
 <div class="row" style="margin-top:10px;">
-    <h3 class="label-default" style="margin: 0px 10px 10px 10px; padding: 2px; color: #FFF; border-left: 5px #CB9420 solid; font-size: 14px">Quản lý CH Sản Phẩm</h3>
+    <h3 class="label-default" style="margin: 0px 10px 10px 10px; padding: 2px; color: #FFF; border-left: 5px #CB9420 solid; font-size: 14px">Quản lý danh mục sản phẩm</h3>
 	<div class="well-sm well"  style="margin: 0px 10px 10px 10px;">
 		<button type="button" class="btn btn-success btn-xs" id="btnTaiLai">
 			<i class="glyphicon glyphicon-refresh"></i> Tải lại
@@ -10,7 +10,7 @@
 		<button type="button" class="btn btn-primary btn-xs" id="btnThemMoi">
 		<i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
 		<button type="button" class="btn btn-warning btn-xs" id="btnSua">
-		<i class="glyphicon glyphicon-edit"></i> Sửa</button>
+		<i class="glyphicon glyphicon-edit"></i> Sửa</button> 
 		<button type="button" class="btn btn-danger btn-xs" id="btnXoa">
 			<i class="glyphicon glyphicon-trash"></i> Xóa
 		</button>
@@ -23,12 +23,10 @@
 					<thead>
 						<tr>
 							<th><input type="checkbox" id="chkAll" /></th>
-							<th>Id_SảnPhẩm</th>
-							<th>Mã</th>
+							<th>STT</th>
 							<th>Tên</th>
-							<th>Giá_Nhập</th>
-							<th>Giá_Bán</th>
-							<th>GiớiThiệu</th>
+							<th>id_dm_sanpham_cha</th>
+							<th>Mô tả</th>
 							<th>Trạng thái</th>
 						</tr>
 					</thead>
@@ -36,13 +34,11 @@
 						<tr>
 							<td><input type="checkbox" id="chk_1" /></td>
 							<td>1</td>
-							<td>001</td>
-							<td>Iphone XS</td>
-							<td>20000000</td>
-							<td>25000000</td>
-							<td>Iphone đời mới 2018</td>
+							<td>Diện thoại</td>
+							<td>4</td>
+							<td>Diện thoại di động</td>
 							<td>
-								<span class="label label-success">Còn hàng</span>
+								<span class="label label-success">1</span>
 							</td>
 						</tr>
 					</tbody>
@@ -51,20 +47,20 @@
         </div>
     </div>
 </div>
-<script src="app/ChSanPham/js/ChSanPham.js"></script>
+<script src="app/DmSanPham/js/DmSanPham.js"></script>
 <script>
+	// Khai báo đối tượng cửa sổ
 	var EccDialog = new ECC_DIALOG(Page_init);
-	var SanPham = new ChSanPham('?app=ChSanPham');
+	var SanPham = new DmSanPham('?app=DmSanPham');
 	
 	function Page_init(){
-		SanPham.id_sanpham=0;
+		SanPham.id_dm_sanpham=0;
 		SanPham.FindAll();
 		DanhSach_bind();
 		Action_filter();
 	}
-	
 	function Action_filter(){
-		if(SanPham.id_sanpham != 0){
+		if(SanPham.id_dm_sanpham != 0){
 			$('#btnSua').show();
 			$('#btnXoa').show();
 		}else{
@@ -72,7 +68,6 @@
 			$('#btnXoa').hide();
 		}
 	}
-	
 	function DanhSach_bind(){
 		
 		var _html = '';
@@ -81,19 +76,17 @@
 			
 			var _trangthai ='';
 			if(_dong.trangthai=='1'){
-				_trangthai = '<span class="label label-success">Có hàng</span>';
+				_trangthai = '<span class="label label-success">Sử dụng</span>';
 			}else{
-				_trangthai = '<span class="label label-danger">Hết hàng</span>';
+				_trangthai = '<span class="label label-danger">Khóa</span>';
 			}
 			
-			_html +='<tr data-id="'+ _dong.id_sanpham +'">';
+			_html +='<tr data-id=>'+ _dong.id_dm_sanpham+'">';
 			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
 			_html +='	<td>'+ (i+1) +'</td>';
-			_html +='	<td>'+ _dong.ma +'</td>';
 			_html +='	<td>'+ _dong.ten +'</td>';
-			_html +='	<td>'+ _dong.gia_nhap +'</td>';
-			_html +='	<td>'+ _dong.gia_ban +'</td>';
-			_html +='	<td>'+ _dong.gioithieu +'</td>';
+			_html +='	<td>'+ _dong.id_dm_sanpham_cha +'</td>';
+			_html +='	<td>'+ _dong.mota +'</td>';
 			_html +='	<td>';
 			_html += _trangthai;
 			_html +='	</td>';
@@ -102,20 +95,18 @@
 		$('#DanhSach > tbody').html(_html);
 	}
 	
-	
 	$(function(){
 		Page_init();
-		
 		// Bắt sự kiện khi ấn nút thêm mới
 		$('#btnThemMoi').on('click',function(){
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
-				'Tạo mới danh mục Sản Phẩm', 
-				'?app=ChSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_sanpham,
-				'90%', '500');
+				'Tạo mới danh mục sản phẩm', 
+				'?app=DmSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_dm_sanpham, 
+				'50%', '360');
 		});
-		
-		$('#btnXoa').on('click',function(){
+
+				$('#btnXoa').on('click',function(){
 			var _xacnhan = confirm('Bạn có chắc chắn muốn xóa không?');
 			if(_xacnhan==true){
 				SanPham.Del();
@@ -130,21 +121,21 @@
 		$('#DanhSach').on('click','tr',function(){
 			$('#DanhSach tr').attr('class', '');
 			var _id = $(this).data('id');
-			if(SanPham.id_sanpham == _id){
-				SanPham.id_sanpham = 0;
+			if(SanPham.id_dm_sanpham == _id){
+				SanPham.id_dm_sanpham = 0;
 			}else{
 				$('#DanhSach tr').attr('class', '');
-				SanPham.id_sanpham = _id;
+				SanPham.id_dm_sanpham = _id;
 				$(this).attr('class', 'row_selected');
 			}
 			Action_filter();
 		});
-		
 		$('#btnSua').on('click',function(){
 			EccDialog.show(
-				'Sửa danh mục sản phẩm', 
-				'?app=ChSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_sanpham, 
-				'90%', '500');
+					'Sửa danh mục sản phẩm',
+					'?app=DmSanPham&view=ChiTiet&layout=popup&id='+SanPham.id_dm_sanpham,'50%','310'
+				);
 		});
 	});
+
 </script>
