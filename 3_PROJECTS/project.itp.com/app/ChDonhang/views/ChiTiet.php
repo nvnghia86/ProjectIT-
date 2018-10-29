@@ -40,8 +40,8 @@
 	 <div class="form-group-sm col-sm-4">
         <label>Trạng thái </label>
         <select class="form-control" id="sel_TRANG_THAI" name="trang_thai">
-            <option value="1">Kích hoạt</option>
-            <option value="0">Khóa</option>
+            <option value="1">Khởi Tạo</option>
+            <option value="2">Đã Duyệt</option>
         </select>
     </div>
 	<div class="form-group-sm ACTIONS col-sm-12">
