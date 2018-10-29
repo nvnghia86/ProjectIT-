@@ -66,3 +66,32 @@
         <button type="button" class="btn btn-warning btn-sm" id="btnSave"><i class="glyphicon glyphicon-save"></i> Lưu</button>
     </div>
 </form>
+<script src="app/ChSanPham/js/ChSanPham.js"></script>
+<script>
+	
+	var SanPham = new ChSanPham('?app=ChSanPham');
+	
+	
+	
+	$(function(){
+		
+		$('#btnSave').on('click',function(){
+			BaoHanh.ma = $('#ma').val();
+			BaoHanh.ten = $('#ten').val();
+			BaoHanh.gia_nhap = $('#gia_nhap').val();
+			BaoHanh.gia_ban = $('#gia_ban').val();
+			BaoHanh.gia_ban = $('#gia_ban').val();
+			BaoHanh.gioithieu = $('#gioithieu').val();
+			BaoHanh.id_dm_sanpham = $('#id_dm_sanpham').val();
+			BaoHanh.id_dm_baohanh = $('#id_dm_baohanh').val();
+			BaoHanh.id_dm_doitra = $('#id_dm_doitra').val();
+			BaoHanh.id_dm_giaohang = $('#id_dm_giaohang').val();
+			BaoHanh.id_dm_tragop = $('#id_dm_tragop').val();
+			BaoHanh.id_dm_hang_sansuat = $('#id_dm_hang_sansuat').val();
+			BaoHanh.trangthai = $('#trangthai').val();
+			BaoHanh.Save();
+		})
+		
+	})
+
+</script>

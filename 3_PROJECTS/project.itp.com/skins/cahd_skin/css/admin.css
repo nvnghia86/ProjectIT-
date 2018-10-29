@@ -211,3 +211,8 @@ input[type=date]:focus{
 .table tbody > tr:hover{
     background: #FFE793;
 }
+
+.table tbody > tr.row_selected{
+    background: #79BF71;
+	color: #FFF;
+}
