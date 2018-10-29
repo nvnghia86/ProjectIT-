@@ -37,9 +37,12 @@
        <label>Địa chỉ Người Nhận <span class="require">(*)</span></label>
 	   <textarea class="form-control" rows="3"></textarea>
     </div>
-	<div class="form-group-sm col-sm-6">
-       <label>Trạng Thái<span class="require">(*)</span></label>
-	   <input type="text" class="form-control" placeholder="Tên người nhận"  />
+	 <div class="form-group-sm col-sm-4">
+        <label>Trạng thái </label>
+        <select class="form-control" id="sel_TRANG_THAI" name="trang_thai">
+            <option value="1">Kích hoạt</option>
+            <option value="0">Khóa</option>
+        </select>
     </div>
 	<div class="form-group-sm ACTIONS col-sm-12">
         <hr>
