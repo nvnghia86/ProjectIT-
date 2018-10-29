@@ -7,15 +7,15 @@
     </div>
 	<div class="form-group-sm col-sm-6">
        <label>Id sản phẩm <span class="require">(*)</span></label>
-	   <textarea id="mota" class="form-control" rows="3"></textarea>
+	   <textarea id="id_sanpham_hinhanh" class="form-control" rows="3"></textarea>
     </div>
 	<div class="form-group-sm col-sm-6">
        <label>Id hình ảnh<span class="require">(*)</span></label>
-	   <textarea id="mota" class="form-control" rows="3"></textarea>
+	   <textarea id="id_hinhanh" class="form-control" rows="3"></textarea>
     </div>
 	<div class="form-group-sm col-sm-6">
        <label>Loại <span class="require">(*)</span></label>
-	   <textarea id="mota" class="form-control" rows="3"></textarea>
+	   <textarea id="loai" class="form-control" rows="3"></textarea>
     </div>
     <div class="form-group-sm ACTIONS col-sm-12">
         <hr>
@@ -29,7 +29,11 @@
 	
 	function Page_init(){
 		SanPham.id_sanpham_hinhanh = Util.getParameterByName('id');
-		if(SanPham.id_sanpham_hinhanh==0 || SanPham.id_sanpham_hinhanh==null){
+		SanPham.id_sanpham = Util.getParameterByName('id');
+		SanPham.id_hinhanh = Util.getParameterByName('id');
+		if(SanPham.id_sanpham_hinhanh==0 || SanPham.id_sanpham_hinhanh==null
+		&& SanPham.id_sanpham==0 || SanPham.id_sanpham==null
+		&& SanPham.id_hinhanh==0 || SanPham.id_hinhanh==null){
 			
 			$('#loai').val('');
 			
