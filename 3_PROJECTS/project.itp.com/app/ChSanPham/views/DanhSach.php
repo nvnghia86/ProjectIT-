@@ -63,7 +63,7 @@
 	}
 	
 	function Action_filter(){
-		if(SanPham.id_ch_sanpham != 0){
+		if(SanPham.id_sanpham != 0){
 			$('#btnSua').show();
 			$('#btnXoa').show();
 		}else{
@@ -85,7 +85,7 @@
 				_trangthai = '<span class="label label-danger">Hết hàng</span>';
 			}
 			
-			_html +='<tr data-id="'+ _dong.id_ch_sanpham +'">';
+			_html +='<tr data-id="'+ _dong.id_sanpham +'">';
 			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
 			_html +='	<td>'+ (i+1) +'</td>';
 			_html +='	<td>'+ _dong.ma +'</td>';
@@ -110,11 +110,8 @@
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
 				'Tạo mới danh mục Sản Phẩm', 
-
 				'?app=ChSanPham&view=ChiTiet&layout=popup', 
 				'90%', '500');
-
-
 		});
 		
 		$('#btnXoa').on('click',function(){
@@ -132,11 +129,11 @@
 		$('#DanhSach').on('click','tr',function(){
 			$('#DanhSach tr').attr('class', '');
 			var _id = $(this).data('id');
-			if(SanPham.id_ch_sanpham == _id){
-				SanPham.id_ch_sanpham = 0;
+			if(SanPham.id_sanpham == _id){
+				SanPham.id_sanpham = 0;
 			}else{
 				$('#DanhSach tr').attr('class', '');
-				SanPham.id_ch_sanpham = _id;
+				SanPham.id_sanpham = _id;
 				$(this).attr('class', 'row_selected');
 			}
 			Action_filter();

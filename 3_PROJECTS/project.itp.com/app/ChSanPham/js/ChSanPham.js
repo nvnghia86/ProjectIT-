@@ -36,7 +36,28 @@ var ChSanPham = function(pAppUrl){
 	
 	this.GetById = function(){}
 	
-	this.Save = function(){}
+	this.Save = function(){
+		var _params = {
+			id_ch_sanpham: this.id_sanpham,
+			ma: this.ma,
+			ten: this.ten,
+			gia_nhap: this.gia_nhap
+			gia_ban: this.giaban
+			gioithieu: this.gioithieu
+			trangthai: this.trangthai
+		};
+        var _data = {COMMAND:'p_ch_sanpham_save', PARAMS:_params};
+        var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
+		alert(_rs.MESSAGE);
+	}
 
-	this.Del = function(){}
+	this.Del = function()
+	var _params = {
+			id_sanpham: this.id_sanpham
+		};
+		console.log(_params);
+        var _data = {COMMAND:'p_ch_sanpham_del', PARAMS:_params};
+        var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
+		alert(_rs.MESSAGE);
+	}
 }
