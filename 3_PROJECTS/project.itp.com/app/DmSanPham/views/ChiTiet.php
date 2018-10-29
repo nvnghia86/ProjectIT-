@@ -33,12 +33,28 @@
     
     var SanPham = new DmSanPham('?app=DmSanPham');
     
-    
+    function Page_init(){
+        SanPham.id_dm_sanpham = Util.getParameterByName('id');
+        if(SanPham.id_dm_sanpham==0 || SanPham.id_dm_sanpham==null){
+            $('#ten').val('');
+            $('#id_dm_sanpham_cha').val('');
+            $('#mota').val('');
+            $('#trangthai').val('1');
+        }else{
+            SanPham.GetById();
+            $('#ten').val(SanPham.ten);
+            $('#id_dm_sanpham_cha').val(SanPham.id_dm_sanpham_cha);
+            $('#mota').val(SanPham.mota);
+            $('#trangthai').val(SanPham.trangthai);
+        }
+    }
     
     $(function(){
+        Page_init();
         
         $('#btnSave').on('click',function(){
             SanPham.ten = $('#ten').val();
+            SanPham.id_dm_sanpham_cha = $('#id_dm_sanpham_cha').val();
             SanPham.mota = $('#mota').val();
             SanPham.trangthai = $('#trangthai').val();
             SanPham.Save();

@@ -26,7 +26,22 @@ var DmSanPham = function(pAppUrl){
 		}
 	}
 	
-	this.GetById = function(){}
+	this.GetById = function(){
+		var _params = {
+			id_dm_sanpham: that.id_dm_sanpham
+		};
+        var _data = {COMMAND:'p_ch_dm_sanpham_get_byid', PARAMS:_params};
+        var _rs = that.CoreData.callDataGet('AjxCallProcGet', _data);
+		if(_rs.CODE=='SUC'){
+			var _chitiet = _rs.DATA[0];
+			that.ten = _chitiet.ten;
+			that.id_dm_sanpham_cha = _chitiet.id_dm_sanpham_cha;
+			that.mota = _chitiet.mota;
+			that.trangthai = _chitiet.trangthai;
+		}else{
+			alert(_rs.MESSAGE);
+		}
+	}
 	
 	this.Save = function(){
 		var _params = {

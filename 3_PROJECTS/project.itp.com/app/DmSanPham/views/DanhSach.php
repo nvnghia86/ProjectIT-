@@ -50,10 +50,11 @@
 <script src="app/DmSanPham/js/DmSanPham.js"></script>
 <script>
 	// Khai báo đối tượng cửa sổ
-	var EccDialog = new ECC_DIALOG();
+	var EccDialog = new ECC_DIALOG(Page_init);
 	var SanPham = new DmSanPham('?app=DmSanPham');
 	
 	function Page_init(){
+		SanPham.id_dm_sanpham=0;
 		SanPham.FindAll();
 		DanhSach_bind();
 		Action_filter();
@@ -128,6 +129,12 @@
 				$(this).attr('class', 'row_selected');
 			}
 			Action_filter();
+		});
+		$('#btnSua').on('click',function(){
+			EccDialog.show(
+					'Sửa danh mục sản phẩm',
+					'?app=DmSanPham&view=ChiTiet&layout=popup&id='+SanPham.id_dm_sanpham,'50%','310'
+				);
 		});
 	});
 
