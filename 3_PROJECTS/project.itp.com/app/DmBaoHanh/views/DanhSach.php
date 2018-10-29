@@ -102,13 +102,8 @@
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
 				'Tạo mới danh mục bảo hành', 
-<<<<<<< HEAD
-				'?app=DmBaoHanh&view=ChiTiet&layout=popup', 
-				'90%', '310');
-=======
 				'?app=DmBaoHanh&view=ChiTiet&layout=popup&id=' + BaoHanh.id_dm_baohanh, 
 				'50%', '310');
->>>>>>> 13846127e4df4995a537d2052b32b4604fb5d88a
 		});
 		
 		$('#btnXoa').on('click',function(){
