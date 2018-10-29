@@ -19,6 +19,10 @@ if (!defined('AREA')) {
         <script src="<?= AppObject::getBaseFile('libs/Cores/CoreUtilities.js') ?>"></script>
         <script src="<?= AppObject::getBaseFile('app/CoreData/js/CoreDataAjax.js') ?>"></script>
         <?php include_once(AppObject::getBaseFile('modules/ecc_dialog/eccdialog.php')); ?>
+		
+		<script>
+			var Util = new CoreUtilities();
+		</script>
     </head>
     <body>
         <div class="overlay" style="display:none;">

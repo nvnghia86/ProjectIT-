@@ -52,6 +52,7 @@
 	var BaoHanh = new DmBaoHanh('?app=DmBaoHanh');
 	
 	function Page_init(){
+		BaoHanh.id_dm_baohanh=0;
 		BaoHanh.FindAll();
 		DanhSach_bind();
 		Action_filter();
@@ -129,6 +130,13 @@
 				$(this).attr('class', 'row_selected');
 			}
 			Action_filter();
+		});
+		
+		$('#btnSua').on('click',function(){
+			EccDialog.show(
+				'Sửa danh mục bảo hành', 
+				'?app=DmBaoHanh&view=ChiTiet&layout=popup&id=' + BaoHanh.id_dm_baohanh, 
+				'50%', '310');
 		});
 		
 	});
