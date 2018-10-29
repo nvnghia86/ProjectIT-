@@ -59,7 +59,7 @@ var ChSanPham = function(pAppUrl){
 			ma: this.ma,
 			ten: this.ten,
 			gia_nhap: this.gia_nhap
-			gia_ban: this.giaban
+			gia_ban: this.gia_ban
 			gioithieu: this.gioithieu
 			trangthai: this.trangthai
 		};

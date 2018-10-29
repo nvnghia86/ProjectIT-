@@ -142,7 +142,7 @@
 		
 		$('#btnSua').on('click',function(){
 			EccDialog.show(
-				'Sửa danh mục bảo hành', 
+				'Sửa danh mục sản phẩm', 
 				'?app=ChSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_sanpham, 
 				'90%', '500');
 		});
