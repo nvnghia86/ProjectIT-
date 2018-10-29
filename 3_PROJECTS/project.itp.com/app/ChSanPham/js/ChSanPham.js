@@ -55,26 +55,27 @@ var ChSanPham = function(pAppUrl){
 	
 	this.Save = function(){
 		var _params = {
-			id_sanpham: this.id_sanpham,
-			ma: this.ma,
-			ten: this.ten,
-			gia_nhap: this.gia_nhap
-			gia_ban: this.gia_ban
-			gioithieu: this.gioithieu
-			trangthai: this.trangthai
+			id_sanpham: that.id_sanpham,
+			ma: that.ma,
+			ten: that.ten,
+			gia_nhap: that.gia_nhap,
+			gia_ban: that.gia_ban,
+			gioithieu: that.gioithieu,
+			trangthai: that.trangthai
 		};
         var _data = {COMMAND:'p_ch_sanpham_save', PARAMS:_params};
         var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
 		alert(_rs.MESSAGE);
 	}
 
-	this.Del = function()
-	var _params = {
-			id_sanpham: this.id_sanpham
+	this.Del = function(){
+		var _params = {
+			id_sanpham: that.id_sanpham
 		};
 		console.log(_params);
         var _data = {COMMAND:'p_ch_sanpham_del', PARAMS:_params};
         var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
 		alert(_rs.MESSAGE);
 	}
+	
 }
