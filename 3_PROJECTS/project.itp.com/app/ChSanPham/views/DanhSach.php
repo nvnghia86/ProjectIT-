@@ -56,11 +56,48 @@
 	var EccDialog = new ECC_DIALOG(Page_init);
 	var SanPham = new ChSanPham('?app=ChSanPham');
 	
+	function DanhSach_phantrang(){
+		$('#DanhSach').DataTable({
+			"paging": true,
+			"autoWidth": false,
+			"searching": true,
+			"ordering": true,
+			"language": {
+
+				"decimal": "",
+				"emptyTable": "Danh sách trống",
+				"info": "Hiển thị _START_ đến _END_ trong _TOTAL_ kết quả",
+				"infoEmpty": "Showing 0 to 0 of 0 entries",
+				"infoFiltered": "(filtered from _MAX_ total entries)",
+				"infoPostFix": "",
+				"thousands": ",",
+				"lengthMenu": "Hiển thị _MENU_ kết quả",
+				"loadingRecords": "Loading...",
+				"processing": "Processing...",
+				"search": "Tìm kiếm nhanh: ",
+				"zeroRecords": "No matching records found",
+				"paginate": {
+					"first": "Đầu ",
+					"last": "Cuối",
+					"next": "Sau",
+					"previous": "Trước"
+				},
+				"aria": {
+					"sortAscending": ": activate to sort column ascending",
+					"sortDescending": ": activate to sort column descending"
+				}
+			}
+    });
+	
+	}
+
+	
 	function Page_init(){
 		SanPham.id_sanpham=0;
 		SanPham.FindAll();
 		DanhSach_bind();
 		Action_filter();
+		DanhSach_phantrang();
 	}
 	
 	function Action_filter(){

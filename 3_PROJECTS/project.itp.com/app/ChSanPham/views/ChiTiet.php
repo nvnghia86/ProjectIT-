@@ -74,7 +74,7 @@
 	var SanPham = new ChSanPham('?app=ChSanPham');
 	var DMSP = new DmSanPham('?app=DmSanPham');
 	var DMBH = new DmBaoHanh('?app=DmBaoHanh');
-	
+
 	function DmSanPham_bind(){
 		DMSP.FindAll();
 		var _html='';
