@@ -24,33 +24,33 @@
 	   <textarea class="form-control" rows="3"></textarea>
     </div>
 	<div class="form-group-sm col-sm-6">
-        <label>Id_Dm_SanPham </label>
-        <select class="form-control" id="Id_Dm_SanPham" name="Id_Dm_SanPham">
+        <label>Danh mục sản phẩm </label>
+        <select class="form-control" id="id_dm_sanpham" name="id_dm_sanpham">
         </select>
     </div>
 	<div class="form-group-sm col-sm-6">
-        <label>Id_Dm_BaoHanh </label>
-        <select class="form-control" id="Id_Dm_BaoHanh" name="Id_Dm_BaoHanh">
+        <label>Chế độ bảo hành </label>
+        <select class="form-control" id="id_dm_baohanh" name="id_dm_baohanh">
         </select>
     </div>
 	<div class="form-group-sm col-sm-6">
-        <label>Id_Dm_DoiTra </label>
-        <select class="form-control" id="Id_Dm_DoiTra" name="Id_Dm_DoiTra">
+        <label>Đổi trả </label>
+        <select class="form-control" id="id_dm_doitra" name="id_dm_doitra">
         </select>
     </div>
 	<div class="form-group-sm col-sm-6">
-        <label>Id_Dm_GiaoHang </label>
-        <select class="form-control" id="Id_Dm_GiaoHang" name="Id_Dm_GiaoHang">
+        <label>Phương thức giao hàng </label>
+        <select class="form-control" id="id_dm_giaohang" name="id_dm_giaohang">
         </select>
     </div>
 	<div class="form-group-sm col-sm-6">
-        <label>Id_Dm_TraGop </label>
-        <select class="form-control" id="Id_Dm_TraGop" name="Id_Dm_TraGop">
+        <label>Phương thức trả góp </label>
+        <select class="form-control" id="id_dm_tragop" name="id_dm_tragop">
         </select>
     </div>
 	<div class="form-group-sm col-sm-6">
-        <label>Id_Dm_Hang_SanSuat </label>
-        <select class="form-control" id="Id_Dm_Hang_SanSuat" name="Id_Dm_Hang_SanSuat">
+        <label>Hãng sản xuất </label>
+        <select class="form-control" id="id_dm_hang_sansuat" name="id_dm_hang_sansuat">
         </select>
     </div>
     <div class="form-group-sm col-sm-6">
@@ -66,3 +66,123 @@
         <button type="button" class="btn btn-warning btn-sm" id="btnSave"><i class="glyphicon glyphicon-save"></i> Lưu</button>
     </div>
 </form>
+<script src="app/ChSanPham/js/ChSanPham.js"></script>
+<script src="app/DmSanPham/js/DmSanPham.js"></script>
+<script src="app/DmBaoHanh/js/DmBaoHanh.js"></script>
+<script src="app/DmDoiTra/js/DmDoitra.js"></script>
+<script src="app/DmGiaoHang/js/DmGiaoHang.js"></script>
+<script src="app/DmHangSanXuat/js/DmHangSanXuat.js"></script>
+<script>
+	
+	var SanPham = new ChSanPham('?app=ChSanPham');
+	var DMSP = new DmSanPham('?app=DmSanPham');
+	var DMBH = new DmBaoHanh('?app=DmBaoHanh');
+	var DMGH = new DmGiaoHang('?app=DmGiaoHang');
+	var DMTG = new DmTraGop('?app=DmTraGop');
+	var DMHSS = new DmHangSanSuat('?app=DmHangSanSuat');
+	function DmSanPham_bind(){
+		DMSP.FindAll();
+		var _html='';
+		for(var i=0; i< DMSP.DanhSach.length; i++){
+			var _dong = DMSP.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_sanpham +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_sanpham').html(_html);
+	}
+	
+	function DmBaoHanh_bind(){
+		DMBH.FindAll();
+		var _html='';
+		for(var i=0; i< DMBH.DanhSach.length; i++){
+			var _dong = DMBH.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_baohanh +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_baohanh').html(_html);
+	}
+	
+	function DmDoiTra_bind(){
+		DMDT.FindAll();
+		var _html='';
+		for(var i=0; i< DMDT.DanhSach.length; i++){
+			var _dong = DMDT.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_doitra +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_doitra').html(_html);
+	}
+	
+	function DmGiaoHang_bind(){
+		DMGH.FindAll();
+		var _html='';
+		for(var i=0; i< DMGH.DanhSach.length; i++){
+			var _dong = DMGH.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_giaohang +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_giaohang').html(_html);
+	}
+	
+	function DmTraGop_bind(){
+		DMTG.FindAll();
+		var _html='';
+		for(var i=0; i< DMTG.DanhSach.length; i++){
+			var _dong = DMTG.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_tragop +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_tragop').html(_html);
+	}
+	
+	function DmHangSanSuat_bind(){
+		DMHSS.FindAll();
+		var _html='';
+		for(var i=0; i< DMHSS.DanhSach.length; i++){
+			var _dong = DMHSS.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_hang_sansuat +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_hang_sansuat').html(_html);
+	}
+	
+	function Page_init(){
+		SanPham.id_sanpham = Util.getParameterByName('id');
+		if(SanPham.id_sanpham==0 || SanPham.id_sanpham==null){
+			$('#ma').val('');
+			$('#ten').val('');
+			$('#gia_nhap').val('');
+			$('#gia_ban').val('');
+			$('#gioithieu').val('');
+			$('#trangthai').val('1');
+		}else{
+			SanPham.GetById();
+			$('#ma').val(SanPham.ma);
+			$('#ten').val(SanPham.ten);
+			$('#gia_nhap').val(SanPham.gia_nhap);
+			$('#gia_ban').val(SanPham.gia_ban);
+			$('#gioithieu').val(SanPham.gioithieu);
+			$('#trangthai').val(SanPham.trangthai);
+		}
+	
+	
+		DmSanPham_bind();
+		DmBaoHanh_bind();
+		DmDoiTra_bind();
+		DmGiaoHang_bind();
+		DmTraGop_bind();
+		DmHangSanSuat_bind();
+	}
+	
+	
+	$(function(){
+		
+		Page_init();
+		
+		$('#btnSave').on('click',function(){
+			SanPham.ma = $('#ma').val();
+			SanPham.ten = $('#ten').val();
+			SanPham.gia_nhap = $('#gia_nhap').val();
+			SanPham.gia_ban = $('#gia_ban').val();
+			SanPham.gioithieu = $('#gioithieu').val();
+			SanPham.trangthai = $('#trangthai').val();
+			SanPham.Save();
+		})
+		
+	})
+
+</script>

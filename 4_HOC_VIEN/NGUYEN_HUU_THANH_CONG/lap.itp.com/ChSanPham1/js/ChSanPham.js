@@ -1,4 +1,4 @@
-var ChSanPham = function(pAppUrl){
+var DmBaoHanh = function(pAppUrl){
 	// Thuộc tính bắt buộc
 	this.AppURL = pAppUrl;
 	this.CoreData = new CoreDataAjax();
@@ -6,15 +6,9 @@ var ChSanPham = function(pAppUrl){
 	this.id_sanpham = 0;
 	this.ma = '';
 	this.ten = '';
-	this.gia_nhap = '15,2';
-	this.gia_ban = '15,2';
+	this.gia_nhap = '';
+	this.gia_ban = '';
 	this.gioithieu = '';
-	this.id_dm_sanpham = 0;
-	this.id_dm_baohanh = 0;
-	this.id_dm_doitra = 0;
-	this.id_dm_giaohang = 0;
-	this.id_dm_doittra = 0;
-	this.id_dm_hang_sansuat = 0;
 	this.trangthai = 1;
 	
 	// Thuộc tính mở rộng
@@ -55,27 +49,25 @@ var ChSanPham = function(pAppUrl){
 	
 	this.Save = function(){
 		var _params = {
-			id_sanpham: that.id_sanpham,
-			ma: that.ma,
-			ten: that.ten,
-			gia_nhap: that.gia_nhap,
-			gia_ban: that.gia_ban,
-			gioithieu: that.gioithieu,
-			trangthai: that.trangthai
+			id_sanpham: this.id_sanpham,
+			ma: this.ma,
+			ten: this.ten,
+			gia_nhap: this.gia_nhap,
+			gia_ban: this.giaban,
+			gioithieu: this.gioithieu,
+			trangthai: this.trangthai
 		};
-        var _data = {COMMAND:'p_ch_sanpham_save', PARAMS:_params};
+        var _data = {COMMAND:'p_ch_s_save', PARAMS:_params};
         var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
 		alert(_rs.MESSAGE);
 	}
 
 	this.Del = function(){
 		var _params = {
-			id_sanpham: that.id_sanpham
+			id_sanpham: this.id_sanpham
 		};
-		console.log(_params);
         var _data = {COMMAND:'p_ch_sanpham_del', PARAMS:_params};
         var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
 		alert(_rs.MESSAGE);
 	}
-	
 }
