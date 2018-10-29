@@ -12,7 +12,7 @@
 		<button type="button" class="btn btn-warning btn-xs" id="btnSua">
 		<i class="glyphicon glyphicon-edit"></i> Sửa</button> 
 		<button type="button" class="btn btn-danger btn-xs" id="btnXoa">
-			<i class="glyphicon glyphicon-trash"></i> Xóa1
+			<i class="glyphicon glyphicon-trash"></i> Xóa
 		</button>
     </div>
     <div class="col-sm-12">
@@ -46,6 +46,7 @@
     </div>
 </div>
 <script src="app/DmBaoHanh/js/DmBaoHanh.js"></script>
+
 <script>
 	// Khai báo đối tượng cửa sổ
 	var EccDialog = new ECC_DIALOG(Page_init);
@@ -73,11 +74,10 @@
 		var _html = '';
 		for(var i=0; i< BaoHanh.DanhSach.length;i++){
 			var _dong = BaoHanh.DanhSach[i];
-			
 			var _trangthai ='';
 			if(_dong.trangthai=='1'){
 				_trangthai = '<span class="label label-success">Sử dụng</span>';
-			}else{
+			}else {
 				_trangthai = '<span class="label label-danger">Khóa</span>';
 			}
 			

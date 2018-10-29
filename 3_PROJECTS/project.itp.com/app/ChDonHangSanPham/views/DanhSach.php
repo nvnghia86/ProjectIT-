@@ -24,8 +24,8 @@
 						<tr>
 							<th><input type="checkbox" id="chkAll" /></th>
 							<th>STT</th>
-							<th>id_sanpham</th>
-							<th>id_donhang</th>
+							<th>Sản phẩm</th>
+							<th>Đơn hàng</th>
 							<th>Số lượng</th>
 							<th>Đơn giá</th>
 						</tr>
@@ -55,6 +55,7 @@
 	
 	
 function Page_init(){
+		DonHangSanPham.id_donhang_sanpham=0;
 		DonHangSanPham.FindAll();
 		DanhSach_bind();
 		Action_filter();
@@ -127,7 +128,12 @@ function Page_init(){
 			}
 			Action_filter();
 		});
-		
+		$('#btnSua').on('click',function(){
+			EccDialog.show(
+			'Sửa danh mục đơn hàng sản phẩm',
+			'?app=ChDonHangSanPham&view=ChiTiet&layout=popup&id=' + DonHangSanPham.id_donhang_sanpham, 
+				'50%', '310');
+		});
 	});
 
 </script>
