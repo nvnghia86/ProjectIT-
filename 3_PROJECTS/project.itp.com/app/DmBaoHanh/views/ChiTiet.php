@@ -28,9 +28,27 @@
 	
 	var BaoHanh = new DmBaoHanh('?app=DmBaoHanh');
 	
+	function Page_init(){
+		BaoHanh.id_dm_baohanh = Util.getParameterByName('id');
+		if(BaoHanh.id_dm_baohanh==0 || BaoHanh.id_dm_baohanh==null){
+			$('#ten').val('');
+			$('#mota').val('');
+			$('#trangthai').val('1');
+		}else{
+			BaoHanh.GetById();
+			$('#ten').val(BaoHanh.ten);
+			$('#mota').val(BaoHanh.mota);
+			$('#trangthai').val(BaoHanh.trangthai);
+		}
+	}
+	
+	
+	
 	
 	
 	$(function(){
+		
+		Page_init();
 		
 		$('#btnSave').on('click',function(){
 			BaoHanh.ten = $('#ten').val();
