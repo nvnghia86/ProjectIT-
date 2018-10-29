@@ -81,7 +81,7 @@
 				_trangthai = '<span class="label label-danger">Khóa</span>';
 			}
 			
-			_html +='<tr>';
+			_html +='<tr data-id=>'+ _dong.id_dm_sanpham+'">';
 			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
 			_html +='	<td>'+ (i+1) +'</td>';
 			_html +='	<td>'+ _dong.ten +'</td>';
@@ -102,7 +102,7 @@
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
 				'Tạo mới danh mục sản phẩm', 
-				'?app=DmSanPham&view=ChiTiet&layout=popup', 
+				'?app=DmSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_dm_sanpham, 
 				'50%', '360');
 		});
 
@@ -121,7 +121,7 @@
 		$('#DanhSach').on('click','tr',function(){
 			$('#DanhSach tr').attr('class', '');
 			var _id = $(this).data('id');
-			if(S.id_dm_sanpham == _id){
+			if(SanPham.id_dm_sanpham == _id){
 				SanPham.id_dm_sanpham = 0;
 			}else{
 				$('#DanhSach tr').attr('class', '');
