@@ -30,6 +30,7 @@
 							<th>Tên Người Nhận</th>
 							<th>SDT Người Nhận</th>
 							<th>Địa chỉ Người Nhận</th>
+							<th>Trạng Thái</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -44,6 +45,7 @@
 							<td>Nguyễn Hùng</td>
 							<td>09888888888</td>
 							<td> Thôn 1, xóm 1, Lương Tài, Bắc Ninh</td>
+							<td>1</td>
 						</tr>
 					</tbody>
 				</table>
@@ -51,10 +53,62 @@
         </div>
     </div>
 </div>
+<script src="app\ChDonhang\js\chDonHang.js"></script>
+
+
 <script>
-    // Khai báo đối tượng cửa sổ
-    var EccDialog = new ECC_DIALOG();
-    $(function() {
+  
+// Khai báo đối tượng cửa sổ
+	var EccDialog = new ECC_DIALOG();
+	var Donhang = new ChDonhang('?app=ChDonhang');
+	
+	function Page_init(){
+		Donhang.FindAll();
+		DanhSach_bind();
+	}
+function DanhSach_bind(){
+		// Trang Thai :
+		// 1: Khoi Tao
+		// 2: Đã Duyệt
+		// 3: Đang Giao
+		// 4: Đã Thanh Toán
+		// 5: Đã Hủy
+		var _html = '';
+		for(var i=0; i< BaoHanh.DanhSach.length;i++){
+			var _dong = BaoHanh.DanhSach[i];
+			var _trangthai='';
+	switch ($_dong.trangthai) 
+	{
+    case "1":
+        echo "Đơn hàng đã khởi tạo";
+        break;
+    case "2":
+        echo "Đơn hàng đã duyệt!";
+        break;
+    case "3":
+        echo "Đơn hàng đang giao";
+        break;
+	case "4":
+        echo "Đơn hàng đã thanh toán";
+        break;
+	case "5":
+        echo "Đơn hàng đã Hủy bỏ";
+        break;
+    default:
+        echo "Đơn hàng không tồn tại!";
+}
+
+
+
+
+
+
+
+
+
+
+
+$(function() {
         // Bắt sự kiện khi ấn nút Thêm Mới
         $( '#btnThemMoi').on('click',function(){
             //Hiển thị cửa sổ popup
@@ -64,8 +118,7 @@
 				'?app=chDonHang&view=ChiTiet&layout=popup', 
 				'70%', '510');
         });
-            });        
-                
-  
-            
-   </script>        
+            });                  
+
+</script>
+   
