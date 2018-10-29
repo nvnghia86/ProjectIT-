@@ -74,8 +74,8 @@ function DanhSach_bind(){
 		// 4: Đã Thanh Toán
 		// 5: Đã Hủy
 		var _html = '';
-		for(var i=0; i< BaoHanh.DanhSach.length;i++){
-			var _dong = BaoHanh.DanhSach[i];
+		for(var i=0; i< Donhang.DanhSach.length;i++){
+			var _dong = Donhang.DanhSach[i];
 			var _trangthai='';
 	switch ($_dong.trangthai) 
 	{
@@ -96,8 +96,8 @@ function DanhSach_bind(){
         break;
     default:
         echo "Đơn hàng không tồn tại!";
-}
-
+    }
+_html +='<tr data-id="'+ _dong.id_ch">';
 
 
 
