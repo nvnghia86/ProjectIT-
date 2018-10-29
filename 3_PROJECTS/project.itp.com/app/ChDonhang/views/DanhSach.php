@@ -17,7 +17,7 @@
         <div class="row panel panel-primary" id="LIST">
             <div class="panel-heading">Danh sách Đơn Hàng</div>
             <div class="panel-body">
-                <table class="table table-bordered table-stripped">
+                <table class="table table-bordered table-stripped" id="DanhSach">
 					<thead>
 						<tr>
 							<th><input type="checkbox" id="chkAll" /></th>
@@ -53,14 +53,14 @@
         </div>
     </div>
 </div>
-<script src="app\ChDonhang\js\chDonHang.js"></script>
+<script src="app/ChDonhang/js/chDonHang.js"></script>
 
 
 <script>
   
 // Khai báo đối tượng cửa sổ
 	var EccDialog = new ECC_DIALOG();
-	var Donhang = new ChDonhang('?app=ChDonhang');
+	var Donhang = new ChDonHang('?app=ChDonhang');
 	
 	function Page_init(){
 		Donhang.FindAll();
@@ -74,28 +74,45 @@ function DanhSach_bind(){
 		// 4: Đã Thanh Toán
 		// 5: Đã Hủy
 		var _html = '';
-		for(var i=0; i< BaoHanh.DanhSach.length;i++){
-			var _dong = BaoHanh.DanhSach[i];
+		for(var i=0; i< Donhang.DanhSach.length;i++){
+			var _dong = Donhang.DanhSach[i];
 			var _trangthai='';
-	switch ($_dong.trangthai) 
-	{
-    case "1":
-        echo "Đơn hàng đã khởi tạo";
-        break;
-    case "2":
-        echo "Đơn hàng đã duyệt!";
-        break;
-    case "3":
-        echo "Đơn hàng đang giao";
-        break;
-	case "4":
-        echo "Đơn hàng đã thanh toán";
-        break;
-	case "5":
-        echo "Đơn hàng đã Hủy bỏ";
-        break;
-    default:
-        echo "Đơn hàng không tồn tại!";
+			switch (_dong.trangthai) 
+			{
+			case "1":
+				_trangthai = "Đơn hàng đã khởi tạo";
+				break;
+			case "2":
+				_trangthai =  "Đơn hàng đã duyệt!";
+				break;
+			case "3":
+				_trangthai =  "Đơn hàng đang giao";
+				break;
+			case "4":
+				_trangthai =  "Đơn hàng đã thanh toán";
+				break;
+			case "5":
+				_trangthai =  "Đơn hàng đã Hủy bỏ";
+				break;
+			default:
+				_trangthai =  "Không xác định";
+			}
+			_html += '<tr data-id="'+ _dong.id_donhang +'">';
+			_html += '	<td><input type="checkbox" id="chk_1" /></td>';
+			_html += '	<td>'+ (i+1) +'</td>';
+			_html += '	<td>'+ (i+1) +'</td>';
+			_html += '	<td>'+ _dong.ngay_tao +'</td>';
+			_html += '	<td>'+ _dong.ngay_duyet +'</td>';
+			_html += '	<td>'+ _dong.ngay_giao +'</td>';
+			_html += '	<td>'+ _dong.ngay_nhan +'</td>';
+			_html += '	<td>'+ _dong.ten_nguoinhan +'</td>';
+			_html += '	<td>'+ _dong.sdt_nguoinhan +'</td>';
+			_html += '	<td> '+ _dong.diachi_nguoinhan +'</td>';
+			_html += '	<td>'+ _trangthai +'</td>';
+			_html += '</tr>';
+		}
+		
+		$('#DanhSach > tbody').html(_html);
 }
 
 
@@ -104,21 +121,20 @@ function DanhSach_bind(){
 
 
 
-
-
-
-
 $(function() {
+	
+	Page_init();
+	
         // Bắt sự kiện khi ấn nút Thêm Mới
-        $( '#btnThemMoi').on('click',function(){
-            //Hiển thị cửa sổ popup
-            
-            EccDialog.show(
-			'Tạo mới danh mục bảo hành', 
-				'?app=chDonHang&view=ChiTiet&layout=popup', 
-				'70%', '510');
-        });
-            });                  
+	$( '#btnThemMoi').on('click',function(){
+		//Hiển thị cửa sổ popup
+		
+		EccDialog.show(
+		'Tạo mới danh mục bảo hành', 
+			'?app=chDonHang&view=ChiTiet&layout=popup', 
+			'70%', '510');
+	});
+});                  
 
 </script>
    
