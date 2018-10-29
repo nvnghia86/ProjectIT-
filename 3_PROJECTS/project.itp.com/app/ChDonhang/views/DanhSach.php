@@ -74,7 +74,11 @@ function DanhSach_bind(){
 		// 4: Đã Thanh Toán
 		// 5: Đã Hủy
 		var _html = '';
-	switch ($trangthai) {
+		for(var i=0; i< BaoHanh.DanhSach.length;i++){
+			var _dong = BaoHanh.DanhSach[i];
+			var _trangthai='';
+	switch ($_dong.trangthai) 
+	{
     case "1":
         echo "Đơn hàng đã khởi tạo";
         break;
@@ -91,9 +95,9 @@ function DanhSach_bind(){
         echo "Đơn hàng đã Hủy bỏ";
         break;
     default:
-        echo "Your favorite color is neither red, blue, nor green!";
+        echo "Đơn hàng không tồn tại!";
 }
-?>
+
 
 
 
