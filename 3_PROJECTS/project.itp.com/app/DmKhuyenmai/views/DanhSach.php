@@ -9,6 +9,8 @@
 		</button>
 		<button type="button" class="btn btn-primary btn-xs" id="btnThemMoi">
 		<i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
+		<button type="button" class="btn btn-warning btn-xs" id="btnSua">
+		<i class="glyphicon glyphicon-edit"></i> Sửa</button> 
 		<button type="button" class="btn btn-danger btn-xs" id="btnXoa">
 			<i class="glyphicon glyphicon-trash"></i> Xóa
 		</button>
@@ -52,7 +54,19 @@
 	function Page_init(){
 		Khuyenmai.FindAll();
 		DanhSach_bind();
+		Action_filter();
 	}
+	
+	function Action_filter(){
+		if(Khuyenmai.id_dm_khuyenmai != 0){
+			$('#btnSua').show();
+			$('#btnXoa').show();
+		}else{
+			$('#btnSua').hide();
+			$('#btnXoa').hide();
+		}
+	}
+	
 	
 	function DanhSach_bind(){
 		
@@ -80,6 +94,7 @@
 		$('#DanhSach > tbody').html(_html);
 	}
 	
+		
 	$(function(){
 		
 		Page_init();
@@ -91,6 +106,39 @@
 				'?app=DmKhuyenmai&view=ChiTiet&layout=popup', 
 				'50%', '450');
 		});
+		
+		$('#btnXoa').on('click',function(){
+			var _xacnhan = confirm('Bạn có chắc chắn muốn xóa không?');
+			if(_xacnhan==true){
+				Khuyenmai.Del();
+				Page_init();
+			}
+		});
+		
+		$('#btnTaiLai').on('click',function(){
+			Page_init();
+		});
+		
+		$('#DanhSach').on('click','tr',function(){
+			$('#DanhSach tr').attr('class', '');
+			var _id = $(this).data('id');
+			if(Khuyenmai.id_dm_khuyenmai == _id){
+				Khuyenmai.id_dm_khuyenmai = 0;
+			}else{
+				$('#DanhSach tr').attr('class', '');
+				Khuyenmai.id_dm_khuyenmai = _id;
+				$(this).attr('class', 'row_selected');
+			}
+			Action_filter();
+		});
+		
+		$('#btnSua').on('click',function(){
+			EccDialog.show(
+				'Sửa danh mục khuyến mại', 
+				'?app=DmKhuyenmai&view=ChiTiet&layout=popup&id=' + Khuyenmai.id_dm_khuyenmai, 
+				'50%', '410');
+		});
+		
 	});
 
 </script>
