@@ -44,6 +44,7 @@
     </div>
 </div>
 <script src="app/DmBaoHanh/js/DmBaoHanh.js"></script>
+
 <script>
 	// Khai báo đối tượng cửa sổ
 	var EccDialog = new ECC_DIALOG();
@@ -59,11 +60,10 @@
 		var _html = '';
 		for(var i=0; i< BaoHanh.DanhSach.length;i++){
 			var _dong = BaoHanh.DanhSach[i];
-			
 			var _trangthai ='';
 			if(_dong.trangthai=='1'){
 				_trangthai = '<span class="label label-success">Sử dụng</span>';
-			}else{
+			}else {
 				_trangthai = '<span class="label label-danger">Khóa</span>';
 			}
 			
