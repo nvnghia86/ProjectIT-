@@ -66,3 +66,46 @@
         <button type="button" class="btn btn-warning btn-sm" id="btnSave"><i class="glyphicon glyphicon-save"></i> Lưu</button>
     </div>
 </form>
+<script src="app/ChSanPham/js/ChSanPham.js"></script>
+<script>
+	
+	var SanPham = new ChSanPham('?app=ChSanPham');
+	
+	function Page_init(){
+		SanPham.id_sanpham = Util.getParameterByName('id');
+		if(SanPham.id_sanpham==0 || SanPham.id_sanpham==null){
+			$('#ma').val('');
+			$('#ten').val('');
+			$('#gia_nhap').val('');
+			$('#gia_ban').val('');
+			$('#gioithieu').val('');
+			$('#trangthai').val('1');
+		}else{
+			SanPham.GetById();
+			$('#ma').val(SanPham.ma);
+			$('#ten').val(SanPham.ten);
+			$('#gia_nhap').val(SanPham.gia_nhap);
+			$('#gia_ban').val(SanPham.gia_ban);
+			$('#gioithieu').val(SanPham.gioithieu);
+			$('#trangthai').val(SanPham.trangthai);
+		}
+	}
+	
+	
+	$(function(){
+		
+		Page_init();
+		
+		$('#btnSave').on('click',function(){
+			SanPham.ma = $('#ma').val();
+			SanPham.ten = $('#ten').val();
+			SanPham.gia_nhap = $('#gia_nhap').val();
+			SanPham.gia_ban = $('#gia_ban').val();
+			SanPham.gioithieu = $('#gioithieu').val();
+			SanPham.trangthai = $('#trangthai').val();
+			SanPham.Save();
+		})
+		
+	})
+
+</script>

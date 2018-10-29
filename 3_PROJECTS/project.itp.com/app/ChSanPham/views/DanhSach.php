@@ -57,6 +57,7 @@
 	var SanPham = new ChSanPham('?app=ChSanPham');
 	
 	function Page_init(){
+		SanPham.id_sanpham=0;
 		SanPham.FindAll();
 		DanhSach_bind();
 		Action_filter();
@@ -110,7 +111,7 @@
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
 				'Tạo mới danh mục Sản Phẩm', 
-				'?app=ChSanPham&view=ChiTiet&layout=popup', 
+				'?app=ChSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_sanpham,
 				'90%', '500');
 		});
 		
@@ -139,5 +140,11 @@
 			Action_filter();
 		});
 		
+		$('#btnSua').on('click',function(){
+			EccDialog.show(
+				'Sửa danh mục bảo hành', 
+				'?app=ChSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_sanpham, 
+				'90%', '500');
+		});
 	});
 </script>
