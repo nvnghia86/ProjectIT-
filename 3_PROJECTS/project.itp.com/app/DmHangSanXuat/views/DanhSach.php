@@ -95,13 +95,11 @@
 		}
 		$('#DanhSach > tbody').html(_html);
 	}
-
 	$(function(){
 		Page_init();
 		$('#btnThemMoi').on('click',function(){
 			EccDialog.show(
 				'Tạo mới danh mục hãng sản xuất','?app=DmHangSanXuat&view=ChiTiet&layout=popup&id='+HangSanXuat.id_dm_hang_sanxuat,'50%','300');
-
 		});
 		$('#btnXoa').on('click',function(){
 			var _xacnhan = confirm('Bạn có chắc chắn muốn xóa không?');
@@ -134,9 +132,3 @@
 				'?app=DmHangSanXuat&view=ChiTiet&layout=popup&id='+HangSanXuat.id_dm_hang_sanxuat,'50%','300');
 		});
 	});
-		
-<<<<<<< HEAD
-</script>
-=======
-</script>
->>>>>>> 58fe7c80b60d40cf000420402461ee4579d5afac

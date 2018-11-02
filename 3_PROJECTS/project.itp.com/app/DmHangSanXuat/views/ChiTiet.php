@@ -5,15 +5,15 @@
 <form class="row" style="margin-bottom:5px" id="FORM">
     <div class="form-group-sm col-sm-6">
        <label>Tên hãng sản xuất <span class="require">(*)</span></label>
-	   <input type="text" class="form-control" placeholder="Tên hãng sản xuất" id="ten" />
+       <input type="text" class="form-control" placeholder="Tên hãng sản xuất" id="ten" />
     </div>
     <div class="form-group-sm col-sm-6">
        <label>Ảnh Logo <span class="require">(*)</span></label>
        <textarea class="form-control" rows="3" id="anh_logo"></textarea>
     </div>
-	<div class="form-group-sm col-sm-6">
+    <div class="form-group-sm col-sm-6">
        <label>Mô tả <span class="require">(*)</span></label>
-	   <textarea class="form-control" rows="3" id="mota"></textarea>
+       <textarea class="form-control" rows="3" id="mota"></textarea>
     </div>
     
     <div class="form-group-sm col-sm-4">
@@ -63,5 +63,4 @@
         })
         
     })
-
 </script>
