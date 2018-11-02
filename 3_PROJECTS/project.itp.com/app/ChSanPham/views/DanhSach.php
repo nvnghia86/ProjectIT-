@@ -97,7 +97,7 @@
 		SanPham.FindAll();
 		DanhSach_bind();
 		Action_filter();
-		DanhSach_phantrang();
+		
 	}
 	
 	function Action_filter(){
@@ -142,7 +142,7 @@
 	
 	$(function(){
 		Page_init();
-		
+		DanhSach_phantrang();
 		// Bắt sự kiện khi ấn nút thêm mới
 		$('#btnThemMoi').on('click',function(){
 			// Hiển thị cửa sổ popup
