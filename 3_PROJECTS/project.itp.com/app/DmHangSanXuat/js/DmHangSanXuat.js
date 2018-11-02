@@ -28,14 +28,14 @@ var DmHangSanXuat = function(pAppUrl){
 	
 	this.GetById = function(){
 		var _params = {
-			id_dm_baohanh: that.id_dm_baohanh
+			id_dm_hang_sanxuat: that.id_dm_hang_sanxuat
 		};
         var _data = {COMMAND:'p_ch_dm_hang_sanxuat_get_byid', PARAMS:_params};
         var _rs = that.CoreData.callDataGet('AjxCallProcGet', _data);
 		if(_rs.CODE=='SUC'){
 			var _chitiet = _rs.DATA[0];
 			that.ten = _chitiet.ten;
-			that.anh_logo =_chitiet.anh_logo;
+			that.anh_logo = _chitiet.anh_logo;
 			that.mota = _chitiet.mota;
 			that.trangthai = _chitiet.trangthai;
 		}else{
@@ -45,11 +45,11 @@ var DmHangSanXuat = function(pAppUrl){
 	
 	this.Save = function(){
 		var _params = {
-			id_dm_hang_sanxuat: that.id_dm_hang_sanxuat,
-			ten: that.ten,
-			anh_logo: that.anh_logo,
-			mota: that.mota,
-			trangthai: that.trangthai
+			id_dm_hang_sanxuat: this.id_dm_hang_sanxuat,
+			ten: this.ten,
+			anh_logo: this.anh_logo,
+			mota: this.mota,
+			trangthai: this.trangthai
 		};
         var _data = {COMMAND:'p_ch_dm_hang_sanxuat_save', PARAMS:_params};
         var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);

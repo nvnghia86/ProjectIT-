@@ -51,7 +51,7 @@
 <script src="app/DmHangSanXuat/js/DmHangSanXuat.js"></script>
 <script>
 	
-	var EccDialog = new ECC_DIALOG();
+	var EccDialog = new ECC_DIALOG(Page_init);
 	var HangSanXuat = new DmHangSanXuat('?app=DmHangSanXuat');
 	
 	function Page_init(){
