@@ -33,9 +33,6 @@ var ChSanPhamHinhAnh = function(pAppUrl){
         var _rs = that.CoreData.callDataGet('AjxCallProcGet', _data);
 		if(_rs.CODE=='SUC'){
 			var _chitiet = _rs.DATA[0];
-			that.id_sanpham_hinhanh = _chitiet.id_sanpham_hinhanh;
-			that.id_sanpham = _chitiet.id_sanpham;
-			that.id_hinhanh = _chitiet.id_hinhanh;
 			that.loai = _chitiet.loai;
 		}else{
 			alert(_rs.MESSAGE);

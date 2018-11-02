@@ -1,6 +1,6 @@
 <?php
 /**
- * App quản lý Hệ Thống Tài Khoản
+ * App Hệ Thống Tài Khoản
  * Create: 08-10-2017
  * @author Hieubd <buiduchieuvnu@gmail.com>
  * @version 1.0
@@ -18,7 +18,7 @@ class HtTaiKhoanApp extends AppObject {
     public $app_name="HtTaiKhoan";
     public $dir_layout="cahd_skin"; 
     public $layout="admin";
-    public $page_title = "Quản lý Hệ Thống Tài Khoản";
+    public $page_title = "Hệ Thống Tài Khoản";
 
     public function __construct() {
         $this->authen();
