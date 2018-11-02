@@ -132,9 +132,9 @@
 		});
 		$('#btnSua').on('click',function(){
 			EccDialog.show(
-					'Sửa danh mục sản phẩm',
-					'?app=DmSanPham&view=ChiTiet&layout=popup&id='+SanPham.id_dm_sanpham,'50%','310'
-				);
+				'Sửa danh mục sản phẩm', 
+				'?app=DmSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_dm_sanpham, 
+				'50%', '310');
 		});
 	});
 
