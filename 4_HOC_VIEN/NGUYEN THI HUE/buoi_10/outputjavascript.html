@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>outputjavascript</title>
+	<script>
+		function canhbao(){
+			alert('Đây là hộp thoại cảnh báo');
+		}
+			function xacnhan(){
+			var ketqua=confirm('Lựa chọn của bạn là gì (Có hoặc Không)');
+			alert('Kết quả:'+ketqua);
+		}
+		
+			function nhap(){
+			var ketqua=prompt('Tên của bạn là gì:');
+			alert('Xin chào'+ ketqua);
+		}
+	
+		function kiemtra_chanle()
+		{
+			var nhapso=prompt("Mời bạn nhập số tùy ý:");
+			if(nhapso%2==0)
+			{
+				alert(nhapso+ "là số chẵn");
+			}
+			else
+			{
+				alert(nhapso+ "là số lẻ");
+			}
+		}
+		
+	</script>
+	
+</head>
+<body>
+	<h3></h3>
+	<button type="button" onclick="canhbao();">Hộp thoại cảnh báo-Alert</button>
+	<br><br>
+	<button type="button" onclick="xacnhan();">Hộp thoại xác nhận-Confirm</button>
+	<br><br>
+	<button type="button" onclick="nhap();">Hộp thoại nhập-Prompt</button>
+	 <br><br>
+	 <button type="button" onclick="kiemtra_chanle();">Kiểm tra chẵn-lẻ</button>
+	 <br><br>
+	
+</body>
+</html>

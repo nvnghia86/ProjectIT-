@@ -8,7 +8,9 @@
 			<i class="glyphicon glyphicon-refresh"></i> Tải lại
 		</button>
 		<button type="button" class="btn btn-primary btn-xs" id="btnThemMoi">
-		<i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
+		<i class="glyphicon glyphicon-plus"></i> Thêm mới</button> 
+		<button type="button" class="btn btn-warning btn-xs" id="btnSua">
+		<i class="glyphicon glyphicon-edit"></i> Sửa</button> 
 		<button type="button" class="btn btn-danger btn-xs" id="btnXoa">
 			<i class="glyphicon glyphicon-trash"></i> Xóa
 		</button>
@@ -48,15 +50,25 @@
 
 <script src="app/DmHangSanXuat/js/DmHangSanXuat.js"></script>
 <script>
-	// Khai báo đối tượng cửa sổ
-	var EccDialog = new ECC_DIALOG();
+	
+	var EccDialog = new ECC_DIALOG(Page_init);
 	var HangSanXuat = new DmHangSanXuat('?app=DmHangSanXuat');
 	
 	function Page_init(){
+		HangSanXuat.id_dm_hang_sanxuat=0;
 		HangSanXuat.FindAll();
 		DanhSach_bind();
+		Action_filter();
 	}
-	
+	function Action_filter(){
+		if(HangSanXuat.id_dm_hang_sanxuat != 0){
+			$('#btnSua').show();
+			$('#btnXoa').show();
+		}else{
+			$('#btnSua').hide();
+			$('#btnXoa').hide();
+		}
+	}
 	function DanhSach_bind(){
 		
 		var _html = '';
@@ -70,7 +82,7 @@
 				_trangthai = '<span class="label label-danger">Khóa</span>';
 			}
 			
-			_html +='<tr>';
+			_html +='<tr data-id="'+ _dong.id_dm_hang_sanxuat +'">';
 			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
 			_html +='	<td>'+ (i+1) +'</td>';
 			_html +='	<td>'+ _dong.ten +'</td>';
@@ -87,8 +99,44 @@
 	$(function(){
 		Page_init();
 		$('#btnThemMoi').on('click',function(){
-			EccDialog.show('Tạo mới danh mục hãng sản xuất','?app=DmHangSanXuat&view=ChiTiet&layout=popup','50%','300');
+			EccDialog.show(
+				'Tạo mới danh mục hãng sản xuất','?app=DmHangSanXuat&view=ChiTiet&layout=popup&id='+HangSanXuat.id_dm_hang_sanxuat,'50%','300');
+
+		});
+		$('#btnXoa').on('click',function(){
+			var _xacnhan = confirm('Bạn có chắc chắn muốn xóa không?');
+			if(_xacnhan==true){
+				HangSanXuat.Del();
+				Page_init();
+			}
+		});
+		
+		$('#btnTaiLai').on('click',function(){
+			Page_init();
+		});
+		
+		$('#DanhSach').on('click','tr',function(){
+			$('#DanhSach tr').attr('class', '');
+			var _id = $(this).data('id');
+			if(HangSanXuat.id_dm_hang_sanxuat == _id){
+				HangSanXuat.id_dm_hang_sanxuat = 0;
+			}else{
+				$('#DanhSach tr').attr('class', '');
+				HangSanXuat.id_dm_hang_sanxuat = _id;
+				$(this).attr('class', 'row_selected');
+			}
+			Action_filter();
+		});
+		
+		$('#btnSua').on('click',function(){
+			EccDialog.show(
+				'Sửa mới danh mục hãng sản xuất',
+				'?app=DmHangSanXuat&view=ChiTiet&layout=popup&id='+HangSanXuat.id_dm_hang_sanxuat,'50%','300');
 		});
 	});
-	
+		
+<<<<<<< HEAD
 </script>
+=======
+</script>
+>>>>>>> 58fe7c80b60d40cf000420402461ee4579d5afac

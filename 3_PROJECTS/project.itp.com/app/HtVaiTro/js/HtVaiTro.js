@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 var HtVaiTro = function(pAppUrl){
+=======
+var HtTaiKhoan = function(pAppUrl){
+>>>>>>> 0b5d4fb53753bdaf1f71cbbfd942ce49582031a4
 	// Thuộc tính bắt buộc
 	this.AppURL = pAppUrl;
 	this.CoreData = new CoreDataAjax();
 	// Thuộc tính của đối tượng
+<<<<<<< HEAD
 	this.id_vaitro = 0;
 	this.ten = '';
 	this.mota = '';
+=======
+	this.id_vaitro= 0;
+	this.ten = '';
+	this.mota= '';
+>>>>>>> 0b5d4fb53753bdaf1f71cbbfd942ce49582031a4
 	this.trangthai = 1;
 	
 	// Thuộc tính mở rộng
@@ -45,6 +55,10 @@ var HtVaiTro = function(pAppUrl){
 		var _params = {
 			id_vaitro: this.id_vaitro,
 			ten: this.ten,
+<<<<<<< HEAD
+=======
+			matkhau: this.matkhau,
+>>>>>>> 0b5d4fb53753bdaf1f71cbbfd942ce49582031a4
 			mota: this.mota,
 			trangthai: this.trangthai
 		};
@@ -52,12 +66,22 @@ var HtVaiTro = function(pAppUrl){
         var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
 		alert(_rs.MESSAGE);
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0b5d4fb53753bdaf1f71cbbfd942ce49582031a4
 	this.Del = function(){
 		var _params = {
 			id_vaitro: this.id_vaitro
 		};
+<<<<<<< HEAD
         var _data = {COMMAND:'p_ht_vaitro_del', PARAMS:_params};
         var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
+=======
+               
+        var _data = {COMMAND:'p_ht_vaitro_del`', PARAMS:_params};
+        var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data); console.log(_rs);
+>>>>>>> 0b5d4fb53753bdaf1f71cbbfd942ce49582031a4
 		alert(_rs.MESSAGE);
 	}
 }

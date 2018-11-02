@@ -51,6 +51,7 @@
 			$('#hoten').val('');
 			$('#sodienthoai').val('');
 			$('#email').val('');
+			$('#id_vaitro').val('');
 			$('#trangthai').val('1');
 		}else{
 			TaiKhoan.GetById();
@@ -59,6 +60,7 @@
 			$('#hoten').val(TaiKhoan.hoten);
 			$('#sodienthoai').val(TaiKhoan.sodienthoai);
 			$('#email').val(TaiKhoan.email);
+			$('#id_vaitro').val(TaiKhoan.id_vaitro);
 			$('#trangthai').val(TaiKhoan.trangthai);
 		}
 	}
@@ -74,6 +76,7 @@
 			TaiKhoan.hoten = $('#hoten').val();
 			TaiKhoan.sodienthoai = $('#sodienthoai').val();
 			TaiKhoan.email= $('#email').val();
+			TaiKhoan.id_vaitro= $('#id_vaitro').val();
 			TaiKhoan.trangthai = $('#trangthai').val();
 			TaiKhoan.Save();
 		})

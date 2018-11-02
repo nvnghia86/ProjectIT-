@@ -32,20 +32,7 @@
 							<th>Trạng thái</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<td><input type="checkbox" id="chk_1" /></td>
-							<td>1</td>
-							<td>001</td>
-							<td>Iphone XS</td>
-							<td>20000000</td>
-							<td>25000000</td>
-							<td>Iphone đời mới 2018</td>
-							<td>
-								<span class="label label-success">Còn hàng</span>
-							</td>
-						</tr>
-					</tbody>
+					<tbody></tbody>
 				</table>
             </div>
         </div>
@@ -55,9 +42,9 @@
 <script>
 	var EccDialog = new ECC_DIALOG(Page_init);
 	var SanPham = new ChSanPham('?app=ChSanPham');
-	
+	var tblDanhSach=null;
 	function DanhSach_phantrang(){
-		$('#DanhSach').DataTable({
+		tblDanhSach= $('#DanhSach').DataTable({
 			"paging": true,
 			"autoWidth": false,
 			"searching": true,
@@ -97,7 +84,6 @@
 		SanPham.FindAll();
 		DanhSach_bind();
 		Action_filter();
-		DanhSach_phantrang();
 	}
 	
 	function Action_filter(){
@@ -113,34 +99,35 @@
 	function DanhSach_bind(){
 		
 		var _html = '';
+		var aRows = [];
+		tblDanhSach.clear().draw();
 		for(var i=0; i< SanPham.DanhSach.length;i++){
 			var _dong = SanPham.DanhSach[i];
 			
 			var _trangthai ='';
 			if(_dong.trangthai=='1'){
-				_trangthai = '<span class="label label-success">Có hàng</span>';
+				_trangthai = '<span data-id="'+ _dong.id_sanpham +'" class="label label-success dong">Có hàng</span>';
 			}else{
-				_trangthai = '<span class="label label-danger">Hết hàng</span>';
+				_trangthai = '<span data-id="'+ _dong.id_sanpham +'" class="label label-danger dong">Hết hàng</span>';
 			}
-			
-			_html +='<tr data-id="'+ _dong.id_sanpham +'">';
-			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
-			_html +='	<td>'+ (i+1) +'</td>';
-			_html +='	<td>'+ _dong.ma +'</td>';
-			_html +='	<td>'+ _dong.ten +'</td>';
-			_html +='	<td>'+ _dong.gia_nhap +'</td>';
-			_html +='	<td>'+ _dong.gia_ban +'</td>';
-			_html +='	<td>'+ _dong.gioithieu +'</td>';
-			_html +='	<td>';
-			_html += _trangthai;
-			_html +='	</td>';
-			_html +='</tr>';
+			 aRows.push([
+                (i + 1),
+				_dong.id_sanpham,
+                _dong.ma,
+                _dong.ten,
+                _dong.gia_nhap,
+                _dong.gia_ban,
+                _dong.gioithieu,
+                 _trangthai
+            ]);
 		}
-		$('#DanhSach > tbody').html(_html);
+		tblDanhSach.rows.add(aRows).draw();
 	}
 	
 	
 	$(function(){
+		DanhSach_phantrang();
+		
 		Page_init();
 		
 		// Bắt sự kiện khi ấn nút thêm mới
@@ -148,8 +135,8 @@
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
 				'Tạo mới danh mục Sản Phẩm', 
-				'?app=ChSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_sanpham,
-				'90%', '500');
+				'?app=ChSanPham&view=ChiTiet1&layout=popup&id=' + SanPham.id_sanpham,
+				'90%', '570');
 		});
 		
 		$('#btnXoa').on('click',function(){
@@ -166,7 +153,7 @@
 		
 		$('#DanhSach').on('click','tr',function(){
 			$('#DanhSach tr').attr('class', '');
-			var _id = $(this).data('id');
+			var _id = $(this).find(".dong").data('id');
 			if(SanPham.id_sanpham == _id){
 				SanPham.id_sanpham = 0;
 			}else{
@@ -180,8 +167,8 @@
 		$('#btnSua').on('click',function(){
 			EccDialog.show(
 				'Sửa danh mục sản phẩm', 
-				'?app=ChSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_sanpham, 
-				'90%', '500');
+				'?app=ChSanPham&view=ChiTiet1&layout=popup&id=' + SanPham.id_sanpham, 
+				'90%', '570');
 		});
 	});
 </script>
