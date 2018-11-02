@@ -13,7 +13,7 @@ var ChSanPham = function(pAppUrl){
 	this.id_dm_baohanh = 0;
 	this.id_dm_doitra = 0;
 	this.id_dm_giaohang = 0;
-	this.id_dm_doittra = 0;
+	this.id_dm_tragop = 0;
 	this.id_dm_hang_sansuat = 0;
 	this.trangthai = 1;
 	
