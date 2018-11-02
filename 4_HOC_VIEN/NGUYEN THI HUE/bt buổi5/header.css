@@ -1,0 +1,196 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+#header
+{
+	width: 100%;
+	height: 54px;
+	background: #fed700;
+}
+
+.wrapper
+{
+	width: 1141px;
+	margin:0 auto;
+	
+}
+#search 
+{
+	float:left;
+	background:#000;
+	width: 370px;
+	height:53px
+}
+#search #search1{
+	float:left;
+	width: 180px;
+	margin: 11px 12px;
+	border-radius: 4px;
+	background:#fff;
+	 
+       
+}
+
+#icon i.logo
+{
+	float:left;
+	background-image:url('icondesktop@1x.png');
+	background-position: 0 0;
+    width: 156px;
+    height: 30px;
+    display: block;
+    margin: 10px 2px 0px 8px;
+	line-height: 30px;
+	
+	
+	
+}
+form input
+{
+	border:0;
+	text-indent: 10px;
+	padding-top: 8px;
+	background:#fff;
+    font-size: 13px;
+	outline: none;
+	 margin-top: 3px;
+}
+button
+{
+	float:right;
+    width: 40px;
+    height: 35px;
+    border: 0;
+    background: none;
+	outline: none;
+}
+form i.tim
+{
+	background-image:url('icondesktop@1x.png');
+	background-position: -160px 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 1px auto 0;
+	line-height: 30px;
+	
+	
+	
+}
+
+/*menu*/
+#menu{
+	float:left;
+}
+ul li
+{
+	display:inline;
+	padding:0px 0px 29px 3px;
+	text-transform:uppercase;
+	background-color: #FED700;
+	float:left;
+	width:75px;
+	line-height:23px;
+	height:24px;
+	font-size:11px;
+	text-align:center;
+}
+
+ul li:hover
+{
+	cursor:pointer;
+	background-color:#B9BBC0;
+}
+ul li i{
+		width:16px;
+	height:25px;
+	display:block;
+	margin:3px auto 3px;
+	background-image:url('icondesktop@1x.png');
+	background-repeat:no-repeat;
+}
+	
+ul li i.dt
+{
+	background-position:-190px 0;
+	width: 16px;
+    height: 25px;
+	
+}
+
+ul li i.tl
+{
+	width:33px;
+	background-position:-208px 0px;
+	height: 25px;
+}
+
+ul li i.lt
+{
+	    background-position: -245px 0;
+		   
+     width: 39px;
+    height: 24px;
+}
+
+ul li i.pk
+{
+	width: 22px;
+    height: 24px;
+	background-position:-288px 0;
+}
+
+ul li i.cu
+{
+	background-position:-315px 0;
+	width:34px;
+	height:24px;
+}
+
+ul li i.km
+{
+	background-position:-475px 0;
+	width:28px;
+	height:24px;
+	
+}
+
+ul li i.cn
+{
+	background-position:-375px 0;
+	    width: 29px;
+    height: 25px;
+}
+
+ul li i.hd
+{
+	background-position:-410px 0;
+	width:26px;
+	height:24px;
+	
+}
+li#sim
+{
+	    text-transform: none;
+    font-size: 13px;
+	    line-height: 19px;
+		border-left:1px solid #b2b2b2;
+		    padding-top: 6px;
+			height:19px;
+			width:58px;
+}
+
+li#tien
+{
+	   text-transform: none;
+    font-size: 13px;
+	    line-height: 19px;
+		border-left:1px solid #b2b2b2;
+		    padding-top: 6px;
+			height:19px;
+			width:81px;
+			text-align:center;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function ptbn()
+		{
+			var a=prompt("nhập số a bất kỳ:");
+			var b=prompt("nhập số b bất kỳ:");
+			if(a==0)
+			{
+				document.getElementById('ketqua').innerHTML=('Phương trình vô nghiệm');
+			}
+			else
+			{
+				var c=-parseFloat(b)/parseFloat(a);
+				document.getElementById('ketqua').innerHTML=c;
+			}
+		}
+	</script>
+</head>
+<body>
+	<button type="button" onclick="ptbn();">Giải phương trình bậc nhất</button>
+	<br><br>
+	<lable id="ketqua">Kết quả</lable>
+</body>
+</html>
