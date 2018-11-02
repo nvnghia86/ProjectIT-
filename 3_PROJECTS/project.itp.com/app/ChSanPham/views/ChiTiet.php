@@ -50,7 +50,7 @@
     </div>
 	<div class="form-group-sm col-sm-6">
         <label>Hãng sản xuất </label>
-        <select class="form-control" id="id_dm_hang_sansuat" name="id_dm_hang_sansuat">
+        <select class="form-control" id="id_dm_hang_sanxuat" name="id_dm_hang_sanxuat">
         </select>
     </div>
     <div class="form-group-sm col-sm-6">
@@ -69,7 +69,7 @@
 <script src="app/ChSanPham/js/ChSanPham.js"></script>
 <script src="app/DmSanPham/js/DmSanPham.js"></script>
 <script src="app/DmBaoHanh/js/DmBaoHanh.js"></script>
-<script src="app/DmDoiTra/js/DmDoitra.js"></script>
+<script src="app/DmTraGop/js/DmTraGop.js"></script>
 <script src="app/DmGiaoHang/js/DmGiaoHang.js"></script>
 <script src="app/DmHangSanXuat/js/DmHangSanXuat.js"></script>
 <script>
@@ -79,7 +79,7 @@
 	var DMBH = new DmBaoHanh('?app=DmBaoHanh');
 	var DMGH = new DmGiaoHang('?app=DmGiaoHang');
 	var DMTG = new DmTraGop('?app=DmTraGop');
-	var DMHSS = new DmHangSanSuat('?app=DmHangSanSuat');
+	var DMHSX = new DmHangSanXuat('?app=DmHangSanXuat');
 	function DmSanPham_bind(){
 		DMSP.FindAll();
 		var _html='';
@@ -98,16 +98,6 @@
 			_html +='<option value="'+ _dong.id_dm_baohanh +'">'+ _dong.ten +'</option>';
 		}
 		$('#id_dm_baohanh').html(_html);
-	}
-	
-	function DmDoiTra_bind(){
-		DMDT.FindAll();
-		var _html='';
-		for(var i=0; i< DMDT.DanhSach.length; i++){
-			var _dong = DMDT.DanhSach[i];
-			_html +='<option value="'+ _dong.id_dm_doitra +'">'+ _dong.ten +'</option>';
-		}
-		$('#id_dm_doitra').html(_html);
 	}
 	
 	function DmGiaoHang_bind(){
@@ -130,14 +120,14 @@
 		$('#id_dm_tragop').html(_html);
 	}
 	
-	function DmHangSanSuat_bind(){
-		DMHSS.FindAll();
+	function DmHangSanXuat_bind(){
+		DMHSX.FindAll();
 		var _html='';
-		for(var i=0; i< DMHSS.DanhSach.length; i++){
-			var _dong = DMHSS.DanhSach[i];
-			_html +='<option value="'+ _dong.id_dm_hang_sansuat +'">'+ _dong.ten +'</option>';
+		for(var i=0; i< DMHSX.DanhSach.length; i++){
+			var _dong = DMHSX.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_hang_sanxuat +'">'+ _dong.ten +'</option>';
 		}
-		$('#id_dm_hang_sansuat').html(_html);
+		$('#id_dm_hang_sanxuat').html(_html);
 	}
 	
 	function Page_init(){
@@ -156,16 +146,15 @@
 			$('#gia_nhap').val(SanPham.gia_nhap);
 			$('#gia_ban').val(SanPham.gia_ban);
 			$('#gioithieu').val(SanPham.gioithieu);
-			$('#trangthai').val(SanPham.trangthai);
+			$('#trangthai').val(SanPham.trangthai);DmHangSanXuat
 		}
 	
 	
 		DmSanPham_bind();
 		DmBaoHanh_bind();
-		DmDoiTra_bind();
 		DmGiaoHang_bind();
 		DmTraGop_bind();
-		DmHangSanSuat_bind();
+		DmHangSanXuat_bind();
 	}
 	
 	
