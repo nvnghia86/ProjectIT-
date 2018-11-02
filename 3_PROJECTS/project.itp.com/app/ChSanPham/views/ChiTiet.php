@@ -5,23 +5,23 @@
 <form class="row" style="margin-bottom:5px" id="FORM">
     <div class="form-group-sm col-sm-6">
        <label>Mã sản phẩm <span class="require">(*)</span></label>
-	   <input type="text" class="form-control" placeholder="Mã sản phẩm"  />
+	   <input type="text" id="ma" class="form-control" placeholder="Mã sản phẩm"  />
     </div>
 	<div class="form-group-sm col-sm-6">
        <label>Tên sản phẩm <span class="require">(*)</span></label>
-	   <input type="text" class="form-control" placeholder="Tên sản phẩm"  />
+	   <input type="text" id="ten" class="form-control" placeholder="Tên sản phẩm"  />
     </div>
 	<div class="form-group-sm col-sm-6">
        <label>Giá Nhập <span class="require">(*)</span></label>
-	   <input type="text" class="form-control" placeholder="Giá Nhập"  />
+	   <input type="text" id="gia_nhap" class="form-control" placeholder="Giá Nhập"  />
     </div>
 	<div class="form-group-sm col-sm-6">
        <label>Giá Bán <span class="require">(*)</span></label>
-	   <input type="text" class="form-control" placeholder="Giá Bán"  />
+	   <input type="text" id="gia_ban" class="form-control" placeholder="Giá Bán"  />
     </div>
 	<div class="form-group-sm col-sm-6">
        <label>Giới Thiệu <span class="require">(*)</span></label>
-	   <textarea class="form-control" rows="3"></textarea>
+	   <textarea class="form-control" id="gioithieu" rows="3"></textarea>
     </div>
 	<div class="form-group-sm col-sm-6">
         <label>Danh mục sản phẩm </label>
@@ -55,7 +55,7 @@
     </div>
     <div class="form-group-sm col-sm-6">
         <label>Trạng thái </label>
-        <select class="form-control" id="sel_TRANG_THAI" name="trang_thai">
+        <select class="form-control" id="trangthai" name="trangthai">
             <option value="1">Có Hàng</option>
             <option value="0">Hết Hàng</option>
         </select>
@@ -72,6 +72,7 @@
 <script src="app/DmTraGop/js/DmTraGop.js"></script>
 <script src="app/DmGiaoHang/js/DmGiaoHang.js"></script>
 <script src="app/DmHangSanXuat/js/DmHangSanXuat.js"></script>
+<script src="app/DmDoiTra/js/DmDoiTra.js"></script>
 <script>
 	
 	var SanPham = new ChSanPham('?app=ChSanPham');
@@ -80,6 +81,8 @@
 	var DMGH = new DmGiaoHang('?app=DmGiaoHang');
 	var DMTG = new DmTraGop('?app=DmTraGop');
 	var DMHSX = new DmHangSanXuat('?app=DmHangSanXuat');
+	var DoiTra = new DmDoiTra('?app=DmDoiTra');
+	
 	function DmSanPham_bind(){
 		DMSP.FindAll();
 		var _html='';
@@ -130,7 +133,25 @@
 		$('#id_dm_hang_sanxuat').html(_html);
 	}
 	
+	function DmDoiTra_bind(){
+		DoiTra.FindAll();
+		var _html='';
+		for(var i=0; i< DoiTra.DanhSach.length; i++){
+			var _dong = DoiTra.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_doitra +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_doitra').html(_html);
+	}
+	
 	function Page_init(){
+		
+		DmSanPham_bind();
+		DmBaoHanh_bind();
+		DmGiaoHang_bind();
+		DmTraGop_bind();
+		DmHangSanXuat_bind();
+		DmDoiTra_bind();
+		
 		SanPham.id_sanpham = Util.getParameterByName('id');
 		if(SanPham.id_sanpham==0 || SanPham.id_sanpham==null){
 			$('#ma').val('');
@@ -146,15 +167,17 @@
 			$('#gia_nhap').val(SanPham.gia_nhap);
 			$('#gia_ban').val(SanPham.gia_ban);
 			$('#gioithieu').val(SanPham.gioithieu);
-			$('#trangthai').val(SanPham.trangthai);DmHangSanXuat
+			$('#id_dm_sanpham').val(SanPham.id_dm_sanpham);
+			$('#id_dm_baohanh').val(SanPham.id_dm_baohanh);
+			$('#id_dm_doitra').val(SanPham.id_dm_doitra);
+			$('#id_dm_giaohang').val(SanPham.id_dm_giaohang);
+			$('#id_dm_tragop').val(SanPham.id_dm_tragop);
+			$('#id_dm_hang_sanxuat').val(SanPham.id_dm_hang_sanxuat);
+			$('#trangthai').val(SanPham.trangthai);
 		}
 	
 	
-		DmSanPham_bind();
-		DmBaoHanh_bind();
-		DmGiaoHang_bind();
-		DmTraGop_bind();
-		DmHangSanXuat_bind();
+		
 	}
 	
 	
@@ -168,6 +191,12 @@
 			SanPham.gia_nhap = $('#gia_nhap').val();
 			SanPham.gia_ban = $('#gia_ban').val();
 			SanPham.gioithieu = $('#gioithieu').val();
+			SanPham.id_dm_sanpham = $('#id_dm_sanpham').val();
+			SanPham.id_dm_baohanh = $('#id_dm_baohanh').val();
+			SanPham.id_dm_doitra = $('#id_dm_doitra').val();
+			SanPham.id_dm_giaohang = $('#id_dm_giaohang').val();
+			SanPham.id_dm_tragop = $('#id_dm_tragop').val();
+			SanPham.id_dm_hang_sanxuat = $('#id_dm_hang_sanxuat').val();
 			SanPham.trangthai = $('#trangthai').val();
 			SanPham.Save();
 		})
