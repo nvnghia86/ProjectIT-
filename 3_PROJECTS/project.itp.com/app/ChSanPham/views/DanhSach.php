@@ -84,6 +84,10 @@
 		SanPham.FindAll();
 		DanhSach_bind();
 		Action_filter();
+<<<<<<< HEAD
+		
+=======
+>>>>>>> 096d440fdec11e113ba5383c9e8204425af3730b
 	}
 	
 	function Action_filter(){
@@ -128,7 +132,7 @@
 		DanhSach_phantrang();
 		
 		Page_init();
-		
+		DanhSach_phantrang();
 		// Bắt sự kiện khi ấn nút thêm mới
 		$('#btnThemMoi').on('click',function(){
 			// Hiển thị cửa sổ popup

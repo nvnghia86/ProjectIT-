@@ -17,8 +17,8 @@ var ChKhachHang = function (pAppUrl) {
     // Các phương thức
     // Liệt kê tất cả
     this.FindAll = function () {
-        var _params = {};
-        var _data = {COMMAND: 'p_ch_khachhang_find_all', PARAMS: _params};
+        var _params = {}; console.log(_params);
+        var _data = {COMMAND: 'p_ch_khachhang_find_all', PARAMS: _params}; 
         var _rs = that.CoreData.callDataGet('AjxCallProcGet', _data); /* Get là lấy ra*/
         if (_rs.CODE == 'SUC') {
             that.DanhSach = _rs.DATA;

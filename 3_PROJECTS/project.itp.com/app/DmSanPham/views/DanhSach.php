@@ -81,7 +81,7 @@
 				_trangthai = '<span class="label label-danger">Khóa</span>';
 			}
 			
-			_html +='<tr data-id=>'+ _dong.id_dm_sanpham+'">';
+			_html +='<tr data-id="'+ _dong.id_dm_sanpham+'">';
 			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
 			_html +='	<td>'+ (i+1) +'</td>';
 			_html +='	<td>'+ _dong.ten +'</td>';
@@ -132,9 +132,9 @@
 		});
 		$('#btnSua').on('click',function(){
 			EccDialog.show(
-					'Sửa danh mục sản phẩm',
-					'?app=DmSanPham&view=ChiTiet&layout=popup&id='+SanPham.id_dm_sanpham,'50%','310'
-				);
+				'Sửa danh mục sản phẩm', 
+				'?app=DmSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_dm_sanpham, 
+				'50%', '310');
 		});
 	});
 
