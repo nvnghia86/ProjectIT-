@@ -51,53 +51,18 @@
         </div>
     </div>
 </div>
-<script src="app/ChSanPham/js/ChSanPham.js"></script>
+<script src="app/ChSanPham1/js/ChSanPham1.js"></script>
+
 <script>
+	// Khai báo đối tượng cửa sổ
 	var EccDialog = new ECC_DIALOG(Page_init);
 	var SanPham = new ChSanPham('?app=ChSanPham');
-	
-	function DanhSach_phantrang(){
-		$('#DanhSach').DataTable({
-			"paging": true,
-			"autoWidth": false,
-			"searching": true,
-			"ordering": true,
-			"language": {
-
-				"decimal": "",
-				"emptyTable": "Danh sách trống",
-				"info": "Hiển thị _START_ đến _END_ trong _TOTAL_ kết quả",
-				"infoEmpty": "Showing 0 to 0 of 0 entries",
-				"infoFiltered": "(filtered from _MAX_ total entries)",
-				"infoPostFix": "",
-				"thousands": ",",
-				"lengthMenu": "Hiển thị _MENU_ kết quả",
-				"loadingRecords": "Loading...",
-				"processing": "Processing...",
-				"search": "Tìm kiếm nhanh: ",
-				"zeroRecords": "No matching records found",
-				"paginate": {
-					"first": "Đầu ",
-					"last": "Cuối",
-					"next": "Sau",
-					"previous": "Trước"
-				},
-				"aria": {
-					"sortAscending": ": activate to sort column ascending",
-					"sortDescending": ": activate to sort column descending"
-				}
-			}
-    });
-	
-	}
-
 	
 	function Page_init(){
 		SanPham.id_sanpham=0;
 		SanPham.FindAll();
 		DanhSach_bind();
 		Action_filter();
-		DanhSach_phantrang();
 	}
 	
 	function Action_filter(){
@@ -115,12 +80,11 @@
 		var _html = '';
 		for(var i=0; i< SanPham.DanhSach.length;i++){
 			var _dong = SanPham.DanhSach[i];
-			
 			var _trangthai ='';
 			if(_dong.trangthai=='1'){
-				_trangthai = '<span class="label label-success">Có hàng</span>';
-			}else{
-				_trangthai = '<span class="label label-danger">Hết hàng</span>';
+				_trangthai = '<span class="label label-success">Còn Hàng</span>';
+			}else {
+				_trangthai = '<span class="label label-danger">Hết Hàng</span>';
 			}
 			
 			_html +='<tr data-id="'+ _dong.id_sanpham +'">';
@@ -139,16 +103,16 @@
 		$('#DanhSach > tbody').html(_html);
 	}
 	
-	
 	$(function(){
+		
 		Page_init();
 		
 		// Bắt sự kiện khi ấn nút thêm mới
 		$('#btnThemMoi').on('click',function(){
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
-				'Tạo mới danh mục Sản Phẩm', 
-				'?app=ChSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_sanpham,
+				'Tạo mới danh mục bảo hành', 
+				'?app=ChSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_sanpham, 
 				'90%', '500');
 		});
 		
@@ -179,9 +143,18 @@
 		
 		$('#btnSua').on('click',function(){
 			EccDialog.show(
-				'Sửa danh mục sản phẩm', 
+				'Sửa danh mục bảo hành', 
 				'?app=ChSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_sanpham, 
-				'90%', '500');
+				'50%', '310');
 		});
+		
 	});
+
 </script>
+
+
+
+
+
+
+

@@ -16,6 +16,8 @@ if (!defined('AREA')) {
         <link href="<?php echo AppObject::getBaseFile('skins/cahd_skin/css/admin.css') ?>" rel="stylesheet" media="screen">
         <script type="text/javascript" src="<?php echo AppObject::getBaseFile('libs/jquery/jquery-3.3.1.min.js') ?>"></script>
         <script type="text/javascript" src="<?php echo AppObject::getBaseFile('skins/cahd_skin/assets/js/core/libraries/bootstrap.min.js') ?>"></script>
+		<script type="text/javascript" src="<?= AppObject::getBaseFile('libs/datatable/js/jquery.dataTables.min.js') ?>"></script>
+		<script type="text/javascript" src="<?= AppObject::getBaseFile('libs/datatable/js/dataTables.bootstrap.js') ?>"></script>
         <script src="<?= AppObject::getBaseFile('libs/Cores/CoreUtilities.js') ?>"></script>
         <script src="<?= AppObject::getBaseFile('app/CoreData/js/CoreDataAjax.js') ?>"></script>
         <?php include_once(AppObject::getBaseFile('modules/ecc_dialog/eccdialog.php')); ?>

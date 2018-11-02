@@ -8,7 +8,9 @@
 			<i class="glyphicon glyphicon-refresh"></i> Tải lại
 		</button>
 		<button type="button" class="btn btn-primary btn-xs" id="btnThemMoi">
-		<i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
+		<i class="glyphicon glyphicon-plus"></i> Thêm mới</button> 
+		<button type="button" class="btn btn-warning btn-xs" id="btnSua">
+		<i class="glyphicon glyphicon-edit"></i> Sửa</button> 
 		<button type="button" class="btn btn-danger btn-xs" id="btnXoa">
 			<i class="glyphicon glyphicon-trash"></i> Xóa
 		</button>
@@ -17,16 +19,15 @@
         <div class="row panel panel-primary" id="LIST">
             <div class="panel-heading">Hệ Thống Tài Khoản</div>
             <div class="panel-body">
-                <table class="table table-bordered table-stripped">
+                <table class="table table-bordered table-stripped" id="DanhSach">
 					<thead>
 						<tr>
 							<th><input type="checkbox" id="chkAll" /></th>
 							<th>STT</th>
-							<th> Họ Tên</th>
-							<th> Tên Tài Khoản</th>
-							<th> SĐT</th>
-							<th> Email</th>
-							<th>Vai Trò</th>
+							<th>Tài khoản</th>
+							<th>Họ tên</th>
+							<th>Số Điện thoại</th>
+							<th>Email</th>
 							<th>Trạng thái</th>
 						</tr>
 					</thead>
@@ -34,11 +35,10 @@
 						<tr>
 							<td><input type="checkbox" id="chk_1" /></td>
 							<td>1</td>
-							<td>Nguyễn Ngọc Thủy</td>
-							<td> NgocThuy</td>
-							<td>01689876548</td>
+							<td>ngocthuy</td>
+							<td> nguyễn thu thủy</td>
+							<td>09876789</td>
 							<td>thuy@gmail.com</td>
-							<td>1</td>
 							<td>
 								<span class="label label-success">Sử dụng</span>
 							</td>
@@ -49,20 +49,109 @@
         </div>
     </div>
 </div>
-<script>
-    //khai báo đối tượng cửa sổ- EccDialog để mở trang mới
+<script src="app/HtTaiKhoan/js/HtTaiKhoan.js"></script>
 
-	var EccDialog = new ECC_DIALOG();
+<script>
+	// Khai báo đối tượng cửa sổ
+	var EccDialog = new ECC_DIALOG(Page_init);
+	var TaiKhoan = new HtTaiKhoan('?app=HtTaiKhoan');
+	
+	function Page_init(){
+		TaiKhoan.id_taikhoan=0;
+		TaiKhoan.FindAll();
+		DanhSach_bind();
+		Action_filter();
+	}
+	
+	function Action_filter(){
+		if(TaiKhoan.id_taikhoan != 0){
+			$('#btnSua').show();
+			$('#btnXoa').show();
+		}else{
+			$('#btnSua').hide();
+			$('#btnXoa').hide();
+		}
+	}
+	
+	function DanhSach_bind(){
+		
+		var _html = '';
+		for(var i=0; i< TaiKhoan.DanhSach.length;i++){
+			var _dong = TaiKhoan.DanhSach[i];
+			var _trangthai ='';
+			if(_dong.trangthai=='1'){
+				_trangthai = '<span class="label label-success">Sử dụng</span>';
+			}else {
+				_trangthai = '<span class="label label-danger">Khóa</span>';
+			}
+			
+			_html +='<tr data-id="'+ _dong.id_taikhoan +'">';
+			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
+			_html +='	<td>'+ (i+1) +'</td>';
+			_html +='	<td>'+ _dong.taikhoan +'</td>';
+			_html +='	<td>'+ _dong.hoten +'</td>';
+			_html +='	<td>'+ _dong.sodienthoai +'</td>';
+			_html +='	<td>'+ _dong.email +'</td>';
+			_html +='	<td>';
+			_html += _trangthai;
+			_html +='	</td>';
+			_html +='</tr>';
+		}
+		$('#DanhSach > tbody').html(_html);
+	}
 	
 	$(function(){
+		
+		Page_init();
 		
 		// Bắt sự kiện khi ấn nút thêm mới
 		$('#btnThemMoi').on('click',function(){
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
-				'Tạo mới Hệ Thống Tài Khoản', 
-				'?app=HtTaiKhoan&view=ChiTiet&layout=popup', 
-				'60%', '320');
+				'Tạo mới Tài Khoản', 
+				'?app=HtTaiKhoan&view=ChiTiet&layout=popup&id=' + TaiKhoan.id_taikhoan, 
+				'50%', '310');
 		});
-	});	
+		
+		$('#btnXoa').on('click',function(){
+			var _xacnhan = confirm('Bạn có chắc chắn muốn xóa không?');
+			if(_xacnhan==true){
+				TaiKhoan.Del();
+				Page_init();
+			}
+		});
+		
+		$('#btnTaiLai').on('click',function(){
+			Page_init();
+		});
+		
+		$('#DanhSach').on('click','tr',function(){
+			$('#DanhSach tr').attr('class', '');
+			var _id = $(this).data('id');
+			if(TaiKhoan.id_taikhoan == _id){
+				TaiKhoan.id_taikhoan = 0;
+			}else{
+				$('#DanhSach tr').attr('class', '');
+				TaiKhoan.id_taikhoan = _id;
+				$(this).attr('class', 'row_selected');
+			}
+			Action_filter();
+		});
+		
+		$('#btnSua').on('click',function(){
+			EccDialog.show(
+				'Sửa Tài Khoản', 
+				'?app=HtTaiKhoan&view=ChiTiet&layout=popup&id=' + TaiKhoan.id_taikhoan, 
+				'50%', '310');
+		});
+		
+	});
+
 </script>
+
+
+
+
+
+
+

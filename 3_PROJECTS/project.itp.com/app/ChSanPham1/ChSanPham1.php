@@ -1,6 +1,6 @@
 <?php
 /**
- * App Hệ Thống Tài Khoản
+ * App quản lý danh mục bảo hành
  * Create: 08-10-2017
  * @author Hieubd <buiduchieuvnu@gmail.com>
  * @version 1.0
@@ -14,11 +14,11 @@ if ( !defined('AREA') ) {
 
 ?>
 <?php
-class HtTaiKhoanApp extends AppObject {
-    public $app_name="HtTaiKhoan";
+class ChSanPhamApp extends AppObject {
+    public $app_name="ChSanPham";
     public $dir_layout="cahd_skin"; 
     public $layout="admin";
-    public $page_title = "Hệ Thống Tài Khoản";
+    public $page_title = "Quản lý danh mục bảo hành";
 
     public function __construct() {
         $this->authen();

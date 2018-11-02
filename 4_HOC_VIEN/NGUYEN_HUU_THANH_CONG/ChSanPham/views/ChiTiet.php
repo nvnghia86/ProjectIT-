@@ -2,8 +2,8 @@
 
 <form class="row" style="margin-bottom:5px" id="FORM">
     <div class="form-group-sm col-sm-6">
-       <label>Tên Trả Gop <span class="require">(*)</span></label>
-	   <input type="text" id="ten" class="form-control" placeholder="Tên Trả Gop"  />
+       <label>Tên bảo hành <span class="require">(*)</span></label>
+	   <input type="text" id="ten" class="form-control" placeholder="Tên bảo hành"  />
     </div>
 	<div class="form-group-sm col-sm-6">
        <label>Mô tả <span class="require">(*)</span></label>
@@ -23,34 +23,47 @@
         <button type="button" class="btn btn-warning btn-sm" id="btnSave"><i class="glyphicon glyphicon-save"></i> Lưu</button>
     </div>
 </form>
-<script src="app/DmTraGop/js/DmTraGop.js"></script>
+<script src="app/ChSanPham/js/ChSanPham.js"></script>
 <script>
 	
-	var TraGop = new DmTraGop('?app=DmTraGop');
+	var SanPham = new ChSanPham('?app=ChSanPham');
 	
 	function Page_init(){
-		TraGop.id_dm_tragop = Util.getParameterByName('id');
-		if(TraGop.id_dm_tragop==0 || TraGop.id_dm_tragop==null){
+		SanPham.id_sanpham = Util.getParameterByName('id');
+		if(SanPham.id_sanpham==0 || SanPham.id_sanpham==null){
+			$('#ma').val('');
 			$('#ten').val('');
-			$('#mota').val('');
+			$('#gia_nhap').val('');
+			$('#gia_ban').val('');
+			$('#gioithieu').val('');
 			$('#trangthai').val('1');
 		}else{
-			TraGop.GetById();
-			$('#ten').val(TraGop.ten);
-			$('#mota').val(TraGop.mota);
-			$('#trangthai').val(TraGop.trangthai);
+			SanPham.GetById();
+			$('#ma').val(SanPham.ma);
+			$('#ten').val(SanPham.ten);
+			$('#gia_nhap').val(SanPham.gia_nhap);
+			$('#gia_ban').val(SanPham.gia_ban);
+			$('#gioithieu').val(SanPham.gioithieu);
+			$('#trangthai').val(SanPham.trangthai);
 		}
 	}
+	
+	
+	
+	
 	
 	$(function(){
 		
 		Page_init();
 		
 		$('#btnSave').on('click',function(){
-			TraGop.ten = $('#ten').val();
-			TraGop.mota = $('#mota').val();
-			TraGop.trangthai = $('#trangthai').val();
-			TraGop.Save();
+			BaoHanh.ma = $('#ma').val();
+			BaoHanh.ten = $('#ten').val();
+			BaoHanh.gia_nhap = $('#gia_nhap').val();
+			BaoHanh.gia_ban = $('#gia_ban').val();
+			BaoHanh.gioithieu = $('#gioithieu').val();
+			BaoHanh.trangthai = $('#trangthai').val();
+			BaoHanh.Save();
 		})
 		
 	})
