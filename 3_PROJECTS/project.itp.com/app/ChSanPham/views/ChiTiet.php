@@ -50,7 +50,7 @@
     </div>
 	<div class="form-group-sm col-sm-6">
         <label>Hãng sản xuất </label>
-        <select class="form-control" id="id_dm_hang_sansuat" name="id_dm_hang_sansuat">
+        <select class="form-control" id="id_dm_hang_sanxuat" name="id_dm_hang_sanxuat">
         </select>
     </div>
     <div class="form-group-sm col-sm-6">
@@ -69,12 +69,17 @@
 <script src="app/ChSanPham/js/ChSanPham.js"></script>
 <script src="app/DmSanPham/js/DmSanPham.js"></script>
 <script src="app/DmBaoHanh/js/DmBaoHanh.js"></script>
+<script src="app/DmTraGop/js/DmTraGop.js"></script>
+<script src="app/DmGiaoHang/js/DmGiaoHang.js"></script>
+<script src="app/DmHangSanXuat/js/DmHangSanXuat.js"></script>
 <script>
 	
 	var SanPham = new ChSanPham('?app=ChSanPham');
 	var DMSP = new DmSanPham('?app=DmSanPham');
 	var DMBH = new DmBaoHanh('?app=DmBaoHanh');
-	
+	var DMGH = new DmGiaoHang('?app=DmGiaoHang');
+	var DMTG = new DmTraGop('?app=DmTraGop');
+	var DMHSX = new DmHangSanXuat('?app=DmHangSanXuat');
 	function DmSanPham_bind(){
 		DMSP.FindAll();
 		var _html='';
@@ -95,6 +100,36 @@
 		$('#id_dm_baohanh').html(_html);
 	}
 	
+	function DmGiaoHang_bind(){
+		DMGH.FindAll();
+		var _html='';
+		for(var i=0; i< DMGH.DanhSach.length; i++){
+			var _dong = DMGH.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_giaohang +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_giaohang').html(_html);
+	}
+	
+	function DmTraGop_bind(){
+		DMTG.FindAll();
+		var _html='';
+		for(var i=0; i< DMTG.DanhSach.length; i++){
+			var _dong = DMTG.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_tragop +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_tragop').html(_html);
+	}
+	
+	function DmHangSanXuat_bind(){
+		DMHSX.FindAll();
+		var _html='';
+		for(var i=0; i< DMHSX.DanhSach.length; i++){
+			var _dong = DMHSX.DanhSach[i];
+			_html +='<option value="'+ _dong.id_dm_hang_sanxuat +'">'+ _dong.ten +'</option>';
+		}
+		$('#id_dm_hang_sanxuat').html(_html);
+	}
+	
 	function Page_init(){
 		SanPham.id_sanpham = Util.getParameterByName('id');
 		if(SanPham.id_sanpham==0 || SanPham.id_sanpham==null){
@@ -111,11 +146,15 @@
 			$('#gia_nhap').val(SanPham.gia_nhap);
 			$('#gia_ban').val(SanPham.gia_ban);
 			$('#gioithieu').val(SanPham.gioithieu);
-			$('#trangthai').val(SanPham.trangthai);
+			$('#trangthai').val(SanPham.trangthai);DmHangSanXuat
 		}
-		
+	
+	
 		DmSanPham_bind();
 		DmBaoHanh_bind();
+		DmGiaoHang_bind();
+		DmTraGop_bind();
+		DmHangSanXuat_bind();
 	}
 	
 	
