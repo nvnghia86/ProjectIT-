@@ -47,6 +47,12 @@ var ChSanPham = function(pAppUrl){
 			that.gia_nhap = _chitiet.gia_nhap;
 			that.gia_ban = _chitiet.gia_ban;
 			that.gioithieu = _chitiet.gioithieu;
+			that.id_dm_sanpham = _chitiet.id_dm_sanpham;
+			that.id_dm_baohanh = _chitiet.id_dm_baohanh;
+			that.id_dm_doitra = _chitiet.id_dm_doitra;
+			that.id_dm_giaohang = _chitiet.id_dm_giaohang;
+			that.id_dm_tragop = _chitiet.id_dm_tragop;
+			that.id_dm_hang_sanxuat = _chitiet.id_dm_hang_sanxuat;
 			that.trangthai = _chitiet.trangthai;
 		}else{
 			alert(_rs.MESSAGE);
@@ -61,6 +67,12 @@ var ChSanPham = function(pAppUrl){
 			gia_nhap: that.gia_nhap,
 			gia_ban: that.gia_ban,
 			gioithieu: that.gioithieu,
+			id_dm_sanpham: that.id_dm_sanpham,
+			id_dm_baohanh: that.id_dm_baohanh,
+			id_dm_doitra: that.id_dm_doitra,
+			id_dm_giaohang: that.id_dm_giaohang,
+			id_dm_tragop: that.id_dm_tragop,
+			id_dm_hang_sanxuat: that.id_dm_hang_sanxuat,
 			trangthai: that.trangthai
 		};
         var _data = {COMMAND:'p_ch_sanpham_save', PARAMS:_params};

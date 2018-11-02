@@ -55,7 +55,40 @@
 	// Khai báo đối tượng cửa sổ
 	var EccDialog = new ECC_DIALOG(Page_init);
 	var TaiKhoan = new HtTaiKhoan('?app=HtTaiKhoan');
-	
+	    function DanhSach_phantrang() {
+        tblDanhSach= $('#DanhSach').DataTable({
+            "paging": true,
+            "autoWidth": false,
+            "searching": true,
+            "ordering": true,
+            "language": {
+
+                "decimal": "",
+                "emptyTable": "Danh sách trống",
+                "info": "Hiển thị _START_ đến _END_ trong _TOTAL_ kết quả",
+                "infoEmpty": "Showing 0 to 0 of 0 entries",
+                "infoFiltered": "(filtered from _MAX_ total entries)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Hiển thị _MENU_ kết quả",
+                "loadingRecords": "Loading...",
+                "processing": "Processing...",
+                "search": "Tìm kiếm nhanh: ",
+                "zeroRecords": "No matching records found",
+                "paginate": {
+                    "first": "Đầu ",
+                    "last": "Cuối",
+                    "next": "Sau",
+                    "previous": "Trước"
+                },
+                "aria": {
+                    "sortAscending": ": activate to sort column ascending",
+                    "sortDescending": ": activate to sort column descending"
+                }
+            }
+        });
+
+    }
 	function Page_init(){
 		TaiKhoan.id_taikhoan=0;
 		TaiKhoan.FindAll();
@@ -101,7 +134,7 @@
 	}
 	
 	$(function(){
-		
+		DanhSach_phantrang();
 		Page_init();
 		
 		// Bắt sự kiện khi ấn nút thêm mới
