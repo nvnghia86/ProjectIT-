@@ -20,7 +20,7 @@ var HtTaiKhoan = function(pAppUrl){
 	// Liệt kê tất cả
 	this.FindAll = function(){
 		var _params = {};
-        var _data = {COMMAND:'p_ht_TaiKhoan_find_all', PARAMS:_params};
+        var _data = {COMMAND:'p_ht_taikhoan_find_all', PARAMS:_params};
         var _rs = that.CoreData.callDataGet('AjxCallProcGet', _data);
 		if(_rs.CODE=='SUC'){
 			that.DanhSach = _rs.DATA;
@@ -56,7 +56,7 @@ var HtTaiKhoan = function(pAppUrl){
 			matkhau: this.matkhau,
 			hoten: this.hoten,
 			sodienthoai: this.sodienthoai,
-			email : this.email ,
+			email : this.email,
 			id_vaitro: this.id_vaitro,
 			trangthai: this.trangthai
 		};
@@ -69,7 +69,7 @@ var HtTaiKhoan = function(pAppUrl){
 		var _params = {
 			id_taikhoan: this.id_taikhoan
 		};
-        var _data = {COMMAND:'p_ht_taikhoan_del`', PARAMS:_params};
+        var _data = {COMMAND:'p_ht_taikhoan_del', PARAMS:_params};
         var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
 		alert(_rs.MESSAGE);
 	}
