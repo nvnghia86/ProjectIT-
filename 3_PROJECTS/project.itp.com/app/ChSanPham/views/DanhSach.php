@@ -84,10 +84,6 @@
 		SanPham.FindAll();
 		DanhSach_bind();
 		Action_filter();
-<<<<<<< HEAD
-		
-=======
->>>>>>> 096d440fdec11e113ba5383c9e8204425af3730b
 	}
 	
 	function Action_filter(){
@@ -104,6 +100,7 @@
 		
 		var _html = '';
 		var aRows = [];
+		tblDanhSach.clear().draw();
 		for(var i=0; i< SanPham.DanhSach.length;i++){
 			var _dong = SanPham.DanhSach[i];
 			
@@ -111,7 +108,7 @@
 			if(_dong.trangthai=='1'){
 				_trangthai = '<span data-id="'+ _dong.id_sanpham +'" class="label label-success dong">Có hàng</span>';
 			}else{
-				_trangthai = '<span data-id="'+ _dong.id_sanpham +'" class="label label-danger">Hết hàng</span>';
+				_trangthai = '<span data-id="'+ _dong.id_sanpham +'" class="label label-danger dong">Hết hàng</span>';
 			}
 			 aRows.push([
                 (i + 1),
@@ -132,14 +129,14 @@
 		DanhSach_phantrang();
 		
 		Page_init();
-		DanhSach_phantrang();
+		
 		// Bắt sự kiện khi ấn nút thêm mới
 		$('#btnThemMoi').on('click',function(){
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
 				'Tạo mới danh mục Sản Phẩm', 
-				'?app=ChSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_sanpham,
-				'90%', '500');
+				'?app=ChSanPham&view=ChiTiet1&layout=popup&id=' + SanPham.id_sanpham,
+				'90%', '570');
 		});
 		
 		$('#btnXoa').on('click',function(){
@@ -156,7 +153,7 @@
 		
 		$('#DanhSach').on('click','tr',function(){
 			$('#DanhSach tr').attr('class', '');
-			var _id = $(this).children(".dong").data('id');
+			var _id = $(this).find(".dong").data('id');
 			if(SanPham.id_sanpham == _id){
 				SanPham.id_sanpham = 0;
 			}else{
@@ -170,8 +167,8 @@
 		$('#btnSua').on('click',function(){
 			EccDialog.show(
 				'Sửa danh mục sản phẩm', 
-				'?app=ChSanPham&view=ChiTiet&layout=popup&id=' + SanPham.id_sanpham, 
-				'90%', '500');
+				'?app=ChSanPham&view=ChiTiet1&layout=popup&id=' + SanPham.id_sanpham, 
+				'90%', '570');
 		});
 	});
 </script>

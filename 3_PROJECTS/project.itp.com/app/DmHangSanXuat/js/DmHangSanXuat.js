@@ -64,4 +64,8 @@ var DmHangSanXuat = function(pAppUrl){
         var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
 		alert(_rs.MESSAGE);
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 58fe7c80b60d40cf000420402461ee4579d5afac

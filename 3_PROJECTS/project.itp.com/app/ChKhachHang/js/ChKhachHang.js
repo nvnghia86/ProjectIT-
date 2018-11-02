@@ -17,7 +17,7 @@ var ChKhachHang = function (pAppUrl) {
     // Các phương thức
     // Liệt kê tất cả
     this.FindAll = function () {
-        var _params = {}; console.log(_params);
+        var _params = {};
         var _data = {COMMAND: 'p_ch_khachhang_find_all', PARAMS: _params}; 
         var _rs = that.CoreData.callDataGet('AjxCallProcGet', _data); /* Get là lấy ra*/
         if (_rs.CODE == 'SUC') {
@@ -31,7 +31,6 @@ var ChKhachHang = function (pAppUrl) {
         var _params = {
             id_khachhang: that.id_khachhang
         };
-        console.log(_params);
         var _data = {COMMAND: 'p_ch_khachhang_get_byid', PARAMS: _params};
         var _rs = that.CoreData.callDataGet('AjxCallProcGet', _data);
         if (_rs.CODE == 'SUC') {
@@ -66,7 +65,6 @@ var ChKhachHang = function (pAppUrl) {
         };
 
         var _data = {COMMAND: 'p_ch_khachhang_del', PARAMS: _params};
-        console.log(_data);
         var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data);
         alert(_rs.MESSAGE);
     };
