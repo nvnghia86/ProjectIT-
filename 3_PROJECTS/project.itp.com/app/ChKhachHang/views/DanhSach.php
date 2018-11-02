@@ -47,7 +47,7 @@ if (!defined('AREA')) {
     var KhachHang = new ChKhachHang('?app=ChKhachHang');
 
     function DanhSach_phantrang() {
-        $('#DanhSach').DataTable({
+        tblDanhSach= $('#DanhSach').DataTable({
             "paging": true,
             "autoWidth": false,
             "searching": true,
@@ -86,7 +86,6 @@ if (!defined('AREA')) {
         KhachHang.FindAll();
         DanhSach_bind();
         Action_filter();
-        DanhSach_phantrang();
     }
 
     function Action_filter() {
@@ -98,34 +97,34 @@ if (!defined('AREA')) {
             $('#btnXoa').hide();
         }
     }
-
-    function DanhSach_bind() {
-
-        var _html = '';
-        for (var i = 0; i < KhachHang.DanhSach.length; i++) {
-            var _dong = KhachHang.DanhSach[i];
-            var _trangthai = '';
-            if (_dong.trangthai == '1') {
-                _trangthai = '<span class="label label-success">Sử dụng</span>';
-            } else {
-                _trangthai = '<span class="label label-danger">Khóa</span>';
-            }
-
-            _html += '<tr data-id="' + _dong.id_khachhang + '">';
-            _html += '	<td><input type="checkbox" id="chk_1" /></td>';
-            _html += '	<td>' + (i + 1) + '</td>';
-            _html += '	<td>' + _dong.hoten + '</td>';
-            _html += '	<td>' + _dong.email + '</td>';
-            _html += '	<td>' + _dong.sodienthoai + '</td>';
-            _html += '	<td>';
-            _html += _trangthai;
-            _html += '	</td>';
-            _html += '</tr>';
-        }
-        $('#DanhSach > tbody').html(_html);
-    }
+    
+     function DanhSach_bind(){
+		
+		var _html = '';
+		var aRows = [];
+		for(var i=0; i< KhachHang.DanhSach.length;i++){
+			var _dong = KhachHang.DanhSach[i];
+			
+			var _trangthai ='';
+			if(_dong.trangthai=='1'){
+				_trangthai = '<span data-id="'+ _dong.id_khachhang +'" class="label label-success dong">Kích hoạt</span>';
+			}else{
+				_trangthai = '<span data-id="'+ _dong.id_khachhang +'" class="label label-danger">Khóa</span>';
+			}
+			 aRows.push([
+                (i + 1),
+				_dong.id_khachhang,
+                _dong.hoten,
+                _dong.email,
+                _dong.sodienthoai,
+                 _trangthai
+            ]);
+		}
+		tblDanhSach.rows.add(aRows).draw();
+	}
 
     $(function () {
+        DanhSach_phantrang();
         Page_init();
 
         // Bắt sự kiện khi ấn nút thêm mới
