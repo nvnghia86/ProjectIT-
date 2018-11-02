@@ -1,0 +1,39 @@
+[
+	{
+		"MA":"DIENTHOAI",
+		"TEN":"điện thoại",
+		"MO_TA":"danh mục điện thoại di động",
+		"TRANG_THAI":"sử dụng"
+		
+	},
+	
+	{
+		"MA":"LAPTOP",
+		"TEN":"laptop",
+		"MO_TA":"danh mục điện thoại laptop",
+		"TRANG_THAI":"không"
+		
+	},
+	
+	{
+		"MA":"TABLET",
+		"TEN":"tablet",
+		"MO_TA":"danh mục điện thoại tablet",
+		"TRANG_THAI":"sử dụng"
+		
+	},
+	{
+		"MA":"PHUKIEN",
+		"TEN":"phụ kiện",
+		"MO_TA":"danh mục điện thoại phụ kiện",
+		"TRANG_THAI":"không"
+		
+	},
+		{
+		"MA":"KHUYENMAI",
+		"TEN":"khuyến mại",
+		"MO_TA":"danh mục điện thoại khuyến mại",
+		"TRANG_THAI":"sử dụng"
+		
+	}
+]
