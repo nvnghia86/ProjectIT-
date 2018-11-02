@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	function ptb2()
+	{
+		var a=prompt('mời bạn nhập số a bất kỳ:');
+		var b=prompt('mời bạn nhập số b bất kỳ:');
+		var c=prompt('mời bạn nhập số c bất kỳ:');
+		var delta=b*b-4*a*c;
+		var x1; var x2;
+		if(delta<0)
+		{
+			document.getElementById('ketqua').innerHTML=('Phương trinh vô nghiệm');
+		}
+		else if(delta>0)
+		{
+			 x1=(-b-Math.sqrt(delta)/(2*a));
+			 x2=(-b+Math.sqrt(delta)/(2*a));
+			document.getElementById('ketqua').innerHTML=('Phương trình có hai nghiệm là x1=' + x1 + 'và x2=' + x2 );
+		}
+		else 
+		{
+			x1= x2=-b/2*a;
+			document.getElementById('ketqua').innerHTML=('Phương trình có nghiệm kép x1=x2=' + x1);
+		}
+
+	}
+	</script>
+</head>
+<body>
+	<button type="button" onclick="ptb2();">Giải phương trình bậc 2</button>
+	<br><br>
+	<lable id="ketqua">Kết quả</lable>
+</body>
+</html>

@@ -1,0 +1,34 @@
+var account =function()
+{
+	var DS_TAIKHOAN=[];
+	this.TAI_KHOAN='';
+	this.MAT_KHAU='';
+	this.VAI_TRO='';
+	this.EMAIL='';
+	this.AVATAR='';
+	this.dangnhap=function()
+	
+	{
+		localStorage.setItem('acc',null);
+		
+		var hople=false;
+		for(var i=0;i<this.DS_TAIKHOAN.length;i++){
+				var tk=this.DS_TAIKHOAN[i];
+			if(this.TAI_KHOAN==tk.TAI_KHOAN && this.MAT_KHAU==tk.MAT_KHAU)
+			{
+				hople=true;
+				this.VAI_TRO=tk.VAI_TRO;
+				localStorage.setItem('acc',JSON.stringify(tk));
+			}
+			
+		}
+		if(hople)
+		{
+			alert('đăng nhập thành công!Xin chào:' + this.VAI_TRO);
+			document.location.href='danhmuc_sanpham.html';
+		}
+		else{
+			alert('tài khoản và mật khẩu không hợp lệ!');
+		}
+	}
+}

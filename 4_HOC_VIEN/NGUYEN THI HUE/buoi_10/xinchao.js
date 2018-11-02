@@ -1,0 +1,4 @@
+function xinchao()
+{
+	alert('xinchao');
+}
