@@ -123,32 +123,6 @@ if (!defined('AREA')) {
 		tblDanhSach.rows.add(aRows).draw();
 	}
 
-    /*function DanhSach_bind() {
-
-        var _html = '';
-        for (var i = 0; i < KhachHang.DanhSach.length; i++) {
-            var _dong = KhachHang.DanhSach[i];
-            var _trangthai = '';
-            if (_dong.trangthai == '1') {
-                _trangthai = '<span class="label label-success">Sử dụng</span>';
-            } else {
-                _trangthai = '<span class="label label-danger">Khóa</span>';
-            }
-
-            _html += '<tr data-id="' + _dong.id_khachhang + '">';
-            _html += '	<td><input type="checkbox" id="chk_1" /></td>';
-            _html += '	<td>' + (i + 1) + '</td>';
-            _html += '	<td>' + _dong.hoten + '</td>';
-            _html += '	<td>' + _dong.email + '</td>';
-            _html += '	<td>' + _dong.sodienthoai + '</td>';
-            _html += '	<td>';
-            _html += _trangthai;
-            _html += '	</td>';
-            _html += '</tr>';
-        }
-        $('#DanhSach > tbody').html(_html);
-    }*/
-
     $(function () {
         DanhSach_phantrang();
         Page_init();
