@@ -50,7 +50,6 @@
 			"searching": true,
 			"ordering": true,
 			"language": {
-
 				"decimal": "",
 				"emptyTable": "Danh sách trống",
 				"info": "Hiển thị _START_ đến _END_ trong _TOTAL_ kết quả",
