@@ -1,4 +1,5 @@
-<?php if (!defined('AREA')) {
+<?php if (!defined('AREA')) 
+{
     die('Access denied');
 } ?>
 

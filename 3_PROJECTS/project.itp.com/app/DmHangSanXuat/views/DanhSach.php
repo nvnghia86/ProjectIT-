@@ -74,7 +74,6 @@
 		var _html = '';
 		for(var i=0; i< HangSanXuat.DanhSach.length;i++){
 			var _dong = HangSanXuat.DanhSach[i];
-			
 			var _trangthai ='';
 			if(_dong.trangthai=='1'){
 				_trangthai = '<span class="label label-success">Sử dụng</span>';
@@ -132,3 +131,4 @@
 				'?app=DmHangSanXuat&view=ChiTiet&layout=popup&id='+HangSanXuat.id_dm_hang_sanxuat,'50%','300');
 		});
 	});
+</script>
