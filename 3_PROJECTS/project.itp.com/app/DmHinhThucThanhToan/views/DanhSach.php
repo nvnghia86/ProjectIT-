@@ -74,7 +74,7 @@
 	
 	}
 
-	
+	function Page(){}
 	function Page_init(){
 		HinhThucThanhToan.id_dm_hinhthuc_thanhtoan=0;
 		HinhThucThanhToan.FindAll();
@@ -116,7 +116,6 @@
 		}
 		tblDanhSach.rows.add(aRows).draw();
 	}
-	
 	
 	$(function(){
 		DanhSach_phantrang();
