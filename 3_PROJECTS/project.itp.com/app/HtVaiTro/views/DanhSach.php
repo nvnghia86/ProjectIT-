@@ -9,6 +9,8 @@
 		</button>
 		<button type="button" class="btn btn-primary btn-xs" id="btnThemMoi">
 		<i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
+		<button type="button" class="btn btn-warning btn-xs" id="btnSua">
+		<i class="glyphicon glyphicon-edit"></i> Sửa</button>
 		<button type="button" class="btn btn-danger btn-xs" id="btnXoa">
 			<i class="glyphicon glyphicon-trash"></i> Xóa
 		</button>
@@ -17,7 +19,7 @@
         <div class="row panel panel-primary" id="LIST">
             <div class="panel-heading">Danh sách Vai Trò</div>
             <div class="panel-body">
-                <table class="table table-bordered table-stripped">
+                <table class="table table-bordered table-stripped" id="DanhSach">
 					<thead>
 						<tr>
 							<th><input type="checkbox" id="chkAll" /></th>
@@ -42,18 +44,102 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-    	var EccDiaLog = new ECC_DIALOG();
-    	$(function(){
-    		//Bắt sự kiện khi ấn nút thêm mới
-    		$('#btnThemMoi').on('click',function(){
-    			//Hiển thị cửa sổ popup
-    			EccDiaLog.show(
-    				'Tạo mới danh mục vai trò',
-    				'?app=HtVaiTro&view=ChiTiet&layout=popup',
-              		'50%','300'	);
-    		});
-    	});
+   <script src="app/HtVaiTro/js/HtVaiTro.js"></script>
+<script>
+	// Khai báo đối tượng cửa sổ
+	var EccDialog = new ECC_DIALOG(Page_init);
+	var VaiTro = new HtVaiTro('?app=HtVaiTro');
+	
+	function Page_init(){
+		VaiTro.id_vaitro=0;
+		VaiTro.FindAll();
+		DanhSach_bind();
+		Action_filter();
+	}
+	
+	function Action_filter(){
+		if(VaiTro.id_vaitro != 0){
+			$('#btnSua').show();
+			$('#btnXoa').show();
+		}else{
+			$('#btnSua').hide();
+			$('#btnXoa').hide();
+		}
+	}
+	
+	function DanhSach_bind(){
+		
+		var _html = '';
+		for(var i=0; i< VaiTro.DanhSach.length;i++){
+			var _dong = VaiTro.DanhSach[i];
+			
+			var _trangthai ='';
+			if(_dong.trangthai=='1'){
+				_trangthai = '<span class="label label-success">Sử dụng</span>';
+			}else{
+				_trangthai = '<span class="label label-danger">Khóa</span>';
+			}
+			
+			_html +='<tr data-id="'+ _dong.id_vaitro +'">';
+			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
+			_html +='	<td>'+ (i+1) +'</td>';
+			_html +='	<td>'+ _dong.ten +'</td>';
+			_html +='	<td>'+ _dong.mota +'</td>';
+			_html +='	<td>';
+			_html += _trangthai;
+			_html +='	</td>';
+			_html +='</tr>';
+		}
+		$('#DanhSach > tbody').html(_html);
+	}
+	
+	$(function(){
+		
+		Page_init();
+		
+		// Bắt sự kiện khi ấn nút thêm mới
+		$('#btnThemMoi').on('click',function(){
+			// Hiển thị cửa sổ popup
+			EccDialog.show(
+				'Tạo mới danh mục vai trò', 
+				'?app=HtVaiTro&view=ChiTiet&layout=popup&id=' + VaiTro.id_vaitro, 
+				'50%', '310');
+		});
+		
+		
+		$('#btnXoa').on('click',function(){
+			var _xacnhan = confirm('Bạn có chắc chắn muốn xóa không?');
+			if(_xacnhan==true){
+				VaiTro.Del();
+				Page_init();
+			}
+		});
+		
+		$('#btnTaiLai').on('click',function(){
+			Page_init();
+		});
+		
+		$('#DanhSach').on('click','tr',function(){
+			$('#DanhSach tr').attr('class', '');
+			var _id = $(this).data('id');
+			if(VaiTro.id_vaitro == _id){
+				VaiTro.id_vaitro = 0;
+			}else{
+				$('#DanhSach tr').attr('class', '');
+				VaiTro.id_vaitro = _id;
+				$(this).attr('class', 'row_selected');
+			}
+			Action_filter();
+		});
+		
+		$('#btnSua').on('click',function(){
+			EccDialog.show(
+				'Tạo mới danh mục vai trò', 
+				'?app=HtVaiTro&view=ChiTiet&layout=popup&id=' + VaiTro.id_vaitro, 
+				'50%', '310');
+		});
+		
+	});
 
-    </script>
+</script>
 

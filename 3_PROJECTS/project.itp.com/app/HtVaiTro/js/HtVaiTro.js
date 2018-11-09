@@ -1,4 +1,4 @@
-var HtTaiKhoan = function(pAppUrl){
+var HtVaiTro = function(pAppUrl){
 	// Thuộc tính bắt buộc
 	this.AppURL = pAppUrl;
 	this.CoreData = new CoreDataAjax();
@@ -45,7 +45,6 @@ var HtTaiKhoan = function(pAppUrl){
 		var _params = {
 			id_vaitro: this.id_vaitro,
 			ten: this.ten,
-			matkhau: this.matkhau,
 			mota: this.mota,
 			trangthai: this.trangthai
 		};
@@ -58,7 +57,7 @@ var HtTaiKhoan = function(pAppUrl){
 		var _params = {
 			id_vaitro: this.id_vaitro
 		};
-               
+   
         var _data = {COMMAND:'p_ht_vaitro_del`', PARAMS:_params};
         var _rs = that.CoreData.callDataGet('AjxCallProcSet', _data); console.log(_rs);
 		alert(_rs.MESSAGE);
