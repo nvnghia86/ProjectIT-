@@ -102,6 +102,7 @@ if (!defined('AREA')) {
 		
 		var _html = '';
 		var aRows = [];
+                tblDanhSach.clear().draw(); //Dòng thêm vào
 		for(var i=0; i< KhachHang.DanhSach.length;i++){
 			var _dong = KhachHang.DanhSach[i];
 			
@@ -150,7 +151,8 @@ if (!defined('AREA')) {
 
         $('#DanhSach').on('click', 'tr', function () {
             $('#DanhSach tr').attr('class', '');
-            var _id = $(this).data('id');
+            //thay dòng bên dưới:  var _id = $(this).data('id');
+            var _id = $(this).find(".dong").data('id');
             if (KhachHang.id_khachhang == _id) {
                 KhachHang.id_khachhang = 0;
             } else {
