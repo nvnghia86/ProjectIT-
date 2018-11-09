@@ -14,4 +14,4 @@ require dirname(__FILE__) . '/init.php'; // file chứa các định nghĩa thô
 
 // Chạy module chính
 //System::dispatch("trangchu",false);
-System::dispatch("main",true);
+System::dispatch("TrangChu",true);
