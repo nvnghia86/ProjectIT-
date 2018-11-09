@@ -65,3 +65,4 @@ var DmHangSanXuat = function(pAppUrl){
 		alert(_rs.MESSAGE);
 	}
 }
+

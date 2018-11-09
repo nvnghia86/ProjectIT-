@@ -41,6 +41,21 @@ var DmHinhThucThanhToan = function(pAppUrl){
 			alert(_rs.MESSAGE);
 		}
 	}
+	this.GetById = function(){
+		var _params = {
+			ten: that.ten
+		};
+        var _data = {COMMAND:'p_ch_dm_hinhthuc_thanhtoan_find_key', PARAMS:_params};
+        var _rs = that.CoreData.callDataGet('AjxCallProcGet', _data);
+		if(_rs.CODE=='SUC'){
+			var _chitiet = _rs.DATA[0];
+			that.ten = _chitiet.ten;
+			that.mota = _chitiet.mota;
+			that.trangthai = _chitiet.trangthai;
+		}else{
+			alert(_rs.MESSAGE);
+		}
+	}
 	this.Save = function(){
 		var _params = {
 			id_dm_hinhthuc_thanhtoan: this.id_dm_hinhthuc_thanhtoan,
