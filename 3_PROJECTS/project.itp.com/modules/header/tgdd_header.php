@@ -1,3 +1,14 @@
+<?php 
+
+$DB = new MySQLHelper();
+$_rs = $DB->callProcedure('p_ht_dm_menu_find_all');
+//echo "<pre>";
+//print_r($_rs);
+
+?>
+
+
+
 <div class="wrapper">
 	<div id="logo"></div>
 	<div id="search">
@@ -5,38 +16,15 @@
 		<i class="search-icon"></i>
 	</div>
 	<ul id="main-menu">
+		<?php
+			for($i=0; $i< count($_rs); $i++){
+				$item = $_rs[$i];
+		?>
 		<li>
-			<i class="icon dt"></i>
-			Điện thoại
+			<i class="<?=$item['icon']?>"></i>
+			<?=$item['tieude']?>
 		</li>
-		<li>
-			<i class="icon tb"></i>
-			Tablet
-		</li>
-		<li>
-			<i class="icon lt"></i>
-			Laptop
-		</li>
-		<li>
-			<i class="icon pk"></i>
-			Phụ kiện
-		</li>
-		<li>
-			<i class="icon cu"></i>
-			Cũ giá rẻ
-		</li>
-		<li>
-			<i class="icon km"></i>
-			Khuyến mãi
-		</li>
-		<li>
-			<i class="icon cn"></i>
-			Công nghệ
-		</li>
-		<li>
-			<i class="icon hd"></i>
-			Hỏi đáp
-		</li>
+		<?php } ?>
 		<li class="simso">Sim số <br/> Thẻ cào</li>
 		<li class="thecao">Đóng tiền điện, nước trả góp</li>
 	</ul>
