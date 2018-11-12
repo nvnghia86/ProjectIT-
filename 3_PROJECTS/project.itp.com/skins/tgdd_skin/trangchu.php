@@ -18,66 +18,7 @@
 				</div>
 			</div>
 			<div class="giasoc-cuoituan">
-				<div class="sanpham">
-				<a href="#">
-					<img src="skins/tgdd_skin/images/product/dt1.jpg" />
-					<label class="giamgia"> GIẢM 1.0000.000 đ</label>
-					<h3>OPPO F7</h3>
-					<p class="gia" >7.990.000đ</p>
-					<div class="khuyenmai">
-						<img src="skins/tgdd_skin/images/product/km1.jpg" />
-						<p>Bình giữ nhiệt inox DMX-002 500ml khi mua online</p>
-					</div>
-				</a>
-				</div>
-				<div class="sanpham">
-				<a href="#">
-					<img src="skins/tgdd_skin/images/product/dt2.jpg" />
-					<label class="giamgia"> GIẢM 1.0000.000 đ</label>
-					<h3>OPPO F7</h3>
-					<p class="gia" >7.990.000đ</p>
-					<div class="khuyenmai">
-						<img src="skins/tgdd_skin/images/product/km1.jpg" />
-						<p>Bình giữ nhiệt inox DMX-002 500ml khi mua online</p>
-					</div>
-				</a>
-				</div>
-				<div class="sanpham">
-				<a href="#">
-					<img src="skins/tgdd_skin/images/product/dt3.jpg" />
-					<label class="giamgia"> GIẢM 1.0000.000 đ</label>
-					<h3>OPPO F7</h3>
-					<p class="gia" >7.990.000đ</p>
-					<div class="khuyenmai">
-						<img src="skins/tgdd_skin/images/product/km1.jpg" />
-						<p>Bình giữ nhiệt inox DMX-002 500ml khi mua online</p>
-					</div>
-				</a>
-				</div>
-				<div class="sanpham">
-				<a href="#">
-					<img src="skins/tgdd_skin/images/product/dt4.jpg" />
-					<label class="giamgia"> GIẢM 1.0000.000 đ</label>
-					<h3>OPPO F7</h3>
-					<p class="gia" >7.990.000đ</p>
-					<div class="khuyenmai">
-						<img src="skins/tgdd_skin/images/product/km1.jpg" />
-						<p>Bình giữ nhiệt inox DMX-002 500ml khi mua online</p>
-					</div>
-				</a>
-				</div>
-				<div class="sanpham">
-				<a href="#">
-					<img src="skins/tgdd_skin/images/product/dt5.jpg" />
-					<label class="giamgia"> GIẢM 1.0000.000 đ</label>
-					<h3>OPPO F7</h3>
-					<p class="gia" >7.990.000đ</p>
-					<div class="khuyenmai">
-						<img src="skins/tgdd_skin/images/product/km1.jpg" />
-						<p>Bình giữ nhiệt inox DMX-002 500ml khi mua online</p>
-					</div>
-				</a>
-				</div>
+				<?php include('modules/sanpham/mod_sanpham_giasoc.php') ?>
 			</div>	
 			<div class="product-cat">
 				<div class="tieu-de">
