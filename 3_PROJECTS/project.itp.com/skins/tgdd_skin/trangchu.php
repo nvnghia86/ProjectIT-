@@ -2,6 +2,9 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Trang chủ | Thế giới di động</title>
+		<link href="<?php echo AppObject::getBaseFile('skins/cahd_skin/assets/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="<?php echo AppObject::getBaseFile('libs/jquery/jquery-3.3.1.min.js') ?>"></script>
+        <script type="text/javascript" src="<?php echo AppObject::getBaseFile('skins/cahd_skin/assets/js/core/libraries/bootstrap.min.js') ?>"></script>
 		<link rel="stylesheet" href="skins/tgdd_skin/css/style.css" />
 	</head>
 	<body>
@@ -21,176 +24,10 @@
 				<?php include('modules/sanpham/mod_sanpham_giasoc.php') ?>
 			</div>	
 			<div class="product-cat">
-				<div class="tieu-de">
-					<h2>ĐIỆN THOẠI NỔI BẬT NHẤT</h2>
-					<div class="ds-danhmuc">
-						<a href="#">Apple Iphone</a>
-						<a href="#">Samsung</a>
-						<a href="#">Màn hình viền</a>
-						<a href="#">Giá từ 3-5 triệu</a>
-						<a href="#">Trả góp 0%</a>
-						<a href="#">Xem tất cả 174 điện thoại</a>
-					</div>
-				</div>
-				<ul class="ds-sanpham">
-					<li class="sp-tieubieu">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt-tieubieu-1.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">Dự kiến: 24.000.000đ</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt1.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt2.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt3.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-tieubieu">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt-tieubieu-1.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">Dự kiến: 24.000.000đ</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt1.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt2.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt3.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-				</ul>
-			
+				<?php include('modules/sanpham/mod_dienthoai_noibat.php') ?>
 			</div>
 			<div class="product-cat">
-				<div class="tieu-de">
-					<h2>MÁY TÍNH BẢNG NỔI BẬT NHẤT</h2>
-					<div class="ds-danhmuc">
-						<a href="#">Apple Iphone</a>
-						<a href="#">Samsung</a>
-						<a href="#">Màn hình viền</a>
-						<a href="#">Giá từ 3-5 triệu</a>
-						<a href="#">Trả góp 0%</a>
-						<a href="#">Xem tất cả 174 điện thoại</a>
-					</div>
-				</div>
-				<ul class="ds-sanpham">
-					<li class="sp-tieubieu">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt-tieubieu-1.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">Dự kiến: 24.000.000đ</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt1.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt2.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt3.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-tieubieu">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt-tieubieu-1.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">Dự kiến: 24.000.000đ</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt1.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt2.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt3.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-				</ul>
-			
+				<?php include('modules/sanpham/mod_mtb_noibat.php') ?>
 			</div>
 			
 			<div class="product-cat">
