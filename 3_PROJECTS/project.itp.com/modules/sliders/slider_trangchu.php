@@ -1,26 +1,48 @@
-<img class="slider-images" src="skins/tgdd_skin/images/slider1.png" />
-<ul class="slider-items">
-	<li>
-		<a href="#">Đặt Trước Huawei Nova 3i Nhận Quà 1.2 Triệu <i class="item-border"></i></a>
-		
-	</li>
-	<li>
-		<a href="#">Galaxy A6+ Giá Mới 8.290.000đ</a>
-		<i class="item-border"></i>
-	</li>
-	<li>
-		<a href="#">Độc Quyền Nokia 3.1</a>
-		<i class="item-border"></i>
-	</li>
-	<li>
-		<a href="#">Trả Góp 0%, Trúng Vespa OPPO Ưu Đãi</a>
-		<i class="item-border"></i>
-	</li>
-	<li>
-		<a href="#">Loa Vi Tính Đồng Loạt Giảm 20%</a>
-	</li>
-</ul>
-<div class="controls">
-	<div class="btn btn-prev"><</div>
-	<div class="btn btn-next">></div>
-</div>
+<?php
+$DB = new MySQLHelper();
+$data = $DB->callProcedure('p_ch_dm_slider_find_vitri(?)',['trangchu']);
+//echo "<pre>";
+//print_r($data);
+?>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+	  <?php
+		for($i=0; $i< count($data);$i++){
+			$dong = $data[$i];
+	  ?>
+      <li data-target="#myCarousel" data-slide-to="<?=$i?>" class="active"></li>
+	  <?php
+		}
+	  ?>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+	   <?php
+		for($i=0; $i< count($data);$i++){
+			$dong = $data[$i];
+	  ?>
+      <div class="item <?=$i==0?"active":""?>">
+        <img src="media/upload_tgdd/slider/<?=$dong['image_url']?>"  style="width:100%;">
+		<div class="carousel-caption">
+          <h3><?=$dong['tieude']?></h3>
+          <p></p>
+        </div>
+      </div>
+	 <?php
+		}
+	  ?>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>

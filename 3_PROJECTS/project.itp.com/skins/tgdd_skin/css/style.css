@@ -160,6 +160,7 @@ a{
 
 #content #line-1 #slider{
 	width: 790px;
+	height:296px;
 	float:left;
 	position: relative;
 	overflow:hidden;
@@ -241,7 +242,7 @@ a{
 	height: 300px;
 	width: 400px;
 	float:left;
-	margin: 10px 0px 10px 10px;
+	margin: 0px 0px 0px 10px;
 }
 
 #content #line-1 #adv-1 h3{
@@ -251,6 +252,7 @@ a{
 	background: #FFF;
 	height: 30px;
 	border-bottom: #F0F0F0 1px solid;
+	font-size:13px;
 }
 
 #content #line-1 #adv-1 h3 span{
@@ -261,7 +263,7 @@ a{
 }
 
 #content #line-1 #adv-1 .tin-tieudiem{
-	width: 390px;
+	width: 400px;
 	float:left;
 	background: #FFF;
 	padding: 10px 5px;
@@ -269,13 +271,14 @@ a{
 
 #content #line-1 #adv-1 ul.anh-quangcao{
 	list-style-type: none;
-	margin-top: 10px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	width: 400px;
 	float:left;
 }
 
 #content #line-1 #adv-1 ul.anh-quangcao li{
-	padding-bottom: 10px;;
+	padding-bottom: 2px;;
 }
 
 #content #line-1 #adv-1 ul.anh-quangcao li img{
@@ -296,11 +299,9 @@ a{
 	width: 1200px;
 	float:left;
 	background:  #FFF;
-	margin-top: 30px;
 	border: 1px solid #ff4d00;
-    margin-top: 30px;
+    margin-top: 10px;
     overflow: visible;
-    padding-top: 20px;
 	position:relative;
 
 }
@@ -379,9 +380,13 @@ a{
 	border-bottom: 1px solid #F0F0F0;
 }
 #content .product-cat .tieu-de h2{
-	padding: 10px 20px;
-	width: 350px;
-	float:left;
+	padding: 1px 13px;
+    width: 350px;
+    float: left;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: blueviolet;
 }
 
 #content .product-cat .tieu-de .ds-danhmuc{
@@ -420,8 +425,8 @@ a{
 
 #content .product-cat ul.ds-sanpham  li.sp-tieubieu img {
     width: 480px;
-    height: 222px;
-    margin: 0 0 14px;
+    height: 188px;
+    margin: 5px 0 14px;
 }
 
 
@@ -538,3 +543,20 @@ a{
 	float:left;
 	margin: 10px;
 }
+
+#adv-1 h3{
+	margin-top: 0px;
+	margin-bottom:2px;
+}
+
+h2.tieude-giasoc{
+	margin: 0px 9px;
+    font-weight: bold;
+    color: red;
+	border-bottom: red 1px solid;
+}
+
+
+
+
+

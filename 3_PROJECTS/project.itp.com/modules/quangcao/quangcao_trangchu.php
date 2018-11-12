@@ -6,5 +6,4 @@
 </div>
 <ul class="anh-quangcao">
 	<li><a href="#"><img src="skins/tgdd_skin/images/adv/adv1.png" /></a></li>
-	<li><a href="#"><img src="skins/tgdd_skin/images/adv/adv2.png" /></a></li>
 </ul>
