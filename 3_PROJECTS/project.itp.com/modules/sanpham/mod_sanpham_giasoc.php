@@ -4,7 +4,7 @@ $data = $DB->callProcedure('p_ch_sanpham_find_giasoc');
 //echo "<pre>";
 //print_r($data);
 ?>
-
+<h2 class="tieude-giasoc">Giá sốc cuối tuần</h2>
 <?php
 for($i=0; $i< count($data);$i++){
 	$dong = $data[$i];
