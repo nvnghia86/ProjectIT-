@@ -144,7 +144,7 @@ a{
 #header ul#main-menu li.simso,li.thecao{
 	text-transform: none !important;
 	padding: 5px 5px;
-	font-size:13px !important;
+	font-size:12.5px !important;
 	height:45px !important;
 }
 
@@ -524,6 +524,346 @@ a{
 	margin: 5px;
 }
 
+#content #thongtin-sp{
+	height:40px;
+	/*background-color:red;*/
+	width:1200px;
+	float:left;
+}
+
+#content #thongtin-sp .breakcrumb{
+	list-style: none;
+	display: block;
+    overflow: hidden;
+    margin: 0;
+    line-height: 32px;
+    padding-top: 5px;
+}
+
+#content #thongtin-sp .breakcrumb li{
+	display:inline-block;
+}
+
+#content #thongtin-sp .breakcrumb li a{
+    white-space: nowrap;
+    font-size: 15px;
+    padding: 0 10px 0 0;
+}
+
+#content #thongtin-sp .breakcrumb span{
+    font-size: 20px;
+    color: #999;
+    padding: 2px 5px 0 0;
+    line-height: 1;
+}
+#content #row-top{
+	display:block;
+	width:1200px;
+
+}
+
+#content #row-top #rating-result{
+    float: left;
+    font-size: 14px;
+    color: #288ad6;
+    margin-left:10px;
+}
+
+#content #row-top #rating-result span.star{
+	display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+	background-image: url('../images/icondesktop@1x.png');
+	background-repeat:no-repeat;
+	width:12px;
+	height:12px;
+}
+
+#content #row-top #rating-result span.full-star{
+	background-position: -295px -30px;
+}
+
+#content #row-top #rating-result span.half-star{
+	background-position: -423px -30px;
+}
+#content #row-top #rating-result span.empty-star{
+	background-position: -310px -30px;
+}
+
+#content #row-top #like-share{
+	
+}
+
+#content #row-detail{
+	
+	border-top: 2px solid black;
+    display: block;
+    border-top: 1px solid #e5e5e5;
+    padding: 15px 0;
+    margin-top: 15px;
+    clear: both;
+	float:left;
+
+}
+#content #row-detail #col-1{
+	width:500px;
+	height:620px;
+	/*background-color:blue;*/
+	float:left;
+}
+
+#content #row-detail #col-2{
+	width:370px;
+	height:620px;
+	/*background-color:red;*/
+	float:left;
+}
+
+#content #row-detail #col-2 .gia {
+    display: inline-block;
+    vertical-align: middle;
+
+    font-size: 25px;
+	font-weight:bold;
+    color: #e10c00;
+    line-height: 15px;
+}
+
+#content #row-detail #col-2 label.tragop {
+    top: 140px;
+    background: #f28902;
+    color: #FFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#content #row-detail #col-2 .tsh{
+	background-color: #ecf7ed;
+    border-radius: 3px;
+    border: solid 1px #c4ddc8;
+    margin: 15px 0px;
+    font-weight: bold;
+    line-height: 30px;
+	width:350px;
+}
+
+#content #row-detail #col-2 .tsh:before {
+    content: '';
+    background: url(../images/nhan-hang-1-gio@2x.png);
+    width: 19px;
+    height: 21px;
+    background-size: 19px 21px;
+    margin-right: 10px;
+    float: left;
+    margin: 3px 10px;
+}
+
+#content #row-detail #col-2 .area_promotion {
+    display: block;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    position: relative;
+    margin:10px 0px;
+    background: #fff;
+    padding-bottom: 10px;
+	width:350px;
+	height:240px;
+	float:left;
+}
+
+#content #row-detail #col-2 .area_promotion strong {
+    display: block;
+    overflow: hidden;
+    font-size: 15px;
+    color: #333;
+    padding: 15px 15px 10px 15px;
+    text-transform: uppercase;
+}
+
+#content #row-detail #col-2 #infopr{
+		float:left;
+		margin-left:20px;
+}
+
+#content #row-detail #col-2 #infopr span:before{
+    content: '';
+    margin-left: -20px;
+    background: url(../images/check@2x.png);
+    width: 14px;
+    height: 14px;
+    background-size: 14px 14px;
+    margin-right: 0;
+    float: left;
+    margin-top: 2px;
+}
+
+#content #row-detail #col-2 #infopr .inf{
+	float:left;
+	margin-left:10px;
+}
+
+#content #row-detail #col-2 .area_promotion .onlinepromo {
+    border: #d0021b solid 1px;
+    border-radius: 4px;
+    padding: 20px 0 10px;
+    position: relative;
+    overflow: visible;
+    margin:  20px 0px;
+	float:left;
+	width:348px;
+
+}
+
+#content #row-detail #col-2 .area_promotion .onlinepromo b {
+    background: #ec1933;
+    border-radius: 13px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    position: absolute;
+    top: -13px;
+    left: 10px;
+    vertical-align: middle;
+    line-height: 26px;
+    clear: both;
+    padding: 0 15px 0 30px;
+}
+
+#content #row-detail #col-2 .area_promotion .onlinepromo .pro-img{
+	
+}
+
+#content #row-detail #col-2 .area_promotion .onlinepromo b:before {
+    content: '';
+    background: url(../images/icon-qua-tang@2x.png);
+    width: 16px;
+    height: 15px;
+    background-size: 16px 15px;
+    float: left;
+    margin: 5px -20px;
+}
+
+#content #row-detail #col-2 .area_promotion .onlinepromo ul{
+	list-style:none;
+}
+
+#content #row-detail #col-2 .area_promotion .onlinepromo .pro-img ul li label img {
+    display: block;
+    width: 50px;
+    float: left;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0 10px 0 15px;
+    cursor: pointer;
+}
+#content #row-detail #col-2 .area_promotion .onlinepromo .pro-img .prmImg{
+	margin-top:-5px;
+}
+
+#content #row-detail #col-2 .area_promotion .onlinepromo .pro-img .pro-img ul li label h3 {
+    display: flex;
+    align-items: center;
+    height: auto;
+    min-height: 50px;
+    font-size: 14px;
+    padding-right: 15px;
+    line-height: 20px;
+    float: left;
+    width: calc(100% - 100px);
+}
+
+#content #row-detail #col-2 #form-thanh-toan{
+	width:350px;
+	height:100px;
+	float:left;
+}
+
+#content #row-detail #col-2 #form-thanh-toan .zalopay {
+    background: #f3fbff;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    padding: 6px 10px;
+
+}
+
+#content #row-detail #col-2 .area_order {
+    display: block;
+    overflow: hidden;
+    margin: 40px 0px;;
+	float:left;
+	width:350px;
+}
+
+#content #row-detail #col-2 .area_order span {
+    display: block;
+    font-size: 13px;
+    color: #fff;
+    text-transform: none;
+    padding-top: 3px;
+}
+
+#content #row-detail #col-2 .area_order .buy_now {
+    display: block;
+    overflow: hidden;
+    padding: 7px 0;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: normal;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    background: #fd6e1d;
+    background: -webkit-gradient(linear,0% 0%,0% 100%,from(#fd6e1d),to(#f59000));
+    background: -webkit-linear-gradient(top,#f59000,#fd6e1d);
+    background: -moz-linear-gradient(top,#f59000,#fd6e1d);
+    background: -ms-linear-gradient(top,#f59000,#fd6e1d);
+    background: -o-linear-gradient(top,#f59000,#fd6e1d);
+}
+
+#content #row-detail #col-2 .area_order .buy_repay {
+    line-height: normal;
+    display: block;
+    padding: 7px 0;
+    text-align: center;
+    margin: 10px 2px;;
+    background: #288ad6;
+    color: #fff;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 15px;
+    text-transform: uppercase;
+    width: 48.5%;
+    float: left;
+}
+
+#content #row-detail #col-2 .callorder {
+    display: block;
+    overflow: hidden;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #333;
+    margin-top: -50px;
+	float:left;
+}
+
+#content #row-detail #col-2 .callorder .ct {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+#content #row-detail #col-3{
+	width:330px;
+	height:620px;
+	background-color:orange;
+	float:left;
+
+}
+	
 #footer{
 	height: 150px;
 	width: 100%;
