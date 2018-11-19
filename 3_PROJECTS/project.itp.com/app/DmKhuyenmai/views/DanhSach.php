@@ -52,6 +52,7 @@
 	var Khuyenmai = new DmKhuyenmai('?app=DmKhuyenmai');
 	
 	function Page_init(){
+		Khuyenmai.id_dm_khuyenmai=0;
 		Khuyenmai.FindAll();
 		DanhSach_bind();
 		Action_filter();
@@ -81,7 +82,7 @@
 				_trangthai = '<span class="label label-danger">Khóa</span>';
 			}
 			
-			_html +='<tr>';
+			_html +='<tr data-id="'+_dong.id_dm_khuyenmai +'">';
 			_html +='	<td><input type="checkbox" id="chk_1" /></td>';
 			_html +='	<td>'+ (i+1) +'</td>';
 			_html +='	<td>'+ _dong.ten +'</td>';
@@ -103,7 +104,7 @@
 			// Hiển thị cửa sổ popup
 			EccDialog.show(
 				'Tạo mới danh mục khuyến mại', 
-				'?app=DmKhuyenmai&view=ChiTiet&layout=popup', 
+				'?app=DmKhuyenmai&view=ChiTiet&layout=popup&id=' + Khuyenmai.id_dm_khuyenmai, 
 				'50%', '450');
 		});
 		
@@ -136,7 +137,7 @@
 			EccDialog.show(
 				'Sửa danh mục khuyến mại', 
 				'?app=DmKhuyenmai&view=ChiTiet&layout=popup&id=' + Khuyenmai.id_dm_khuyenmai, 
-				'50%', '410');
+				'50%', '450');
 		});
 		
 	});

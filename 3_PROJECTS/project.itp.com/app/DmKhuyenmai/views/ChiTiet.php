@@ -5,7 +5,6 @@
        <label>Mã khuyến mại <span class="require">(*)</span></label>
 	   <input type="text" id="ma" class="form-control" placeholder="Mã khuyến mại"  />
     </div>
-	
 	<div class="form-group-sm col-sm-6">
        <label>Tên khuyến mại<span class="require">(*)</span></label>
 	   <textarea id="ten" class="form-control" rows="3"></textarea>
