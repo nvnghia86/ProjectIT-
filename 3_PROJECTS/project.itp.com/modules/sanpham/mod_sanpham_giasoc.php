@@ -10,7 +10,7 @@ for($i=0; $i< count($data);$i++){
 	$dong = $data[$i];
 ?>
 <div class="sanpham">
-<a href="#">
+<a href="?app=gianhang&view=chitiet&id=<?=$dong['id_sanpham']?>">
 	<img src="media/upload_tgdd/sanpham/<?=$dong['hinhanh']?>" />
 	<label class="giamgia"> GIẢM <?=$dong['giamgia']?></label>
 	<h3><?=$dong['ten']?></h3>
