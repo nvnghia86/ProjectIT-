@@ -31,65 +31,7 @@
 			</div>
 			
 			<div class="product-cat">
-				<div class="tieu-de">
-					<h2>PHỤ KIỆN GIÁ RẺ</h2>
-					<div class="ds-danhmuc">
-						<a href="#">Apple Iphone</a>
-						<a href="#">Samsung</a>
-						<a href="#">Màn hình viền</a>
-						<a href="#">Giá từ 3-5 triệu</a>
-						<a href="#">Trả góp 0%</a>
-						<a href="#">Xem tất cả 174 điện thoại</a>
-					</div>
-				</div>
-				<ul class="ds-sanpham">
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt2.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt3.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt1.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt2.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-					<li class="sp-thuong">
-						<a href="#">
-							<img src="skins/tgdd_skin/images/product/dt3.jpg" />
-							<h3>Samsung Galaxy A6 (2018)</h3>
-							<p class="gia">24.000.000đ</p>
-							<p class="khuyenmai"> Giảm 600.000đ qua quà tặng Galaxy và 5 phụ kiện đi kèm</p>
-							<label class="tragop">Trả góp 0%</label>
-						</a>
-					</li>
-				</ul>
-			
+				<?php include('modules/sanpham/mod_sanpham_phukiengiare.php') ?>
 			</div>
 			<div id="promotion">
 				<h2>KHUYẾN MÃI TẠI CÁC WEBSITE THÀNH VIÊN</h2>
