@@ -36,5 +36,28 @@ class GianHangApp extends AppObject {
             parent::display();
         }  
     }
+	
+	public function actThemGioHang(){
+		$id = $_GET['id'];
+		$soluong = isset($_GET['soluong'])?$_GET['soluong']:1;
+		if(isset($_SESSION['giohang'])){
+			$giohang = $_SESSION['giohang'];
+		}else{
+			$giohang = array();
+		}
+		$sanpham = array('id'=>$id,'soluong'=>$soluong);
+		array_push($giohang,$sanpham);
+		$_SESSION['giohang'] = $giohang;
+		header('Location: ?app=gianhang&view=giohang&layout=giohang');
+	}
 
 }
+
+
+
+
+
+
+
+
+
