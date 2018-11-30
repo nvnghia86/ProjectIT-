@@ -3,6 +3,9 @@
 <head>
 	<title>Thegioididong.com - Siêu thị điện thoại, Tablet, Laptop, Phụ kiện chính hãng</title>
 	<meta charset="utf-8" />
+	<link href="<?php echo AppObject::getBaseFile('skins/cahd_skin/assets/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="<?php echo AppObject::getBaseFile('libs/jquery/jquery-3.3.1.min.js') ?>"></script>
+        <script type="text/javascript" src="<?php echo AppObject::getBaseFile('skins/cahd_skin/assets/js/core/libraries/bootstrap.min.js') ?>"></script>
 	<link rel="stylesheet" type="text/css" href="skins/tgdd_skin/css/style_sanpham.css" />
 	<!--<link rel="shortcut icon" href="skins/tgdd_skin/images_sanpham/favicon.ico"  type="image/x-icon" />-->
 </head>
@@ -12,7 +15,7 @@
 			<div class="wrapper">
 				
 				<!----------Logo--->
-				<a href="index.html" id="logo">
+				<a href="/" id="logo">
 					<i id="icon-logo"></i>
 				</a>
 			

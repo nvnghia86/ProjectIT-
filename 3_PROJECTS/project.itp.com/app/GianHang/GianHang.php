@@ -48,12 +48,48 @@ class GianHangApp extends AppObject {
 		}else{
 			$giohang = array();
 		}
-		$sanpham = array('id'=>$id,'soluong'=>$soluong);
-		array_push($giohang,$sanpham);
+		$trung = false;
+		for($i=0;$i< count($giohang); $i++){
+			if($giohang[$i]['id']==$id){
+				$giohang[$i]['soluong'] = (int)$giohang[$i]['soluong'] + 1;
+				$trung = true;
+			}
+		}
+		
+		if(!$trung){
+			$sanpham = array('id'=>$id,'soluong'=>$soluong);
+			array_push($giohang,$sanpham);
+		}
+		
+
 		$_SESSION['giohang'] = $giohang;
-		header('Location: ?app=gianhang&view=giohang&layout=giohang');
+		header('Location: ?app=gianhang&view=giohang');
+	}
+	
+	public function actHuyGioHang(){
+		$giohang = array();
+		$_SESSION['giohang'] = $giohang;
+		header('Location: ?app=gianhang&view=giohang');
 	}
 
+	public function actXoaGioHang(){
+		$id = $_GET['id'];
+		if(isset($_SESSION['giohang'])){
+			$giohang = $_SESSION['giohang'];
+		}else{
+			$giohang = array();
+		}
+		
+		for($i=0;$i< count($giohang); $i++){
+			if($giohang[$i]['id']==$id){
+				unset($giohang[$i]);
+			}
+		}
+
+		$_SESSION['giohang'] = $giohang;
+		header('Location: ?app=gianhang&view=giohang');
+	}
+	
 }
 
 

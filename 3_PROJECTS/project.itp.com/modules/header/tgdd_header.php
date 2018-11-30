@@ -10,7 +10,7 @@ $_rs = $DB->callProcedure('p_ht_dm_menu_find_all');
 
 
 <div class="wrapper">
-	<div id="logo"></div>
+	<a href="/"><div id="logo"></div><a>
 	<div id="search">
 		<input type="text" size="30" placeholder="Bạn tìm gì..." id="txtSearch" />
 		<i class="search-icon"></i>
