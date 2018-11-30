@@ -14,7 +14,7 @@ if(isset($_SESSION['giohang'])){
 <div class="row well" style="top:30px">
 	<div class="col-md-12" style="margin:0; auto">
 		<h2>Giỏ hàng</h2><hr/>
-		<a class="btn btn-sm btn-danger">Hủy đơn hàng</a>
+		<a class="btn btn-sm btn-danger" href="?app=gianhang&action=huygiohang">Hủy đơn hàng</a>
 		<table class="table table-bordered tabler-hover table-stripped">
 			<thead>
 				<tr>
@@ -39,18 +39,18 @@ if(isset($_SESSION['giohang'])){
 					$tongtien += $thanhtien;
 			?>
 				<tr>
-					<td>1</td>
+					<td><?=($i+1)?></td>
 					<td>
 						<img width="75" src="/media/upload_tgdd/sanpham/<?=$sp['hinhanh']?>"/>
 					</td>
 					<td>
 						<a href="#"><h3><?=$sp['ten']?></h3></a>
 						<p><?=$sp['khuyenmai']?></p>
-						<p><a href="?app=gianhang&view=chitiet&id=<?=$sp['id']?>"> Xem chi tiết >></a></p>
+						<p><a href="?app=gianhang&view=chitiet&id=<?=$sp['id_sanpham']?>"> Xem chi tiết >></a></p>
 					</td>
 					<td><b style="color:red"><?=$sp['gia_ban']?>₫</b></td>
-					<td>2</td>
-					<td><a class="btn btn-xs btn-danger">Xóa</a></td>
+					<td><?=$giohang[$i]['soluong']?></td>
+					<td><a class="btn btn-xs btn-danger" href="?app=gianhang&action=xoagiohang&id=<?=$sp['id_sanpham']?>">Xóa</a></td>
 				</tr>
 				<?php } ?>	
 			</tbody>

@@ -87,16 +87,16 @@ $sp = $data[0];
 			</div>
 			<div class="thanhtoan">
 				<div class="muangay">
-					<button>
-						<h3>MUA NGAY</h3>
+					<a class="btn btn-md btn-warning" href="?app=gianhang&action=themgiohang&id=<?=$sp['id_sanpham']?>"> 
+						<i class="glyphicon glyphicon-shopping-cart"></i> MUA NGAY
 						<p>Giao trong 1 giờ hoặc nhận tại siêu thị</p>
-					</button>
+					</a>
 				</div>
-				<div class="thanhtoan-km">
-					<button>
-						<h3>MUA TRẢ GÓP</h3>
-						<p>Thủ tục đơn giản</p>
-					</button>
+				<div class="muangay">
+					<a class="btn btn-md btn-success"> 
+						<i class="glyphicon glyphicon-usd"></i> MUA TRẢ GÓP
+						<p>Giao trong 1 giờ hoặc nhận tại siêu thị</p>
+					</a>
 				</div>
 				<div class="thanhtoan-km-lienhe">
 					Gọi đặt mua: 1800.1060 (miễn phí - 7:30-22:00)
