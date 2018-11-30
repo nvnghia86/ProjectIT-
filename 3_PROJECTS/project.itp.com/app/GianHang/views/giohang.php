@@ -29,17 +29,19 @@ if(isset($_SESSION['giohang'])){
 			<tbody>
 			<?php 
 				$tongtien = 0;
-				for($i=0; $i<count($giohang);$i++){
-					$id = $giohang[$i]['id'];
+				$i = 0;
+				foreach ($giohang as $key => $value){
+					$i++;
+					$id = $value['id'];
 					$data = $DB->callProcedure('p_ch_sanpham_get_byid(?)',array($id));
 					$sp = $data[0];
 					$gia = (int)$sp['gia_ban'];
-					$soluong = (int)$giohang[$i]['soluong'];
+					$soluong = (int)$value['soluong'];
 					$thanhtien = $gia  * $soluong;
 					$tongtien += $thanhtien;
 			?>
 				<tr>
-					<td><?=($i+1)?></td>
+					<td><?=($i)?></td>
 					<td>
 						<img width="75" src="/media/upload_tgdd/sanpham/<?=$sp['hinhanh']?>"/>
 					</td>
@@ -49,7 +51,7 @@ if(isset($_SESSION['giohang'])){
 						<p><a href="?app=gianhang&view=chitiet&id=<?=$sp['id_sanpham']?>"> Xem chi tiết >></a></p>
 					</td>
 					<td><b style="color:red"><?=$sp['gia_ban']?>₫</b></td>
-					<td><?=$giohang[$i]['soluong']?></td>
+					<td><?=$value['soluong']?></td>
 					<td><a class="btn btn-xs btn-danger" href="?app=gianhang&action=xoagiohang&id=<?=$sp['id_sanpham']?>">Xóa</a></td>
 				</tr>
 				<?php } ?>	
