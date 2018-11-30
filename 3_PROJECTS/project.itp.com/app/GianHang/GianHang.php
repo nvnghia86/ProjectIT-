@@ -76,16 +76,12 @@ class GianHangApp extends AppObject {
 		$id = $_GET['id'];
 		if(isset($_SESSION['giohang'])){
 			$giohang = $_SESSION['giohang'];
-		}else{
-			$giohang = array();
-		}
-		
-		for($i=0;$i< count($giohang); $i++){
-			if($giohang[$i]['id']==$id){
-				unset($giohang[$i]);
+			foreach ($giohang as $key => $value){
+				if($value['id']==$id){
+					unset($giohang[$key]);
+				}
 			}
 		}
-
 		$_SESSION['giohang'] = $giohang;
 		header('Location: ?app=gianhang&view=giohang');
 	}
