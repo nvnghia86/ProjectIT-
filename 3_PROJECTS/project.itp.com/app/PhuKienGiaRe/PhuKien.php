@@ -1,6 +1,6 @@
 <?php
 /**
- * App quản lý danh mục bảo hành
+ * App quản lý danh mục phụ kiện giá rẻ
  * Create: 08-10-2017
  * @author Hieubd <buiduchieuvnu@gmail.com>
  * @version 1.0
@@ -14,8 +14,8 @@ if ( !defined('AREA') ) {
 
 ?>
 <?php
-class GianHangApp extends AppObject {
-    public $app_name="GianHang";
+class PhuKienApp extends AppObject {
+    public $app_name="PhuKienGiaRe";
     public $dir_layout="tgdd_skin"; 
     public $layout="chitiet_sanpham";
     public $page_title = "Trang chủ | Thế giới di động";
@@ -36,28 +36,5 @@ class GianHangApp extends AppObject {
             parent::display();
         }  
     }
-	
-	public function actThemGioHang(){
-		$id = $_GET['id'];
-		$soluong = isset($_GET['soluong'])?$_GET['soluong']:1;
-		if(isset($_SESSION['giohang'])){
-			$giohang = $_SESSION['giohang'];
-		}else{
-			$giohang = array();
-		}
-		$sanpham = array('id'=>$id,'soluong'=>$soluong);
-		array_push($giohang,$sanpham);
-		$_SESSION['giohang'] = $giohang;
-		header('Location: ?app=gianhang&view=giohang&layout=giohang');
-	}
 
-}
-
-
-
-
-
-
-
-
-
+}  
