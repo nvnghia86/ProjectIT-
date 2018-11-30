@@ -33,6 +33,9 @@ class GianHangApp extends AppObject {
             $this->{'act'.$_GET["action"]}();
         }else{
             $this->view = isset($_REQUEST["view"])?$_REQUEST["view"]:"default"; 
+			if($this->view=='giohang'){
+				$this->layout="giohang";
+			}
             parent::display();
         }  
     }
