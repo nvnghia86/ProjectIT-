@@ -14,7 +14,8 @@ if(isset($_SESSION['giohang'])){
 <div class="row well" style="top:30px">
 	<div class="col-md-12" style="margin:0; auto">
 		<h2>Giỏ hàng</h2><hr/>
-		<a class="btn btn-sm btn-danger" href="?app=gianhang&action=huygiohang">Hủy đơn hàng</a>
+		<a class="btn btn-sm btn-success" href="?app=gianhang&view=dathang"><i class="glyphicon glyphicon-ok-circle"></i>  Đặt hàng</a> 
+		<a class="btn btn-sm btn-danger" href="?app=gianhang&action=huygiohang"><i class="glyphicon glyphicon-remove-circle"></i> Hủy đơn hàng</a>
 		<table class="table table-bordered tabler-hover table-stripped">
 			<thead>
 				<tr>
