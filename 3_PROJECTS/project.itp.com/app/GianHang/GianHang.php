@@ -36,6 +36,14 @@ class GianHangApp extends AppObject {
 			if($this->view=='giohang'){
 				$this->layout="giohang";
 			}
+			
+			if($this->view=='dathang'){
+				$this->layout="giohang";
+			}
+			
+			if($this->view=='thongbao'){
+				$this->layout="giohang";
+			}
             parent::display();
         }  
     }
@@ -76,18 +84,56 @@ class GianHangApp extends AppObject {
 		$id = $_GET['id'];
 		if(isset($_SESSION['giohang'])){
 			$giohang = $_SESSION['giohang'];
-		}else{
-			$giohang = array();
-		}
-		
-		for($i=0;$i< count($giohang); $i++){
-			if($giohang[$i]['id']==$id){
-				unset($giohang[$i]);
+			foreach ($giohang as $key => $value){
+				if($value['id']==$id){
+					unset($giohang[$key]);
+				}
 			}
 		}
-
 		$_SESSION['giohang'] = $giohang;
 		header('Location: ?app=gianhang&view=giohang');
+	}
+	
+	public function actDatHang(){
+		// 1. Lưu thông tin đơn hàng (khách hàng)
+		$ten_nguoinhan = $_POST['ten_nguoinhan'];
+		$sdt_nguoinhan = $_POST['sdt_nguoinhan'];
+		$diachi_nguoinhan = $_POST['diachi_nguoinhan'];
+		$ghichu = $_POST['ghichu'];
+		$id_hinhthuc_thanhtoan = $_POST['id_hinhthuc_thanhtoan'];
+		$DB = new MySQLHelper();
+		$thamso = array(
+			$ten_nguoinhan,
+			$sdt_nguoinhan,
+			$diachi_nguoinhan,
+			$ghichu,
+			$id_hinhthuc_thanhtoan
+		);
+		$data = $DB->callProcedure('p_ch_donhang_dathang(?,?,?,?,?)',$thamso);
+		$kq = $data[0];
+		$thongbao =$kq['THONG_BAO'];
+		
+		$id_donhang = $kq['KET_QUA'];
+		
+		//1. Lưu chi tiết đơn hàng
+		if(isset($_SESSION['giohang'])){
+			$giohang = $_SESSION['giohang'];
+			foreach ($giohang as $key => $value){
+				
+				$thamso = array(
+					$value['id'],
+					$id_donhang,
+					$value['soluong'],
+					0
+				);
+				$data = $DB->callProcedure('p_ch_donhang_sanpham_them(?,?,?,?)',$thamso);
+			}
+		}	
+		
+		$this->actHuyGioHang();
+		//print('<pre>');
+		//print_r($data);
+		header('Location: ?app=gianhang&view=thongbao&msg='.$thongbao);
 	}
 	
 }
