@@ -60,7 +60,6 @@ if(isset($_SESSION['giohang'])){
 		</table>
 		<hr/>
 		<h3>Tổng tiền thanh toán <span style="color:red"><?=$tongtien?>₫</span></h3>
-	
 </div>
 	</div>
 </div>
