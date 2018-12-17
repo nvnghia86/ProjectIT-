@@ -8,8 +8,6 @@ if(isset($_SESSION['giohang'])){
 	//echo "<h2>Giỏ hàng trống</h2>";
 	$giohang = array();
 } 
-
-
 ?>
 <div class="row well" style="top:30px">
 	<form class="col-md-12" style="margin:0; auto" method="post" action="?app=gianhang&action=dathang">
