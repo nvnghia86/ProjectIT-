@@ -29,7 +29,7 @@ if(isset($_SESSION['giohang'])){
 			</select>
 		</div>
 		<div class="form-group col-md-8">
-			<label>Địa chỉ giao hàng</label>
+			<label>Địa chỉ giao hàng</label>z
 			<input id="diachi_nguoinhan" name="diachi_nguoinhan" placeholder="Địa chỉ người nhận" class="form-control"  />
 		</div>
 		<div class="form-group col-md-12">

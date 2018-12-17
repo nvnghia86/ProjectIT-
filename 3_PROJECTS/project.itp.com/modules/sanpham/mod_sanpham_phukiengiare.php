@@ -22,7 +22,7 @@ for($i=0; $i< count($data);$i++){
 	?>
 	<ul class="ds-sanpham">
 		<li class="sp-thuong">
-			<a href="#">
+			<a href="?app=gianhang&view=chitiet&id=<?=$dong['id_sanpham']?>">
 				<img src="media/upload_tgdd/sanpham/<?=$dong['hinhanh']==null?"noimage.png":$dong['hinhanh']?>" />
 				<h3><?=$dong['ten']?></h3>
 				<p class="gia"><?=$dong['gia_ban']?></p>
