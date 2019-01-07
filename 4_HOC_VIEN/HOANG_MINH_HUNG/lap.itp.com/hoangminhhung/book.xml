@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+  <book>
+    <title>Đôi mắt người sơn tây</title>
+    <price>14580</price>
+	<author>Quang Dũng</author>
+   
+  </book>
+  <book>
+
+    <title>Thương nhớ đồng quê</title>
+    <price>51030</price>
+	<author>Nguyễn Huy Thiệp</author>
+   
+  </book>
+  <book >
+    
+    <title>Born in Tibet</title>
+    <price>145800</price>
+	<author>Trungpa</author>
+  
+  </book>
+  <book >
+   
+    <title>Run</title>
+    <price>189540</price>
+	<author>Panic</author>
+    
+  </book>
+  <book >
+   
+    <title>Hương tóc mạ non</title>
+    <price>65610</price>
+	 <author>Nguyễn Thu Phương</author>
+  
+  </book>
+  <book >
+    
+    <title>Cúi xuống nhìn mặt đất </title>
+    <price>2187</price>
+    <author>Nguyễn Thị Nguyên</author>
+  </book>
+  <book>
+   
+    <title>Thanh thanh</title>
+    <price>36450</price>
+     <author>Mai Thị Thanh</author>
+  </book>
+  <book>
+    
+    <title>You are the universe</title>
+    <price>189540</price>
+   <author>Deepak Chopra</author>
+  </book>
+  <book>
+   
+    <title>Dưới đất có gì</title>
+    <price>0</price>
+     <author>Nguyên Nguyễn</author>
+  </book>
+
+ 
+</books>

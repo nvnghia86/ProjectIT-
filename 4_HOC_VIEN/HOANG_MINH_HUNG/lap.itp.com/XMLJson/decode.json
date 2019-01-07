@@ -1,0 +1,12 @@
+<?php
+$string=file_get_contents (http://lab.itp.com:8080/XMLJson/CDcatalog.json);
+echo $string;
+echo "<br>";
+$json_a=json_decode($string,true);
+foreach ($json_a as $reader){
+	echo"<b>Artis: </b>", $reader['artist'],"<b>title</b>",
+	$reader['title'],"<b>Price:</b>", $reader['price'],
+	"<b> Company</b>", $reader['company'],"<b>year</b>",$reader['year'];
+	echo "<br>";
+}
+?>

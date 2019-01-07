@@ -1,0 +1,24 @@
+<html>
+<head>
+<title> Variable - Some practice</title>
+</head>
+<body>
+<?php print("It Worked!");
+$url='http://lab.itp.com:8080/XMLJson/cdcatalog.xml';
+$xml=simplexml_load_file($url) or die ("can't connet to the url");
+if ($xml == false){
+	echo "Failed loading XML: ";
+	foreach(libxml_get_errors() as $error){
+		echo "<br>",$error->message;
+	}
+}else{
+	foreach($xml->children() as $cd){
+		echo $cd->title;
+		echo "<br>";
+	}
+}
+print($xml->saveXML());
+?>
+
+</body>
+</html>
