@@ -1,45 +1,37 @@
-<html><!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Màn hình câu hỏi</title>
+	<title>Chờ</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="../css/Doi.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 </head>
-<style>
-    /* reset css*/
-    *{margin: 0; padding:0}
-    body{
-        background-color: aquamarine;
-    }
-    .wrapper{
-        width: 1300px;
-        margin: 0 auto;
-    }
-    #header{
-        width: 100%;
-        height: 55px;
-        background: white;
-        float: left;
-    }
-    #header #pin{
-       margin: 0px 0px 10px 0px;
-       float: left;
-    }
-    #header #name{
-        margin: 0px 0px 0px 1200px;
-    }
-</style>
 <body>
-    <div id="header">
-        <div class="wrapper">
-            <div id="pin">PIN</div>
-            <div id="name">NAME</div>
-        </div>
-    </div>
-    <div id="content">
-        <h1 style="text-align:center;">Question</h1>
-        <h3 style="text-align:center;">Go!</h3>
-    </div>
+	<div class="page-header">
+		<div class="page-header_inner">
+			<div id="pin">
+				PIN: 423432
+			</div>
+			<div class="page-name">
+				SpeedyLeopard
+			</div>
+		</div>
+	</div>
+
+	<div class="content" style="background: #66BF39;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2"></div>
+				<div class="col-lg-8">
+					<div class="noidung1"><h1 style="text-align: center;">You’re in!</h1></div>
+					<div class="noidung2"><h2>See your nickname onscreen?</h2></div>
+				</div>
+				<div class="col-lg-2"></div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

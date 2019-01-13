@@ -1,0 +1,110 @@
+*{
+	margin: 0px;
+	padding: 00px;
+}
+
+body{}
+
+.page-header{
+	width: 100%;
+	height: 56px;
+	background: #FFF;
+	line-height: 56px;
+}
+
+.page-header .page-header_inner{
+	margin: auto 2%;
+	height: 56px;
+}
+
+.page-header .page-header_inner #pin{
+	width: 150px;
+	height: 56px;
+	line-height: 56px;
+	float: left;
+	font-weight: bold;
+	font-size: 18px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 2.625;
+    color: #333;
+}
+
+
+.page-header .page-name{
+	width: 500px;
+	float: right;
+	height: 56px;
+	line-height: 56px;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: right;
+	display: block;
+	flex: 1 0 auto;
+    text-align: right;
+    -webkit-tap-highlight-color: transparent;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 2.625;
+    color: #333;
+}
+
+.content{
+	background: #66BF39;
+	width: 100%;
+	position: fixed;
+	height: 100%;
+	padding-top: 10%;
+}
+
+.content  .noidung1 h1{
+	font-family: BPreplay,sans-serif;
+    font-style: italic;
+    font-size: 2.5rem;
+    text-rendering: optimizeLegibility;
+    line-height: normal;
+    text-rendering: optimizelegibility;
+    margin: 0;
+    line-height: normal;
+    text-transform: none;
+    text-shadow: none;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 -1px 0 #fff;
+    letter-spacing: 1px;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.content .noidung2 h2{
+	margin-top: 1.5rem;
+    font-size: 1.25rem;
+    text-rendering: optimizeSpeed;
+    margin: 0;
+    line-height: normal;
+    text-transform: none;
+    text-shadow: none;
+    color: #fff;
+    text-shadow: 0 -1px 0 #fff;
+    letter-spacing: 1px;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+     text-align: center;
+} 
+
+
