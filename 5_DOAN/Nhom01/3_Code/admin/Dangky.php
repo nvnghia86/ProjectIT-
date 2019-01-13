@@ -12,7 +12,7 @@
 <body>
 <div class="header">
 	<div class="logo">
-		<img src="../images/logo.png" />
+		<img src="../images/logokahoot.png" />
 	</div>
 	<div class="menu">
 		<div class="menu-name">

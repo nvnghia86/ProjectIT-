@@ -1,0 +1,100 @@
+*{
+	margin: 0px;
+	padding: 00px;
+}
+
+.page-header{
+	width: 100%;
+	height: 56px;
+	background: #46178F;
+	line-height: 56px;
+}
+
+.page-header .page-header_inner{
+	margin: auto 2%;
+	height: 56px;
+}
+
+.page-header .page-header_inner #logo{
+	width: 40px;
+	height: 56px;
+	line-height: 56px;
+	float: left;
+}
+
+.page-header .page-header_inner #logo img{
+	width: auto;
+	height: 40px;
+}
+
+.page-menu{
+	width: 500px;
+	float: right;
+	height: 56px;
+	line-height: 56px;
+}
+
+.page-menu .main-menu{
+	width: 500px;
+	float: right;
+	height: 56px;
+	line-height: 56px;
+}
+
+.page-menu li{
+	display: inline-block;
+	float: right;
+	list-style: none;
+	height: 56px;
+	line-height: 56px;
+	margin-left: 15px;
+
+}
+
+
+.page-menu .sign{
+	height: 35px;
+    background: green;
+    margin-top: 11px;
+    line-height: 35px;
+    text-align: center;
+    width: 80px;
+   	border-radius: 3px;
+}
+
+.page-menu .list-menu{
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+}
+
+.page-menu .login {
+	height: 35px;
+    background: green;
+    margin-top: 11px;
+    line-height: 35px;
+    text-align: center;
+    width: 80px;
+   	border-radius: 3px;
+}
+
+
+.page-menu .play{
+	height: 35px;
+    background: green;
+    margin-top: 11px;
+    line-height: 35px;
+    text-align: center;
+    width: 80px;
+   	border-radius: 3px;
+}
+
+.slider{
+	width: 100%;
+	height: 400px;
+	background: yellow;
+}
+
+.content{}
+
+.footer{}
