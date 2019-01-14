@@ -26,7 +26,11 @@
 		<td align="center" width="851">
 		<img src="../images/kahoot.png" height="86" width="236"></td>
 		<td width="10"></td>
-		<td align="center" width="180"><input type="button" value="Khởi đầu" name="button" align="center" style="background-color: #CCCCCC"></td>
+		<td align="center" width="180">
+			<a href="../admin/Chondapan.php">
+				<input type="button" value="Bắt đầu" name="button" align="center" style="background-color: #CCCCCC">
+			</a>
+		</td>
 	</tr>
 	<tr>
 		<td width="180">
@@ -42,7 +46,7 @@
 
 <table border="0" width="100%" height="319">
 	<tr>
-		<td height="268" colspan="2"></td>
+		<td height="268" colspan="2">sdfghjk</td>
 	</tr>
 	<tr>
 		<td width="5%" bgcolor="#1368CE">

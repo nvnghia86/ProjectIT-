@@ -23,61 +23,43 @@
 		</div>
 	</div>
 </div>
-<div class="main">
-	<span>< Back</span>
-</div>
+<form action="DangKy_act.php" method="post">
 <div class="content">
 	<div class="container">
 		<div class="row">
 		<div class="col-sm-4" ></div>
 		<div class="col-sm-4" >
-			<h3 align="center">Your account details</h3>
+			<h3 align="center">ĐĂNG KÝ TÀI KHOẢN</h3>
 			<div class="form-group">
-			  <label for="optional">Add your school or university (optional)</label>
-			  <input type="text" class="form-control" id="optional">
+			  <label for="optional">Email (*)</label>
+			  <input type="text" class="form-control" id="email" name="email">
+			</div>
+			<div class="form-group">
+			  <label for="optional">Họ và tên (*)</label>
+			  <input type="text" class="form-control" id="ho_ten" name="ho_ten">
+			</div>
+			<div class="form-group">
+			  <label for="optional">Mật khẩu (*)</label>
+			  <input type="text" class="form-control" id="mat_khau" name="mat_khau">
+			</div>
+			<div class="form-group">
+			  <label for="optional">Nhập lại mật khẩu (*)</label>
+			  <input type="text" class="form-control" id="mat_khau_lai" name="mat_khau_lai">
 			</div>
 
-			<div class="form-group">
-			  <label for="required">Workplace details (required)</label>
-			  <select class="form-control " id="required">
-			    <option>Select one</option>
-			    <option>School</option>
-			    <option>Higher education</option>
-			    <option>School administration</option>
-			    <option>Business</option>
-			    <option>Other</option>
-			  </select>
-			</div>
 
 			<div class="row"><div class="col-sm-12" style="height: 30px;"></div></div>
 			<hr class="hr">
 
-			<div class="form-group">
-			  <label for="optional">Pick a username  (required)</label>
-			  <input type="text" class="form-control" id="optional">
-			</div>
-
 			<div class="checkbox disabled">
-			  <label><input type="checkbox" value="">I have read and agree with the Kahoot! Terms and Conditions. Kahoot! will collect and process data as described in the Privacy Policy and Children's Privacy Policy. (required)</label>
+			  <label><input type="checkbox" value=""> Tôi đã đọc và hoàn toàn đồng ký với <a href="#">điều khoản</a>  khi tham gia website này.</label>
 			</div>
-
-			<div class="checkbox disabled">
-			  <label><input type="checkbox" value="">I wish to receive information, offers, recommendations and updates from Kahoot!</label>
-			</div>
-
-			<div class="checkbox disabled">
-			  <label><input type="checkbox" value="">I want Kahoot! to send me information, exclusive invitations and special offers from other companies.</label>
-			</div>
-
-			<button type="button" class="btn btn-primary btn-block">Join Kahoot!</button>
-
-			<span>I understand that I can withdraw my consent at any time and the withdrawal will not affect the lawfulness of the consent before its withdrawal, as described in the Kahoot! Privacy Policy.</span>
-			
+			<button type="submit" class="btn btn-primary btn-block">Đăng ký tham gia</button>
 		</div>
 		<div class="col-sm-4" ></div>
 	</div>
 	</div>
-
+</form>
 </div>
 
 </body>

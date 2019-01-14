@@ -21,7 +21,9 @@
 		<tr>
 			<td></td>
 			<td width="119">
-				<p align="center"><input type="button" value="Get Results" name="B3"></p>
+				<a href="../admin/tongket.php">
+					<p align="center"><input type="button" value="Get Results" name="B3"></p>
+				</a>
 			</form>
 			</td>
 		</tr>

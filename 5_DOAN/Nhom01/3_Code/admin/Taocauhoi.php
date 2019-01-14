@@ -24,7 +24,9 @@
 </div>
 
 	<div class="menu">
+		<a href="../admin/Themcauhoi.php">
 			<button class="btn btn-success">Next</button>
+		</a>
 	</div>
 </div>
 <!--Content-->

@@ -41,7 +41,9 @@
 						<li class="menu-right-nd4 glyphicon glyphicon-question-sign"></li>
 						<li class="menu-right-nd3 glyphicon glyphicon-cog"></li>
 						<li class="menu-right-nd2">
-							<button class="btn">Create</button>
+							<a href="../admin/Taodethi.php">
+								<button class="btn">Create</button>
+							</a>
 						</li>
 						<li class="menu-right-nd1">
 							<a href="#">
@@ -90,7 +92,7 @@
 							  		<div class="col-lg-6 ">
 							  			<ul class="row-left">
 							  				<li>Kahoots(1)</li>
-							  				<li><a href="#">Create new</a></li>
+							  				<li><a href="../admin/Taodethi.php">Create new</a></li>
 							  			</ul>
 							  		</div>
 							  		<div class="col-lg-6 ">

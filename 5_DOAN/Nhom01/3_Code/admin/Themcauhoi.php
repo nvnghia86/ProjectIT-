@@ -23,7 +23,9 @@
 	<div class="center">K!Quiz</div>
 
 	<div class="menu">
+		<a href="../admin/Choi.php">
 			<button class="btn btn-success">Save</button>
+		</a>
 	</div>
 </div>
 
@@ -54,8 +56,10 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-12 row-content-game">
-				<button class="btn btn-success btn-cong"><span class="glyphicon " aria-hidden="true">+</span></button>
-				<p>Add Question</p>
+				<a href="../admin/Taocauhoi.php">
+					<button class="btn btn-success btn-cong"><span class="glyphicon " aria-hidden="true">+</span></button>
+					<p>Add Question</p>
+				</a>
 			</div>
 		</div>
 

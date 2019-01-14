@@ -1,3 +1,6 @@
+<?php
+	$thongbao = isset($_GET['thongbao'])?$_GET['thongbao']:'';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,38 +23,35 @@
 			<em>Not got an account?</em>
 		</div>
 		<div class="login">
-			<button class="btn btn-primary">SIGN UP</button>
+			<a href="../admin/Dangky.php">
+				<button class="btn btn-primary">SIGN UP</button>
+			</a>
 		</div>
 	</div>
 	</div>
 </div>
+<form action="dangnhap_act.php" method="post">
 <div class="content">
 	<div class="container">
 		<div class="row">
 		<div class="col-sm-4" ></div>
 		<div class="col-sm-4" >
-			<h3 style="text-align: center; color: blue; font-weight: bold; font-size: 30px">LOG IN</h3>
-
-			<button type="button" class="btn btn-primary btn-block">Log in with Google</button>
-
-			<button type="button" class="btn btn-primary btn-block" style="background: #003673;">Log in with Microsoft</button>
-
+			<h3 style="text-align: center; color: blue; font-weight: bold; font-size: 30px">ĐĂNG NHẬP</h3>
 			<div class="row">
 				<div class="col-sm-5"><hr class="hr"></div>
-				<div class="col-sm-2">or</div>
+				<div class="col-sm-2">-</div>
 				<div class="col-sm-5"><hr class="hr"></div>
-			</div>
-
-
-			<div class="form-group">
-			  <input type="text" class="form-control" id="optional" placeholder="Username or email">
-			</div>
+			</div> 
 
 			<div class="form-group">
-			  <input type="password" class="form-control" id="optional" placeholder="Password">
+			  <input type="text" class="form-control" id="email" name="email" placeholder="Email">
 			</div>
 
-			<button type="button" class="btn btn-red btn-block" style="background: #7944AC; color: #fff">Log in</button>
+			<div class="form-group">
+			  <input type="password" class="form-control" id="mat_khau" name="mat_khau" placeholder="Mật khẩu">
+			</div>
+				<p style="font-style:italic;color: red;font-weight: bold"><?=$thongbao?></p>
+				<button type="submit" class="btn btn-red btn-block" style="background: #7944AC; color: #fff">Đăng nhập</button>
 			
 			<div class="row">
 				<div class="col-sm-12" style=" text-align: center; ">
@@ -68,7 +68,7 @@
 		<div class="col-sm-4" ></div>
 	</div>
 	</div>
-
+</form>
 </div>
 
 </body>
