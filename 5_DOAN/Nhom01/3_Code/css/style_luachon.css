@@ -1,0 +1,162 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+#wrapper-menu{
+	margin: auto 2%;
+	height: 56px;
+}
+
+li{
+	list-style: none;
+}
+
+#header{
+	background: #46178F;
+	color: #fff;
+	width: 100%;
+	height: 56px;
+	line-height: 56px;
+	position: fixed;
+	top: 0; /*Nằm trên cùng*/
+  	left: 0; /*Nằm sát bên trái*/
+	float: left;
+}
+
+#header .menu-left{
+	display: inline;
+	float: left;
+	height: 56px;
+	line-height: 56px;
+}
+
+#header .menu-left img{
+	width: auto;
+	height: 40px;
+}
+
+#header .menu-left .menu-left-logo{
+	width: 56px;
+	height: 56px;
+	float: left;
+	margin-right: 100px;
+}
+
+#header .menu-left .menu-left-nd1 .icon{
+	float: left;
+	height: 56px;
+	line-height: 56px;
+	padding-right: 5px;
+}
+
+#header .menu-left .menu-left-nd1{
+	height: 56px;
+	float: left;
+	padding-right: 25px;
+	line-height: 56px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+}
+
+#header .menu-right{
+	display: inline;
+	float: right;
+	height: 56px;
+	line-height: 56px;
+	width: 25%;
+}
+
+#header .menu-right-nd1{
+	float: right;
+	color: #fff;
+	font-weight: 700px;
+	font-size: 14px;
+	text-align: center;
+	width: 100px;
+	height: 56px;
+	line-height: 56px;
+}
+#header  .menu-right-nd1 a{
+	color: #fff;
+	font-weight: 700;
+}
+#header  .menu-right-nd2{
+	float: right;
+	width: 100px;
+	text-align: center;
+}
+#header  .menu-right-nd2 button{
+	background: #fff;
+}
+#header  .menu-right-nd3{
+	float: right;
+	height: 56px;
+	line-height: 56px;
+	width: 30px;
+	text-align: center;
+}
+#header  .menu-right-nd4{
+	float: right;
+	height: 56px;
+	line-height: 56px;
+	width: 30px;
+	text-align: center;
+}
+
+/*Content*/
+#content{
+	width: 100%;
+	float: left;
+	margin-top: 56px;
+	
+}
+
+
+#content .nd-left{
+	width: 100%;
+	background: #fff;
+}
+
+
+#content .nd-left .nd-luachon{
+	margin: 0 auto;
+	width: 700px;
+	height: 200px;
+	background: #46178F;
+	margin-top: 50px;
+}
+
+#content .nd-left .nd-luachon .nd-luachon-d1{
+	font-size: 2.5rem;
+    line-height: 1.875rem;
+    text-align: left;
+	font-family: inherit;
+    font-weight: 700;
+    color: #fff;
+   	margin-top: 50px;
+}
+
+#content .nd-left .nd-luachon .nd-luachon-d2{
+	font-size: 1.5rem;
+    line-height: 1.5rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #fff;
+    text-align: left;
+}
+
+#content .nd-right{
+	width: 100%;
+	background: #F1F1F1;
+	height: 500px;
+}
+
+#content .nd-right .menu-luachon{
+
+}
+

@@ -19,9 +19,21 @@
 								<img src="../images/logokahoot.png" />
 							</a>
 						</li>
-						<i class="glyphicon glyphicon-list"></i>
 						<li class="menu-left-nd1">
+							<i class="glyphicon glyphicon-list icon"></i>
+							Discover
+						</li>
+
+						
+						<li class="menu-left-nd1">
+							<i class="glyphicon glyphicon-list icon"></i>
 							Kahoots
+						</li>
+
+						
+						<li class="menu-left-nd1">
+							<i class="glyphicon glyphicon-stats icon"></i>
+							Reports
 						</li>
 					</ul>
 

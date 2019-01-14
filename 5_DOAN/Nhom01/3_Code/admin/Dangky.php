@@ -19,7 +19,7 @@
 			<em>Already got an account?</em>
 		</div>
 		<div class="login">
-			<button class="btn btn-primary">Log in</button>
+			<a href="../admin/Dangnhap.php"><button class="btn btn-primary">Log in</button></a>
 		</div>
 	</div>
 </div>

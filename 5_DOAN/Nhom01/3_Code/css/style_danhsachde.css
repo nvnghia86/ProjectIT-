@@ -43,17 +43,17 @@ li{
 	margin-right: 100px;
 }
 
-#header .menu-left .glyphicon-list{
+#header .menu-left .menu-left-nd1 .icon{
 	float: left;
 	height: 56px;
 	line-height: 56px;
+	padding-right: 5px;
 }
 
 #header .menu-left .menu-left-nd1{
-	width: 56px;
 	height: 56px;
 	float: left;
-	padding-left: 5px;
+	padding-right: 25px;
 	line-height: 56px;
 	font-size: 14px;
 	font-weight: 700;
