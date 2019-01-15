@@ -14,7 +14,11 @@
 			<p align="center"><span style="background-color: #000000">Finished</span></p></font></b>	
 		</form>
 		</td>
-		<td width="47"><input type="button" value="I'm done" name="button" align="center" style="background-color: #298F0D"></td>
+		<td width="47">
+			<a href="../admin/Danhsachde.php">
+				<input type="button" value="I'm done" name="button" align="center" style="background-color: #298F0D" />
+			</a>
+		</td>
 	</tr>
 </table>
 
@@ -28,18 +32,26 @@
 	<tr>
 		<td align="center"><img src="../images/edit.png" height="50"></td>
 		<td align="center"><img src="../images/preview.png" height="50"></td>
-		<td align="center"><img src="../images/play%20(1).png" height="50"></td>
+		
+			<td align="center"><a href="../admin/Chochoi.php"><img src="../images/play%20(1).png" height="50"></a></td>
+		
 		<td align="center"><img src="../images/play%20(2).png" height="50"></td>
 	</tr>
 	<tr>
 		<td>
-			<p align="center"><font style="font-size: 10pt" face="Tahoma">Edit it</font></p></td>
+			<p align="center"><font style="font-size: 10pt" face="Tahoma">Edit it</font></p>
+		</td>
 		<td>
-			<p align="center"><font style="font-size: 10pt" face="Tahoma">Preview it</font></p></td>
+			<p align="center"><font style="font-size: 10pt" face="Tahoma">Preview it</font></p>
+		</td>
 		<td>
-			<p align="center"><font style="font-size: 10pt" face="Tahoma">Play it</font></p></td>
+			<a href="../admin/Chochoi.php">
+				<p align="center"><font style="font-size: 10pt" face="Tahoma">Play it</font></p>
+			</a>
+		</td>
 		<td>
-			<p align="center"><font style="font-size: 10pt" face="Tahoma">Share it</font></p></td>
+			<p align="center"><font style="font-size: 10pt" face="Tahoma">Share it</font></p>
+		</td>
 	</tr>
 </table>
 

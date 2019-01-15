@@ -14,16 +14,20 @@
 	<!--Header-->
 <div class="header">
 	<div class="logo">
-		<button type="button" class="close" aria-label="Close">
-  			<span aria-hidden="true">&times; Close</span>
-		</button>
+		<a href="../admin/Danhsachde.php">
+			<button type="button" class="close" aria-label="Close">
+	  			<span aria-hidden="true">&times; Close</span>
+			</button>
+		</a>
 	</div>
 
 	<div class="center">K!Quiz
 </div>
 
 	<div class="menu">
-			<button class="btn btn-success">OK, Go</button>
+			<a href="../admin/Themcauhoi.php">
+				<button class="btn btn-success">OK, Go</button>
+			</a>
 	</div>
 </div>
 <!--Content-->
