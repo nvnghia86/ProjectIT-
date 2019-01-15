@@ -69,8 +69,9 @@
 			  <label><input type="checkbox" value="">I want Kahoot! to send me information, exclusive invitations and special offers from other companies.</label>
 			</div>
 
-			<button type="button" class="btn btn-primary btn-block">Join Kahoot!</button>
-
+			<a href="../admin/Dangnhap.php">
+				<button type="button" class="btn btn-primary btn-block">Join Kahoot!</button>
+			</a>
 			<span>I understand that I can withdraw my consent at any time and the withdrawal will not affect the lawfulness of the consent before its withdrawal, as described in the Kahoot! Privacy Policy.</span>
 			
 		</div>
