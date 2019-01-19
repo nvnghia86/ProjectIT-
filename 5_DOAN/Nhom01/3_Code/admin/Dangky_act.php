@@ -10,12 +10,16 @@
 		$mat_khau = md5($mat_khau);
 		$params = array(0, $email, $ho_ten, $mat_khau,1);
 		$ketqua = $DB->callProcedure('p_tai_khoan_save(?,?,?,?,?)',$params);
-		if($ketqua[0]['MA_LOI']=='SUC'){
-			echo "<script type='text/javascript'>";
-			echo "alert('Đăng kí thành công!');";			
-			echo "window.location.replace('Dangnhap.php')";
-			echo "</script>";
-		}
+			if(isset($_REQUEST['termOfService'])&&$_REQUEST['termOfService']=="yes"){
+				if($ketqua[0]['MA_LOI']=='SUC'){
+					echo "<script type='text/javascript'>";
+					echo "alert('Đăng kí thành công!');";			
+					echo "window.location.replace('Dangnhap.php')";
+					echo "</script>";
+				}
+			}else{
+			   header("Location: Dangky.php?thongbao= Bạn phải chấp nhận điều khoản của chúng tôi!");
+			}
 	}catch(Exception $e){
 		header("Location: loi.php?thongbao= Lỗi: ".$e->message);
 		exit;

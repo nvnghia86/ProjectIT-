@@ -1,3 +1,6 @@
+<?php
+	$thongbao = isset($_GET['thongbao'])?$_GET['thongbao']:'';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,25 +37,25 @@
 			<div class="form-group">
 			  <label for="optional">Email <span class="sao">(*)</span></label>
 			  <br /><span class="info_kt" id="email_error"></span>
-			  <input type="text" class="form-control" id="email" name="email">
+			  <input type="text" class="form-control" id="email" name="email"  />
 			</div>
 			
 			<div class="form-group">
 			  <label for="optional">Họ và tên <span class="sao">(*)</span></label>
 			  <br /><span class="info_kt" id="ho_ten_error"></span>
-			  <input type="text" class="form-control" id="ho_ten" name="ho_ten">
+			  <input type="text" class="form-control" id="ho_ten" name="ho_ten"  />
 			</div>
 			
 			<div class="form-group">
 			  <label for="optional">Mật khẩu <span class="sao">(*)</span></label>
 			  <br /><span class="info_kt" id="mat_khau_error"></span>
-			  <input type="password" class="form-control" id="mat_khau" name="mat_khau">
+			  <input type="password" class="form-control" id="mat_khau" name="mat_khau" />
 			</div>
 			
 			<div class="form-group">
 			  <label for="optional">Nhập lại mật khẩu <span class="sao">(*)</span></label>
 			  <br /><span class="info_kt" id="mat_khau_lai_error"></span>
-			  <input type="password" class="form-control" id="mat_khau_lai" name="mat_khau_lai">
+			  <input type="password" class="form-control" id="mat_khau_lai" name="mat_khau_lai" />
 			</div>
 			
 
@@ -61,7 +64,11 @@
 			<hr class="hr">
 
 			<div class="checkbox disabled">
-			  <label><input type="checkbox" value=""> Tôi đã đọc và hoàn toàn đồng ký với <a href="#">điều khoản</a>  khi tham gia website này.</label>
+
+			  <label>
+			  	<span class="info_kt"><?=$thongbao?></span><br />
+			  	<input type="checkbox" name="termOfService" value="yes"> Tôi đã đọc và hoàn toàn đồng ký với <a href="#">điều khoản</a>  khi tham gia website này.
+			  </label>
 			</div>
 			
 			<button type="submit" class="btn btn-primary btn-block">Đăng ký tham gia</button>
@@ -180,6 +187,6 @@
 	 
 	        return flag;
 	    });
-                     
+     
   	});
 </script>
