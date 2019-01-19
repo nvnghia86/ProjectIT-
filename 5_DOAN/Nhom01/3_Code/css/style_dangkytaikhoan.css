@@ -26,30 +26,12 @@
 
 
 .header .menu{
-	width: 300px;
+	width: 290px;
 	height: 60px;
 	line-height: 60px;
 	float: right;
 	padding-right: 10px; 
-}
-
-
-.header .menu .menu-name{
-	width: 200px;
-	height: 60px;
-	line-height: 60px;
-	float: left;
-	color: #fff;
-	font-size: 18px;
-}
-
-
-.header .menu{
-	width: 300px;
-	height: 60px;
-	line-height: 60px;
-	float: right;
-	padding-right: 10px; 
+	text-align: right;
 }
 
 
@@ -63,22 +45,18 @@
 }
 
 
-.main{
-	height: 30px;
-	width: 100%;
-	float: left;
-	margin-top: 60px; 
-	padding-left: 10px;
-}
-
-.main span{
-	width: 40px;
-	height: 30px;
-	font-size: 16px;
-	font-weight: bold;
-}
-
 .content{
 	width: 100%;
 	float: left;
+	margin-top: 20px;
+}
+
+.content .sao{
+	color: red;
+}
+
+.info_kt{
+	font-size: 13px;
+	color: red;
+	font-weight: initial;
 }

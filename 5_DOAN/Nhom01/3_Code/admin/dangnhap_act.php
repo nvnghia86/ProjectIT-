@@ -6,11 +6,6 @@ try {
 	$email = $_REQUEST['email'];
 	$mat_khau = $_REQUEST['mat_khau'];
 
-	if($email == "" || $email == null || strlen($email)<3 ){
-		header("Location: dangnhap.php?thongbao=Không được để trống email");
-		exit;
-	}
-
 	$DB= new MySQLHelper();
 	$mat_khau = md5($mat_khau);
 	$params = array($email ,$mat_khau);
@@ -21,7 +16,11 @@ try {
 	if(count($ketqua)>0){
 		header("Location: Danhsachde.php");
 	}else{
-		header("Location: dangnhap.php?thongbao= Tài khoản hoặc mật khẩu không đúng.");
+		echo "<script type='text/javascript'>";
+			echo "alert('Tài khoản hoặc mật khẩu không đúng!');";			
+			echo "window.location.replace('Dangnhap.php')";
+			echo "</script>";
+		//header("Location: dangnhap.php?thongbao= Tài khoản hoặc mật khẩu không đúng.");
 	}
 
 } catch (Exception $e) {
