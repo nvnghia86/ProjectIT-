@@ -29,7 +29,7 @@
 }
 
 .center {
-	width: 965px;
+	width: 940px;
 	height: 60px;
 	color: #fff;
 	float: left;
@@ -45,12 +45,12 @@
 }
 
 
-.header .menu{
-	width: 100px;
-	height: 60px;
-	line-height: 60px;
-	float: right;
-	padding-right: 10px; 
+.header .menu {
+    width: 234px;
+    height: 60px;
+    line-height: 60px;
+    float: right;
+    padding-right: 10px;
 }
 
 

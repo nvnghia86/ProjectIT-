@@ -1,3 +1,22 @@
+<?php
+require "../core/MySQLHelper.php";
+try {
+	$key = isset($_REQUEST['key'])?$_REQUEST['key']:'';
+	$DB= new MySQLHelper();
+	$params = array($key);
+	$ketqua =$DB->callProcedure('p_baithi_find_key(?)',$params);
+
+	//echo '<pre>';
+	//print_r($ketqua);
+
+} catch (Exception $e) {
+	header("Location: loi.php?thongbao= Lỗi: ".$e->message);
+	exit;	
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,71 +30,19 @@
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div id="header">
-		<div id="wrapper-menu">
-					<ul class="menu-left">
-						<li class="menu-left-logo">
-							<a href="#">
-								<img src="../images/logokahoot.png" />
-							</a>
-						</li>
-						<li class="menu-left-nd1">
-							<i class="glyphicon glyphicon-list icon"></i>
-							Discover
-						</li>
-
-						
-						<li class="menu-left-nd1">
-							<i class="glyphicon glyphicon-list icon"></i>
-							Kahoots
-						</li>
-
-						
-						<li class="menu-left-nd1">
-							<i class="glyphicon glyphicon-stats icon"></i>
-							Reports
-						</li>
-					</ul>
-
-					<ul class="menu-right">
-						<li class="menu-right-nd4 glyphicon glyphicon-question-sign"></li>
-						<li class="menu-right-nd3 glyphicon glyphicon-cog"></li>
-						<li class="menu-right-nd2">
-							<a href="../admin/Taodethi.php">
-								<button class="btn">Create</button>
-							</a>
-						</li>
-						<li class="menu-right-nd1">
-							<a href="#">
-								Upgrade Now
-							</a>
-						</li>
-					</ul>
-		</div>
-	</div>
+	<?php include('../modules/admin_header.php'); ?>
 
 	<div id="content">
 			<div class="row">
 				<div class="col-lg-3" style="background: #fff;">
-					<div class="content-left">
-						<div class="vertical-menu">
-						  <a href="#" class="active"><i class="icon-menu glyphicon glyphicon-user"></i>My Kahoots</a>
-						  <a href="#"><i class="icon-menu glyphicon glyphicon-new-window"></i>ITPlus</a>
-						  <a href="#"><i class="icon-menu glyphicon glyphicon-star-empty"></i>Favorites</a>
-						  <a href="#"><i class="icon-menu glyphicon glyphicon-share"></i>Share with me</a>
-						</div>
-
-						<div class="content-left-qc">
-							<img src="../images/qc.png">
-						</div>
-					</div>
+					<?php include('../modules/admin_cottrai.php'); ?>
 				</div>
 				<div class="col-lg-9" style="background: #f2f2f2;">
 					<div class="content-right">
 						<div class="search">
-						  		<form class="navbar-form" role="search">
+						  		<form method="get" action="Danhsachde.php" class="navbar-form" role="search">
 								    <div class="input-group add-on">
-								      	<input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+								      	<input class="form-control" placeholder="Tìm kiếm bài thi" name="key" id="srch-term" type="text" value="<?=$key?>">
 								      	<div class="input-group-btn">
 								      		<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
 								     	</div>
@@ -105,13 +72,16 @@
 						  </div>
 
 						  <div class="content-right-ds-nd">
+						  	<?php for ($i=0; $i < count($ketqua); $i++) { 
+						  		$dong = $ketqua[$i];
+						  	?>
 						  	<div class="table">
 						  		<table class="content-table">
 						  			<tr>
 						  				<td class="content-table-img" rowspan="3">
-						  					<img src="../images/anhcauhoi.png" />
+						  					<img src="<?=$dong['hinh_anh']?>" />
 						  				</td>
-						  				<td class="content-table-col1"><h4>Đề Test</h4></td>
+						  				<td class="content-table-col1"><h4><?=$dong['tieu_de']?></h4></td>
 						  				<td class="content-table-col2">
 						  					<i class="glyphicon glyphicon-star-empty"></i>
 						  					<i class="glyphicon glyphicon-option-vertical"></i>
@@ -120,7 +90,7 @@
 
 						  			<tr>
 						  				<td class="content-table-col1">
-						  					<a href="#">phananhson</a>
+						  					<a href="#"><?=$dong['nguoi_tao']?></a>
 						  				</td>
 						  				<td class="content-table-col2">
 						  					<span>Created 4 days ago</span>
@@ -131,56 +101,21 @@
 						  			<tr style="background: #f8f8f8">
 						  				<td class="content-table-col1">
 						  					<i class="glyphicon glyphicon-play-circle"></i>
-						  					<a href="#">Visible to everyone</a>
+						  					<a href="#"><?=$dong['trang_thai']=='1'?"Công khai với mọi người":"Xem riêng tư"?></a>
 						  				</td>
 						  				<td class="content-table-col2">
-						  					<button type="button btn-sm" class="btn btn-success">Play</button>
-						  					<button type="button btn-sm" class="btn btn-success">Challenge</button>
+						  					<button type="button btn-sm" class="btn btn-success">Chơi</button>
+						  					<button type="button btn-sm" class="btn btn-success">Thử thách</button>
+						  					<a class="btn btn-warning" href="/admin/Taodethi.php?id=<?=$dong['id']?>"> Sửa</a>
+
+						  					<a class="btn btn-danger" href="/admin/Taodethi_act.php?id=<?=$dong['id']?>&act=xoa"> Xóa</a>
 						  				</td>
 						  			</tr>
 						  		</table>
-						  		<span class="soluongch">1 Questions</span>
+						  		<span class="soluongch"><?=$dong['so_cau_hoi']?> Câu hỏi</span>
 						  		<span class="checkch glyphicon glyphicon-ok-circle "></span>
 						  	</div>
-
-						  	<div class="table">
-						  		<table class="content-table">
-						  			<tr>
-						  				<td class="content-table-img" rowspan="3">
-						  					<img src="../images/anhcauhoi.png" />
-						  				</td>
-						  				<td class="content-table-col1"><h4>Đề Test</h4></td>
-						  				<td class="content-table-col2">
-						  					<i class="glyphicon glyphicon-star-empty"></i>
-						  					<i class="glyphicon glyphicon-option-vertical"></i>
-						  				</td>
-						  			</tr>
-
-						  			<tr>
-						  				<td class="content-table-col1">
-						  					<a href="#">phananhson</a>
-						  				</td>
-						  				<td class="content-table-col2">
-						  					<span>Created 4 days ago</span>
-						  					<b> • 2 plays</b>
-						  				</td>
-						  			</tr>
-
-						  			<tr style="background: #f8f8f8">
-						  				<td class="content-table-col1">
-						  					<i class="glyphicon glyphicon-play-circle"></i>
-						  					<a href="#">Visible to everyone</a>
-						  				</td>
-						  				<td class="content-table-col2">
-						  					<button type="button btn-sm" class="btn btn-success">Play</button>
-						  					<button type="button btn-sm" class="btn btn-success">Challenge</button>
-						  				</td>
-						  			</tr>
-						  		</table>
-						  		<span class="soluongch">1 Questions</span>
-						  		<span class="checkch glyphicon glyphicon-ok-circle "></span>
-						  	</div>
-
+						  	<?php } ?>
 
 						  </div>
 						 

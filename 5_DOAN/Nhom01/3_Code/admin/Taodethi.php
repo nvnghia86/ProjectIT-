@@ -1,3 +1,27 @@
+<?php
+require "../core/MySQLHelper.php";
+$DB= new MySQLHelper();
+$id = isset($_REQUEST['id'])?$_REQUEST['id']:'0';
+$baithi = null;
+if($id !='0'){
+	try {
+		
+		$params = array($id);
+		$ketqua =$DB->callProcedure('p_baithi_get_byid(?)',$params);
+		$baithi = $ketqua[0];
+		//print_r($baithi);
+		//echo '<pre>';
+		
+
+	} catch (Exception $e) {
+		header("Location: loi.php?thongbao= Lỗi: ".$e->message);
+		exit;	
+	}
+}
+$taikhoan = $DB->callProcedure('p_tai_khoan_find_all()');
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +35,8 @@
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 </head>
 <body>
+<form method="post" action="Taodethi_act.php">
+	<input type="hidden" name="id" value="<?=$id?>">
 	<!--Header-->
 <div class="header">
 	<div class="logo">
@@ -25,9 +51,8 @@
 </div>
 
 	<div class="menu">
-			<a href="../admin/Themcauhoi.php">
-				<button class="btn btn-success">OK, Go</button>
-			</a>
+		<button class="btn btn-success" type="submit" name="nut_taode" value="luu">Lưu đề</button>  
+		<button class="btn btn-success" type="submit" name="nut_taode" value="luu_them">Lưu đề & thêm mới </button>
 	</div>
 </div>
 <!--Content-->
@@ -36,13 +61,13 @@
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="form-group">
-				  <label for="usr">Title  (required)</label>
-				  <input type="text" class="form-control" id="usr">
+				  <label for="usr">Tiêu đề  (bắt buộc)</label>
+				  <input type="text" class="form-control" id="usr" name="tieu_de" value="<?=$baithi['tieu_de']?>">
 				</div>
 
 				<div class="form-group">
-				  <label for="comment">Description (required)</label>
-				  <textarea class="form-control" rows="5" id="comment"></textarea>
+				  <label for="comment">Mô tả (required)</label>
+				  <textarea class="form-control" rows="5" id="comment" name="mo_ta"><?=$baithi['mo_ta']?></textarea>
 				</div>
 			</div>
 		<div class="col-lg-6">
@@ -104,35 +129,31 @@
 	<div class="row" style="margin-top: 20px">
 			<div class="col-lg-4">
 				<div class="form-group">
-				  <label for="Visible ">Visible to</label>
-				  <select class="form-control" id="Visible ">
-				    <option>Only me</option>
-				    <option>Everyone</option>
+				  <label for="Visible ">Trạng thái</label>
+				  <select class="form-control" id="Visible " name="trang_thai">
+				    <option value="1" <?=$baithi['trang_thai']=='1'?'selected':''?>>Công khai với mọi người</option>
+				    <option value="0" <?=$baithi['trang_thai']=='0'?'selected':''?>>Xem chế độ riêng tư</option>
 				  </select>
 				</div>
 			</div>
 
 			<div class="col-lg-4">
 				<div class="form-group">
-				  <label for="Language">Visible to</label>
-				  <select class="form-control" id="Language">
-				    <option>Vietnamese</option>
-				    <option>English</option>
-				  </select>
+				  <label for="Language">Mã PIN</label>
+				  <input type="text" placeholder="Nhập mã PIN" class="form-control" name="ma_pin" value="<?=$baithi['ma_pin']?>"/>
 				</div>
 			</div>
 
 			<div class="col-lg-4">
 				<div class="form-group">
-				  <label for="sel1">Audience  (required)</label>
-				  <select class="form-control" id="sel1">
-				    <option>Please select...</option>
-				    <option>School</option>
-				    <option>University</option>
-				    <option>Business</option>
-				    <option>Training</option>
-				    <option>Event</option>
-				    <option>Social</option>
+				  <label for="sel1">Tác giả</label>
+				  <select class="form-control" id="id_tai_khoan" name="id_tai_khoan">
+				    <?php 
+				    	for ($i=0; $i < count($taikhoan); $i++) { 
+				    		$dong = $taikhoan[$i];
+				    ?>
+				    	<option value="<?=$dong['id']?>"><?=$dong['ho_ten']?></option>
+				    <?php } ?>
 				  </select>
 				</div>
 			</div>
@@ -154,6 +175,6 @@
 	</div>
 </div>
 
-
+</form>
 </body>
 </html>
