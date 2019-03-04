@@ -51,7 +51,7 @@
          	fontColor   : '#FFFFFF',
          	autostart   : false,
          	onComplete  : function () { console.log('done') 
-         window.location="./chondapan.php";}
+         	window.location="./chondapan.php";}
 		   });
 			countdown.start();
 
