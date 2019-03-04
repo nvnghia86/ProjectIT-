@@ -23,7 +23,7 @@
 						<li class="menu-right-nd4 glyphicon glyphicon-question-sign"></li>
 						<li class="menu-right-nd3 glyphicon glyphicon-cog"></li>
 						<li class="menu-right-nd2">
-							<a href="../admin/Taodethi.php">
+							<a href="../admin/taodethi.php">
 								<button class="btn"><b>Tạo đề</b></button>
 							</a>
 						</li>

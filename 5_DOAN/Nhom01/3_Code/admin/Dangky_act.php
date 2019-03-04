@@ -14,7 +14,7 @@
 				if($ketqua[0]['MA_LOI']=='SUC'){
 					echo "<script type='text/javascript'>";
 					echo "alert('Đăng kí thành công!');";			
-					echo "window.location.replace('Dangnhap.php')";
+					echo "window.location.replace('dangnhap.php')";
 					echo "</script>";
 				}
 			}else{

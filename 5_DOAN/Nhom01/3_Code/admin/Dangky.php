@@ -20,7 +20,7 @@
 	</div>
 	<div class="menu">
 		<div class="login">
-			<a href="../admin/Dangnhap.php"><button class="btn btn-primary">Đăng Nhập</button></a>
+			<a href="../admin/dangnhap.php"><button class="btn btn-primary">Đăng Nhập</button></a>
 		</div>
 
 		<div class="menu-name">

@@ -14,11 +14,11 @@ try {
 	// echo "<pre>";
 	// print_r($ketqua);
 	if(count($ketqua)>0){
-		header("Location: Danhsachde.php");
+		header("Location: danhsachde.php");
 	}else{
 		echo "<script type='text/javascript'>";
 			echo "alert('Tài khoản hoặc mật khẩu không đúng!');";			
-			echo "window.location.replace('Dangnhap.php')";
+			echo "window.location.replace('dangnhap.php')";
 			echo "</script>";
 		//header("Location: dangnhap.php?thongbao= Tài khoản hoặc mật khẩu không đúng.");
 	}

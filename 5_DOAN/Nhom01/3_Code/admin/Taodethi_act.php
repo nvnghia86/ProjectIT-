@@ -9,7 +9,7 @@ try {
 	if ($act=='xoa') {
 		$params = array($id);
 		$ketqua =$DB->callProcedure('p_baithi_del(?)',$params);
-		header("Location: Danhsachde.php");
+		header("Location: danhsachde.php");
 		exit;
 	}
 
@@ -30,15 +30,15 @@ try {
 
 	// print_r($params);
 		if($_REQUEST['nut_taode']=='luu'){
-			header("Location: Danhsachde.php");
+			header("Location: danhsachde.php");
 		}else if($_REQUEST['nut_taode']=='luu_them'){
-			header("Location: Themcauhoi.php");
+			header("Location: themcauhoi.php");
 		}
 		else{
-			header("Location: Taodethi.php");
+			header("Location: taodethi.php");
 		}
 	}else{
-		header("Location: Taodethi.php");
+		header("Location: taodethi.php");
 	}
 	
 	

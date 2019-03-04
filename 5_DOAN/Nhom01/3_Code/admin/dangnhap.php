@@ -17,7 +17,7 @@
 	</div>
 	<div class="menu">
 		<div class="login">
-			<a href="../admin/Dangky.php">
+			<a href="../admin/dangky.php">
 				<button class="btn btn-primary">ĐĂNG KÝ</button>
 			</a>
 		</div>

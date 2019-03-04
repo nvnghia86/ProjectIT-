@@ -11,18 +11,11 @@
 }
 
 .header .logo{
-	width: 100px;
-	height: 60px;
-	line-height: 60px;
-	padding-left: 10px;
-	float: left;
-}
-
-.header .logo{
 	width: 20%;
 	height: 60px;
 	line-height: 60px;
 	float: left;
+	padding-left: 10px;
 }
 
 .header .logo a{

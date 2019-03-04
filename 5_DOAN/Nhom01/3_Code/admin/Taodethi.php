@@ -35,12 +35,12 @@ $taikhoan = $DB->callProcedure('p_tai_khoan_find_all()');
 
 </head>
 <body>
-<form method="post" action="Taodethi_act.php">
+<form method="post" action="taodethi_act.php">
 	<input type="hidden" name="id" value="<?=$id?>">
 	<!--Header-->
 <div class="header">
 	<div class="logo">
-		<a href="../admin/Danhsachde.php">
+		<a href="../admin/danhsachde.php">
 			<button type="button" class="close" aria-label="Close">
 	  			<span aria-hidden="true">&times; Close</span>
 			</button>

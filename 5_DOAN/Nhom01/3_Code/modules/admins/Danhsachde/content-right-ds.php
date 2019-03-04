@@ -6,7 +6,7 @@
   		<div class="col-lg-6 ">
   			<ul class="row-left">
   				<li></li>
-  				<li><a href="../admin/Taodethi.php">Tạo mới</a></li>
+  				<li><a href="../admin/taodethi.php">Tạo mới</a></li>
   			</ul>
   		</div>
   		<div class="col-lg-6 ">

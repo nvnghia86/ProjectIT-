@@ -23,14 +23,14 @@
 </div>
 
 	<div class="menu">
-		<a href="../admin/Themcauhoi.php">
+		<a href="../admin/themcauhoi.php" id="tieptuc">
 			<button class="btn btn-success">Tiếp tục</button>
 		</a>
 	</div>
 </div>
 <!--Content-->
 <div class="content">
-	<form method="post" action="Taodethi_act.php">
+	
 		<input type="hidden" name="id" value="<?=$id?>">
 		<div class="container">
 			<div class="row">
@@ -63,66 +63,17 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<p>Hình ảnh</p>
+					<p><b>Hình ảnh</b></p>
 					<div class="row">
 						<div class="col-lg-12 content-ha">
 							<table class="tbl">
-								<tr height="50px">
-									<td colspan="7"></td>
-								</tr>
-
-								<tr>
-									<td class="nd1"></td>
-									<td class="nd">Thêm ảnh từ thư viện</td>
-									<td></td>
-									<td class="nd">Tải lên hình ảnh của bạn</td>
-									<td ></td>
-									<td class="nd">Thêm liên kết youtobe</td>
-									<td class="nd1"></td>
-								</tr>
-
-								<tr>
-									<td></td>
-									<td class="nd">
-										<button type="file" class="btn" name="hinh_anh" name="hinh_anh">
-											<img src="../images/ha1.png" />
-										</button>
-									</td>
-									<td></td>
-									<td class="nd">
-										<button type="file" class="btn" >
-											<img src="../images/ha2.png" />
-										</button>
-									</td>
-									<td></td>
-									<td class="nd">
-										<button type="file" class="btn" id="video" name="video">
-											<img src="../images/ha.png" />
-										</button>
-									</td>
-									<td></td>
-								</tr>
-
-								<tr>
-									<td></td>
-									<td align="center">
-											<span class="new">&nbsp; Mới! &nbsp;</span>
-									</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-
-								 <tr>
-									<td colspan="7" align="center">hoặc kéo và thả hình ảnh</td>
-								</tr>
-
-								<tr height="50px">
-									<td colspan="7"></td>
-								</tr>
-							</table>
+							<tr>
+								<td class="nd" align="center">
+									<p>Tải lên hình ảnh của bạn</p>
+									<input type="file" name="hinh_anh" id="hinh_anh" />
+								</td>
+							</tr>
+						</table>
 						</div>
 					</div>
 				</div>
@@ -187,19 +138,8 @@
 					</div>
 				</div>
 			</div>
-
-
-
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="form-group">
-					  	<label for="comment">Tạo resources</label>
-					  	<textarea class="form-control" rows="3" id="comment"></textarea>
-					</div>
-				</div>
-			</div>
 		</div>
-	</form>
+	
 	</div>
 
 

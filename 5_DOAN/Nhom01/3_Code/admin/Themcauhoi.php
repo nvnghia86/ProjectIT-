@@ -15,7 +15,7 @@
 	<!--Header-->
 <div class="header">
 	<div class="logo">
-		<a href="../admin/Danhsachde.php">
+		<a href="../admin/danhsachde.php">
 			<button type="button" class="close" aria-label="Close">
 	  			<span aria-hidden="true">&times; Thoát</span>
 			</button>
@@ -25,7 +25,7 @@
 	<div class="center">K!Quiz</div>
 
 	<div class="menu">
-		<a href="../admin/Choi.php">
+		<a href="../admin/danhsachde.php">
 			<button class="btn btn-success"><b>Lưu</b></button>
 		</a>
 	</div>
@@ -83,7 +83,7 @@
 
 		<div class="row">
 			<div class="col-lg-12 row-content-game">
-				<a href="../admin/Taocauhoi.php">
+				<a href="../admin/taocauhoi.php">
 					<button class="btn btn-success btn-cong"><span class="glyphicon " aria-hidden="true">+</span></button>
 					<p><b>Thêm câu hỏi</b></p>
 				</a>
