@@ -80,27 +80,10 @@ $taikhoan = $DB->callProcedure('p_tai_khoan_find_all()');
 							</tr>
 
 							<tr>
-								<td class="nd1"></td>
-								<td class="nd">Image Library by Getty Images</td>
-								<td></td>
-								<td class="nd">Upload Your Image</td>
-								<td class="nd1"></td>
-							</tr>
+								<td class="nd" colspan="5">
+									<input type="file" name="hinh_anh" id="hinh_anh" />
+								</td>
 
-							<tr>
-								<td></td>
-								<td class="nd">
-									<button type="file" class="btn">
-										<img src="../images/ha1.png" />
-									</button>
-								</td>
-								<td></td>
-								<td class="nd">
-									<button type="file" class="btn">
-										<img src="../images/ha2.png" />
-									</button>
-								</td>
-								<td></td>
 							</tr>
 
 							<tr>
@@ -164,12 +147,6 @@ $taikhoan = $DB->callProcedure('p_tai_khoan_find_all()');
 					<div class="form-group">
 					  <label for="ngay_tao">Ngày tạo</label>
 					  <input type="date" class="form-control"  id="ngay_tao" name="ngay_tao" value="<?=$baithi['ngay_tao']?>" />
-					</div>
-				
-
-					<div class="form-group">
-					  <label for="video">Intro video</label>
-					  <input type="text" class="form-control" id="video">
 					</div>
 				</div>
 		</div>

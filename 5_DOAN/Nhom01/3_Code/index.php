@@ -3,14 +3,14 @@
 <head>
 	<title>Trang Chủ</title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="css/style_trangchu.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style_trangchu.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="page-header">
+	<div class="header">
 		<div class="page-header_inner">
 			<a id="logo" href="#">
 				<img src="images/logokahoot.png" />
@@ -28,7 +28,7 @@
 	<div class="slider">
 		<div class="container">
 				<div class="row">
-					<div class="col-lg-9">
+					<div class="col-lg-12">
 					
 					  <div id="myCarousel" class="carousel slide" data-ride="carousel">
 					    <!-- Indicators -->
@@ -39,25 +39,25 @@
 					    </ol>
 
 					    <!-- Wrapper for slides -->
-					    <div class="carousel-inner" style="height: 400px;">
-					      <div class="item active" style="height: 400px;">
-					        <img src="images/slide1.jpg" alt="Los Angeles" style="width:100%; height: 400px;">
+					    <div class="carousel-inner" style="height: 500px;">
+					      <div class="item active" style="height: 500px;">
+					        <img src="images/slide1.jpg" alt="Los Angeles" style="width:100%; height: 500px;">
 					        <div class="carousel-caption">
 					          <h3>New York</h3>
 					          <p>We love the Big Apple!</p>
 					        </div>
 					      </div>
 
-					      <div class="item" style="height: 400px;">
-					        <img src="images/slide2.jpg" alt="Chicago" style="width:100%; height: 400px;">
+					      <div class="item" style="height: 500px;">
+					        <img src="images/slide2.jpg" alt="Chicago" style="width:100%; height: 500px;">
 					        <div class="carousel-caption">
 					          <h3>New York</h3>
 					          <p>We love the Big Apple!</p>
 					        </div>
 					      </div>
 					    
-					      <div class="item" style="height: 400px;">
-					        <img src="images/slide3.jpg" alt="New york" style="width:100%; height: 400px;">
+					      <div class="item" style="height: 600px;">
+					        <img src="images/slide3.jpg" alt="New york" style="width:100%; height: 600px;">
 					        <div class="carousel-caption">
 					          <h3>New York</h3>
 					          <p>We love the Big Apple!</p>
@@ -76,105 +76,11 @@
 					    </a>
 					</div>
 				</div>
-				<div class="col-lg-3" style="background: green;">ds</div>
+				<!-- <div class="col-lg-3" style="background: green;">ds</div> -->
 			</div>
 		</div>
 	</div>
-
-	<div class="content">
-		<div class="page-content">
-			<div class="env-content_top ">
-				<div class="inner"></div>
-			</div>
-
-			<div class="env-content_body">
-				<div class="layout-component">
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-				</div>
-
-				<div class="page-break">
-					<div class="outer"> </div>
-				</div>
-			</div>
-		</div>
-
-		<div class="page-content">
-			<div class="env-content_top ">
-				<div class="inner"></div>
-			</div>
-
-			<div class="layout-component">
-					<ul>
-						<li></li>
-					</ul>
-			</div>
-
-			<div class="layout-component">
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-			</div>
-
-			<div class="page-break">
-					<div class="outer"> </div>
-			</div>
-		</div>
-
-		<div class="page-content">
-			<div class="env-content_top ">
-				<div class="inner"></div>
-			</div>
-
-			<div class="layout-left"></div>
-
-			<div class="layout-right"></div>
-
-			<div class="page-break">
-					<div class="outer"> </div>
-			</div>
-		</div>
-
-		<div class="page-content">
-			<div class="env-content_top ">
-				<div class="inner"></div>
-			</div>
-			<div class="layout-component">
-					<ul>
-						<li></li>
-					</ul>
-			</div>
-		</div>
-
-		<div class="env-content_body">
-				<div class="layout-component">
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-				</div>
-
-				<div class="page-break">
-					<div class="outer"> </div>
-				</div>
-			</div>
-		</div>
-
-
-	</div>
-
+	
 	<div class="footer">
 		<div class="wrapper">
 			<ul class="list-footer">

@@ -6,7 +6,7 @@
 	<table class="content-table">
 		<tr>
 			<td class="content-table-img" rowspan="3">
-				<img src=".<?=$dong['hinh_anh']?>" />
+				<img src="./images/baithi/<?=$dong['hinh_anh']?>" />
 			</td>
 			<td class="content-table-col1"><h4><?=$dong['tieu_de']?></h4></td>
 			<td class="content-table-col2">
