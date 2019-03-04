@@ -28,9 +28,18 @@
 				<div class="maudapan"  style="background: red; ">
 					<span class="fontdapan">ĐÁP ÁN 1</span>
 				</div>
-				<div class="maudapan" style="background: blue;"><span class="fontdapan">ĐÁP ÁN 2</span></div>
-				<div class="maudapan" style="background: yellow;"><span class="fontdapan">ĐÁP ÁN 3</span></div>
-				<div class="maudapan" style="background: green;"><span class="fontdapan">ĐÁP ÁN 4</span></div>
+				
+				<div class="maudapan" style="background: blue;">
+					<span class="fontdapan">ĐÁP ÁN 2</span>
+				</div>
+
+				<div class="maudapan" style="background: yellow;">
+					<span class="fontdapan">ĐÁP ÁN 3</span>
+				</div>
+
+				<div class="maudapan" style="background: green;">
+					<span class="fontdapan">ĐÁP ÁN 4</span>
+				</div>
 			</div>
 		</div>
 	</div>
