@@ -17,9 +17,9 @@
 			</a>
 			<div class="page-menu">
 					<ul class="main-menu">
-						<li class="sign"><a  class="list-menu" href="admin/dangky.php">Sign Up</a></li>
-						<li class="login"><a  class="list-menu" href="admin/dangnhap.php">Login</a></li>
-						<li class="play"><a  class="list-menu" href="#">Play Game</a></li>
+						<li class="sign"><a  class="list-menu" href="admin/dangky.php">Đăng ký</a></li>
+						<li class="login"><a  class="list-menu" href="admin/dangnhap.php">Đăng nhập</a></li>
+						<li class="play"><a  class="list-menu" href="#">Chơi</a></li>
 					</ul>
 			</div>
 		</div>
