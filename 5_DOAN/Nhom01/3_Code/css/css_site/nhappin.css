@@ -8,6 +8,7 @@ body{
     margin-right: 420px;
     margin-left: 480px;
     font-family: "Comic Sans MS";
+    margin: 100px auto;
 }
 th{
     line-height: 2.5;

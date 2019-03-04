@@ -5,14 +5,6 @@ $DB= new MySQLHelper();
 try {
 
 	$id = isset($_REQUEST['id'])? $_REQUEST['id']:'0';
-	$act = isset($_REQUEST['act'])? $_REQUEST['act']:'';
-	if ($act=='xoa') {
-		$params = array($id);
-		$ketqua =$DB->callProcedure('p_baithi_del(?)',$params);
-		header("Location: Danhsachde.php");
-		exit;
-	}
-
 	echo $id;
 	$tieu_de = isset($_REQUEST['tieu_de'])? $_REQUEST['tieu_de']:'';
 	$mo_ta = isset($_REQUEST['mo_ta'])? $_REQUEST['mo_ta']:'';

@@ -28,11 +28,11 @@ $taikhoan = $DB->callProcedure('p_tai_khoan_find_all()');
 	<title>Tạo bài thi</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="../css/taobaithi.css" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/css_admin/taobaithi.css" />
+
 </head>
 <body>
 <form method="post" action="Taodethi_act.php">
@@ -162,9 +162,10 @@ $taikhoan = $DB->callProcedure('p_tai_khoan_find_all()');
 		<div class="row">
 				<div class="col-lg-12">
 					<div class="form-group">
-					  <label for="comment">Credit resources</label>
-					  <textarea class="form-control" rows="5" id="comment"></textarea>
+					  <label for="ngay_tao">Ngày tạo</label>
+					  <input type="date" class="form-control"  id="ngay_tao" name="ngay_tao" value="<?=$baithi['ngay_tao']?>" />
 					</div>
+				
 
 					<div class="form-group">
 					  <label for="video">Intro video</label>

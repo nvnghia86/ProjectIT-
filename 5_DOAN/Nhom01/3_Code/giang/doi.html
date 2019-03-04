@@ -15,11 +15,12 @@
 		</div>
         <div class="container">
             <div id="CountDownTimer" data-timer="60"></div>
-            <button class="btn btn-success startTimer" style="margin: 0px 0px 0px 400px">Start Timer</button>
-            <button class="btn btn-danger stopTimer" >Stop Timer</button>
         </div>
-        <script>
-			$("#CountDownTimer").TimeCircles({ time: { Days: { show: false }, Hours: { show: false } }});
+     
+    </body>
+</html>
+   <script>
+      $("#CountDownTimer").TimeCircles({ time: { Days: { show: false }, Hours: { show: false } }});
             var updateTime = function(){
                 var date = $("#date").val();
                 var time = $("#time").val();
@@ -37,5 +38,3 @@
                 $("#CountDownTimer").TimeCircles().stop();
             });
         </script>       
-    </body>
-</html>

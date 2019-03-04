@@ -6,21 +6,16 @@
 								<img src="../images/logokahoot.png" />
 							</a>
 						</li>
-						<li class="menu-left-nd1">
-							<i class="glyphicon glyphicon-list icon"></i>
-							Discover
-						</li>
-
 						
 						<li class="menu-left-nd1">
 							<i class="glyphicon glyphicon-list icon"></i>
-							Kahoots
+							Danh Sách Đề
 						</li>
 
 						
 						<li class="menu-left-nd1">
 							<i class="glyphicon glyphicon-stats icon"></i>
-							Reports
+							Báo Cáo
 						</li>
 					</ul>
 
@@ -29,12 +24,7 @@
 						<li class="menu-right-nd3 glyphicon glyphicon-cog"></li>
 						<li class="menu-right-nd2">
 							<a href="../admin/Taodethi.php">
-								<button class="btn">Create</button>
-							</a>
-						</li>
-						<li class="menu-right-nd1">
-							<a href="#">
-								Upgrade Now
+								<button class="btn"><b>Tạo đề</b></button>
 							</a>
 						</li>
 					</ul>

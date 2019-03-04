@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chờ</title>
+	<title>Sẵn sàng chơi</title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="../css/Doi.css" />
+	<link rel="stylesheet" type="text/css" href="../css/css_site/sansang.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -16,7 +16,8 @@
 				PIN: 423432
 			</div>
 			<div class="page-name">
-				SpeedyLeopard
+				<div class="diem">55</div>
+				<div class="ten">abdsadadadadddddddddddc</div>
 			</div>
 		</div>
 	</div>
@@ -26,8 +27,10 @@
 			<div class="row">
 				<div class="col-lg-2"></div>
 				<div class="col-lg-8">
-					<div class="noidung1"><h1 style="text-align: center;">You’re in!</h1></div>
-					<div class="noidung2"><h2>See your nickname onscreen?</h2></div>
+					<div class="noidung1">
+						<p class="ready">Sẵn sàng!</p>
+						<i class="fa fa-circle-o-notch fa-spin"></i><br /><p class="load">Loadding...</p>
+					</div>
 				</div>
 				<div class="col-lg-2"></div>
 			</div>
