@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/js_site/jquery.countdown360.js"></script>
 </head>
 <body>
 	<div class="page-header">
@@ -25,7 +26,7 @@
 		</div>
 	</div>
 
-	<div class="content" style="background: #66BF39;">
+	<div class="content" style="background: #be39bf;">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-2"></div>
@@ -42,4 +43,30 @@
 	</div>
 </body>
 </html>
+<script type="text/javascript" charset="utf-8">
+
+		 	var countdown =  $("#countdown").countdown360({
+       	 	radius      : 60,
+         	seconds     : 30,
+         	fontColor   : '#FFFFFF',
+         	autostart   : false,
+         	onComplete  : function () { console.log('done') }
+		   });
+			countdown.start();
+			console.log('countdown360 ',countdown);
+		 	$(document).on("click","button",function(e){
+		 		e.preventDefault();
+		 		var type = $(this).attr("data-type");
+		 		if(type === "time-remaining")
+		 		{
+		 			var timeRemaining = countdown.getTimeRemaining();
+		 			alert(timeRemaining);
+		 		}
+		 		else
+		 		{
+		 			var timeElapsed = countdown.getElapsedTime();
+		 			alert(timeElapsed);
+		 		}
+		 	});
+</script>
 

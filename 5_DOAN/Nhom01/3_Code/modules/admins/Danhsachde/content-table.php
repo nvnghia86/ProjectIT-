@@ -31,7 +31,7 @@
 			</td>
 			<td class="content-table-col2">
 				<button type="button btn-sm" class="btn btn-success">Chơi</button>
-				<button type="button btn-sm" class="btn btn-success">Thử thách</button>
+				<!-- <button type="button btn-sm" class="btn btn-success">Thử thách</button> -->
 				<a class="btn btn-warning" href="/admin/Taodethi.php?id=<?=$dong['id']?>"> Sửa</a>
 
 				<a class="btn btn-danger" href="/admin/Taodethi_act.php?id=<?=$dong['id']?>&act=xoa"> Xóa</a>
