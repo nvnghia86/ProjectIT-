@@ -12,6 +12,10 @@ li{
 	list-style: none;
 }
 
+a{
+	text-decoration: none;
+}
+
 #header{
 	background: #46178F;
 	color: #fff;
@@ -221,9 +225,6 @@ li{
 	line-height: 50px;
 }
 
-#content .content-right a{
-	text-decoration: underline;
-}
 
 .content-right .content-right-ds-nd{
 	max-width: 100%;
